@@ -56,7 +56,7 @@
             </li>
 
             <li>
-              <a href="/admin/facturas">
+              <a href="/admin/invoices">
                 <i class="fa fa-th"></i> <span>Facturas</span>
                 <span class="pull-right-container">
                   
@@ -82,7 +82,7 @@
             </li>
 
             <li>
-              <a href="/admin/facturas">
+              <a href="/admin/blog">
                 <i class="fa fa-th"></i> <span>Blog</span>
                 <span class="pull-right-container">
                   

@@ -24,6 +24,13 @@ Auth::routes();
 
 Route::group(['prefix' => 'admin'],function(){
     Route::get('/', 'Backend\DashboardController@index')->name('dashboard');
+    Route::get('/categories', 'Backend\CategoryController@index')->name('category');
+    Route::get('/products', 'Backend\ProductController@index')->name('product');
+    Route::get('/orders', 'Backend\OrderController@index')->name('order');
+    Route::get('/invoices', 'Backend\InvoiceController@index')->name('order');
+    Route::get('/pages', 'Backend\PageController@index')->name('pages');
+    Route::get('/blog', 'Backend\BlogController@index')->name('blogs');
+    Route::get('/media', 'Backend\MediaController@index')->name('multimedia');
 });
 
 Route::group(['prefix' => 'outlet'],function(){
