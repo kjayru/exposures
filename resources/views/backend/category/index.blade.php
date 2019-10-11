@@ -29,52 +29,35 @@
                   <table id="example2" class="table table-bordered table-hover">
                     <thead>
                     <tr>
-                      <th>Rendering engine</th>
-                      <th>Browser</th>
-                      <th>Platform(s)</th>
-                      <th>Engine version</th>
-                      <th>CSS grade</th>
+                      <th></th>
+                      <th>Nombre</th>
+                      <th>Titulo</th>
+                      <th>Keywords</th>
+                      <th>Descripción</th>
+                      <th>Fecha</th>
+                      <th></th>
                     </tr>
                     </thead>
                     <tbody>
-                    <tr>
-                      <td>Trident</td>
-                      <td>Internet
-                        Explorer 4.0
+                   
+                      @foreach($categorias as $key=>$categoria)
+                      <tr>
+                      <th>{{ $key+1}}</th>
+                      <td>{{$categoria->name}}</td>
+                      <td>{{$categoria->title}}</td>
+                      <td>{{$categoria->keywords}}</td>
+                      <td>{{$categoria->description}}</td>
+                      <td>{{$categoria->updated_at}}</td>
+                      <td>
+                        <a href="/admin/category/{{$categoria->id}}/edit" class="btn btn-xs btn-primary">Editar</a>
                       </td>
-                      <td>Win 95+</td>
-                      <td> 4</td>
-                      <td>X</td>
                     </tr>
-                    <tr>
-                      <td>Trident</td>
-                      <td>Internet
-                        Explorer 5.0
-                      </td>
-                      <td>Win 95+</td>
-                      <td>5</td>
-                      <td>C</td>
-                    </tr>
-                    <tr>
-                      <td>Trident</td>
-                      <td>Internet
-                        Explorer 5.5
-                      </td>
-                      <td>Win 95+</td>
-                      <td>5.5</td>
-                      <td>A</td>
-                    </tr>
+                      @endforeach
+                   
+                    
                     
                     </tbody>
-                    <tfoot>
-                    <tr>
-                      <th>Rendering engine</th>
-                      <th>Browser</th>
-                      <th>Platform(s)</th>
-                      <th>Engine version</th>
-                      <th>CSS grade</th>
-                    </tr>
-                    </tfoot>
+                    
                   </table>
                 </div>
                 <!-- /.box-body -->

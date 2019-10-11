@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Backend;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Product;
 
 class ProductController extends Controller
 {
@@ -14,7 +15,9 @@ class ProductController extends Controller
      */
     public function index()
     {
-        return view('Backend.product.index');
+        $productos = Product::orderBy('id','desc')->get();
+
+        return view('Backend.product.index',['productos'=>$productos]);
     }
 
     /**

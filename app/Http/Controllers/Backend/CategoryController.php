@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Backend;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Category;
 
 class CategoryController extends Controller
 {
@@ -14,7 +15,8 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        return view('Backend.category.index');
+        $categorias = Category::orderBy('id','desc')->get();
+        return view('Backend.category.index',['categorias'=>$categorias]);
     }
 
     /**
