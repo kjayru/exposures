@@ -22,7 +22,7 @@
               <a href="/admin">
                 <i class="fa fa-dashboard"></i> <span>Dashboard</span>
                 <span class="pull-right-container">
-                  <i class="fa fa-angle-left pull-right"></i>
+                 
                 </span>
               </a>
              
@@ -81,13 +81,18 @@
               </a>
             </li>
 
-            <li>
+            <li class="treeview">
               <a href="/admin/blog">
                 <i class="fa fa-th"></i> <span>Blog</span>
                 <span class="pull-right-container">
-                  
+                    <i class="fa fa-angle-left pull-right"></i>
                 </span>
+
               </a>
+              <ul class="treeview-menu">
+                <li>  <a href="/admin/category-blog" >Categorias</a><li>
+                <li>  <a href="/admin/posts" >Entradas</a><li>
+              </ul>
             </li>
           
           </ul>

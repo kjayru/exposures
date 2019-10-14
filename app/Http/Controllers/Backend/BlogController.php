@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Backend;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Post;
 
 class BlogController extends Controller
 {
@@ -14,7 +15,8 @@ class BlogController extends Controller
      */
     public function index()
     {
-        return view('Backend.blog.index');
+        $posts = Post::orderBy('id','desc')->get();
+        return view('Backend.blog.index',['posts'=>$posts]);
     }
 
     /**
@@ -24,7 +26,7 @@ class BlogController extends Controller
      */
     public function create()
     {
-        //
+       
     }
 
     /**
@@ -82,4 +84,6 @@ class BlogController extends Controller
     {
         //
     }
+
+    
 }

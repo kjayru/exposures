@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Backend;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Payment;
 
 class InvoiceController extends Controller
 {
@@ -14,7 +15,9 @@ class InvoiceController extends Controller
      */
     public function index()
     {
-        return view('Backend.invoice.index');
+        $facturas = Payment::orderBy('id','desc')->get();
+
+        return view('Backend.invoice.index',['facturas'=>$facturas]);
     }
 
     /**

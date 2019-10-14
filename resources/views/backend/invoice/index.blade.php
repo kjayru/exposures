@@ -38,52 +38,37 @@
                       <table id="example2" class="table table-bordered table-hover">
                         <thead>
                         <tr>
-                          <th>Rendering engine</th>
-                          <th>Browser</th>
-                          <th>Platform(s)</th>
-                          <th>Engine version</th>
-                          <th>CSS grade</th>
+                          <th>N</th>
+                          
+                          <th>Nombre</th>
+                          <th>Telefono</th>
+                          <th>Metodo de pago</th>
+                          <th>Cantidad</th>
+                          <th>Recibo</th>
+                          <th></th>
                         </tr>
                         </thead>
                         <tbody>
-                        <tr>
-                          <td>Trident</td>
-                          <td>Internet
-                            Explorer 4.0
-                          </td>
-                          <td>Win 95+</td>
-                          <td> 4</td>
-                          <td>X</td>
-                        </tr>
-                        <tr>
-                          <td>Trident</td>
-                          <td>Internet
-                            Explorer 5.0
-                          </td>
-                          <td>Win 95+</td>
-                          <td>5</td>
-                          <td>C</td>
-                        </tr>
-                        <tr>
-                          <td>Trident</td>
-                          <td>Internet
-                            Explorer 5.5
-                          </td>
-                          <td>Win 95+</td>
-                          <td>5.5</td>
-                          <td>A</td>
-                        </tr>
+                          @foreach($facturas as $key =>$fact)
+                          <tr>
+
+                              <th>{{$key +1 }}</th>
+                              
+                              <td>{{$fact->name}}</td>
+                              <td>{{$fact->phone}}</td>
+                              <td>{{$fact->method}}</td>
+                              <td>{{$fact->amount}}</td>
+                              <td>{{$fact->recibo_url}}</td>
+                              <td>
+                                <a href="#" class="btn btn-xs btn-primary">Orden</a>
+                                <a href="#" class="btn btn-xs btn-primary">Detalle</a>
+                              </td>
+                          
+                          </tr>
                         
+                        @endforeach
                         </tbody>
-                        <tfoot>
-                        <tr>
-                          <th>Rendering engine</th>
-                          <th>Browser</th>
-                          <th>Platform(s)</th>
-                          <th>Engine version</th>
-                          <th>CSS grade</th>
-                        </tr>
-                        </tfoot>
+                        
                       </table>
                     </div>
                     <!-- /.box-body -->

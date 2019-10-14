@@ -15,13 +15,7 @@
           </ol>
         </section>
     
-     
-        <section class="content">
-       
-          
-       
-          <div class="row">
-         
+  
             <section class="content">
        
           
@@ -38,52 +32,25 @@
                       <table id="example2" class="table table-bordered table-hover">
                         <thead>
                         <tr>
-                          <th>Rendering engine</th>
-                          <th>Browser</th>
-                          <th>Platform(s)</th>
-                          <th>Engine version</th>
-                          <th>CSS grade</th>
+                          <th></th>
+                          <th>Titulo</th>
+                          <th>Categoria</th>
+                          <th>Creado</th>
+                          <th></th>
                         </tr>
                         </thead>
                         <tbody>
                         <tr>
-                          <td>Trident</td>
-                          <td>Internet
-                            Explorer 4.0
-                          </td>
-                          <td>Win 95+</td>
-                          <td> 4</td>
-                          <td>X</td>
+                         @foreach($posts as $k => $post) 
+                          <th></th>
+                          
+                          <td>{{$post->title}}</td>
+                          <td> {{ $post->categoryblog->name }}</td>
+                          <td>{{$post->created_at}}</td>
+                          <td><a href="#" class="btn btn-xs btn-primary">Editar</a></td>
                         </tr>
-                        <tr>
-                          <td>Trident</td>
-                          <td>Internet
-                            Explorer 5.0
-                          </td>
-                          <td>Win 95+</td>
-                          <td>5</td>
-                          <td>C</td>
-                        </tr>
-                        <tr>
-                          <td>Trident</td>
-                          <td>Internet
-                            Explorer 5.5
-                          </td>
-                          <td>Win 95+</td>
-                          <td>5.5</td>
-                          <td>A</td>
-                        </tr>
+                        @endforeach
                         
-                        </tbody>
-                        <tfoot>
-                        <tr>
-                          <th>Rendering engine</th>
-                          <th>Browser</th>
-                          <th>Platform(s)</th>
-                          <th>Engine version</th>
-                          <th>CSS grade</th>
-                        </tr>
-                        </tfoot>
                       </table>
                     </div>
                     <!-- /.box-body -->
@@ -97,11 +64,7 @@
             
         
             </section>
-          
-          </div>
-        
     
-        </section>
       
       </div>
 

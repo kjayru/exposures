@@ -38,52 +38,29 @@
                       <table id="example2" class="table table-bordered table-hover">
                         <thead>
                         <tr>
-                          <th>Rendering engine</th>
-                          <th>Browser</th>
-                          <th>Platform(s)</th>
-                          <th>Engine version</th>
-                          <th>CSS grade</th>
+                          <th></th>
+                          <th>Producto</th>
+                          <th>Envio</th>
+                          <th>N Orden</th>
+                          <th>Usuario</th>
+                          <th>Fecha</th>
+                          <th></th>
                         </tr>
                         </thead>
                         <tbody>
-                        <tr>
-                          <td>Trident</td>
-                          <td>Internet
-                            Explorer 4.0
-                          </td>
-                          <td>Win 95+</td>
-                          <td> 4</td>
-                          <td>X</td>
-                        </tr>
-                        <tr>
-                          <td>Trident</td>
-                          <td>Internet
-                            Explorer 5.0
-                          </td>
-                          <td>Win 95+</td>
-                          <td>5</td>
-                          <td>C</td>
-                        </tr>
-                        <tr>
-                          <td>Trident</td>
-                          <td>Internet
-                            Explorer 5.5
-                          </td>
-                          <td>Win 95+</td>
-                          <td>5.5</td>
-                          <td>A</td>
-                        </tr>
-                        
+                          @foreach($ordenes as $key=>$order)
+                          <tr>
+                            <th>{{ $key+1 }}</th>
+                            <td>{{ $order->cart }} </td>
+                            <td>{{ $order->shipment }}</td>
+                            <td>{{ $order->order_send_id }}</td>
+                            <td>{{ $order->user->name }}</td>
+                            <td>{{ $order->updated_at }}</td>
+                            <td> <a href="/order/detail/{{$order->id}}" class="btn btn-primary btn-xs">Detalle</a> </td>
+                          </tr>
+                        @endforeach
                         </tbody>
-                        <tfoot>
-                        <tr>
-                          <th>Rendering engine</th>
-                          <th>Browser</th>
-                          <th>Platform(s)</th>
-                          <th>Engine version</th>
-                          <th>CSS grade</th>
-                        </tr>
-                        </tfoot>
+                       
                       </table>
                     </div>
                     <!-- /.box-body -->

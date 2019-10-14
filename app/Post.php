@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Post extends Model
 {
-    public function categorypost(){
-        return $this->belongsTo(CategoryPost::class);
+    public function categoryblog(){
+        return $this->belongsTo(CategoryBlog::class,'category_blog_id');
     }
 }

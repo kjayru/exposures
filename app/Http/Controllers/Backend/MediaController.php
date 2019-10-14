@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Backend;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-
+use App\Multimedia;
 class MediaController extends Controller
 {
     /**
@@ -14,7 +14,8 @@ class MediaController extends Controller
      */
     public function index()
     {
-        return view('Backend.media.index');
+        $mediafiles = Multimedia::orderBy('id','desc')->get();
+        return view('Backend.media.index',['$mediafiles'=>$mediafiles]);
     }
 
     /**

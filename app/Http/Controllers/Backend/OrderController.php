@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Backend;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Order;
 
 class OrderController extends Controller
 {
@@ -14,7 +15,8 @@ class OrderController extends Controller
      */
     public function index()
     {
-        return view('Backend.order.index');
+        $ordenes = Order::orderBy('id','desc')->get();
+        return view('Backend.order.index',['ordenes'=>$ordenes]);
     }
 
     /**

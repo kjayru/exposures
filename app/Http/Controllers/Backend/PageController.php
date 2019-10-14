@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Backend;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-
+Use App\Page;
 class PageController extends Controller
 {
     /**
@@ -14,7 +14,8 @@ class PageController extends Controller
      */
     public function index()
     {
-        return view('Backend.page.index');
+        $paginas = Page::orderBy('id','desc')->get();
+        return view('Backend.page.index',['paginas'=>$paginas]);
     }
 
     /**
