@@ -10653,3 +10653,78 @@ a.text-dark:focus {
   color: black !important;
 }
 
+.block-black {
+  background: #252525;
+  color: white;
+  padding: 20px 25px;
+}
+
+.block-black p {
+  color: #A7AFB2;
+}
+
+.pad-20 {
+  padding: 20px 0 20px;
+}
+
+.pad-6 {
+  padding: 0 6%;
+}
+
+.pad-top-30 {
+  padding: 30px 0;
+}
+
+.block-black p strong {
+  color: white;
+  font-weight: bold;
+}
+
+.wp-block-mwp-inner-blocks2 p {
+  text-align: justify;
+}
+
+#footer {
+  background: #2F383D;
+  padding: 20px 0 20px;
+}
+
+#footer li {
+  text-align: center;
+  display: block;
+  color: white;
+}
+
+#footer a {
+  display: block;
+  text-align: center;
+  color: white;
+}
+
+.blanco h2 {
+  color: #0371bc;
+}
+
+li.nav-item.copy {
+  padding-top: 8px;
+}
+
+.slick-slide {
+  height: 520px !important;
+  width: 100h !important;
+}
+
+.o-h {
+  overflow: hidden;
+}
+
+.nav-item a.nav-link:hover {
+  color: #0371bc !important;
+  border-color: #0371bc;
+}
+
+.navbar-light .navbar-nav .active {
+  color: #0371bc !important;
+  border-top: 2px solid #0371bc;
+}
+

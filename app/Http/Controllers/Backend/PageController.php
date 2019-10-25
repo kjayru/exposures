@@ -15,7 +15,7 @@ class PageController extends Controller
     public function index()
     {
         $paginas = Page::orderBy('id','desc')->get();
-        return view('Backend.page.index',['paginas'=>$paginas]);
+        return view('backend.page.index',['paginas'=>$paginas]);
     }
 
     /**
@@ -58,7 +58,9 @@ class PageController extends Controller
      */
     public function edit($id)
     {
-        //
+        $page = Page::find($id);
+
+        return view('backend.page.edit',['page'=>$page]);
     }
 
     /**
@@ -70,7 +72,12 @@ class PageController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+
+        $page = Page::find($id);
+        $page->content = $request->editorgut;
+        $page->save();
+
+        return redirect()->route('pages.edit',['id'=>$id]);
     }
 
     /**

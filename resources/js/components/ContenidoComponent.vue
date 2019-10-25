@@ -1,9 +1,13 @@
 <template>
+    <section class="container-fluid paginas">
+        <div class="row justify-content-center"  v-html="contenido.content">
+             {{ contenido.content }}
 
-    <section class="container" v-html="contenido[0].content">
-       {{ contenido[0].content }}
+        </div>
+
     </section>
 </template>
+
 <script>
 export default {
     data(){
@@ -12,10 +16,10 @@ export default {
         }
     },
     created:function(){
-         axios.get('/page')
+         axios.get('/inicio')
             .then( (response)=> {
                 this.contenido = response.data;
-                 
+
                  console.log(response.data);
                 })
              .catch(function (error) {

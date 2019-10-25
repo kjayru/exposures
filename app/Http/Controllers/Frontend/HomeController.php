@@ -14,6 +14,7 @@ class HomeController extends Controller
     }
 
     public function empresa(){
+
         return view('frontend.home.empresa');
     }
 
@@ -33,19 +34,44 @@ class HomeController extends Controller
 
     public function getslide(){
         $slider = SlideItem::where('slide_id','1')->get();
- 
+
        foreach($slider as $sli){
            $items[] = $sli->multimedias;
        }
 
-    
+
        return response()->json([$items]);
     }
 
-    public function getpage(){
+    public function getinicio(){
         $page = Page::where('id',1)->first();
 
-        return response()->json([$page]);
+        return response()->json($page);
+    }
+    public function getempresa(){
+        $page = Page::where('id',2)->first();
+
+        return response()->json($page);
+    }
+    public function getproductos(){
+        $page = Page::where('id',3)->first();
+
+        return response()->json($page);
+    }
+    public function getvideos(){
+        $page = Page::where('id',4)->first();
+
+        return response()->json($page);
+    }
+    public function getdistribuidores(){
+        $page = Page::where('id',5)->first();
+
+        return response()->json($page);
+    }
+    public function getcontacto(){
+        $page = Page::where('id',6)->first();
+
+        return response()->json($page);
     }
 }
 

@@ -19,7 +19,13 @@ Route::get('/distribuidores', 'Frontend\HomeController@distribuidores')->name('d
 Route::get('/contacto', 'Frontend\HomeController@contacto')->name('contacto');
 
 Route::get('/sliders', 'Frontend\HomeController@getslide')->name('slider');
-Route::get('/page', 'Frontend\HomeController@getpage')->name('getpage');
+Route::get('/inicio', 'Frontend\HomeController@getinicio')->name('getinicio');
+Route::get('/getempresa', 'Frontend\HomeController@getempresa')->name('getempresa');
+
+Route::get('/getproductos', 'Frontend\HomeController@getproductos')->name('getproductos');
+Route::get('/getvideos', 'Frontend\HomeController@getvideos')->name('getvideos');
+Route::get('/getdistribuidores', 'Frontend\HomeController@getdistribuidores')->name('getdistribuidores');
+Route::get('/getcontacto', 'Frontend\HomeController@getcontacto')->name('getcontacto');
 
 Auth::routes();
 
@@ -31,7 +37,13 @@ Route::group(['prefix' => 'admin'],function(){
     Route::get('/products', 'Backend\ProductController@index')->name('product');
     Route::get('/orders', 'Backend\OrderController@index')->name('order');
     Route::get('/invoices', 'Backend\InvoiceController@index')->name('order');
+
     Route::get('/pages', 'Backend\PageController@index')->name('pages');
+    Route::get('/pages/{id}/edit', 'Backend\PageController@edit')->name('pages.edit');
+    Route::post('/pages','Backend\PageController@store')->name('pages.store');
+    Route::put('pages/{id}','Backend\PageController@update')->name('pages.update');
+
+
     Route::get('/blog', 'Backend\BlogController@index')->name('blogs');
     Route::get('/media', 'Backend\MediaController@index')->name('multimedia');
     Route::get('/category-blog', 'Backend\CategoryBLogController@index')->name('categoryBlog');

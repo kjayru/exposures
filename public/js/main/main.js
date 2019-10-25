@@ -8,4 +8,9 @@ $(window).on('load',function(){
     fade: true,
     cssEase: 'linear'
   });
+
+  $(".paginas img").addClass('img-fluid');
+  $(".wp-block-group__inner-container").addClass('row');
+
 });
+

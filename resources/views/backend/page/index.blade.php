@@ -1,7 +1,7 @@
 @extends('layouts.backend.app')
 @section('content')
-   
-    
+
+
 <div class="content-wrapper">
         <!-- Content Header (Page header) -->
         <section class="content-header">
@@ -14,14 +14,14 @@
             <li class="active">Paginas</li>
           </ol>
         </section>
-    
-     
+
+
         <section class="content">
-       
-          
-       
+
+
+
           <div class="row">
-         
+
             <div class="col-xs-12">
               <div class="box">
                 <div class="box-header">
@@ -29,13 +29,16 @@
                 </div>
                 <!-- /.box-header -->
                 <div class="box-body">
+                 <div class="box-header with-border">
+                    <a href="#" class="btn btn-primary">Crear</a>
+                  </div>
                   <table id="example2" class="table table-bordered table-hover">
                     <thead>
                     <tr>
                       <th></th>
                       <th>Titulo</th>
                       <th>Slug</th>
-                      
+
                       <th></th>
                     </tr>
                     </thead>
@@ -43,33 +46,33 @@
                       @foreach($paginas as $k => $page)
                     <tr>
                       <td>{{$k+1}}</td>
-                     
+
                       <td>{{$page->title}}</td>
                       <td> {{$page->slug}}</td>
                       <td>
-                        <a href="#" class="btn btn-xs btn-primary">Editar</a>
+                        <a href="/admin/pages/{{$page->id}}/edit" class="btn btn-xs btn-primary">Editar</a>
                       </td>
                     </tr>
                     @endforeach
-                    
+
                     </tbody>
-                    
+
                   </table>
                 </div>
                 <!-- /.box-body -->
               </div>
               <!-- /.box -->
-    
-           
+
+
             </div>
-          
+
           </div>
-        
-    
+
+
         </section>
-      
+
       </div>
 
 
-      
+
 @endsection

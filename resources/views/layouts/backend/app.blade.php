@@ -37,7 +37,11 @@
 
   <!-- Google Font -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
-  <link rel="stylesheet" href="/backend/css/main.css">
+
+  <link rel="stylesheet" href="{{asset('vendor/laraberg/css/laraberg.css')}}">
+
+
+  <link rel="stylesheet" href="/backend/css/main.css?v={{uniqid()}}">
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
@@ -46,16 +50,536 @@
 
 @include('layouts.backend.include.header')
   <!---SIDEBAR-->
-@include('layouts.backend.include.sidebar') 
+@include('layouts.backend.include.sidebar')
 
   <!-- Content Wrapper. Contains page content -->
-  
+
   @yield('content')
 
 @include('layouts.backend.include.footer')
 
   <!--FOOTER-->
 
+  <script src="https://unpkg.com/react@16.8.6/umd/react.production.min.js"></script>
+
+<script src="https://unpkg.com/react-dom@16.8.6/umd/react-dom.production.min.js"></script>
+
+<script src="{{ asset('vendor/laraberg/js/laraberg.js') }}"></script>
+
+<script>
+        Laraberg.init('editorgut');
+
+
+
+
+
+( function(
+	blocks,
+	blockEditor,
+	element,
+) {
+	var el = element.createElement;
+	var InnerBlocks = blockEditor.InnerBlocks;
+	blocks.registerBlockType( 'mwp/inner-blocks', {
+		title: 'bootstrap col 2',
+		category: 'layout',
+		attributes: {},
+		edit: function( props ) {
+			return el(
+				'div',
+				{ },
+				'',
+				el( 'div', { style: {  }  }, el( InnerBlocks ) ),
+				''
+			);
+		},
+		save: function( props ) {
+            return el(
+				'div',
+				{ className:"col-md-2"},
+				'',
+				el( 'div', { style: {  }  }, el( InnerBlocks.Content ) ),
+				''
+			);
+		},
+	} )
+} ) (
+	window.wp.blocks,
+	window.wp.blockEditor,
+	window.wp.element,
+);
+
+( function(
+	blocks,
+	blockEditor,
+	element,
+) {
+	var el = element.createElement;
+	var InnerBlocks = blockEditor.InnerBlocks;
+	blocks.registerBlockType( 'mwp/inner-blocks2', {
+		title: 'bootstrap col 3',
+		category: 'layout',
+		attributes: {},
+		edit: function( props ) {
+			return el(
+				'div',
+				{},
+				'',
+				el( 'div', { style: {  }  }, el( InnerBlocks ) ),
+				''
+			);
+		},
+		save: function( props ) {
+            return el(
+				'div',
+				{ className:"col-md-3"},
+				'',
+				el( 'div', { style: {  }  }, el( InnerBlocks.Content ) ),
+				''
+			);
+		},
+	} )
+} ) (
+	window.wp.blocks,
+	window.wp.blockEditor,
+	window.wp.element,
+);
+
+( function(
+	blocks,
+	blockEditor,
+	element,
+) {
+	var el = element.createElement;
+	var InnerBlocks = blockEditor.InnerBlocks;
+	blocks.registerBlockType( 'mwp/inner-blocks4', {
+		title: 'bootstrap col 4',
+		category: 'layout',
+		attributes: {},
+		edit: function( props ) {
+			return el(
+				'div',
+				{ },
+				'',
+				el( 'div', { style: {  }  }, el( InnerBlocks ) ),
+				''
+			);
+		},
+		save: function( props ) {
+            return el(
+				'div',
+				{ className:"col-md-4"},
+				'',
+				el( 'div', { style: {  }  }, el( InnerBlocks.Content ) ),
+				''
+			);
+		},
+	} )
+} ) (
+	window.wp.blocks,
+	window.wp.blockEditor,
+	window.wp.element,
+);
+
+( function(
+	blocks,
+	blockEditor,
+	element,
+) {
+	var el = element.createElement;
+	var InnerBlocks = blockEditor.InnerBlocks;
+	blocks.registerBlockType( 'mwp/inner-blocks5', {
+		title: 'bootstrap col 5',
+		category: 'layout',
+		attributes: {},
+		edit: function( props ) {
+			return el(
+				'div',
+				{ },
+				'',
+				el( 'div', { style: {  }  }, el( InnerBlocks ) ),
+				''
+			);
+		},
+		save: function( props ) {
+            return el(
+				'div',
+				{ className:"col-md-5"},
+				'',
+				el( 'div', { style: {  }  }, el( InnerBlocks.Content ) ),
+				''
+			);
+		},
+	} )
+} ) (
+	window.wp.blocks,
+	window.wp.blockEditor,
+	window.wp.element,
+);
+
+( function(
+	blocks,
+	blockEditor,
+	element,
+) {
+	var el = element.createElement;
+	var InnerBlocks = blockEditor.InnerBlocks;
+	blocks.registerBlockType( 'mwp/inner-blocks6', {
+		title: 'bootstrap col 6',
+		category: 'layout',
+		attributes: {},
+		edit: function( props ) {
+			return el(
+				'div',
+				{ },
+				'',
+				el( 'div', { style: {  }  }, el( InnerBlocks ) ),
+				''
+			);
+		},
+		save: function( props ) {
+            return el(
+				'div',
+				{ className:"col-md-6"},
+				'',
+				el( 'div', { style: {  }  }, el( InnerBlocks.Content ) ),
+				''
+			);
+		},
+	} )
+} ) (
+	window.wp.blocks,
+	window.wp.blockEditor,
+	window.wp.element,
+);
+
+( function(
+	blocks,
+	blockEditor,
+	element,
+) {
+	var el = element.createElement;
+	var InnerBlocks = blockEditor.InnerBlocks;
+	blocks.registerBlockType( 'mwp/inner-blocks7', {
+		title: 'bootstrap col 7',
+		category: 'layout',
+		attributes: {},
+		edit: function( props ) {
+			return el(
+				'div',
+				{ },
+				'',
+				el( 'div', { style: {  }  }, el( InnerBlocks ) ),
+				''
+			);
+		},
+		save: function( props ) {
+            return el(
+				'div',
+				{ className:"col-md-7"},
+				'',
+				el( 'div', { style: {  }  }, el( InnerBlocks.Content ) ),
+				''
+			);
+		},
+	} )
+} ) (
+	window.wp.blocks,
+	window.wp.blockEditor,
+	window.wp.element,
+);
+
+( function(
+	blocks,
+	blockEditor,
+	element,
+) {
+	var el = element.createElement;
+	var InnerBlocks = blockEditor.InnerBlocks;
+	blocks.registerBlockType( 'mwp/inner-blocks8', {
+		title: 'bootstrap col 8',
+		category: 'layout',
+		attributes: {},
+		edit: function( props ) {
+			return el(
+				'div',
+				{},
+				'',
+				el( 'div', { style: {  }  }, el( InnerBlocks ) ),
+				''
+			);
+		},
+		save: function( props ) {
+            return el(
+				'div',
+				{ className:"col-md-8"},
+				'',
+				el( 'div', { style: {  }  }, el( InnerBlocks.Content ) ),
+				''
+			);
+		},
+	} )
+} ) (
+	window.wp.blocks,
+	window.wp.blockEditor,
+	window.wp.element,
+);
+( function(
+	blocks,
+	blockEditor,
+	element,
+) {
+	var el = element.createElement;
+	var InnerBlocks = blockEditor.InnerBlocks;
+	blocks.registerBlockType( 'mwp/inner-blocks9', {
+		title: 'bootstrap col 9',
+		category: 'layout',
+		attributes: {},
+		edit: function( props ) {
+			return el(
+				'div',
+				{ },
+				'',
+				el( 'div', { style: {  }  }, el( InnerBlocks ) ),
+				''
+			);
+		},
+		save: function( props ) {
+            return el(
+				'div',
+				{ className:"col-md-9"},
+				'',
+				el( 'div', { style: {  }  }, el( InnerBlocks.Content ) ),
+				''
+			);
+		},
+	} )
+} ) (
+	window.wp.blocks,
+	window.wp.blockEditor,
+	window.wp.element,
+);
+
+( function(
+	blocks,
+	blockEditor,
+	element,
+) {
+	var el = element.createElement;
+	var InnerBlocks = blockEditor.InnerBlocks;
+	blocks.registerBlockType( 'mwp/inner-blocks10', {
+		title: 'bootstrap col 10',
+		category: 'layout',
+		attributes: {},
+		edit: function( props ) {
+			return el(
+				'div',
+				{ },
+				'',
+				el( 'div', { style: {  }  }, el( InnerBlocks ) ),
+				''
+			);
+		},
+		save: function( props ) {
+            return el(
+				'div',
+				{ className:"col-md-10"},
+				'',
+				el( 'div', { style: {  }  }, el( InnerBlocks.Content ) ),
+				''
+			);
+		},
+	} )
+} ) (
+	window.wp.blocks,
+	window.wp.blockEditor,
+	window.wp.element,
+);
+( function(
+	blocks,
+	blockEditor,
+	element,
+) {
+	var el = element.createElement;
+	var InnerBlocks = blockEditor.InnerBlocks;
+	blocks.registerBlockType( 'mwp/inner-blocks11', {
+		title: 'bootstrap col 11',
+		category: 'layout',
+		attributes: {},
+		edit: function( props ) {
+			return el(
+				'div',
+				{},
+				'',
+				el( 'div', { style: {  }  }, el( InnerBlocks ) ),
+				''
+			);
+		},
+		save: function( props ) {
+            return el(
+				'div',
+				{ className:"col-md-11"},
+				'',
+				el( 'div', { style: {  }  }, el( InnerBlocks.Content ) ),
+				''
+			);
+		},
+	} )
+} ) (
+	window.wp.blocks,
+	window.wp.blockEditor,
+	window.wp.element,
+);
+
+( function(
+	blocks,
+	blockEditor,
+	element,
+) {
+	var el = element.createElement;
+	var InnerBlocks = blockEditor.InnerBlocks;
+	blocks.registerBlockType( 'mwp/inner-blocks12', {
+		title: 'bootstrap col 12',
+		category: 'layout',
+		attributes: {},
+		edit: function( props ) {
+			return el(
+				'div',
+				{ },
+				'',
+				el( 'div', { style: {  }  }, el( InnerBlocks ) ),
+				''
+			);
+		},
+		save: function( props ) {
+            return el(
+				'div',
+				{ className:"col-md-12"},
+				'',
+				el( 'div', { style: {  }  }, el( InnerBlocks.Content ) ),
+				''
+			);
+		},
+	} )
+} ) (
+	window.wp.blocks,
+	window.wp.blockEditor,
+	window.wp.element,
+);
+
+
+( function(
+	blocks,
+	blockEditor,
+	element,
+) {
+	var el = element.createElement;
+	var InnerBlocks = blockEditor.InnerBlocks;
+	blocks.registerBlockType( 'mwp/inner-container', {
+		title: 'bootstrap container',
+		category: 'layout',
+		attributes: {},
+		edit: function( props ) {
+			return el(
+				'div',
+				{ },
+				'',
+				 el( InnerBlocks ) ,
+				''
+			);
+		},
+		save: function( props ) {
+            return el(
+				'div',
+				{ className:"container"},
+				'',
+				 el( InnerBlocks.Content ),
+				''
+			);
+		},
+	} )
+} ) (
+	window.wp.blocks,
+	window.wp.blockEditor,
+	window.wp.element,
+);
+
+//container fluid
+( function(
+	blocks,
+	blockEditor,
+	element,
+) {
+	var el = element.createElement;
+	var InnerBlocks = blockEditor.InnerBlocks;
+	blocks.registerBlockType( 'mwp/inner-container-fluid', {
+		title: 'bootstrap container-fluid',
+		category: 'layout',
+		attributes: {},
+		edit: function( props ) {
+			return el(
+				'div',
+				{ },
+				'',
+				 el( InnerBlocks ) ,
+				''
+			);
+		},
+		save: function( props ) {
+            return el(
+				'div',
+				{ className:"container-fluid"},
+				'',
+				 el( InnerBlocks.Content ),
+				''
+			);
+		},
+	} )
+} ) (
+	window.wp.blocks,
+	window.wp.blockEditor,
+	window.wp.element,
+);
+
+
+//row bootstrap
+
+( function(
+	blocks,
+	blockEditor,
+	element,
+) {
+	var el = element.createElement;
+	var InnerBlocks = blockEditor.InnerBlocks;
+	blocks.registerBlockType( 'mwp/inner-row', {
+		title: 'bootstrap row',
+		category: 'layout',
+		attributes: {},
+		edit: function( props ) {
+			return el(
+				'div',
+				{ },
+				'',
+				 el( InnerBlocks ) ,
+				''
+			);
+		},
+		save: function( props ) {
+            return el(
+				'div',
+				{ className:"row"},
+				'',
+				 el( InnerBlocks.Content ),
+				''
+			);
+		},
+	} )
+} ) (
+	window.wp.blocks,
+	window.wp.blockEditor,
+	window.wp.element,
+);
+        </script>
 <!-- jQuery 3 -->
 <script src="/backend/bower_components/jquery/dist/jquery.min.js"></script>
 <!-- jQuery UI 1.11.4 -->
@@ -100,5 +624,5 @@
 
 
 
-           
-       
+
+
