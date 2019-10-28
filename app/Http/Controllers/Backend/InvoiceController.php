@@ -17,7 +17,7 @@ class InvoiceController extends Controller
     {
         $facturas = Payment::orderBy('id','desc')->get();
 
-        return view('Backend.invoice.index',['facturas'=>$facturas]);
+        return view('backend.invoice.index',['facturas'=>$facturas]);
     }
 
     /**
@@ -62,7 +62,7 @@ class InvoiceController extends Controller
     {
         $factura = Payment::find($id);
 
-        return view('Backend.invoice.edit',['factura'=>$factura]);
+        return view('backend.invoice.edit',['factura'=>$factura]);
     }
 
     /**

@@ -19,7 +19,7 @@ class ProductController extends Controller
     {
         $productos = Product::orderBy('id','desc')->get();
 
-        return view('Backend.product.index',['productos'=>$productos]);
+        return view('backend.product.index',['productos'=>$productos]);
     }
 
     /**
@@ -30,7 +30,7 @@ class ProductController extends Controller
     public function create()
     {
         $categorias = Category::orderBy('name','desc')->get();
-        return view('Backend.product.create',['categorias'=>$categorias]);
+        return view('backend.product.create',['categorias'=>$categorias]);
     }
 
     /**
@@ -87,7 +87,7 @@ class ProductController extends Controller
       $categorias = Category::orderBy('name','desc')->get();
 
 
-      return view('Backend.product.edit',['product'=>$product,'categorias'=>$categorias]);
+      return view('backend.product.edit',['product'=>$product,'categorias'=>$categorias]);
     }
 
 

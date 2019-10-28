@@ -15,7 +15,7 @@ class MediaController extends Controller
     public function index()
     {
         $mediafiles = Multimedia::orderBy('id','desc')->get();
-        return view('Backend.media.index',['$mediafiles'=>$mediafiles]);
+        return view('backend.media.index',['$mediafiles'=>$mediafiles]);
     }
 
     /**

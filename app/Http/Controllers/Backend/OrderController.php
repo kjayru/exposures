@@ -17,7 +17,7 @@ class OrderController extends Controller
     public function index()
     {
         $ordenes = Order::orderBy('id','desc')->get();
-        return view('Backend.order.index',['ordenes'=>$ordenes]);
+        return view('backend.order.index',['ordenes'=>$ordenes]);
     }
 
 
@@ -25,7 +25,7 @@ class OrderController extends Controller
     {
         $order = Order::find($id);
         $previous = url()->previous();
-        return view('Backend.order.edit',['orden'=>$order,'previous'=>$previous]);
+        return view('backend.order.edit',['orden'=>$order,'previous'=>$previous]);
     }
 
 

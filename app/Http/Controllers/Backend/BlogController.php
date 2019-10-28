@@ -16,7 +16,7 @@ class BlogController extends Controller
     public function index()
     {
         $posts = Post::orderBy('id','desc')->get();
-        return view('Backend.blog.index',['posts'=>$posts]);
+        return view('backend.blog.index',['posts'=>$posts]);
     }
 
     /**
@@ -26,7 +26,7 @@ class BlogController extends Controller
      */
     public function create()
     {
-       
+
     }
 
     /**
@@ -85,5 +85,5 @@ class BlogController extends Controller
         //
     }
 
-    
+
 }
