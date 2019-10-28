@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Backend;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Str;
 use App\Category;
 
 class CategoryController extends Controller
@@ -26,7 +27,7 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        //
+        return view('Backend.category.create');
     }
 
     /**
@@ -37,7 +38,23 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+      $request->validate([
+          'nombre' => 'required',
+          'titulo' => 'required',
+      ]);
+
+       $category =  new Category();
+
+
+       $category->name = $request->nombre;
+       $category->slug = Str::slug($request->nombre, '-');
+       $category->title =  $request->titulo;
+       $category->save();
+
+
+
+      return redirect()->route('category.edit',['id'=>$category->id])
+     ->with('info','Categoria creada satisfactoriamente');
     }
 
     /**
@@ -59,7 +76,8 @@ class CategoryController extends Controller
      */
     public function edit($id)
     {
-        //
+        $categoria = Category::find($id);
+        return view('Backend.category.edit',['categoria'=>$categoria]);
     }
 
     /**
@@ -71,7 +89,25 @@ class CategoryController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+
+
+        $request->validate([
+            'nombre' => 'required',
+            'titulo' => 'required',
+        ]);
+
+         $category =  Category::find($id);
+
+
+         $category->name = $request->nombre;
+         $category->slug = Str::slug($request->nombre, '-');
+         $category->title =  $request->titulo;
+         $category->save();
+
+
+
+        return redirect()->route('category.edit',['id'=>$id])
+       ->with('info','Categoria actualizada satisfactoriamente');
     }
 
     /**

@@ -354,3 +354,16 @@ $(function () {
 })
 
 
+//implementacion
+
+$(".btn-modificar-imagen").on('click',function(e){
+    e.preventDefault();
+
+    $(this).parent('div').parent('div').children(".thumbnail").hide();
+    $(this).parent('div').parent('div').children("#imagen").show();
+})
+
+$(".btn-object-delete").on("click", function(){
+    let id = $(this).data('id');
+    $(".delete-objeto input[name='id']").val(id);
+  });

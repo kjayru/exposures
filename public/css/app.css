@@ -10728,3 +10728,7 @@ li.nav-item.copy {
   border-top: 2px solid #0371bc;
 }
 
+.thumbnail {
+  width: 50px;
+}
+

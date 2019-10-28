@@ -616,7 +616,7 @@
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="/backend/js/pages/dashboard.js"></script>
 <!-- AdminLTE for demo purposes -->
-<script src="/backend/js/demo.js"></script>
+<script src="/backend/js/demo.js?v={{uniqid()}}"></script>
 </body>
 </html>
 

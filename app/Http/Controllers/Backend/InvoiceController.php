@@ -60,7 +60,9 @@ class InvoiceController extends Controller
      */
     public function edit($id)
     {
-        //
+        $factura = Payment::find($id);
+
+        return view('Backend.invoice.edit',['factura'=>$factura]);
     }
 
     /**
