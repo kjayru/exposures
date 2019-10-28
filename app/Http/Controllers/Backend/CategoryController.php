@@ -17,7 +17,7 @@ class CategoryController extends Controller
     public function index()
     {
         $categorias = Category::orderBy('id','desc')->get();
-        return view('Backend.category.index',['categorias'=>$categorias]);
+        return view('backend.category.index',['categorias'=>$categorias]);
     }
 
     /**
@@ -45,14 +45,10 @@ class CategoryController extends Controller
 
        $category =  new Category();
 
-
        $category->name = $request->nombre;
        $category->slug = Str::slug($request->nombre, '-');
        $category->title =  $request->titulo;
        $category->save();
-
-
-
       return redirect()->route('category.edit',['id'=>$category->id])
      ->with('info','Categoria creada satisfactoriamente');
     }
@@ -89,7 +85,6 @@ class CategoryController extends Controller
      */
     public function update(Request $request, $id)
     {
-
 
         $request->validate([
             'nombre' => 'required',

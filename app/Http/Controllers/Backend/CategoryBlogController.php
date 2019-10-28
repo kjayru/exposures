@@ -15,7 +15,6 @@ class CategoryBlogController extends Controller
     public function index()
     {
         $categorias = CategoryBlog::orderBy('id','desc')->get();
-
         return view('backend.categoryblog.index',['categorias'=>$categorias]);
     }
 
