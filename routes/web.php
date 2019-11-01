@@ -57,6 +57,15 @@ Route::group(['prefix' => 'admin'],function(){
     Route::get('/invoices/{invoice}/edit', 'Backend\InvoiceController@edit')->name('invoice.edit');
     Route::delete('/invoices/{invoice}', 'Backend\InvoiceController@destroy')->name('invoice.destroy');
 
+
+    Route::get('/media', 'Backend\MediaController@index')->name('media.index');
+    Route::get('/media/create', 'Backend\MediaController@create')->name('media.create');
+    Route::delete('/media/{media}', 'Backend\MediaController@destroy')->name('media.destroy');
+    Route::post('/media', 'Backend\MediaController@store')->name('media.store');
+    Route::post('media/savephoto','Backend\MediaController@savephoto')->name('media.savephoto');
+
+
+
     /*Route::resource('/categories', 'CategoryController')->except(['show'])->names([
         'index'  => 'category.index',
         'create' => 'category.build',
@@ -67,20 +76,39 @@ Route::group(['prefix' => 'admin'],function(){
     ]);*/
 
 
-    //Route::get('/orders', 'Backend\OrderController@index')->name('order');
-    //Route::get('/invoices', 'Backend\InvoiceController@index')->name('order');
-
     Route::get('/pages', 'Backend\PageController@index')->name('pages');
     Route::get('/pages/{id}/edit', 'Backend\PageController@edit')->name('pages.edit');
     Route::post('/pages','Backend\PageController@store')->name('pages.store');
     Route::put('pages/{id}','Backend\PageController@update')->name('pages.update');
 
 
-    Route::get('/blog', 'Backend\BlogController@index')->name('blogs');
-    Route::get('/media', 'Backend\MediaController@index')->name('multimedia');
-    Route::get('/category-blog', 'Backend\CategoryBLogController@index')->name('categoryBlog');
-    Route::get('/posts', 'Backend\BLogController@index')->name('post');
+
+    Route::get('/category-blog', 'Backend\CategoryBLogController@index')->name('catblog.index');
+    Route::get('/category-blog/create', 'Backend\CategoryBLogController@create')->name('catblog.created');
+    Route::post('/category-blog', 'Backend\CategoryBLogController@store')->name('catblog.store');
+    Route::get('/category-blog/{catblog}/edit', 'Backend\CategoryBLogController@edit')->name('catblog.edit');
+    Route::put('/category-blog/{catblog}', 'Backend\CategoryBLogController@update')->name('catblog.update');
+    Route::delete('/category-blog/{catblog}', 'Backend\CategoryBLogController@destroy')->name('catblog.destroy');
+
+
+
+    Route::get('/testimonials', 'Backend\TestimonyController@index')->name('testimony.index');
+    Route::get('/testimonials/create', 'Backend\TestimonyController@create')->name('testimony.created');
+    Route::post('/testimonials', 'Backend\TestimonyController@store')->name('testimony.store');
+    Route::get('/testimonials/{testimony}/edit', 'Backend\TestimonyController@edit')->name('testimony.edit');
+    Route::put('/testimonials/{testimony}', 'Backend\TestimonyController@update')->name('testimony.update');
+    Route::delete('/testimonials/{testimony}', 'Backend\TestimonyController@destroy')->name('testimony.destroy');
+
+
+    Route::get('/posts', 'Backend\BLogController@index')->name('post.index');
+
+    Route::get('/posts/create', 'Backend\BLogController@create')->name('post.created');
+    Route::post('/posts', 'Backend\BLogController@store')->name('post.store');
+    Route::get('/posts/{testimony}/edit', 'Backend\BLogController@edit')->name('post.edit');
+    Route::put('/posts/{testimony}', 'Backend\BLogController@update')->name('post.update');
+    Route::delete('/posts/{testimony}', 'Backend\BLogController@destroy')->name('post.destroy');
 });
+
 
 Route::group(['prefix' => 'outlet'],function(){
     Route::get('/', 'Frontend\OutletController@index')->name('dashboard');

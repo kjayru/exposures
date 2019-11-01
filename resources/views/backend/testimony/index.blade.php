@@ -6,62 +6,82 @@
         <!-- Content Header (Page header) -->
         <section class="content-header">
           <h1>
-            Categorias Blog
-            <small>Control panel</small>
+            Paginas
+            <small>Gestión de contenido</small>
           </h1>
           <ol class="breadcrumb">
             <li><a href="#"><i class="fa fa-dashboard"></i> Inicio</a></li>
-            <li class="active">Blog</li>
+            <li class="active">Paginas</li>
           </ol>
         </section>
 
+
         <section class="content">
+
+
+
           <div class="row">
 
             <div class="col-xs-12">
               <div class="box">
                 <div class="box-header with-border">
-                    <h3 class="box-title">Categorias blog</h3>
-                    <a href="{{ route('catblog.created')}}" class="btn btn-primary pull-right">Crear</a>
+                  <h3 class="box-title">Testimonios</h3>
+                  <a href="{{ route('testimony.created')}}" class="btn btn-primary pull-right">Crear</a>
                 </div>
                 <!-- /.box-header -->
                 <div class="box-body">
+
                   <table id="example2" class="table table-bordered table-hover">
                     <thead>
                     <tr>
                       <th></th>
                       <th>Nombre</th>
-                      <th>Slug</th>
-                      <th></th>
+                      <th>Foto</th>
+                      <th>Categoria</th>
+                      <th>Facebook</th>
+                      <th>Twitter</th>
                     </tr>
                     </thead>
                     <tbody>
-                      @foreach($categorias as $k =>$cat)
+                      @foreach($testimonials as $k => $testimony)
                     <tr>
-                      <th>{{$k +1}}</th>
-                      <td>{{ $cat->name}}</td>
+                      <td>{{$k+1}}</td>
 
-                      <td>{{$cat->slug}}</td>
-                      <th>
-                          <a href="{{ route('catblog.edit',['id'=>$cat->id]) }}" class="btn btn-xs btn-primary">Editar</a>
-                          <a href="#" data-id="{{ $cat->id }}" data-toggle="modal" data-target="#delobjeto" class="btn btn-xs btn-danger btn-object-delete">Borrar</a>
-                        </th>
+                      <td> {{@$testimony->nombres}} </td>
+                      <td>
+                          <div class="thumbnail"> <img src="/storage/{{@$testimony->foto}}" width="50" class=""> </div></td>
+                      <td> {{@$testimony->categoria}} </td>
+                      <td> {{@$testimony->facebook}} </td>
+                      <td> {{@$testimony->twitter}} </td>
+                      <td>
+                        <a href="/admin/testimonials/{{ $testimony->id }}/edit" class="btn btn-xs btn-primary">Editar</a>
+                        <a href="#" data-id="{{ $testimony->id }}" data-toggle="modal" data-target="#delobjeto" class="btn btn-xs btn-danger btn-object-delete">Borrar</a>
+                      </td>
                     </tr>
                     @endforeach
+
+                    </tbody>
+
                   </table>
                 </div>
                 <!-- /.box-body -->
               </div>
               <!-- /.box -->
+
+
             </div>
+
           </div>
+
+
         </section>
+
       </div>
 
-      <div class="modal modal-danger fade in" id="delobjeto">
+        <div class="modal modal-danger fade in" id="delobjeto">
             <div class="modal-dialog">
                 <div class="modal-content">
-                    <form class="delete-objeto" action="/admin/category-blog/delete" method="POST">
+                    <form class="delete-objeto" action="/admin/testimonials/delete" method="POST">
                         @csrf
                             <div class="modal-header">
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -83,6 +103,5 @@
                 <!-- /.modal-content -->
             </div>
         </div>
-
 
 @endsection

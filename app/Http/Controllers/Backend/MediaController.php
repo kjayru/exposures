@@ -15,7 +15,8 @@ class MediaController extends Controller
     public function index()
     {
         $mediafiles = Multimedia::orderBy('id','desc')->get();
-        return view('backend.media.index',['$mediafiles'=>$mediafiles]);
+
+        return view('backend.media.index',["mediafiles"=>$mediafiles]);
     }
 
     /**
@@ -25,7 +26,8 @@ class MediaController extends Controller
      */
     public function create()
     {
-        //
+
+        return view('backend.media.create');
     }
 
     /**
@@ -36,7 +38,20 @@ class MediaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        $request->validate([
+            'file'=>'required|mimes:jpeg,png'
+        ]);
+
+        $media = new Multimedia();
+
+        $file = $request->file('file')->store('products');
+        $media->file = $file;
+
+        $media->save();
+
+
+        return response()->json($media);
     }
 
     /**
@@ -81,6 +96,23 @@ class MediaController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Multimedia::find($id)->delete();
+         return response()->json(['rpta'=>'ok']);
     }
+
+    public function savephoto(Request $request){
+        $request->validate([
+            'file'=>'required|mimes:jpeg,png'
+        ]);
+
+        $media = new Multimedia();
+        $file = $request->file('file')->store('products');
+        $media->file = $file;
+
+        $media->save();
+
+
+        return response()->json(['rpta'=>'ok']);
+    }
+
 }

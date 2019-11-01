@@ -35,18 +35,17 @@
             <div class="box-header with-border">
               <h3 class="box-title">Nuevo Producto</h3>
             </div>
-              <div class="box-body">
+            <div class="box-body">
                 @csrf
 
 
                 @include('backend.product.form.index')
 
-              </div>
-
-              <div class="box-footer">
-                <button type="submit" class="btn btn-default">Cancelar</button>
+            </div>
+            <div class="box-footer">
+                    <a href="{{ URL::previous() }}" class="btn btn-default">Cancelar</a>
                 <button type="submit" class="btn btn-info pull-right">Guardar</button>
-              </div>
+            </div>
           </form>
 
 

@@ -6,12 +6,12 @@
         <!-- Content Header (Page header) -->
         <section class="content-header">
           <h1>
-            Dashboard
+            Testimonio
             <small>Control panel</small>
           </h1>
           <ol class="breadcrumb">
             <li><a href="#"><i class="fa fa-dashboard"></i> Inicio</a></li>
-            <li class="active">Dashboard</li>
+            <li class="active">Testimonio</li>
           </ol>
         </section>
 
@@ -37,22 +37,22 @@
                     </div>
                 @endif
 
-              <form class="form-horizontal" action="{{ route('category.update',$categoria->id) }}" method="POST" enctype="multipart/form-data">
+              <form class="form-horizontal" action="{{ route('testimony.update',$testimony->id) }}" method="POST" enctype="multipart/form-data">
                 <div class="box-header with-border">
-                  <h3 class="box-title">Editar Categoria</h3>
+                  <h3 class="box-title">Editar Testimonio</h3>
                 </div>
-                  <div class="box-body">
+                <div class="box-body">
 
                     @csrf
                     <input type="hidden" name="_method" value="PUT">
 
-                    @include('backend.category.form.index')
+                    @include('backend.testimony.form.index')
 
-                  </div>
-                  <div class="box-footer">
+                </div>
+                <div class="box-footer">
                         <a href="{{ URL::previous() }}" class="btn btn-default">Cancelar</a>
                     <button type="submit" class="btn btn-info pull-right">Guardar</button>
-                  </div>
+                </div>
               </form>
 
 

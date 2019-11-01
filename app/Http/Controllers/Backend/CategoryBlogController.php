@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Backend;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\CategoryBlog;
+use Illuminate\Support\Str;
+
 class CategoryBlogController extends Controller
 {
     /**
@@ -25,7 +27,8 @@ class CategoryBlogController extends Controller
      */
     public function create()
     {
-        //
+
+        return view('backend.categoryblog.create');
     }
 
     /**
@@ -36,19 +39,19 @@ class CategoryBlogController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'name' => 'required|min:3'
+        ]);
+
+        $categoria = new CategoryBlog();
+        $categoria->name = $request->name;
+        $categoria->slug = Str::slug($request->name, '-');
+        $categoria->save();
+
+        return redirect()->route('catblog.edit',['id'=>$categoria->id])->with(['info'=>'Categoria blog creada']);
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
+
 
     /**
      * Show the form for editing the specified resource.
@@ -58,7 +61,9 @@ class CategoryBlogController extends Controller
      */
     public function edit($id)
     {
-        //
+        $categoria = CategoryBlog::find($id);
+
+        return view('backend.categoryblog.edit',['categoria'=>$categoria]);
     }
 
     /**
@@ -70,7 +75,16 @@ class CategoryBlogController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $request->validate([
+            'name' => 'required|min:3'
+        ]);
+
+        $categoria = CategoryBlog::find($id);
+        $categoria->name = $request->name;
+        $categoria->slug = Str::slug($request->name, '-');
+        $categoria->save();
+
+        return redirect()->route('catblog.edit',['id'=>$id])->with(['info'=>'Categoria blog actualizada']);
     }
 
     /**
@@ -79,8 +93,11 @@ class CategoryBlogController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Request $request)
     {
-        //
+        CategoryBlog::find($request->id)->delete();
+
+        return redirect()->route('catblog.index')
+        ->with('info','Producto eliminado con exito');
     }
 }

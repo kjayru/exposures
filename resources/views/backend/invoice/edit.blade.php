@@ -121,15 +121,11 @@
                                 </div>
                                 <!-- /.row -->
                         </section>
-                    </div>
-
+                </div>
+                <div class="box-footer">
+                        <a href="{{ URL::previous() }}" class="btn btn-default">Cancelar</a>
+                </div>
           </div>
-
-
         </section>
-
       </div>
-
-
-
 @endsection
