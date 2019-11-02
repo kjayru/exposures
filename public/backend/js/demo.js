@@ -1,9 +1,4 @@
-/**
- * AdminLTE Demo Menu
- * ------------------
- * You should not use this file in production.
- * This file is for demo purposes only.
- */
+
 $(function () {
     'use strict'
 
@@ -477,3 +472,33 @@ $(".borrar-media").click(function(e){
     .catch(error => console.error('Error:', error))
     .then(response => console.log('Success:', response));
     });
+
+
+
+    $(".thumimg").on('click',function(e) {
+        e.preventDefault();
+        $(this).toggleClass("seleccionado");
+        $(this).children('.boxmark').children("span").toggleClass("glyphicon-ok").toggleClass("glyphicon");
+      });
+
+
+
+
+$(".seleccionar-thumb").on('click',function(){
+    var htm = '';
+    $(".thumimg").each(function(){
+
+        if($(this).hasClass("seleccionado")){
+            let id = $(this).data('id');
+            let img = $(this).data('path');
+            htm+=`<div class="col-md-2 "><img src="/storage/${img}" width="70" class="thumbnail"><input type="hidden" name="imageid[]" value="${id}"></div>`;
+        }
+    });
+  $(".prodimages").html(htm);
+  $("#modal-default").modal('hide');
+  $(".thumimg").removeClass("seleccionado");
+  $(".thumimg").children('.boxmark').children("span").removeClass("glyphicon-ok");
+  $(".thumimg").children('.boxmark').children("span").removeClass("glyphicon");
+
+  $(".prodimages").before("<p style='display:block; color:red;'>Deber guardar para mantener la selección de imagenes</p>")
+});

@@ -55,5 +55,6 @@
       </div>
 
 
+     @include('layouts.backend.include.productGallery')
 
 @endsection

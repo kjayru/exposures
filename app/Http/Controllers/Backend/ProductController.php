@@ -7,7 +7,9 @@ use App\Http\Controllers\Controller;
 use App\Product;
 use App\Category;
 use Illuminate\Support\Str;
-
+use App\Multimedia;
+use App\MultimediaProduct;
+use App\ProductMultimedia;
 class ProductController extends Controller
 {
     /**
@@ -85,9 +87,9 @@ class ProductController extends Controller
       $product = Product::find($id);
 
       $categorias = Category::orderBy('name','desc')->get();
+    $multimedias = Multimedia::orderBy('id','desc')->get();
 
-
-      return view('backend.product.edit',['product'=>$product,'categorias'=>$categorias]);
+      return view('backend.product.edit',['product'=>$product,'categorias'=>$categorias,'fotos'=>$multimedias]);
     }
 
 
@@ -116,7 +118,10 @@ class ProductController extends Controller
         }
         $product->category_id = $request->category;
         $product->save();
-
+        foreach($request->imageid as $imgid){
+            $producto = Product::findOrFail($id);
+            $product->multimedias()->attach($imgid);
+         }
         return redirect()->route('product.edit',['id'=>$id])
      ->with('info','Producto actualizado satisfactoriamente');
     }

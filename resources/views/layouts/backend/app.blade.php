@@ -65,6 +65,7 @@
 
 <script src="https://unpkg.com/react-dom@16.8.6/umd/react-dom.production.min.js"></script>
 
+
 <script src="{{ asset('vendor/laraberg/js/laraberg.js') }}"></script>
 
 <script>
@@ -618,6 +619,8 @@
 <script src="/backend/js/pages/dashboard.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="/backend/js/dropzone.js"></script>
+
+
 
 <script src="/backend/js/demo.js?v={{uniqid()}}"></script>
 </body>

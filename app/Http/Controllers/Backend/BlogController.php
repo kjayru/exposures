@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Backend;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Post;
+use App\CategoryBlog;
+use Illuminate\Support\Str;
 
 class BlogController extends Controller
 {
@@ -26,7 +28,8 @@ class BlogController extends Controller
      */
     public function create()
     {
-
+        $categorias = CategoryBlog::orderBy('name','desc')->get();
+        return view('backend.blog.create',['categorias'=>$categorias]);
     }
 
     /**
@@ -37,19 +40,27 @@ class BlogController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'title' => 'required|min:3',
+            'excerpt' => 'required',
+            'content' => 'required',
+            'category_blog_id' => 'required'
+        ]);
+
+        $post = new Post();
+        $post->title = $request->title;
+        $post->slug = Str::slug($request->title);
+        $post->excerpt = $request->excerpt;
+        $post->content = $request->content;
+        $post->category_blog_id = $request->category_blog_id;
+
+        $post->save();
+
+        return redirect()->route('post.edit',['id'=>$post->id])
+                ->with(['info'=>'Post creado']);
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
+
 
     /**
      * Show the form for editing the specified resource.
@@ -59,7 +70,10 @@ class BlogController extends Controller
      */
     public function edit($id)
     {
-        //
+        $post = Post::find($id);
+        $categorias = CategoryBlog::orderBy('name','desc')->get();
+
+        return view('backend.blog.edit',['post'=>$post,'categorias'=>$categorias]);
     }
 
     /**
@@ -71,7 +85,24 @@ class BlogController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $request->validate([
+            'title' => 'required|min:3',
+            'excerpt' => 'required',
+            'content' => 'required',
+            'category_blog_id' => 'required'
+        ]);
+
+        $post =  Post::find($id);
+        $post->title = $request->title;
+        $post->slug = Str::slug($request->title);
+        $post->excerpt = $request->excerpt;
+        $post->content = $request->content;
+        $post->category_blog_id = $request->category_blog_id;
+
+        $post->save();
+
+        return redirect()->route('post.edit',['id'=>$id])
+                ->with(['info'=>'Post actualizado satisfactoriamente']);
     }
 
     /**
@@ -80,9 +111,12 @@ class BlogController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Request $request)
     {
-        //
+        Post::find($request->id)->delete();
+
+        return redirect()->route('post.index')
+        ->with('info','Post eliminado con exito');
     }
 
 

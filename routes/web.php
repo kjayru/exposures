@@ -45,7 +45,7 @@ Route::group(['prefix' => 'admin'],function(){
     Route::get('/products', 'Backend\ProductController@index')->name('product.index');
     Route::get('/products/create', 'Backend\ProductController@create')->name('product.build');
     Route::post('/products', 'Backend\ProductController@store')->name('product.store');
-    Route::get('/products/{product}/', 'Backend\ProductController@edit')->name('product.edit');
+    Route::get('/products/{product}/edit', 'Backend\ProductController@edit')->name('product.edit');
     Route::put('/products/{product}', 'Backend\ProductController@update')->name('product.update');
     Route::delete('/products/{product}', 'Backend\ProductController@destroy')->name('product.destroy');
 
@@ -121,3 +121,4 @@ Route::group(['prefix' => 'usuario'],function(){
 Route::group(['prefix' => 'exposure-team'],function(){
     Route::get('/', 'Frontend\ExposureController@index')->name('dashboard');
 });
+

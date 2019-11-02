@@ -49,19 +49,9 @@ class CategoryController extends Controller
        $category->slug = Str::slug($request->nombre, '-');
        $category->title =  $request->titulo;
        $category->save();
+
       return redirect()->route('category.edit',['id'=>$category->id])
      ->with('info','Categoria creada satisfactoriamente');
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
     }
 
     /**
@@ -111,8 +101,11 @@ class CategoryController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Request $request)
     {
-        //
+        Category::find($request->id)->delete();
+
+        return redirect()->route('category.index')
+        ->with('info','Producto eliminado con exito');
     }
 }

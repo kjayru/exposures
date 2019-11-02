@@ -85,4 +85,20 @@
         </div>
     </div>
 
+    <fieldset>
+        <legend>Galeria producto</legend>
+        <div class="form-group">
+            <button type="button" class="btn btn-default" data-toggle="modal" data-target="#modal-default">
+               Seleccionar imagenes
+            </button>
+        </div>
+        <div class="prodimages">
+           @foreach($product->multimedias as $foto)
+            <div class="col-md-2 ">
+                <img src="/storage/{{ $foto->file }}" class="thumbnail" width="70">
+            </div>
+            @endforeach
+        </div>
+    </fieldset>
+
 

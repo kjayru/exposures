@@ -479,3 +479,27 @@
                   border-left: 6px solid transparent;
                   border-right: 6px solid transparent;
                   border-bottom: 6px solid #be2626; }
+
+
+.modal-body .thumbnail .contenedor{
+    height:200px;
+    position: relative;
+    display: block;
+}
+
+.modal-body{
+    overflow: scroll;
+    height: 500px;
+}
+
+.boxmark {
+    position: absolute;
+    top: 0;
+    width: 20PX;
+    height: 20px;
+    left: 0px;
+    border: 1px solid rgba(0,0,0,0.07);
+    padding-left: 2px;
+    color: red;
+}
+

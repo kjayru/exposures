@@ -58,7 +58,7 @@
         </section>
       </div>
 
-      <div class="modal modal-danger fade in" id="delobjeto">
+    <div class="modal modal-danger fade in" id="delobjeto">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <form class="delete-objeto" action="/admin/category-blog/delete" method="POST">
@@ -82,7 +82,7 @@
                 </div>
                 <!-- /.modal-content -->
             </div>
-        </div>
+    </div>
 
 
 @endsection

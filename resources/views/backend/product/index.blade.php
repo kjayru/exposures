@@ -59,7 +59,7 @@
                           <th>{{ $key+1}}</th>
                           <td>{{$product->name}}</td>
                           <td>{{$product->price}}</td>
-                          <td>{{$product->excerpt}}</td>
+                          <td width="15%">{{$product->excerpt}}</td>
                           <td>{{$product->title}}</td>
                           <td><img src="/storage/{{$product->imagen}}" width="50" alt="" srcset=""></td>
                           <td>{{$product->category->name}}</td>
