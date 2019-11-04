@@ -1884,6 +1884,48 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -2001,6 +2043,67 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/MarcasComponent.vue?vue&type=script&lang=js&":
+/*!**************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/MarcasComponent.vue?vue&type=script&lang=js& ***!
+  \**************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      marcas: []
+    };
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/ProductosComponent.vue?vue&type=script&lang=js&":
 /*!*****************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/ProductosComponent.vue?vue&type=script&lang=js& ***!
@@ -2051,6 +2154,47 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -37555,11 +37699,93 @@ var render = function() {
         staticClass: "row justify-content-center",
         domProps: { innerHTML: _vm._s(_vm.contenido.content) }
       },
-      [_vm._v("\n         " + _vm._s(_vm.contenido.content) + "\n    ")]
+      [
+        _vm._m(0),
+        _vm._v(" "),
+        _vm._m(1),
+        _vm._v(" "),
+        _vm._m(2),
+        _vm._v(" "),
+        _vm._m(3),
+        _vm._v("\n             " + _vm._s(_vm.contenido.content) + "\n        ")
+      ]
     )
   ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-md-8" }, [
+      _c("h3", [_vm._v("Nuestra Historia")]),
+      _vm._v(" "),
+      _c("p", [
+        _vm._v(
+          "Exposure nacio bajo el nombre de MR Climbing en Agosto del 2007, su primer y unica marca\n                    comercializada en aquel entonces era Madrock, ¿su primera oficina? el dormitorio de su\n                    fundador, ¿numero de empleados? uno ¿bodega? el cuarto de servicio, lavanderia y hasta\n                    en el comedor... cualquier lugar donde se pudieran apilar cajas. desde ese comienzo\n                    austero hasta el dia de hoy muchas cosas han cambiado, nos mudamos de base pero para ello\n                    aprendimos a soldar y trabajar la madera para construir nuestro nuevo cuartel\n                    (bodega, oficina y gimnasio), la familia creció, llegaron nuevos integrantes a nuestro\n                    equipo tanto proveedores, clientes y compañeros de trabajo, aprendimos a ser mas eficientes,\n                    mas profesionales, mejores cada dia.\n                "
+        )
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-md-8 bloque" }, [
+      _c("p", [
+        _vm._v(
+          '"Da igual nacer en medio de la llanura, donde los Alpes aparecen como un perfil lejano,\n                 o en la ciudad, donde se camina por las profundas trincheras de las calles: si se ha nacido\n                 para la montaña, tarde o temprano nos sentimos atraídos"\n                 '
+        )
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-md-8" }, [
+      _c("p", [
+        _vm._v(
+          "\n                    Actualmente podemos decir con orgullo que estamos consolidados como uno de los\n                    principales proveedores de equipo outdoor a nivel nacional y con una satisfaccion aun\n                    mayor vemos como nuestra pasion sigue en pie, creemos en lo que vendemos porque lo usamos para hacer lo que amamos.\n                "
+        )
+      ]),
+      _vm._v(" "),
+      _c("p", [
+        _vm._v("Nuestra historia se sigue escribiendo....\n                ")
+      ]),
+      _vm._v(" "),
+      _c("img", {
+        staticClass: "img-fluid",
+        attrs: { src: "http://exposure.mx/images/empresa1.jpg" }
+      })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-md-8" }, [
+      _c("h3", [_vm._v("¿Qué hace Exposure?")]),
+      _vm._v(" "),
+      _c("p", [
+        _vm._v(
+          "Como comerciantes:\nSomos distribuidores mayoristas a nivel nacional de prestigiosas marcas especializadas en la practica de deportes outdoor.\n"
+        )
+      ]),
+      _c("p", [
+        _vm._v(
+          "\nComo usuarios:\nLa familia exposure esta conformada por apasionados de las montañas y es por eso que somos usuarios de todo lo que vendemos, conocemos cada pieza que comercializamos perfectamente porque cada fin de semana, cada viaje cada oportunidad las llevamos con nosotros para practicar nuestro deporte. la experiencia que nos brinda esto es enorme y la ponemos al servicio de nuestros clientes brindando asesoria especializada de todos nuestros productos para ofrecer la solucion mas adecuada a las particulares necesidades de cada cliente\n"
+        )
+      ]),
+      _vm._v(" "),
+      _c("p", [
+        _vm._v(
+          "\nComo miembros de la comunidad:\nNuestro compromiso con el deporte es constante, somos activos miembros de la comunidad aportando apoyo a todo tipo de evento relacionado con nuestros deportes, asi mismo ayudamos a jovenes atletas y desarrolladores de zonas a realizar sus metas y ellos nos apoyan a nosotros representando con entusiasmo nuestras marcas."
+        )
+      ])
+    ])
+  }
+]
 render._withStripped = true
 
 
@@ -37689,6 +37915,99 @@ render._withStripped = true
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/MarcasComponent.vue?vue&type=template&id=0923432a&":
+/*!******************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/MarcasComponent.vue?vue&type=template&id=0923432a& ***!
+  \******************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _vm._m(0)
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("section", { attrs: { id: "testimonio" } }, [
+      _c("div", { staticClass: "container-fluid" }, [
+        _c("div", { staticClass: "row justify-content-center" }, [
+          _c("div", { staticClass: "col-md-8" }, [
+            _c("h3", [_vm._v("MARCAS PARTICIPANTES")]),
+            _vm._v(" "),
+            _c("div", { staticClass: "row" }, [
+              _c("div", { staticClass: "col-md-2" }, [
+                _c("img", {
+                  staticClass: "img-fluid",
+                  attrs: {
+                    src: "http://exposure.mx/images/logo-black-diamond-200.png"
+                  }
+                })
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-md-2" }, [
+                _c("img", {
+                  staticClass: "img-fluid",
+                  attrs: {
+                    src: "http://exposure.mx/images/logo-black-diamond-200.png"
+                  }
+                })
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-md-2" }, [
+                _c("img", {
+                  staticClass: "img-fluid",
+                  attrs: {
+                    src: "http://exposure.mx/images/logo-black-diamond-200.png"
+                  }
+                })
+              ])
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-md-8" }, [
+            _c("div", { staticClass: "row" }, [
+              _c("div", { staticClass: "col-md-6" }, [
+                _c("h3", [_vm._v("Marca que apoyamos")]),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-md-4" }, [
+                  _c("img", {
+                    staticClass: "img-fluid",
+                    attrs: { src: "http://exposure.mx/images/naturalia.png" }
+                  })
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-md-6" }, [
+                _c("h3", [_vm._v("Sigamos conectados")]),
+                _vm._v(" "),
+                _c("p", [
+                  _vm._v(
+                    'Si quieren pedir consejo directamente a alguno de nuestros atletas siganos\n                         en fb "Exposure Climbing Team" o al fb "Exposure Industria y Montaña" donde\n                         con gusto responderemos sus dudas'
+                  )
+                ])
+              ])
+            ])
+          ])
+        ])
+      ])
+    ])
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/ProductosComponent.vue?vue&type=template&id=0c04ebd5&":
 /*!*********************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/ProductosComponent.vue?vue&type=template&id=0c04ebd5& ***!
@@ -37748,7 +38067,69 @@ var staticRenderFns = [
       _c("div", { staticClass: "container-fluid" }, [
         _c("div", { staticClass: "row justify-content-center" }, [
           _c("div", { staticClass: "col-md-8" }, [
-            _c("p", [_vm._v("TESTIMONIOS")])
+            _c("h3", [_vm._v("TESTIMONIOS")]),
+            _vm._v(
+              "\n                Que mejor que escuchar recomendaciones de boca de los expertos, en esta seccion podran encontrar reseñas y consejos del equipo que ya esta siendo sometido a las mas duras pruebas de campo a manos de nuestro equipo de atletas.\n                "
+            ),
+            _c("div", { staticClass: "row" }, [
+              _c("div", { staticClass: "testimonio col-md-6" }, [
+                _c("div", { staticClass: "testimonio-header" }, [
+                  _c("div", { staticClass: "testImg" }, [
+                    _c("img", {
+                      staticClass: "img-fluid",
+                      attrs: {
+                        src: "http://exposure.mx/images/testimonios/test1.jpg"
+                      }
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "datos" }, [
+                    _c("span", { staticClass: "titulo" }, [
+                      _vm._v("THE RUNNER")
+                    ]),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "nombre" }, [
+                      _vm._v("ISABEL BOLIVAR")
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "testimonio-body" }, [
+                  _vm._v(
+                    "\n                            Estoy enamorada de SoiLL, desde los diseños poco comunes hasta su cómoda forma pero sumamente técnica,\n                            los Runner y Runner LV han logrado adaptarse perfectamente a mis pies y a todo terreno.\n                            En mi caso, he tenido la oportunidad de usarlos tanto en la roca como en los entrenamientos\n                            en el muro y su rendimiento es increíble.\n                            Está claro que SoiLL llegó para quedarse.\n                        "
+                  )
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "testimonio col-md-6" }, [
+                _c("div", { staticClass: "testimonio-header" }, [
+                  _c("div", { staticClass: "testImg" }, [
+                    _c("img", {
+                      staticClass: "img-responsive",
+                      attrs: {
+                        src: "http://exposure.mx/images/testimonios/test1.jpg"
+                      }
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "datos" }, [
+                    _c("span", { staticClass: "titulo" }, [
+                      _vm._v("THE RUNNER")
+                    ]),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "nombre" }, [
+                      _vm._v("ISABEL BOLIVAR")
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "testimonio-body" }, [
+                  _vm._v(
+                    "\n                            Estoy enamorada de SoiLL, desde los diseños poco comunes hasta su cómoda forma pero sumamente técnica,\n                            los Runner y Runner LV han logrado adaptarse perfectamente a mis pies y a todo terreno.\n                            En mi caso, he tenido la oportunidad de usarlos tanto en la roca como en los entrenamientos\n                            en el muro y su rendimiento es increíble.\n                            Está claro que SoiLL llegó para quedarse.\n                        "
+                  )
+                ])
+              ])
+            ])
           ])
         ])
       ])
@@ -49951,6 +50332,7 @@ Vue.component('productos-component', __webpack_require__(/*! ./components/Produc
 Vue.component('videos-component', __webpack_require__(/*! ./components/VideosComponent.vue */ "./resources/js/components/VideosComponent.vue")["default"]);
 Vue.component('distribuidores-component', __webpack_require__(/*! ./components/DistribuidoresComponent.vue */ "./resources/js/components/DistribuidoresComponent.vue")["default"]);
 Vue.component('contacto-component', __webpack_require__(/*! ./components/ContactoComponent.vue */ "./resources/js/components/ContactoComponent.vue")["default"]);
+Vue.component('marca-component', __webpack_require__(/*! ./components/MarcasComponent.vue */ "./resources/js/components/MarcasComponent.vue")["default"]);
 var app = new Vue({
   el: '#app'
 });
@@ -50493,6 +50875,75 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ItemComponent_vue_vue_type_template_id_70c3fdcf___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ItemComponent_vue_vue_type_template_id_70c3fdcf___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/MarcasComponent.vue":
+/*!*****************************************************!*\
+  !*** ./resources/js/components/MarcasComponent.vue ***!
+  \*****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _MarcasComponent_vue_vue_type_template_id_0923432a___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./MarcasComponent.vue?vue&type=template&id=0923432a& */ "./resources/js/components/MarcasComponent.vue?vue&type=template&id=0923432a&");
+/* harmony import */ var _MarcasComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./MarcasComponent.vue?vue&type=script&lang=js& */ "./resources/js/components/MarcasComponent.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _MarcasComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _MarcasComponent_vue_vue_type_template_id_0923432a___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _MarcasComponent_vue_vue_type_template_id_0923432a___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/MarcasComponent.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/MarcasComponent.vue?vue&type=script&lang=js&":
+/*!******************************************************************************!*\
+  !*** ./resources/js/components/MarcasComponent.vue?vue&type=script&lang=js& ***!
+  \******************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_MarcasComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./MarcasComponent.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/MarcasComponent.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_MarcasComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/MarcasComponent.vue?vue&type=template&id=0923432a&":
+/*!************************************************************************************!*\
+  !*** ./resources/js/components/MarcasComponent.vue?vue&type=template&id=0923432a& ***!
+  \************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_MarcasComponent_vue_vue_type_template_id_0923432a___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./MarcasComponent.vue?vue&type=template&id=0923432a& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/MarcasComponent.vue?vue&type=template&id=0923432a&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_MarcasComponent_vue_vue_type_template_id_0923432a___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_MarcasComponent_vue_vue_type_template_id_0923432a___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 

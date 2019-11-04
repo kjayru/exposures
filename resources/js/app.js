@@ -14,6 +14,9 @@ Vue.component('productos-component',require('./components/ProductosComponent.vue
 Vue.component('videos-component',require('./components/VideosComponent.vue').default);
 Vue.component('distribuidores-component',require('./components/DistribuidoresComponent.vue').default);
 Vue.component('contacto-component',require('./components/ContactoComponent.vue').default);
+
+Vue.component('marca-component',require('./components/MarcasComponent.vue').default);
+
 const app = new Vue({
     el: '#app'
 });
