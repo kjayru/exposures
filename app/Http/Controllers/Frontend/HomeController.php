@@ -21,6 +21,10 @@ class HomeController extends Controller
     public function productos(){
         return view('frontend.home.productos');
     }
+    public function productoDetalle($slug){
+
+        return view('frontend.home.detalleProducto');
+    }
 
     public function videos(){
         return view('frontend.home.videos');

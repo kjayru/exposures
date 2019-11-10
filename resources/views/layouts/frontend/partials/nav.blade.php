@@ -32,9 +32,17 @@
                     <li class="nav-item">
                         <a href="/contacto" class="nav-link">Contacto</a>
                     </li>
-                    <li class="nav-item">
-                        <a href="/exposure-team/" class="nav-link">Exposure Team</a>
-                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Exposure Team
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <a class="dropdown-item" href="/exposure-team/">Team</a>
+                          <a class="dropdown-item" href="/exposure-team/conoce-al-equipo">exposure-team</a>
+
+                        </div>
+                      </li>
                 </ul>
 
                 <!-- Right Side Of Navbar -->

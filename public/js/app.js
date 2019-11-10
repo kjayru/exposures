@@ -1759,6 +1759,88 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -1826,6 +1908,97 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/DetalleComponent.vue?vue&type=script&lang=js&":
+/*!***************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/DetalleComponent.vue?vue&type=script&lang=js& ***!
+  \***************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      contenido: []
+    };
+  },
+  created: function created() {
+    /* axios.get('/getproductos')
+        .then( (response)=> {
+            this.contenido = response.data;
+              console.log(response.data);
+            })
+         .catch(function (error) {
+                    // handle error
+            console.log(error);
+        });*/
+  },
+  mounted: function mounted() {
+    console.log('Component montado detalle.');
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/DistribuidoresComponent.vue?vue&type=script&lang=js&":
 /*!**********************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/DistribuidoresComponent.vue?vue&type=script&lang=js& ***!
@@ -1835,6 +2008,134 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -1876,6 +2177,118 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -2104,6 +2517,140 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/OutletComponent.vue?vue&type=script&lang=js&":
+/*!**************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/OutletComponent.vue?vue&type=script&lang=js& ***!
+  \**************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      contenido: []
+    };
+  },
+  created: function created() {
+    /*axios.get('/getcontacto')
+       .then( (response)=> {
+           this.contenido = response.data;
+             console.log(response.data);
+           })
+        .catch(function (error) {
+                   // handle error
+           console.log(error);
+       });*/
+  },
+  mounted: function mounted() {
+    console.log('Component montado empresa.');
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/ProductosComponent.vue?vue&type=script&lang=js&":
 /*!*****************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/ProductosComponent.vue?vue&type=script&lang=js& ***!
@@ -2121,6 +2668,168 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -2128,18 +2837,18 @@ __webpack_require__.r(__webpack_exports__);
     };
   },
   created: function created() {
-    var _this = this;
-
-    axios.get('/getproductos').then(function (response) {
-      _this.contenido = response.data;
-      console.log(response.data);
-    })["catch"](function (error) {
-      // handle error
-      console.log(error);
-    });
+    /* axios.get('/getproductos')
+        .then( (response)=> {
+            this.contenido = response.data;
+              console.log(response.data);
+            })
+         .catch(function (error) {
+                    // handle error
+            console.log(error);
+        });*/
   },
   mounted: function mounted() {
-    console.log('Component montado empresa.');
+    console.log('Component montado PRODUCTO.');
   }
 });
 
@@ -2227,6 +2936,80 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -37593,18 +38376,175 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("section", { staticClass: "container-fluid paginas" }, [
-    _c(
-      "div",
-      {
-        staticClass: "row justify-content-center",
-        domProps: { innerHTML: _vm._s(_vm.contenido.content) }
-      },
-      [_vm._v("\n         " + _vm._s(_vm.contenido.content) + "\n    ")]
-    )
-  ])
+  return _vm._m(0)
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("section", { staticClass: "container-fluid paginas" }, [
+      _c("div", { staticClass: "row justify-content-center" }, [
+        _c("div", { staticClass: "col-md-8" }, [
+          _c("h2", [_vm._v("Contacto")]),
+          _vm._v(" "),
+          _c("div", { staticClass: "row" }, [
+            _c("div", { staticClass: "col-md-3 text-center" }, [
+              _c("div", { staticClass: "circular" }, [
+                _c("img", {
+                  staticClass: "img-fluid",
+                  attrs: { src: "http://exposure.mx/images/contactoMapa.png" }
+                })
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "cbody" }, [
+                _c("b", [_vm._v("Dirección")]),
+                _vm._v(" "),
+                _c("p", [
+                  _vm._v(
+                    "Oscar Wilde 224-b Col. Sendero San Jeronimo,\n                         Monterrey, Nuevo Leon, Mexico\n                         "
+                  )
+                ])
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-md-3 text-center" }, [
+              _c("div", { staticClass: "circular" }, [
+                _c("img", {
+                  staticClass: "img-fluid",
+                  attrs: {
+                    src: "http://exposure.mx/images/contactoTelefono.png"
+                  }
+                })
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "cbody" }, [
+                _c("b", [_vm._v("Teléfonos")]),
+                _vm._v(" "),
+                _c("p", [_vm._v("(01 81) 81233278")])
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-md-3 text-center" }, [
+              _c("div", { staticClass: "circular" }, [
+                _c("img", {
+                  staticClass: "img-fluid",
+                  attrs: { src: "http://exposure.mx/images/contactoMail.png" }
+                })
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "cbody" }, [
+                _c("b", [_vm._v("Email")]),
+                _vm._v(" "),
+                _c("p", [
+                  _vm._v("Ricardo Vara Briones"),
+                  _c("br"),
+                  _vm._v(
+                    "\n                           ricardo.vara1@exposure.mx"
+                  )
+                ])
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-md-3 text-center" }, [
+              _c("div", { staticClass: "circular" }, [
+                _c("img", {
+                  staticClass: "img-fluid",
+                  attrs: { src: "http://exposure.mx/images/contactoInfo.png" }
+                })
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "cbody" }, [
+                _c("b", [_vm._v("Soporte online")]),
+                _vm._v(" "),
+                _c("p", [
+                  _vm._v("Facebook: Exposure"),
+                  _c("br"),
+                  _vm._v("\n                           industria y montaña")
+                ])
+              ])
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "row" }, [
+            _c("div", { staticClass: "col-md-12" }, [
+              _c("h3", [_vm._v("NOS INTERESAN TUS COMENTARIOS!")]),
+              _vm._v(" "),
+              _c("div", { staticClass: "row" }, [
+                _c("div", { staticClass: "col-md-4" }, [
+                  _c("div", { staticClass: "form-group" }, [
+                    _c("input", {
+                      staticClass: "form-control",
+                      attrs: {
+                        type: "text",
+                        name: "nombre",
+                        placeholder: "Nombre:*",
+                        required: ""
+                      }
+                    })
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-md-4" }, [
+                  _c("div", { staticClass: "form-group" }, [
+                    _c("input", {
+                      staticClass: "form-control",
+                      attrs: {
+                        type: "text",
+                        name: "email",
+                        placeholder: "Email:*",
+                        required: ""
+                      }
+                    })
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-md-4" }, [
+                  _c("div", { staticClass: "form-group" }, [
+                    _c("input", {
+                      staticClass: "form-control",
+                      attrs: {
+                        type: "text",
+                        name: "asunto",
+                        placeholder: "Asunto:*",
+                        required: ""
+                      }
+                    })
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-md-12" }, [
+                  _c("div", { staticClass: "form-group" }, [
+                    _c("textarea", {
+                      staticClass: "form-control",
+                      attrs: {
+                        name: "mensaje",
+                        placeholder: "Mensaje:*",
+                        cols: "30",
+                        rows: "10"
+                      }
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "form-group float-right" }, [
+                    _c(
+                      "button",
+                      {
+                        staticClass: "btn btn-primary",
+                        attrs: { type: "submit" }
+                      },
+                      [_vm._v("Enviar")]
+                    )
+                  ])
+                ])
+              ])
+            ])
+          ])
+        ])
+      ])
+    ])
+  }
+]
 render._withStripped = true
 
 
@@ -37644,6 +38584,119 @@ render._withStripped = true
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/DetalleComponent.vue?vue&type=template&id=46ecf4b1&":
+/*!*******************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/DetalleComponent.vue?vue&type=template&id=46ecf4b1& ***!
+  \*******************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _vm._m(0)
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("section", { staticClass: "paginas" }, [
+      _c("div", { staticClass: "container-fluid " }, [
+        _c("div", { staticClass: "row justify-content-center" }, [
+          _c("div", { staticClass: "col-md-8" }, [
+            _c("div", { staticClass: "producto-img" }, [
+              _c("img", {
+                staticClass: "img-fluid",
+                attrs: {
+                  src:
+                    "http://exposure.mx/images/productos/1146-0-Kids-Tracer.JPG"
+                }
+              })
+            ])
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "row justify-content-center" }, [
+          _c("div", { staticClass: "col-md-8" }, [
+            _c("div", { staticClass: "titleprod" }, [
+              _c("b", [_vm._v("Solution Women's")]),
+              _vm._v(" "),
+              _c("span", { staticClass: "float-right" }, [_vm._v("$1590")])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "prodbody" }, [
+              _c("p", { staticClass: "describe" }, [
+                _vm._v(
+                  "\n                            Ya sea que estés buscando un arnés para entrenar en el gimnasio, o un arnés que te proporcione\n                            comodidad en la roca, el Black Diamond SOLUTION WOMEN'S no tiene rival, su sistema de 3 correas\n                            distribuye equitativamente el peso alrededor de tu cintura, quitándote peso de los puntos sensibles\n                            y generándote mayor comodidad\n                        "
+                )
+              ]),
+              _vm._v(" "),
+              _c("h3", [_vm._v("CARACTERÍSTICAS")]),
+              _vm._v(" "),
+              _c("ul", [
+                _c("li", [
+                  _vm._v("Diseñado para adaptarse a los contornos de tu cuerpo")
+                ]),
+                _vm._v(" "),
+                _c("li", [
+                  _vm._v("Cinturón de peso ligero con Fusion Comfort Tecnology")
+                ]),
+                _vm._v(" "),
+                _c("li", [
+                  _vm._v(
+                    "Ajuste contorneado para mayor comodidad y amplitud de movimiento"
+                  )
+                ]),
+                _vm._v(" "),
+                _c("li", [_vm._v("Cuatro engranajes moldeados a presión")]),
+                _vm._v(" "),
+                _c("li", [
+                  _vm._v("Bucles de bandas elásticas ajustables y liberables")
+                ]),
+                _vm._v(" "),
+                _c("li", [_vm._v("Peso: 330gr")])
+              ]),
+              _vm._v(" "),
+              _c("h3", [_vm._v("COLORES DISPONIBLES")]),
+              _vm._v(" "),
+              _c("ul", [
+                _c("li", [_vm._v("Nickel")]),
+                _vm._v(" "),
+                _c("li", [_vm._v("Octane")])
+              ]),
+              _vm._v(" "),
+              _c("h3", [_vm._v("TALLAS DISPONIBLES")]),
+              _vm._v(" "),
+              _c("p", [
+                _vm._v(
+                  "\n                        XS - S - M - L\n                        "
+                )
+              ]),
+              _vm._v(" "),
+              _c(
+                "a",
+                { staticClass: "btn btn-primary", attrs: { href: "#" } },
+                [_vm._v("Preguntas frecuentes")]
+              )
+            ])
+          ])
+        ])
+      ])
+    ])
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/DistribuidoresComponent.vue?vue&type=template&id=e2f7b334&":
 /*!**************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/DistribuidoresComponent.vue?vue&type=template&id=e2f7b334& ***!
@@ -37659,18 +38712,204 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("section", { staticClass: "container-fluid paginas" }, [
-    _c(
-      "div",
-      {
-        staticClass: "row justify-content-center",
-        domProps: { innerHTML: _vm._s(_vm.contenido.content) }
-      },
-      [_vm._v("\n         " + _vm._s(_vm.contenido.content) + "\n    ")]
-    )
-  ])
+  return _vm._m(0)
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("section", { staticClass: "container-fluid paginas" }, [
+      _c("div", { staticClass: "row justify-content-center" }, [
+        _c("div", { staticClass: "col-md-8" }, [
+          _c("div", { staticClass: "row" }, [
+            _c("div", { staticClass: "col-md-3" }, [
+              _c("iframe", {
+                staticStyle: { border: "0" },
+                attrs: {
+                  src:
+                    "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15058.24463296332!2d-99.150866!3d19.34484!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xee3b1b18ac559593!2sAcrobarium!5e0!3m2!1ses-419!2smx!4v1573126278692!5m2!1ses-419!2smx",
+                  width: "100%",
+                  height: "170",
+                  frameborder: "0",
+                  allowfullscreen: ""
+                }
+              })
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-md-9" }, [
+              _c("h3", [_vm._v("Acrobarium")]),
+              _vm._v(" "),
+              _c("p", [
+                _vm._v(
+                  "\n                        D.F.Tienda y gimnasio de escalada especializada en la venta de equipo para deportes al aire libre como:\n                        campismo, escalada, alpinismo,trekking, espeleologia,viajes, etc\n                    "
+                )
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "row" }, [
+                _c("div", { staticClass: "col-md-4" }, [
+                  _vm._v(
+                    "\n                            Dirección:\n                            Pensylvania #106 Col. Parque San Andrés CP 04040 Del. Coyoacán México D.F.\n                        "
+                  )
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-md-4" }, [
+                  _vm._v(
+                    "\n                            Teléfonos:\n                            (55) 5554.1299\n                        "
+                  )
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-md-4" }, [
+                  _vm._v(
+                    "\n                            Email:\n                            contacto@acrobarium.com\n                            acrobarium@gmail.com\n                            javo_vg@hotmail.com\n                            http://www.acrobarium.com/\n                        "
+                  )
+                ])
+              ])
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "row" }, [
+            _c("div", { staticClass: "col-md-3" }, [
+              _c("iframe", {
+                staticStyle: { border: "0" },
+                attrs: {
+                  src:
+                    "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15058.24463296332!2d-99.150866!3d19.34484!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xee3b1b18ac559593!2sAcrobarium!5e0!3m2!1ses-419!2smx!4v1573126278692!5m2!1ses-419!2smx",
+                  width: "100%",
+                  height: "170",
+                  frameborder: "0",
+                  allowfullscreen: ""
+                }
+              })
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-md-9" }, [
+              _c("h3", [_vm._v("Acrobarium")]),
+              _vm._v(" "),
+              _c("p", [
+                _vm._v(
+                  "\n                        D.F.Tienda y gimnasio de escalada especializada en la venta de equipo para deportes al aire libre como:\n                        campismo, escalada, alpinismo,trekking, espeleologia,viajes, etc\n                    "
+                )
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "row" }, [
+                _c("div", { staticClass: "col-md-4" }, [
+                  _vm._v(
+                    "\n                            Dirección:\n                            Pensylvania #106 Col. Parque San Andrés CP 04040 Del. Coyoacán México D.F.\n                        "
+                  )
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-md-4" }, [
+                  _vm._v(
+                    "\n                            Teléfonos:\n                            (55) 5554.1299\n                        "
+                  )
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-md-4" }, [
+                  _vm._v(
+                    "\n                            Email:\n                            contacto@acrobarium.com\n                            acrobarium@gmail.com\n                            javo_vg@hotmail.com\n                            http://www.acrobarium.com/\n                        "
+                  )
+                ])
+              ])
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "row" }, [
+            _c("div", { staticClass: "col-md-3" }, [
+              _c("iframe", {
+                staticStyle: { border: "0" },
+                attrs: {
+                  src:
+                    "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15058.24463296332!2d-99.150866!3d19.34484!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xee3b1b18ac559593!2sAcrobarium!5e0!3m2!1ses-419!2smx!4v1573126278692!5m2!1ses-419!2smx",
+                  width: "100%",
+                  height: "170",
+                  frameborder: "0",
+                  allowfullscreen: ""
+                }
+              })
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-md-9" }, [
+              _c("h3", [_vm._v("Acrobarium")]),
+              _vm._v(" "),
+              _c("p", [
+                _vm._v(
+                  "\n                        D.F.Tienda y gimnasio de escalada especializada en la venta de equipo para deportes al aire libre como:\n                        campismo, escalada, alpinismo,trekking, espeleologia,viajes, etc\n                    "
+                )
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "row" }, [
+                _c("div", { staticClass: "col-md-4" }, [
+                  _vm._v(
+                    "\n                            Dirección:\n                            Pensylvania #106 Col. Parque San Andrés CP 04040 Del. Coyoacán México D.F.\n                        "
+                  )
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-md-4" }, [
+                  _vm._v(
+                    "\n                            Teléfonos:\n                            (55) 5554.1299\n                        "
+                  )
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-md-4" }, [
+                  _vm._v(
+                    "\n                            Email:\n                            contacto@acrobarium.com\n                            acrobarium@gmail.com\n                            javo_vg@hotmail.com\n                            http://www.acrobarium.com/\n                        "
+                  )
+                ])
+              ])
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "row" }, [
+            _c("div", { staticClass: "col-md-3" }, [
+              _c("iframe", {
+                staticStyle: { border: "0" },
+                attrs: {
+                  src:
+                    "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15058.24463296332!2d-99.150866!3d19.34484!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xee3b1b18ac559593!2sAcrobarium!5e0!3m2!1ses-419!2smx!4v1573126278692!5m2!1ses-419!2smx",
+                  width: "100%",
+                  height: "170",
+                  frameborder: "0",
+                  allowfullscreen: ""
+                }
+              })
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-md-9" }, [
+              _c("h3", [_vm._v("Acrobarium")]),
+              _vm._v(" "),
+              _c("p", [
+                _vm._v(
+                  "\n                        D.F.Tienda y gimnasio de escalada especializada en la venta de equipo para deportes al aire libre como:\n                        campismo, escalada, alpinismo,trekking, espeleologia,viajes, etc\n                    "
+                )
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "row" }, [
+                _c("div", { staticClass: "col-md-4" }, [
+                  _vm._v(
+                    "\n                            Dirección:\n                            Pensylvania #106 Col. Parque San Andrés CP 04040 Del. Coyoacán México D.F.\n                        "
+                  )
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-md-4" }, [
+                  _vm._v(
+                    "\n                            Teléfonos:\n                            (55) 5554.1299\n                        "
+                  )
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-md-4" }, [
+                  _vm._v(
+                    "\n                            Email:\n                            contacto@acrobarium.com\n                            acrobarium@gmail.com\n                            javo_vg@hotmail.com\n                            http://www.acrobarium.com/\n                        "
+                  )
+                ])
+              ])
+            ])
+          ])
+        ])
+      ])
+    ])
+  }
+]
 render._withStripped = true
 
 
@@ -37692,96 +38931,244 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("section", { staticClass: "container-fluid paginas" }, [
-    _c(
-      "div",
-      {
-        staticClass: "row justify-content-center",
-        domProps: { innerHTML: _vm._s(_vm.contenido.content) }
-      },
-      [
-        _vm._m(0),
-        _vm._v(" "),
-        _vm._m(1),
-        _vm._v(" "),
-        _vm._m(2),
-        _vm._v(" "),
-        _vm._m(3),
-        _vm._v("\n             " + _vm._s(_vm.contenido.content) + "\n        ")
-      ]
-    )
-  ])
+  return _vm._m(0)
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-md-8" }, [
-      _c("h3", [_vm._v("Nuestra Historia")]),
-      _vm._v(" "),
-      _c("p", [
-        _vm._v(
-          "Exposure nacio bajo el nombre de MR Climbing en Agosto del 2007, su primer y unica marca\n                    comercializada en aquel entonces era Madrock, ¿su primera oficina? el dormitorio de su\n                    fundador, ¿numero de empleados? uno ¿bodega? el cuarto de servicio, lavanderia y hasta\n                    en el comedor... cualquier lugar donde se pudieran apilar cajas. desde ese comienzo\n                    austero hasta el dia de hoy muchas cosas han cambiado, nos mudamos de base pero para ello\n                    aprendimos a soldar y trabajar la madera para construir nuestro nuevo cuartel\n                    (bodega, oficina y gimnasio), la familia creció, llegaron nuevos integrantes a nuestro\n                    equipo tanto proveedores, clientes y compañeros de trabajo, aprendimos a ser mas eficientes,\n                    mas profesionales, mejores cada dia.\n                "
-        )
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-md-8 bloque" }, [
-      _c("p", [
-        _vm._v(
-          '"Da igual nacer en medio de la llanura, donde los Alpes aparecen como un perfil lejano,\n                 o en la ciudad, donde se camina por las profundas trincheras de las calles: si se ha nacido\n                 para la montaña, tarde o temprano nos sentimos atraídos"\n                 '
-        )
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-md-8" }, [
-      _c("p", [
-        _vm._v(
-          "\n                    Actualmente podemos decir con orgullo que estamos consolidados como uno de los\n                    principales proveedores de equipo outdoor a nivel nacional y con una satisfaccion aun\n                    mayor vemos como nuestra pasion sigue en pie, creemos en lo que vendemos porque lo usamos para hacer lo que amamos.\n                "
-        )
-      ]),
-      _vm._v(" "),
-      _c("p", [
-        _vm._v("Nuestra historia se sigue escribiendo....\n                ")
-      ]),
-      _vm._v(" "),
-      _c("img", {
-        staticClass: "img-fluid",
-        attrs: { src: "http://exposure.mx/images/empresa1.jpg" }
-      })
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-md-8" }, [
-      _c("h3", [_vm._v("¿Qué hace Exposure?")]),
-      _vm._v(" "),
-      _c("p", [
-        _vm._v(
-          "Como comerciantes:\nSomos distribuidores mayoristas a nivel nacional de prestigiosas marcas especializadas en la practica de deportes outdoor.\n"
-        )
-      ]),
-      _c("p", [
-        _vm._v(
-          "\nComo usuarios:\nLa familia exposure esta conformada por apasionados de las montañas y es por eso que somos usuarios de todo lo que vendemos, conocemos cada pieza que comercializamos perfectamente porque cada fin de semana, cada viaje cada oportunidad las llevamos con nosotros para practicar nuestro deporte. la experiencia que nos brinda esto es enorme y la ponemos al servicio de nuestros clientes brindando asesoria especializada de todos nuestros productos para ofrecer la solucion mas adecuada a las particulares necesidades de cada cliente\n"
-        )
-      ]),
-      _vm._v(" "),
-      _c("p", [
-        _vm._v(
-          "\nComo miembros de la comunidad:\nNuestro compromiso con el deporte es constante, somos activos miembros de la comunidad aportando apoyo a todo tipo de evento relacionado con nuestros deportes, asi mismo ayudamos a jovenes atletas y desarrolladores de zonas a realizar sus metas y ellos nos apoyan a nosotros representando con entusiasmo nuestras marcas."
-        )
+    return _c("section", { staticClass: "container-fluid paginas" }, [
+      _c("div", { staticClass: "row justify-content-center" }, [
+        _c("div", { staticClass: "col-md-8" }, [
+          _c("h3", { staticClass: "pTitulo" }, [_vm._v("Nuestra Historia")]),
+          _vm._v(" "),
+          _c("p", [
+            _vm._v(
+              "Exposure nacio bajo el nombre de MR Climbing en Agosto del 2007, su primer y unica marca\n                comercializada en aquel entonces era Madrock, ¿su primera oficina? el dormitorio de su\n                fundador, ¿numero de empleados? uno ¿bodega? el cuarto de servicio, lavanderia y hasta\n                en el comedor... cualquier lugar donde se pudieran apilar cajas. desde ese comienzo\n                austero hasta el dia de hoy muchas cosas han cambiado, nos mudamos de base pero para ello\n                aprendimos a soldar y trabajar la madera para construir nuestro nuevo cuartel\n                (bodega, oficina y gimnasio), la familia creció, llegaron nuevos integrantes a nuestro\n                equipo tanto proveedores, clientes y compañeros de trabajo, aprendimos a ser mas eficientes,\n                mas profesionales, mejores cada dia.\n            "
+            )
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-md-8 bloque" }, [
+          _c("p", [
+            _vm._v(
+              '"Da igual nacer en medio de la llanura, donde los Alpes aparecen como un perfil lejano,\n             o en la ciudad, donde se camina por las profundas trincheras de las calles: si se ha nacido\n             para la montaña, tarde o temprano nos sentimos atraídos"\n             '
+            )
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-md-8" }, [
+          _c("p", [
+            _vm._v(
+              "\n                Actualmente podemos decir con orgullo que estamos consolidados como uno de los\n                principales proveedores de equipo outdoor a nivel nacional y con una satisfaccion aun\n                mayor vemos como nuestra pasion sigue en pie, creemos en lo que vendemos porque lo usamos para hacer lo que amamos.\n            "
+            )
+          ]),
+          _vm._v(" "),
+          _c("p", [
+            _vm._v("Nuestra historia se sigue escribiendo....\n            ")
+          ]),
+          _vm._v(" "),
+          _c("img", {
+            staticClass: "img-fluid",
+            attrs: { src: "http://exposure.mx/images/empresa1.jpg" }
+          })
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-md-8" }, [
+          _c("h3", [_vm._v("¿Qué hace Exposure?")]),
+          _vm._v(" "),
+          _c("p", [
+            _vm._v(
+              "Como comerciantes:\n            Somos distribuidores mayoristas a nivel nacional de prestigiosas marcas especializadas en la practica de deportes outdoor.\n            "
+            )
+          ]),
+          _vm._v(" "),
+          _c("p", [
+            _vm._v(
+              "\n            Como usuarios:\n            La familia exposure esta conformada por apasionados de las montañas y es por eso que somos usuarios de todo lo que vendemos,\n             conocemos cada pieza que comercializamos perfectamente porque cada fin de semana, cada viaje cada oportunidad las llevamos\n             con nosotros para practicar nuestro deporte. la experiencia que nos brinda esto es enorme y la ponemos al servicio de\n             nuestros clientes brindando asesoria especializada de todos nuestros productos para ofrecer la solucion mas adecuada a las\n             particulares necesidades de cada cliente\n            "
+            )
+          ]),
+          _vm._v(" "),
+          _c("p", [
+            _vm._v(
+              "\n            Como miembros de la comunidad:\n            Nuestro compromiso con el deporte es constante, somos activos miembros de la comunidad aportando apoyo a todo tipo de evento\n             relacionado con nuestros deportes, asi mismo ayudamos a jovenes atletas y desarrolladores de zonas a realizar sus metas y\n             ellos nos apoyan a nosotros representando con entusiasmo nuestras marcas.\n            "
+            )
+          ])
+        ]),
+        _vm._v(" "),
+        _c(
+          "div",
+          {
+            staticClass: "col-md-8 bfinfo",
+            staticStyle: {
+              background: "url('/images/empresa2.jpg') no-repeat 0px 0px",
+              "background-size": "cover"
+            }
+          },
+          [
+            _c("div", { staticClass: "blqfoot" }, [
+              _c("div", { staticClass: "row" }, [
+                _c("div", { staticClass: "col-md-10" }, [
+                  _c("p", { staticClass: "first text-left" }, [
+                    _vm._v("Siempre firmes con lo que realizamos.")
+                  ]),
+                  _vm._v(" "),
+                  _c("p", { staticClass: "secoond text-left" }, [
+                    _vm._v(
+                      "En las montañas el musculo mas importante es la mente."
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("p", { staticClass: "tercero text-right" }, [
+                    _vm._v("Wolfgang Gullich")
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-md-2 text-right" }, [
+                  _c("img", {
+                    staticClass: "img-fluid",
+                    attrs: { src: "/images/bgInfo.jpg" }
+                  })
+                ])
+              ])
+            ])
+          ]
+        ),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-md-8" }, [
+          _c("h3", [_vm._v("PROXIMAMENTE")]),
+          _vm._v(" "),
+          _c("div", { staticClass: "row" }, [
+            _c("div", { staticClass: "col-md-3" }, [
+              _c("figure", [
+                _c("img", {
+                  staticClass: "img-fluid",
+                  attrs: { src: "http://exposure.mx/images/prox1.jpg" }
+                })
+              ]),
+              _vm._v(" "),
+              _c("h4", [_vm._v("ASPECT")]),
+              _vm._v(
+                "\n\n                    El Aspect de Black Diamond es una máquina de escalada, diseñado con cuero resistente, y la innovadora\n                     tecnología NeoFriction en su goma, además de su Engineered Knit en la lengua, brinda perfección en su\n                      agarre, su comodidad y respiración. Sus agujetas te ayudan a ajustar tus pies permitiéndote encadenar\n                       con más fuerza en la roca.\n                "
+              )
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-md-3" }, [
+              _c("figure", [
+                _c("img", {
+                  staticClass: "img-fluid",
+                  attrs: { src: "http://exposure.mx/images/prox2.jpg" }
+                })
+              ]),
+              _vm._v(" "),
+              _c("h4", [_vm._v("ATC PILOT")]),
+              _vm._v(
+                "\n\n                   El nuevo dispositivo de seguro asistido, el ATC Pilot de Black Diamond utiliza un\n                   sistema que provee de un grado de seguridad adicional a tu autoasegurador, mientras\n                   que permite una suave liberación de la cuerda. Su construcción de acero es totalmente\n                   gonómica y cuenta con una superficie antiderrapante. Puede usarse con cuerdas de\n                   8.7-10.5\n                "
+              )
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-md-3" }, [
+              _c("figure", [
+                _c("img", {
+                  staticClass: "img-fluid",
+                  attrs: { src: "http://exposure.mx/images/prox3.jpg" }
+                })
+              ]),
+              _vm._v(" "),
+              _c("h4", [_vm._v("FOCUS")]),
+              _vm._v(
+                "\n\n                   Diseñado para alto desempeño, los Focus de Black Diamond son construidos para rutas\n                   y boulders que demandan precisión. Con un ligero toque en su goma de NeoFriction\n                   Force, cuero que da durabilidad, y la tecnología de Engineered Knit Technology,\n                   convierten a estos zapatos en los ideales para matar ese proyecto. Además su Velcro\n                   ajustable se amolda perfectamente a tu pie.\n                "
+              )
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-md-3" }, [
+              _c("figure", [
+                _c("img", {
+                  staticClass: "img-fluid",
+                  attrs: { src: "http://exposure.mx/images/prox4.jpg" }
+                })
+              ]),
+              _vm._v(" "),
+              _c("h4", [_vm._v("TRAILROC 285")]),
+              _vm._v(
+                "\n\n                  El TRAILROC 285 cuenta con más características de protección. Tiene una caída de 8mm y\n                  es perfecto para entrenamientos o largas carreras sobre senderos duros y rocosos. Su cubierta\n                  externa protege a los dedos de golpes o pisadas. Y su talón rediseñado aumenta la estabilidad y\n                  cubre al medio pie para brindar mayor apoyo. Además su nueva suela intermedia ofrece una mejor\n                  dispersión de choque y una propulsión del ante pie mejorada.\n                "
+              )
+            ])
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-md-8" }, [
+          _c("h3", [
+            _vm._v("NOS INTERESA TU OPINION, HABLA...EXPOSURE TE ESCUCHA")
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "row" }, [
+            _c("div", { staticClass: "col-md-4" }, [
+              _c("div", { staticClass: "form-group" }, [
+                _c("input", {
+                  staticClass: "form-control",
+                  attrs: {
+                    type: "text",
+                    name: "nombre",
+                    placeholder: "Nombre:*",
+                    required: ""
+                  }
+                })
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-md-4" }, [
+              _c("div", { staticClass: "form-group" }, [
+                _c("input", {
+                  staticClass: "form-control",
+                  attrs: {
+                    type: "text",
+                    name: "email",
+                    placeholder: "Email:*",
+                    required: ""
+                  }
+                })
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-md-4" }, [
+              _c("div", { staticClass: "form-group" }, [
+                _c("input", {
+                  staticClass: "form-control",
+                  attrs: {
+                    type: "text",
+                    name: "asunto",
+                    placeholder: "Asunto:*",
+                    required: ""
+                  }
+                })
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-md-12" }, [
+              _c("div", { staticClass: "form-group" }, [
+                _c("textarea", {
+                  staticClass: "form-control",
+                  attrs: {
+                    name: "mensaje",
+                    placeholder: "Mensaje:*",
+                    cols: "30",
+                    rows: "10"
+                  }
+                })
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "form-group float-right" }, [
+                _c(
+                  "button",
+                  { staticClass: "btn btn-primary", attrs: { type: "submit" } },
+                  [_vm._v("Enviar")]
+                )
+              ])
+            ])
+          ])
+        ])
       ])
     ])
   }
@@ -37826,39 +39213,55 @@ var staticRenderFns = [
               ]),
               _vm._v(" "),
               _c("li", { staticClass: "nav-item" }, [
-                _c("a", { staticClass: "nav-link", attrs: { href: "#" } }, [
+                _c("a", { staticClass: "nav-link", attrs: { href: "/" } }, [
                   _vm._v("Inicio")
                 ])
               ]),
               _vm._v(" "),
               _c("li", { staticClass: "nav-item" }, [
-                _c("a", { staticClass: "nav-link", attrs: { href: "#" } }, [
-                  _vm._v("Empresa")
-                ])
+                _c(
+                  "a",
+                  { staticClass: "nav-link", attrs: { href: "/empresa" } },
+                  [_vm._v("Empresa")]
+                )
               ]),
               _vm._v(" "),
               _c("li", { staticClass: "nav-item" }, [
-                _c("a", { staticClass: "nav-link", attrs: { href: "#" } }, [
-                  _vm._v("Productos")
-                ])
+                _c(
+                  "a",
+                  { staticClass: "nav-link", attrs: { href: "/productos" } },
+                  [_vm._v("Productos")]
+                )
               ]),
               _vm._v(" "),
               _c("li", { staticClass: "nav-item" }, [
-                _c("a", { staticClass: "nav-link", attrs: { href: "#" } }, [
-                  _vm._v("Distribuidores")
-                ])
+                _c(
+                  "a",
+                  {
+                    staticClass: "nav-link",
+                    attrs: { href: "/distribuidores" }
+                  },
+                  [_vm._v("Distribuidores")]
+                )
               ]),
               _vm._v(" "),
               _c("li", { staticClass: "nav-item" }, [
-                _c("a", { staticClass: "nav-link", attrs: { href: "#" } }, [
-                  _vm._v("Contacto")
-                ])
+                _c(
+                  "a",
+                  { staticClass: "nav-link", attrs: { href: "/contacto" } },
+                  [_vm._v("Contacto")]
+                )
               ]),
               _vm._v(" "),
               _c("li", { staticClass: "nav-item" }, [
-                _c("a", { staticClass: "nav-link", attrs: { href: "#" } }, [
-                  _vm._v("Acceso a distruidores")
-                ])
+                _c(
+                  "a",
+                  {
+                    staticClass: "nav-link",
+                    attrs: { href: "http://www.exposure.com.mx/pedidosonline/" }
+                  },
+                  [_vm._v("Acceso a distruidores")]
+                )
               ]),
               _vm._v(" "),
               _c("li", { staticClass: "designed" }, [
@@ -38008,6 +39411,194 @@ render._withStripped = true
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/OutletComponent.vue?vue&type=template&id=6a2e7056&":
+/*!******************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/OutletComponent.vue?vue&type=template&id=6a2e7056& ***!
+  \******************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _vm._m(0)
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("section", { staticClass: "container-fluid paginas" }, [
+      _c("img", {
+        staticClass: "img-fluid",
+        attrs: { src: "http://exposure.mx/outlet/images/top_image.jpg" }
+      }),
+      _vm._v(" "),
+      _c("div", { staticClass: "row justify-content-center" }, [
+        _c("div", { staticClass: "col-md-8" }, [
+          _c("h2", { staticClass: "pt-5 pb-5" }, [
+            _vm._v("Recientemente agregados")
+          ])
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "row justify-content-center grayspace" }, [
+        _c("div", { staticClass: "col-md-8 pt-5 pb-5" }, [
+          _c("div", { staticClass: "row" }, [
+            _c("div", { staticClass: "card-columns" }, [
+              _c("div", { staticClass: "card" }, [
+                _c("img", {
+                  staticClass: "card-img-top",
+                  attrs: {
+                    src: "http://exposure.mx/images/productos/161-0-Wiz-Kid.JPG"
+                  }
+                })
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "card p-3" }, [
+                _c("blockquote", { staticClass: "blockquote mb-0 card-body" }, [
+                  _c("img", {
+                    staticClass: "card-img-top",
+                    attrs: {
+                      src:
+                        "http://exposure.mx/images/productos/161-0-Wiz-Kid.JPG"
+                    }
+                  })
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "card" }, [
+                _c("img", {
+                  staticClass: "card-img-top",
+                  attrs: {
+                    src: "http://exposure.mx/images/productos/161-0-Wiz-Kid.JPG"
+                  }
+                })
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "card text-white text-center p-3" }, [
+                _c("blockquote", { staticClass: "blockquote mb-0" }, [
+                  _c("img", {
+                    staticClass: "card-img-top",
+                    attrs: {
+                      src: "http://exposure.mx/images/productos/753-1-Zone.JPG"
+                    }
+                  })
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "card text-center" }, [
+                _c("img", {
+                  staticClass: "card-img-top",
+                  attrs: {
+                    src: "http://exposure.mx/images/productos/161-0-Wiz-Kid.JPG"
+                  }
+                })
+              ])
+            ])
+          ])
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "row justify-content-center" }, [
+        _c("div", { staticClass: "col-md-8" }, [
+          _c("div", { staticClass: "row pb-5 pt-5" }, [
+            _c("div", { staticClass: "col-md-2" }, [
+              _c("ul", { staticClass: "navbar" }, [
+                _c("li", [
+                  _c("a", { staticClass: "link", attrs: { href: "#" } }, [
+                    _vm._v("Categoria 1")
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("li", [
+                  _c("a", { staticClass: "link", attrs: { href: "#" } }, [
+                    _vm._v("Categoria 2")
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("li", [
+                  _c("a", { staticClass: "link", attrs: { href: "#" } }, [
+                    _vm._v("Categoria 3")
+                  ])
+                ])
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-md-10" }, [
+              _c("div", { staticClass: "card-columns products" }, [
+                _c("div", { staticClass: "card" }, [
+                  _c("a", { attrs: { href: "/outlet/detalle" } }, [
+                    _c("div", { staticClass: "card-head" }, [
+                      _c("div", { staticClass: "title" }, [_vm._v("Wiz Kid")]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "price" }, [_vm._v("$ 789")])
+                    ]),
+                    _vm._v(" "),
+                    _c("img", {
+                      staticClass: "card-img-top",
+                      attrs: {
+                        src:
+                          "http://exposure.mx/images/productos/161-0-Wiz-Kid.JPG"
+                      }
+                    })
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "card" }, [
+                  _c("a", { attrs: { href: "/outlet/detalle" } }, [
+                    _c("div", { staticClass: "card-head" }, [
+                      _c("div", { staticClass: "title" }, [_vm._v("Wiz Kid")]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "price" }, [_vm._v("$ 789")])
+                    ]),
+                    _vm._v(" "),
+                    _c("img", {
+                      staticClass: "card-img-top",
+                      attrs: {
+                        src:
+                          "http://exposure.mx/images/productos/161-0-Wiz-Kid.JPG"
+                      }
+                    })
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "card" }, [
+                  _c("a", { attrs: { href: "/outlet/detalle" } }, [
+                    _c("div", { staticClass: "card-head" }, [
+                      _c("div", { staticClass: "title" }, [_vm._v("Wiz Kid")]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "price" }, [_vm._v("$ 789")])
+                    ]),
+                    _vm._v(" "),
+                    _c("img", {
+                      staticClass: "card-img-top",
+                      attrs: {
+                        src:
+                          "http://exposure.mx/images/productos/161-0-Wiz-Kid.JPG"
+                      }
+                    })
+                  ])
+                ])
+              ])
+            ])
+          ])
+        ])
+      ])
+    ])
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/ProductosComponent.vue?vue&type=template&id=0c04ebd5&":
 /*!*********************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/ProductosComponent.vue?vue&type=template&id=0c04ebd5& ***!
@@ -38023,18 +39614,276 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("section", { staticClass: "container-fluid paginas" }, [
-    _c(
-      "div",
-      {
-        staticClass: "row justify-content-center",
-        domProps: { innerHTML: _vm._s(_vm.contenido.content) }
-      },
-      [_vm._v("\n         " + _vm._s(_vm.contenido.content) + "\n    ")]
-    )
-  ])
+  return _vm._m(0)
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("section", { staticClass: "paginas" }, [
+      _c("div", { staticClass: "container-fluid  seccioncategorias" }, [
+        _c("div", { staticClass: "row justify-content-center" }, [
+          _c("div", { staticClass: "col-md-8" }, [
+            _c("h2", [_vm._v("CATEGORIAS")]),
+            _vm._v(" "),
+            _c("a", { staticClass: "btn btn-default", attrs: { href: "#" } }, [
+              _vm._v("Categoria")
+            ]),
+            _vm._v(" "),
+            _c("a", { staticClass: "btn btn-default", attrs: { href: "#" } }, [
+              _vm._v("Categoria 2")
+            ])
+          ])
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "seccionwhite" }, [
+        _c("div", { staticClass: "row justify-content-center" }, [
+          _c("div", { staticClass: "col-md-8" }, [
+            _c("h2", [_vm._v("Nombre de categoría")]),
+            _vm._v(" "),
+            _c("div", { staticClass: "row" }, [
+              _c("div", { staticClass: "col-md-6" }, [
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col" }, [
+                    _c("img", {
+                      staticClass: "img-fluid",
+                      attrs: {
+                        src:
+                          "http://exposure.mx/images/productos/1051-0-Dawn-Patrol-Shell.JPG"
+                      }
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col" }, [
+                    _c("div", { staticClass: "titulo" }, [
+                      _c("span", [_vm._v(" Dawn Patrol Shell")]),
+                      _vm._v(" "),
+                      _c("span", [_vm._v("  Chaqueta")])
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "body" }, [
+                      _vm._v(
+                        "\n                                Para días largos cuesta arriba, el Dawn Patrol Shell\n                                cuenta con un tejido elástico de cuatro vías que asegura\n                                durabilidad y transpiración.\n\n                                "
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "footer" }, [
+                      _c(
+                        "a",
+                        {
+                          staticClass: "btn btn-primary",
+                          attrs: { href: "#" }
+                        },
+                        [_vm._v("Ver detalle")]
+                      )
+                    ])
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-md-6" }, [
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col" }, [
+                    _c("img", {
+                      staticClass: "img-fluid",
+                      attrs: {
+                        src:
+                          "http://exposure.mx/images/productos/1051-0-Dawn-Patrol-Shell.JPG"
+                      }
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col" }, [
+                    _c("div", { staticClass: "titulo" }, [
+                      _c("span", [_vm._v(" Dawn Patrol Shell")]),
+                      _vm._v(" "),
+                      _c("span", [_vm._v("  Chaqueta")])
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "body" }, [
+                      _vm._v(
+                        "\n                                Para días largos cuesta arriba, el Dawn Patrol Shell\n                                cuenta con un tejido elástico de cuatro vías que asegura\n                                durabilidad y transpiración.\n\n                                "
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "footer" }, [
+                      _c(
+                        "a",
+                        {
+                          staticClass: "btn btn-primary",
+                          attrs: { href: "#" }
+                        },
+                        [_vm._v("Ver detalle")]
+                      )
+                    ])
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-md-6" }, [
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col" }, [
+                    _c("img", {
+                      staticClass: "img-fluid",
+                      attrs: {
+                        src:
+                          "http://exposure.mx/images/productos/1051-0-Dawn-Patrol-Shell.JPG"
+                      }
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col" }, [
+                    _c("div", { staticClass: "titulo" }, [
+                      _c("span", [_vm._v(" Dawn Patrol Shell")]),
+                      _vm._v(" "),
+                      _c("span", [_vm._v("  Chaqueta")])
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "body" }, [
+                      _vm._v(
+                        "\n                                Para días largos cuesta arriba, el Dawn Patrol Shell\n                                cuenta con un tejido elástico de cuatro vías que asegura\n                                durabilidad y transpiración.\n\n                                "
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "footer" }, [
+                      _c(
+                        "a",
+                        {
+                          staticClass: "btn btn-primary",
+                          attrs: { href: "#" }
+                        },
+                        [_vm._v("Ver detalle")]
+                      )
+                    ])
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-md-6" }, [
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col" }, [
+                    _c("img", {
+                      staticClass: "img-fluid",
+                      attrs: {
+                        src:
+                          "http://exposure.mx/images/productos/1051-0-Dawn-Patrol-Shell.JPG"
+                      }
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col" }, [
+                    _c("div", { staticClass: "titulo" }, [
+                      _c("span", [_vm._v(" Dawn Patrol Shell")]),
+                      _vm._v(" "),
+                      _c("span", [_vm._v("  Chaqueta")])
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "body" }, [
+                      _vm._v(
+                        "\n                                Para días largos cuesta arriba, el Dawn Patrol Shell\n                                cuenta con un tejido elástico de cuatro vías que asegura\n                                durabilidad y transpiración.\n\n                                "
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "footer" }, [
+                      _c(
+                        "a",
+                        {
+                          staticClass: "btn btn-primary",
+                          attrs: { href: "#" }
+                        },
+                        [_vm._v("Ver detalle")]
+                      )
+                    ])
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-md-6" }, [
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col" }, [
+                    _c("img", {
+                      staticClass: "img-fluid",
+                      attrs: {
+                        src:
+                          "http://exposure.mx/images/productos/1051-0-Dawn-Patrol-Shell.JPG"
+                      }
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col" }, [
+                    _c("div", { staticClass: "titulo" }, [
+                      _c("span", [_vm._v(" Dawn Patrol Shell")]),
+                      _vm._v(" "),
+                      _c("span", [_vm._v("  Chaqueta")])
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "body" }, [
+                      _vm._v(
+                        "\n                                Para días largos cuesta arriba, el Dawn Patrol Shell\n                                cuenta con un tejido elástico de cuatro vías que asegura\n                                durabilidad y transpiración.\n\n                                "
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "footer" }, [
+                      _c(
+                        "a",
+                        {
+                          staticClass: "btn btn-primary",
+                          attrs: { href: "#" }
+                        },
+                        [_vm._v("Ver detalle")]
+                      )
+                    ])
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-md-6" }, [
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col" }, [
+                    _c("img", {
+                      staticClass: "img-fluid",
+                      attrs: {
+                        src:
+                          "http://exposure.mx/images/productos/1051-0-Dawn-Patrol-Shell.JPG"
+                      }
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col" }, [
+                    _c("div", { staticClass: "titulo" }, [
+                      _c("span", [_vm._v(" Dawn Patrol Shell")]),
+                      _vm._v(" "),
+                      _c("span", [_vm._v("  Chaqueta")])
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "body" }, [
+                      _vm._v(
+                        "\n                                Para días largos cuesta arriba, el Dawn Patrol Shell\n                                cuenta con un tejido elástico de cuatro vías que asegura\n                                durabilidad y transpiración.\n\n                                "
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "footer" }, [
+                      _c(
+                        "a",
+                        {
+                          staticClass: "btn btn-primary",
+                          attrs: { href: "#" }
+                        },
+                        [_vm._v("Ver detalle")]
+                      )
+                    ])
+                  ])
+                ])
+              ])
+            ])
+          ])
+        ])
+      ])
+    ])
+  }
+]
 render._withStripped = true
 
 
@@ -38157,18 +40006,147 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("section", { staticClass: "container-fluid paginas" }, [
-    _c(
-      "div",
-      {
-        staticClass: "row justify-content-center",
-        domProps: { innerHTML: _vm._s(_vm.contenido.content) }
-      },
-      [_vm._v("\n         " + _vm._s(_vm.contenido.content) + "\n    ")]
-    )
-  ])
+  return _vm._m(0)
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("section", { staticClass: "container-fluid paginas" }, [
+      _c("div", { staticClass: "row justify-content-center" }, [
+        _c("div", { staticClass: "col-md-8" }, [
+          _c(
+            "div",
+            { staticClass: "embed-responsive embed-responsive-16by9" },
+            [
+              _c("iframe", {
+                staticClass: "embed-responsive-item",
+                attrs: {
+                  src: "https://www.youtube.com/embed/i2rXb9PxFaU?rel=0",
+                  allowfullscreen: ""
+                }
+              })
+            ]
+          )
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-md-8" }, [
+          _c("div", { staticClass: "contexto" }, [
+            _c("div", { staticClass: "tituloembed" }, [
+              _vm._v("BD Climbing Life")
+            ]),
+            _vm._v(
+              "\n                            Exposure nacio bajo el nombre de MR Climbing en Agosto del 2007, su primer y unica marca comercializada\n                            en aquel entonces era Madrock, ¿su primera oficina? el dormitorio de su fundador, ¿numero de empleados?\n                            uno ¿bodega? el cuarto de servicio, lavanderia y hasta en el comedor... cualquier lugar donde se pudieran\n                            apilar cajas. desde ese comienzo austero hasta el dia de hoy muchas cosas han cambiado, nos mudamos\n                            de base pero para ello aprendimos a soldar y trabajar la madera para construir nuestro nuevo cuartel\n                            (bodega, oficina y gimnasio), la familia creció, llegaron nuevos integrantes a nuestro equipo tanto\n                                proveedores, clientes y compañeros de trabajo, aprendimos a ser mas eficientes, mas profesionales,\n                                mejores cada dia.\n                    "
+            )
+          ])
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "row justify-content-center" }, [
+        _c("div", { staticClass: "col-md-8" }, [
+          _c("div", { staticClass: "row" }, [
+            _c("div", { staticClass: "col-md-6" }, [
+              _c(
+                "div",
+                {
+                  staticClass: "cvideo embed-responsive embed-responsive-16by9"
+                },
+                [
+                  _c("iframe", {
+                    staticClass: "embed-responsive-item",
+                    attrs: {
+                      src: "https://www.youtube.com/embed/i2rXb9PxFaU?rel=0",
+                      allowfullscreen: ""
+                    }
+                  })
+                ]
+              ),
+              _vm._v(" "),
+              _c("div", { staticClass: "infotext" }, [
+                _vm._v(
+                  "\n                            Black Diamond camalotx4\n                        "
+                )
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-md-6" }, [
+              _c(
+                "div",
+                {
+                  staticClass: "cvideo embed-responsive embed-responsive-16by9"
+                },
+                [
+                  _c("iframe", {
+                    staticClass: "embed-responsive-item",
+                    attrs: {
+                      src: "https://www.youtube.com/embed/i2rXb9PxFaU?rel=0",
+                      allowfullscreen: ""
+                    }
+                  })
+                ]
+              ),
+              _vm._v(" "),
+              _c("div", { staticClass: "infotext" }, [
+                _vm._v(
+                  "\n                            Black Diamond camalotx4\n                        "
+                )
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-md-6" }, [
+              _c(
+                "div",
+                {
+                  staticClass: "cvideo embed-responsive embed-responsive-16by9"
+                },
+                [
+                  _c("iframe", {
+                    staticClass: "embed-responsive-item",
+                    attrs: {
+                      src: "https://www.youtube.com/embed/i2rXb9PxFaU?rel=0",
+                      allowfullscreen: ""
+                    }
+                  })
+                ]
+              ),
+              _vm._v(" "),
+              _c("div", { staticClass: "infotext" }, [
+                _vm._v(
+                  "\n                            Black Diamond camalotx4\n                        "
+                )
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-md-6" }, [
+              _c(
+                "div",
+                {
+                  staticClass: "cvideo embed-responsive embed-responsive-16by9"
+                },
+                [
+                  _c("iframe", {
+                    staticClass: "embed-responsive-item",
+                    attrs: {
+                      src: "https://www.youtube.com/embed/i2rXb9PxFaU?rel=0",
+                      allowfullscreen: ""
+                    }
+                  })
+                ]
+              ),
+              _vm._v(" "),
+              _c("div", { staticClass: "infotext" }, [
+                _vm._v(
+                  "\n                            Black Diamond camalotx4\n                        "
+                )
+              ])
+            ])
+          ])
+        ])
+      ])
+    ])
+  }
+]
 render._withStripped = true
 
 
@@ -50333,6 +52311,8 @@ Vue.component('videos-component', __webpack_require__(/*! ./components/VideosCom
 Vue.component('distribuidores-component', __webpack_require__(/*! ./components/DistribuidoresComponent.vue */ "./resources/js/components/DistribuidoresComponent.vue")["default"]);
 Vue.component('contacto-component', __webpack_require__(/*! ./components/ContactoComponent.vue */ "./resources/js/components/ContactoComponent.vue")["default"]);
 Vue.component('marca-component', __webpack_require__(/*! ./components/MarcasComponent.vue */ "./resources/js/components/MarcasComponent.vue")["default"]);
+Vue.component('detalle-component', __webpack_require__(/*! ./components/DetalleComponent.vue */ "./resources/js/components/DetalleComponent.vue")["default"]);
+Vue.component('outlet-component', __webpack_require__(/*! ./components/OutletComponent.vue */ "./resources/js/components/OutletComponent.vue")["default"]);
 var app = new Vue({
   el: '#app'
 });
@@ -50599,6 +52579,75 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ContenidoComponent_vue_vue_type_template_id_1d78ff2f___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ContenidoComponent_vue_vue_type_template_id_1d78ff2f___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/DetalleComponent.vue":
+/*!******************************************************!*\
+  !*** ./resources/js/components/DetalleComponent.vue ***!
+  \******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _DetalleComponent_vue_vue_type_template_id_46ecf4b1___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./DetalleComponent.vue?vue&type=template&id=46ecf4b1& */ "./resources/js/components/DetalleComponent.vue?vue&type=template&id=46ecf4b1&");
+/* harmony import */ var _DetalleComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./DetalleComponent.vue?vue&type=script&lang=js& */ "./resources/js/components/DetalleComponent.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _DetalleComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _DetalleComponent_vue_vue_type_template_id_46ecf4b1___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _DetalleComponent_vue_vue_type_template_id_46ecf4b1___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/DetalleComponent.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/DetalleComponent.vue?vue&type=script&lang=js&":
+/*!*******************************************************************************!*\
+  !*** ./resources/js/components/DetalleComponent.vue?vue&type=script&lang=js& ***!
+  \*******************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_DetalleComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./DetalleComponent.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/DetalleComponent.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_DetalleComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/DetalleComponent.vue?vue&type=template&id=46ecf4b1&":
+/*!*************************************************************************************!*\
+  !*** ./resources/js/components/DetalleComponent.vue?vue&type=template&id=46ecf4b1& ***!
+  \*************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_DetalleComponent_vue_vue_type_template_id_46ecf4b1___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./DetalleComponent.vue?vue&type=template&id=46ecf4b1& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/DetalleComponent.vue?vue&type=template&id=46ecf4b1&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_DetalleComponent_vue_vue_type_template_id_46ecf4b1___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_DetalleComponent_vue_vue_type_template_id_46ecf4b1___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 
@@ -50944,6 +52993,75 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_MarcasComponent_vue_vue_type_template_id_0923432a___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_MarcasComponent_vue_vue_type_template_id_0923432a___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/OutletComponent.vue":
+/*!*****************************************************!*\
+  !*** ./resources/js/components/OutletComponent.vue ***!
+  \*****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _OutletComponent_vue_vue_type_template_id_6a2e7056___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./OutletComponent.vue?vue&type=template&id=6a2e7056& */ "./resources/js/components/OutletComponent.vue?vue&type=template&id=6a2e7056&");
+/* harmony import */ var _OutletComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./OutletComponent.vue?vue&type=script&lang=js& */ "./resources/js/components/OutletComponent.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _OutletComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _OutletComponent_vue_vue_type_template_id_6a2e7056___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _OutletComponent_vue_vue_type_template_id_6a2e7056___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/OutletComponent.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/OutletComponent.vue?vue&type=script&lang=js&":
+/*!******************************************************************************!*\
+  !*** ./resources/js/components/OutletComponent.vue?vue&type=script&lang=js& ***!
+  \******************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_OutletComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./OutletComponent.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/OutletComponent.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_OutletComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/OutletComponent.vue?vue&type=template&id=6a2e7056&":
+/*!************************************************************************************!*\
+  !*** ./resources/js/components/OutletComponent.vue?vue&type=template&id=6a2e7056& ***!
+  \************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_OutletComponent_vue_vue_type_template_id_6a2e7056___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./OutletComponent.vue?vue&type=template&id=6a2e7056& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/OutletComponent.vue?vue&type=template&id=6a2e7056&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_OutletComponent_vue_vue_type_template_id_6a2e7056___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_OutletComponent_vue_vue_type_template_id_6a2e7056___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 

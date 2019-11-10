@@ -14,6 +14,7 @@
 Route::get('/', 'Frontend\HomeController@index')->name('home');
 Route::get('/empresa', 'Frontend\HomeController@empresa')->name('empresa');
 Route::get('/productos', 'Frontend\HomeController@productos')->name('productos');
+Route::get('/productos/{slug}', 'Frontend\HomeController@productoDetalle')->name('productos.detalle');
 Route::get('/videos', 'Frontend\HomeController@videos')->name('videos');
 Route::get('/distribuidores', 'Frontend\HomeController@distribuidores')->name('distribuidores');
 Route::get('/contacto', 'Frontend\HomeController@contacto')->name('contacto');
@@ -119,6 +120,9 @@ Route::group(['prefix' => 'usuario'],function(){
 });
 
 Route::group(['prefix' => 'exposure-team'],function(){
-    Route::get('/', 'Frontend\ExposureController@index')->name('dashboard');
+    Route::get('/', 'Frontend\ExposureController@index')->name('exposure.index');
+    Route::get('/{slug}', 'Frontend\ExposureController@detalle')->name('exposure.detalle');
+
+
 });
 

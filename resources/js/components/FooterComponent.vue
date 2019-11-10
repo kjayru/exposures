@@ -8,26 +8,26 @@
                             Copyright © 2019 - Exposure
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Inicio</a>
+                            <a class="nav-link" href="/">Inicio</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Empresa</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Productos</a>
+                            <a class="nav-link" href="/empresa">Empresa</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Distribuidores</a>
+                            <a class="nav-link" href="/productos">Productos</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Contacto</a>
+                            <a class="nav-link" href="/distribuidores">Distribuidores</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Acceso a distruidores</a>
+                            <a class="nav-link" href="/contacto">Contacto</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="http://www.exposure.com.mx/pedidosonline/">Acceso a distruidores</a>
                         </li>
                         <li class="designed">
                             <a class="nav-link" href="#" target="_blank">Design by: COBO's</a>
