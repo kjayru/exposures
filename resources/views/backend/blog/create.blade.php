@@ -6,12 +6,12 @@
         <!-- Content Header (Page header) -->
         <section class="content-header">
           <h1>
-            Posteo
+            Equipo
             <small>Control panel</small>
           </h1>
           <ol class="breadcrumb">
-            <li><a href="#"><i class="fa fa-dashboard"></i> Inicio</a></li>
-            <li class="active">Post</li>
+            <li><a href="/admin"><i class="fa fa-dashboard"></i> Inicio</a></li>
+            <li class="active">Equipo</li>
           </ol>
         </section>
 
@@ -27,30 +27,24 @@
 
                 @if(session('info'))
                     <div class="container">
-                        <div class="row">
-                            <div class="col-md-12">
+
                                 <div class="alert alert-success">
                                     {{ session('info')}}
                                 </div>
-                            </div>
-                        </div>
-                    </div>
+
                 @endif
 
               <form class="form-horizontal" action="{{ route('post.store') }}" method="POST" enctype="multipart/form-data">
                 <div class="box-header with-border">
-                  <h3 class="box-title">Nuevo Post</h3>
+                  <h3 class="box-title">Nuevo Integrante</h3>
+                  <a href="{{ route('post.index') }}" class="btn btn-danger pull-right">Cancelar</a>
                 </div>
                 <div class="box-body">
-
                     @csrf
-
-
                     @include('backend.blog.form.index')
-
                 </div>
                 <div class="box-footer">
-                        <a href="{{ URL::previous() }}" class="btn btn-default">Cancelar</a>
+                    <a href="{{ route('post.index') }}" class="btn btn-danger">Cancelar</a>
                     <button type="submit" class="btn btn-info pull-right">Guardar</button>
                 </div>
               </form>

@@ -20,20 +20,17 @@
 
 
             @if(session('info'))
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12">
+
                             <div class="alert alert-success">
                                 {{ session('info')}}
                             </div>
-                        </div>
-                    </div>
-                </div>
+
             @endif
 
           <form class="form-horizontal" action="{{ route('category.store') }}" method="POST" enctype="multipart/form-data">
             <div class="box-header with-border">
               <h3 class="box-title">Crear Categoria</h3>
+              <a href="{{ route('category.index') }}" class="btn btn-danger">Cancelar</a>
             </div>
               <div class="box-body">
 

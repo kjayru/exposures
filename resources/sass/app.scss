@@ -64,6 +64,7 @@
 
 .blanco h2 {
     color: #0371bc;
+    font-family: Arial, Helvetica, sans-serif;
 }
 li.nav-item.copy {
     padding-top: 8px;
@@ -92,28 +93,32 @@ li.nav-item.copy {
 }
 .testimonio span.nombre {
     display: block;
+
 }
 .testImg {
-    width: 60px;
+    width: 100%;
     display: block;
     float: left;
     position: relative;
     margin-right: 15px;
+    top: 15px;
 }
 .testImg  img{
   width: 100%;
   border-radius: 50%;
+  border: 1px solid white;
+  height: 60px;
 }
 
 .testImg:after {
-    width: 66px;
-    height: 66px;
+    width: 68px;
+    height: 68px;
     content: "";
-    border: 1px solid #000;
+    border: 2px solid #000;
     border-radius: 50%;
     display: block;
-    top: -3px;
-    left: -3px;
+    top: -7px;
+    left: -4px;
     position: absolute;
 }
 
@@ -125,9 +130,10 @@ li.nav-item.copy {
     display: inline-block;
     float: left;
     padding-top: 10px;
+    position: relative;
 }
 .testimonio-body {
-    padding-left: 75px;
+    text-align:justify;
 }
 .testimonio{
     padding-bottom: 40px;
@@ -553,7 +559,7 @@ padding: 32px;
   font-family: Arial, Helvetica, sans-serif;
   padding-top: 20px;
   padding-bottom: 12px;
-} 
+}
 .bloque {
   background: #353535 url(../images/comillas.png) 17px 20px no-repeat;
   border-left: solid 5px #0077c4;
@@ -563,4 +569,26 @@ padding: 32px;
   padding-bottom: 30px;
   margin-bottom: 30px;
   margin-top: 20px;
+}
+.bgMontana {
+    background: url(../images/bgMontana.jpg) center top;
+    padding: 0 0 60px;
+}
+h3.regular {
+    border-bottom: solid 2px #afafaf;
+    padding-bottom: 4px;
+    margin-bottom: 25px;
+    margin-top: 43px;
+    text-transform: uppercase;
+}
+.datos{
+    width:100%;
+}
+.datos:before{
+    content: "";
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    background: #afafaf;
+    bottom: -3px;
 }

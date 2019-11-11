@@ -5,7 +5,7 @@
                 <div class="col-md-8">
                     <h3>MARCAS PARTICIPANTES</h3>
 
-                    <div class="row">
+                    <div class="row justify-content-center">
                         <div class="col-md-2">
                             <img src="http://exposure.mx/images/logo-black-diamond-200.png" class="img-fluid">
                         </div>

@@ -6,12 +6,12 @@
         <!-- Content Header (Page header) -->
         <section class="content-header">
           <h1>
-            Blog
+            Equipo
             <small>Control panel</small>
           </h1>
           <ol class="breadcrumb">
             <li><a href="#"><i class="fa fa-dashboard"></i> Inicio</a></li>
-            <li class="active">Blog</li>
+            <li class="active">Equipo</li>
           </ol>
         </section>
 
@@ -25,7 +25,7 @@
                 <div class="col-xs-12">
                   <div class="box">
                     <div class="box-header">
-                      <h3 class="box-title">Blog posts</h3>
+                      <h3 class="box-title">El equipo</h3>
                       <a href="{{ route('post.created')}}" class="btn btn-primary pull-right">Crear</a>
                     </div>
                     <!-- /.box-header -->

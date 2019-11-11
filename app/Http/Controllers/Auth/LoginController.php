@@ -27,27 +27,23 @@ class LoginController extends Controller
      *
      * @var string
      */
-    //protected $redirectTo = '/home';
 
     protected function authenticated(Request $request, $user)
     {
-        
-       /* switch ($user->roles[0]->slug) {
+
+       switch ($user->roles[0]->slug) {
             case 'usuario':
-            return redirect('/usuario');
+            return redirect('/outlet');
             break;
             case 'client':
                 return redirect('/admin');
                 break;
-            case 'driver':
-                return redirect('/admin');
-                break;
-           
+
             case 'admin':
                 return redirect('/admin');
                 break;
-        }*/
-        return redirect('/admin');
+        }
+
 
     }
     /**

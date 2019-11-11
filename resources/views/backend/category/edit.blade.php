@@ -26,20 +26,17 @@
 
 
                 @if(session('info'))
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-12">
+
                                 <div class="alert alert-success">
                                     {{ session('info')}}
                                 </div>
-                            </div>
-                        </div>
-                    </div>
+
                 @endif
 
               <form class="form-horizontal" action="{{ route('category.update',$categoria->id) }}" method="POST" enctype="multipart/form-data">
                 <div class="box-header with-border">
                   <h3 class="box-title">Editar Categoria</h3>
+                  <a href="{{ route('category.index') }}" class="btn btn-danger pull-right">Cancelar</a>
                 </div>
                   <div class="box-body">
 
@@ -50,7 +47,7 @@
 
                   </div>
                   <div class="box-footer">
-                        <a href="{{ URL::previous() }}" class="btn btn-default">Cancelar</a>
+                        <a href="{{ route('category.index') }}" class="btn btn-danger">Cancelar</a>
                     <button type="submit" class="btn btn-info pull-right">Guardar</button>
                   </div>
               </form>

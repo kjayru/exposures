@@ -35,20 +35,66 @@ Auth::routes();
 Route::group(['prefix' => 'admin'],function(){
     Route::get('/', 'Backend\DashboardController@index')->name('dashboard');
 
-    Route::get('/categories', 'Backend\CategoryController@index')->name('category.index');
-    Route::get('/categories/create', 'Backend\CategoryController@create')->name('category.build');
-    Route::post('/categories', 'Backend\CategoryController@store')->name('category.store');
-    Route::get('/categories/{category}/edit', 'Backend\CategoryController@edit')->name('category.edit');
-    Route::put('/categories/{category}', 'Backend\CategoryController@update')->name('category.update');
-    Route::delete('/categories/{category}', 'Backend\CategoryController@destroy')->name('category.destroy');
+
+    //Roles
+    Route::post('roles/store','Backend\RoleController@store')->name('roles.store')
+    ->middleware('permission:roles.create');
+    Route::get('roles','Backend\RoleController@index')->name('roles.index')
+    ->middleware('permission:roles.index');
+    Route::get('roles/create','Backend\RoleController@create')->name('roles.create')
+    ->middleware('permission:roles.create');
+    Route::put('roles/{role}','Backend\RoleController@update')->name('roles.update')
+    ->middleware('permission:roles.edit');
+    Route::get('roles/{role}','Backend\RoleController@show')->name('roles.show')
+    ->middleware('permission:roles.show');
+    Route::delete('roles/{role}','Backend\RoleController@destroy')->name('roles.destroy')
+    ->middleware('permission:roles.destroy');
+    Route::get('roles/{role}/edit','Backend\RoleController@edit')->name('roles.edit')
+    ->middleware('permission:roles.edit');
+
+    //users
+    Route::post('users/store','Backend\UserController@store')->name('users.store')
+    ->middleware('permission:users.create');
+    Route::get('users','Backend\UserController@index')->name('users.index')
+    ->middleware('permission:users.index');
+    Route::get('users/create','Backend\UserController@create')->name('users.create')
+    ->middleware('permission:users.create');
+    Route::get('users/{user}/edit','Backend\UserController@edit')->name('users.edit')
+    ->middleware('permission:users.edit');
+    Route::put('users/{user}','Backend\UserController@update')->name('users.update')
+    ->middleware('permission:users.edit');
+    Route::get('users/{user}','Backend\UserController@show')->name('users.show')
+    ->middleware('permission:users.show');
+    Route::delete('users/{user}','Backend\UserController@destroy')->name('users.destroy')
+    ->middleware('permission:users.destroy');
 
 
-    Route::get('/products', 'Backend\ProductController@index')->name('product.index');
-    Route::get('/products/create', 'Backend\ProductController@create')->name('product.build');
-    Route::post('/products', 'Backend\ProductController@store')->name('product.store');
-    Route::get('/products/{product}/edit', 'Backend\ProductController@edit')->name('product.edit');
-    Route::put('/products/{product}', 'Backend\ProductController@update')->name('product.update');
-    Route::delete('/products/{product}', 'Backend\ProductController@destroy')->name('product.destroy');
+    Route::get('/categories', 'Backend\CategoryController@index')->name('category.index')
+    ->middleware('permission:categories.index');
+    Route::get('/categories/create', 'Backend\CategoryController@create')->name('category.build')
+    ->middleware('permission:categories.create');
+    Route::post('/categories', 'Backend\CategoryController@store')->name('category.store')
+    ->middleware('permission:categories.create');
+    Route::get('/categories/{category}/edit', 'Backend\CategoryController@edit')->name('category.edit')
+    ->middleware('permission:categories.edit');
+    Route::put('/categories/{category}', 'Backend\CategoryController@update')->name('category.update')
+    ->middleware('permission:categories.edit');
+    Route::delete('/categories/{category}', 'Backend\CategoryController@destroy')->name('category.destroy')
+    ->middleware('permission:categories.destroy');
+
+
+    Route::get('/products', 'Backend\ProductController@index')->name('product.index')
+    ->middleware('permission:products.index');
+    Route::get('/products/create', 'Backend\ProductController@create')->name('product.build')
+    ->middleware('permission:products.create');
+    Route::post('/products', 'Backend\ProductController@store')->name('product.store')
+    ->middleware('permission:products.create');
+    Route::get('/products/{product}/edit', 'Backend\ProductController@edit')->name('product.edit')
+    ->middleware('permission:products.edit');
+    Route::put('/products/{product}', 'Backend\ProductController@update')->name('product.update')
+    ->middleware('permission:products.edit');
+    Route::delete('/products/{product}', 'Backend\ProductController@destroy')->name('product.destroy')
+    ->middleware('permission:products.destroy');
 
     Route::get('/orders', 'Backend\OrderController@index')->name('order.index');
     Route::get('/orders/{order}/edit', 'Backend\OrderController@edit')->name('order.edit');
@@ -121,7 +167,8 @@ Route::group(['prefix' => 'usuario'],function(){
 
 Route::group(['prefix' => 'exposure-team'],function(){
     Route::get('/', 'Frontend\ExposureController@index')->name('exposure.index');
-    Route::get('/{slug}', 'Frontend\ExposureController@detalle')->name('exposure.detalle');
+    Route::get('/{cat}', 'Frontend\ExposureController@categoria')->name('exposure.categoria');
+    Route::get('/{cat}/{slug}', 'Frontend\ExposureController@detalle')->name('exposure.detalle');
 
 
 });

@@ -12,6 +12,9 @@ use App\MultimediaProduct;
 use App\ProductMultimedia;
 class ProductController extends Controller
 {
+    public function __construct(){
+        $this->middleware('auth');
+   }
     /**
      * Display a listing of the resource.
      *
@@ -54,7 +57,6 @@ class ProductController extends Controller
 
         ]);
 
-
         $product = new Product();
 
         $product->name = $request->name;
@@ -63,15 +65,17 @@ class ProductController extends Controller
         $product->description = $request->description;
         $product->title = $request->title;
         $product->slug = Str::slug($request->name, '-');
+
         if($request->hasFile('imagen')){
          $imagen = $request->file('imagen')->store('products');
          $product->imagen = $imagen;
         }
+
         $product->category_id = $request->category;
         $product->save();
 
-        return redirect()->route('product.edit',['id'=>$product->id])
-     ->with('info','Producto actualizado satisfactoriamente');
+        return redirect()->route('product.edit',['id' => $product->id ])
+        ->with('info','Producto actualizado satisfactoriamente');
     }
 
     /**
@@ -117,11 +121,21 @@ class ProductController extends Controller
          $product->imagen = $imagen;
         }
         $product->category_id = $request->category;
+
+        if($request->outlet){
+            $product->outlet = $request->outlet;
+        }
+
+
         $product->save();
-        foreach($request->imageid as $imgid){
-            $producto = Product::findOrFail($id);
-            $product->multimedias()->attach($imgid);
-         }
+
+        if($request->imageid){
+            foreach($request->imageid as $imgid){
+                $producto = Product::findOrFail($id);
+                $product->multimedias()->attach($imgid);
+            }
+        }
+
         return redirect()->route('product.edit',['id'=>$id])
      ->with('info','Producto actualizado satisfactoriamente');
     }

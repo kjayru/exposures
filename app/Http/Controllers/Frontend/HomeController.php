@@ -7,10 +7,15 @@ use App\Http\Controllers\Controller;
 use App\Slide;
 use App\SlideItem;
 use App\Page;
+use App\Testimony;
+
 class HomeController extends Controller
 {
     public function index(){
-        return view('frontend.home.inicio');
+
+        $testimonios = Testimony::orderBy('id','desc')->get();
+
+        return view('frontend.home.inicio',['testimonios'=>$testimonios]);
     }
 
     public function empresa(){

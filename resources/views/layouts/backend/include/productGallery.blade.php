@@ -7,7 +7,9 @@
               <h4 class="modal-title">Imagenes</h4>
             </div>
             <div class="modal-body">
+                @if(@$fotos)
                 @foreach ($fotos as $foto)
+
                 <div class="col-md-3 ">
                     <div class="thumbnail">
                         <a href="#" class="contenedor thumimg" data-id="{{ $foto->id}}" data-path="{{ $foto->file }}">
@@ -19,10 +21,10 @@
                     </div>
                   </div>
                 @endforeach
-
+                @endif
             </div>
             <div class="modal-footer">
-              <a class="btn btn-default pull-left seleccionar-thumb" >Agregar a producto</button>
+              <a class="btn btn-default pull-left seleccionar-thumb" >Agregar a producto</a>
 
             </div>
           </div>

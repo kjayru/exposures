@@ -1,14 +1,23 @@
 <?php
 
 namespace App;
-
+use App\Traits\SeguridadTrait;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Http\Request;
+use Illuminate\Auth\Notifications\ResetPassword;
+use Illuminate\Notifications\Messages\MailMessage;
 
 class User extends Authenticatable
 {
-    use Notifiable;
+    use Notifiable, SeguridadTrait;
+
+
+    public static function navigation(){
+        return auth()->check() ? auth()->user()->roles[0]->slug : 'guest';
+    }
 
     /**
      * The attributes that are mass assignable.

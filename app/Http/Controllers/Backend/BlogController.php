@@ -52,6 +52,14 @@ class BlogController extends Controller
         $post->slug = Str::slug($request->title);
         $post->excerpt = $request->excerpt;
         $post->content = $request->content;
+        $post->facebook = $request->facebook;
+        $post->instagram = $request->instagram;
+
+        if($request->hasFile('foto')){
+            $foto = $request->file('foto')->store('profile');
+            $post->foto = $foto;
+        }
+
         $post->category_blog_id = $request->category_blog_id;
 
         $post->save();
@@ -97,6 +105,13 @@ class BlogController extends Controller
         $post->slug = Str::slug($request->title);
         $post->excerpt = $request->excerpt;
         $post->content = $request->content;
+        $post->facebook = $request->facebook;
+        $post->instagram = $request->instagram;
+        if($request->hasFile('foto')){
+            $foto = $request->file('foto')->store('profile');
+            $post->foto = $foto;
+        }
+
         $post->category_blog_id = $request->category_blog_id;
 
         $post->save();

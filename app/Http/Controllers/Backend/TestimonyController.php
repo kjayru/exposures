@@ -7,6 +7,9 @@ use App\Http\Controllers\Controller;
 use App\Testimony;
 class TestimonyController extends Controller
 {
+    public function __construct(){
+        $this->middleware('auth');
+   }
     /**
      * Display a listing of the resource.
      *

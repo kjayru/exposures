@@ -10,9 +10,7 @@
                         <img src="/images/slide/46-05-05-jpg"  />
                         <img src="/images/slide/47-01-01-jpg"  />
                         <img src="/images/slide/48-06-06-jpg"  />
-                        
                 </div>
-                
         </div>
 </section>
     <videos-component></videos-component>

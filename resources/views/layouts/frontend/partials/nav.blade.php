@@ -12,36 +12,32 @@
                 <!-- Left Side Of Navbar -->
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item ">
-                        <a href="/" class="nav-link active">Inicio</a>
+                        <a href="/" class="nav-link {{{ (Request::is('/') ? 'active' : '') }}}">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a href="/empresa" class="nav-link">Empresa</a>
+                        <a href="/empresa" class="nav-link {{{ (Request::is('empresa') ? 'active' : '') }}}">Empresa</a>
                     </li>
                     <li class="nav-item">
-                        <a href="/productos" class="nav-link">Productos</a>
+                        <a href="/productos" class="nav-link {{{ (Request::is('productos') ? 'active' : '') }}}">Productos</a>
                     </li>
                     <li class="nav-item">
-                        <a href="/videos" class="nav-link">Videos</a>
+                        <a href="/videos" class="nav-link {{{ (Request::is('videos') ? 'active' : '') }}}">Videos</a>
                     </li>
                     <li class="nav-item">
-                        <a href="/distribuidores" class="nav-link">Distribuidores</a>
+                        <a href="/distribuidores" class="nav-link {{{ (Request::is('distribuidores') ? 'active' : '') }}}">Distribuidores</a>
                     </li>
                     <li class="nav-item">
-                        <a href="/outlet/" class="nav-link">Outlet</a>
+                        <a href="/outlet/" class="nav-link {{{ (Request::is('outlet') ? 'active' : '') }}}">Outlet</a>
                     </li>
                     <li class="nav-item">
-                        <a href="/contacto" class="nav-link">Contacto</a>
+                        <a href="/contacto" class="nav-link {{{ (Request::is('contacto') ? 'active' : '') }}}">Contacto</a>
                     </li>
 
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <li class="nav-item ">
+                        <a class="nav-link {{{ (Request::is('exposure-team') ? 'active' : '') }}}" href="/exposure-team" >
                             Exposure Team
                         </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                          <a class="dropdown-item" href="/exposure-team/">Team</a>
-                          <a class="dropdown-item" href="/exposure-team/conoce-al-equipo">exposure-team</a>
 
-                        </div>
                       </li>
                 </ul>
 

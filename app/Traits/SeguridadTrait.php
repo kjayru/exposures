@@ -2,21 +2,21 @@
 namespace App\Traits;
 
 trait seguridadTrait
-{ 
+{
     use PermisoTrait;
-    
+
     public static function getTag()
     {
         return 'seguridad.users';
     }
 
-   
+
     public function roles()
     {
-        return $this->belongsToMany(Role::class)->withTimestamps();
+        return $this->belongsToMany('App\Role')->withTimestamps();
     }
 
-    
+
     public function getRoles()
     {
         if (!is_null($this->roles)) {
@@ -24,7 +24,7 @@ trait seguridadTrait
         }
     }
 
-    
+
     public function isRole($slug)
     {
         $slug = strtolower($slug);
@@ -66,21 +66,21 @@ trait seguridadTrait
         return $this->roles()->detach($roleId);
     }
 
-   
+
     public function syncRoles(array $roleIds)
     {
         $this->flushPermissionCache();
         return $this->roles()->sync($roleIds);
     }
 
-   
+
     public function revokeAllRoles()
     {
         $this->flushPermissionCache();
         return $this->roles()->detach();
     }
 
-   
+
     public function getUserPermissions()
     {
         return $this->permissions->pluck('slug')->all();
@@ -96,9 +96,9 @@ trait seguridadTrait
         return call_user_func_array('array_merge', $permissions);
     }
 
-    
+
     public function can($permission, $arguments = [])
-    {   
+    {
         foreach ($this->roles as $role) {
             if ($role->special === 'no-access') {
                 return false;
@@ -129,17 +129,17 @@ trait seguridadTrait
         return false;
     }
 
-  
+
     public function __call($method, $arguments = [])
     {
-        
+
         if (starts_with($method, 'is') and $method !== 'is') {
             $role = kebab_case(substr($method, 2));
 
             return $this->isRole($role);
         }
 
-      
+
         if (starts_with($method, 'can') and $method !== 'can') {
             $permission = kebab_case(substr($method, 3));
 

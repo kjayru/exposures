@@ -4,9 +4,8 @@ namespace App\Http\Controllers\Backend;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Payment;
 
-class InvoiceController extends Controller
+class RoleController extends Controller
 {
     public function __construct(){
         $this->middleware('auth');
@@ -18,9 +17,7 @@ class InvoiceController extends Controller
      */
     public function index()
     {
-        $facturas = Payment::orderBy('id','desc')->get();
-
-        return view('backend.invoice.index',['facturas'=>$facturas]);
+        //
     }
 
     /**
@@ -63,9 +60,7 @@ class InvoiceController extends Controller
      */
     public function edit($id)
     {
-        $factura = Payment::find($id);
-
-        return view('backend.invoice.edit',['factura'=>$factura]);
+        //
     }
 
     /**

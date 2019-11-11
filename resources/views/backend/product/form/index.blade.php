@@ -85,20 +85,37 @@
         </div>
     </div>
 
-    <fieldset>
-        <legend>Galeria producto</legend>
-        <div class="form-group">
+    <div class="form-group @if($errors->first('excerpt')) has-error @endif">
+            <label for="excerpt" class="col-sm-2 control-label">Outlet</label>
+
+            <div class="col-sm-10">
+                    <div class="checkbox">
+                            <label>
+                              <input type="checkbox" name="outlet" id="outlet" value="1" {{ @$product->outlet ? 'checked' : '' }}>
+                            </label>
+                    </div>
+              <span class="help-block">{{ $errors->first('excerpt') }}</span>
+          </div>
+    </div>
+
+    <fieldset> <legend>Galeria producto</legend></fieldset>
+        <div class="form-group text-center">
             <button type="button" class="btn btn-default" data-toggle="modal" data-target="#modal-default">
                Seleccionar imagenes
             </button>
         </div>
         <div class="prodimages">
+        @if(@$product->multimedias)
            @foreach($product->multimedias as $foto)
             <div class="col-md-2 ">
                 <img src="/storage/{{ $foto->file }}" class="thumbnail" width="70">
             </div>
             @endforeach
+        @endif
         </div>
-    </fieldset>
+
+
+
+
 
 

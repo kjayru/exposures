@@ -34,6 +34,7 @@
           <form class="form-horizontal" action="{{ route('product.update',$product->id) }}" method="POST" enctype="multipart/form-data">
             <div class="box-header with-border">
               <h3 class="box-title">Editar Producto</h3>
+              <a href="{{ route('product.index') }}" class="btn btn-danger pull-right">Cancelar</a>
             </div>
               <div class="box-body">
                 @csrf
@@ -44,7 +45,7 @@
               </div>
 
               <div class="box-footer">
-                    <a href="{{ URL::previous() }}" class="btn btn-default">Cancelar</a>
+                <a href="{{ route('product.index') }}" class="btn btn-danger">Cancelar</a>
                 <button type="submit" class="btn btn-info pull-right">Guardar</button>
               </div>
           </form>

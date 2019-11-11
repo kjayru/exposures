@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Frontend;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Post;
+use App\CategoryBlog;
 
 class ExposureController extends Controller
 {
@@ -14,7 +15,9 @@ class ExposureController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index(){
-        return view('frontend.exposure-team.index');
+        $categorias = CategoryBlog::orderBy('id','desc')->get();
+        $posts = Post::orderBy('id','desc')->get();
+        return view('frontend.exposure-team.index',['categorias'=>$categorias,'posts'=>$posts]);
     }
 
     /**
@@ -22,10 +25,20 @@ class ExposureController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function detalle($slug)
+    public function categoria($slug)
     {
+        $categoria = CategoryBlog::where('slug',$slug)->first();
+        $categorias = CategoryBlog::orderBy('id','desc')->get();
+
+
+        return view('frontend.exposure-team.categoria',['categorias'=>$categorias,'posts'=>$categoria->posts]);
+    }
+
+    public function detalle($categoria,$slug)
+    {
+
         $post = Post::where('slug',$slug)->first();
 
-        return view('frontend.exposure-team.detalle');
+        return view('frontend.exposure-team.detalle',['post'=>$post]);
     }
 }

@@ -24,12 +24,14 @@
                         @csrf
                         <div class="box-header with-border">
                             <h3 class="box-title">Nuevo Testimonio</h3>
+                            <a href="{{ route('testimony.index') }}" class="btn btn-danger pull-right">Cancelar</a>
                         </div>
                         <div class="box-body">
                         @include('backend.testimony.form.index')
                         </div>
                         <div class="box-footer">
-                                <a href="{{ URL::previous() }}" class="btn btn-default">Cancelar</a>
+
+                                <a href="{{ route('testimony.index') }}" class="btn btn-danger">Cancelar</a>
                             <button type="submit" class="btn btn-info pull-right">Guardar</button>
                             </div>
                     </form>

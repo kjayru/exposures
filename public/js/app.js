@@ -39346,7 +39346,7 @@ var staticRenderFns = [
           _c("div", { staticClass: "col-md-8" }, [
             _c("h3", [_vm._v("MARCAS PARTICIPANTES")]),
             _vm._v(" "),
-            _c("div", { staticClass: "row" }, [
+            _c("div", { staticClass: "row justify-content-center" }, [
               _c("div", { staticClass: "col-md-2" }, [
                 _c("img", {
                   staticClass: "img-fluid",
@@ -39912,77 +39912,81 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("section", { attrs: { id: "testimonio" } }, [
-      _c("div", { staticClass: "container-fluid" }, [
-        _c("div", { staticClass: "row justify-content-center" }, [
-          _c("div", { staticClass: "col-md-8" }, [
-            _c("h3", [_vm._v("TESTIMONIOS")]),
-            _vm._v(
-              "\n                Que mejor que escuchar recomendaciones de boca de los expertos, en esta seccion podran encontrar reseñas y consejos del equipo que ya esta siendo sometido a las mas duras pruebas de campo a manos de nuestro equipo de atletas.\n                "
-            ),
-            _c("div", { staticClass: "row" }, [
-              _c("div", { staticClass: "testimonio col-md-6" }, [
-                _c("div", { staticClass: "testimonio-header" }, [
-                  _c("div", { staticClass: "testImg" }, [
-                    _c("img", {
-                      staticClass: "img-fluid",
-                      attrs: {
-                        src: "http://exposure.mx/images/testimonios/test1.jpg"
-                      }
-                    })
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "datos" }, [
-                    _c("span", { staticClass: "titulo" }, [
-                      _vm._v("THE RUNNER")
+    return _c(
+      "section",
+      { staticClass: "bgMontana", attrs: { id: "testimonio" } },
+      [
+        _c("div", { staticClass: "container-fluid" }, [
+          _c("div", { staticClass: "row justify-content-center" }, [
+            _c("div", { staticClass: "col-md-8" }, [
+              _c("h3", [_vm._v("TESTIMONIOS")]),
+              _vm._v(
+                "\n                Que mejor que escuchar recomendaciones de boca de los expertos, en esta seccion podran encontrar reseñas y consejos del equipo que ya esta siendo sometido a las mas duras pruebas de campo a manos de nuestro equipo de atletas.\n                "
+              ),
+              _c("div", { staticClass: "row" }, [
+                _c("div", { staticClass: "testimonio col-md-6" }, [
+                  _c("div", { staticClass: "testimonio-header" }, [
+                    _c("div", { staticClass: "testImg" }, [
+                      _c("img", {
+                        staticClass: "img-fluid",
+                        attrs: {
+                          src: "http://exposure.mx/images/testimonios/test1.jpg"
+                        }
+                      })
                     ]),
                     _vm._v(" "),
-                    _c("span", { staticClass: "nombre" }, [
-                      _vm._v("ISABEL BOLIVAR")
+                    _c("div", { staticClass: "datos" }, [
+                      _c("span", { staticClass: "titulo" }, [
+                        _vm._v("THE RUNNER")
+                      ]),
+                      _vm._v(" "),
+                      _c("span", { staticClass: "nombre" }, [
+                        _vm._v("ISABEL BOLIVAR")
+                      ])
                     ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "testimonio-body" }, [
+                    _vm._v(
+                      "\n                            Estoy enamorada de SoiLL, desde los diseños poco comunes hasta su cómoda forma pero sumamente técnica,\n                            los Runner y Runner LV han logrado adaptarse perfectamente a mis pies y a todo terreno.\n                            En mi caso, he tenido la oportunidad de usarlos tanto en la roca como en los entrenamientos\n                            en el muro y su rendimiento es increíble.\n                            Está claro que SoiLL llegó para quedarse.\n                        "
+                    )
                   ])
                 ]),
                 _vm._v(" "),
-                _c("div", { staticClass: "testimonio-body" }, [
-                  _vm._v(
-                    "\n                            Estoy enamorada de SoiLL, desde los diseños poco comunes hasta su cómoda forma pero sumamente técnica,\n                            los Runner y Runner LV han logrado adaptarse perfectamente a mis pies y a todo terreno.\n                            En mi caso, he tenido la oportunidad de usarlos tanto en la roca como en los entrenamientos\n                            en el muro y su rendimiento es increíble.\n                            Está claro que SoiLL llegó para quedarse.\n                        "
-                  )
-                ])
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "testimonio col-md-6" }, [
-                _c("div", { staticClass: "testimonio-header" }, [
-                  _c("div", { staticClass: "testImg" }, [
-                    _c("img", {
-                      staticClass: "img-responsive",
-                      attrs: {
-                        src: "http://exposure.mx/images/testimonios/test1.jpg"
-                      }
-                    })
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "datos" }, [
-                    _c("span", { staticClass: "titulo" }, [
-                      _vm._v("THE RUNNER")
+                _c("div", { staticClass: "testimonio col-md-6" }, [
+                  _c("div", { staticClass: "testimonio-header" }, [
+                    _c("div", { staticClass: "testImg" }, [
+                      _c("img", {
+                        staticClass: "img-responsive",
+                        attrs: {
+                          src: "http://exposure.mx/images/testimonios/test1.jpg"
+                        }
+                      })
                     ]),
                     _vm._v(" "),
-                    _c("span", { staticClass: "nombre" }, [
-                      _vm._v("ISABEL BOLIVAR")
+                    _c("div", { staticClass: "datos" }, [
+                      _c("span", { staticClass: "titulo" }, [
+                        _vm._v("THE RUNNER")
+                      ]),
+                      _vm._v(" "),
+                      _c("span", { staticClass: "nombre" }, [
+                        _vm._v("ISABEL BOLIVAR")
+                      ])
                     ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "testimonio-body" }, [
+                    _vm._v(
+                      "\n                            Estoy enamorada de SoiLL, desde los diseños poco comunes hasta su cómoda forma pero sumamente técnica,\n                            los Runner y Runner LV han logrado adaptarse perfectamente a mis pies y a todo terreno.\n                            En mi caso, he tenido la oportunidad de usarlos tanto en la roca como en los entrenamientos\n                            en el muro y su rendimiento es increíble.\n                            Está claro que SoiLL llegó para quedarse.\n                        "
+                    )
                   ])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "testimonio-body" }, [
-                  _vm._v(
-                    "\n                            Estoy enamorada de SoiLL, desde los diseños poco comunes hasta su cómoda forma pero sumamente técnica,\n                            los Runner y Runner LV han logrado adaptarse perfectamente a mis pies y a todo terreno.\n                            En mi caso, he tenido la oportunidad de usarlos tanto en la roca como en los entrenamientos\n                            en el muro y su rendimiento es increíble.\n                            Está claro que SoiLL llegó para quedarse.\n                        "
-                  )
                 ])
               ])
             ])
           ])
         ])
-      ])
-    ])
+      ]
+    )
   }
 ]
 render._withStripped = true

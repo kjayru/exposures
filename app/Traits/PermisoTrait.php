@@ -2,22 +2,22 @@
 namespace App\Traits;
 
 trait permisoTrait{
-    
+
     public static function getTag()
     {
         return '';
     }
 
-   
+
     public function permissions()
     {
-        return $this->belongsToMany(Permission::class)->withTimestamps();
+        return $this->belongsToMany('App\Permission')->withTimestamps();
     }
 
-  
+
     protected function getFreshPermissions()
     {
-        
+
     }
 
     public function getPermissions()
@@ -47,7 +47,7 @@ trait permisoTrait{
         return false;
     }
 
-  
+
     public function revokePermission($permissionId = '')
     {
         $this->flushPermissionCache();
@@ -55,7 +55,7 @@ trait permisoTrait{
         return $this->permissions()->detach($permissionId);
     }
 
-    
+
     public function syncPermissions(array $permissionIds = [])
     {
         $this->flushPermissionCache();
@@ -70,7 +70,7 @@ trait permisoTrait{
         return $this->permissions()->detach();
     }
 
-    
+
     public function flushPermissionCache(array $tags = null)
     {
         if (method_exists(app()->make('cache')->getStore(), 'tags')) {
@@ -84,7 +84,7 @@ trait permisoTrait{
         }
     }
 
-    
+
     protected function hasAllPermissions($permission, array $permissions)
     {
         if (is_array($permission)) {
@@ -98,7 +98,7 @@ trait permisoTrait{
         }
     }
 
-    
+
     protected function hasAnyPermission(array $permission, array $permissions)
     {
         $intersection      = array_intersect($permissions, $permission);
