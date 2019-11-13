@@ -23,11 +23,6 @@
 
             </li>
 
-
-
-
-
-
             <li class="treeview menu-open">
                     <a href="#">
                       <i class="fa fa-tags fa-fw"></i> <span>Catálogo</span>
@@ -54,7 +49,6 @@
 
                     </ul>
             </li>
-
 
             <li class="treeview menu-open">
                     <a href="/admin/blog">
@@ -83,27 +77,43 @@
                     </ul>
             </li>
 
+              <li class="treeview menu-open">
+                    <a href="/admin/blog">
+                        <i class="fa fa-newspaper-o" aria-hidden="true"></i> <span>CMS</span>
+                      <span class="pull-right-container">
+                          <i class="fa fa-angle-left pull-right"></i>
+                      </span>
 
-            <li {{{ (Request::is('admin/media') ? 'class=active' : '') }}}>
-              <a href="/admin/media">
-                <i class="fa fa-th"></i> <span>Media</span>
+                    </a>
+                    <ul class="treeview-menu" style="display:block">
 
-              </a>
-            </li>
-            <li {{{ (Request::is('admin/testimonials') ? 'class=active' : '') }}}>
-                <a href="/admin/testimonials">
-                    <i class="fa fa-users" aria-hidden="true"></i> <span>Testimonio</span>
+                            <li {{{ (Request::is('admin/media') ? 'class=active' : '') }}}>
+                                <a href="/admin/media">
+                                  <i class="fa fa-th"></i> <span>Media</span>
 
-                </a>
-              </li>
-            <li  {{{ (Request::is('admin/pages') ? 'class=active' : '') }}}>
-              <a href="/admin/pages">
-                <i class="fa fa-file-text" aria-hidden="true"></i> <span>Paginas</span>
-                <span class="pull-right-container">
+                                </a>
+                              </li>
+                              <li {{{ (Request::is('admin/testimonials') ? 'class=active' : '') }}}>
+                                  <a href="/admin/testimonials">
+                                      <i class="fa fa-users" aria-hidden="true"></i> <span>Testimonio</span>
 
-                </span>
-              </a>
-            </li>
+                                  </a>
+                                </li>
+                              <li  {{{ (Request::is('admin/pages') ? 'class=active' : '') }}}>
+                                <a href="/admin/pages">
+                                  <i class="fa fa-file-text" aria-hidden="true"></i> <span>Paginas</span>
+
+                                </a>
+                              </li>
+
+                            <li {{{ (Request::is('admin/banners') ? 'class=active' : '') }}}>
+                                    <a href="/admin/banners">
+                                      <i class="fa fa-users" aria-hidden="true"></i> <span>Banners</span>
+                                   </a>
+                            </li>
+
+                    </ul>
+                  </li>
 
             <li class="treeview menu-open">
               <a href="/admin/blog">

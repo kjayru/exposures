@@ -129,7 +129,6 @@ Route::group(['prefix' => 'admin'],function(){
     Route::put('pages/{id}','Backend\PageController@update')->name('pages.update');
 
 
-
     Route::get('/category-blog', 'Backend\CategoryBLogController@index')->name('catblog.index');
     Route::get('/category-blog/create', 'Backend\CategoryBLogController@create')->name('catblog.created');
     Route::post('/category-blog', 'Backend\CategoryBLogController@store')->name('catblog.store');
@@ -148,12 +147,23 @@ Route::group(['prefix' => 'admin'],function(){
 
 
     Route::get('/posts', 'Backend\BLogController@index')->name('post.index');
-
     Route::get('/posts/create', 'Backend\BLogController@create')->name('post.created');
     Route::post('/posts', 'Backend\BLogController@store')->name('post.store');
-    Route::get('/posts/{testimony}/edit', 'Backend\BLogController@edit')->name('post.edit');
-    Route::put('/posts/{testimony}', 'Backend\BLogController@update')->name('post.update');
+    Route::get('/posts/{post}/edit', 'Backend\BLogController@edit')->name('post.edit');
+    Route::put('/posts/{post}', 'Backend\BLogController@update')->name('post.update');
     Route::delete('/posts/{testimony}', 'Backend\BLogController@destroy')->name('post.destroy');
+
+    //banner
+
+    Route::get('/banners', 'Backend\BannerController@index')->name('banner.index');
+    Route::get('/banners/create', 'Backend\BannerController@create')->name('banner.created');
+    Route::post('/banners', 'Backend\BannerController@store')->name('banner.store');
+    Route::get('/banners/{banner}/edit', 'Backend\BannerController@edit')->name('banner.edit');
+    Route::put('/banners/{banner}', 'Backend\BannerController@update')->name('banner.update');
+    Route::delete('/banners/{banner}', 'Backend\BannerController@destroy')->name('banner.destroy');
+
+    Route::delete('/banners/slide/{id}','Backend\BannerController@destroyitem')->name('banner.destroyitem');
+
 });
 
 

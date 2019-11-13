@@ -20,9 +20,11 @@
 
 
             @if(session('info'))
-                    <div class="alert alert-success">
-                        {{ session('info')}}
-                    </div>
+
+                            <div class="alert alert-success">
+                                {{ session('info')}}
+                            </div>
+
             @endif
 
           <form class="form-horizontal" action="{{ route('category.store') }}" method="POST" enctype="multipart/form-data">

@@ -436,69 +436,181 @@ $(".btn-object-delete").on("click", function(){
     console.log("no inciializado");
 }
 
-$(".mediafile").hover(
-function(){
-    console.log($(this));
-    $(this).children(".botones").fadeIn(350);
-},function(){
-    $(this).children(".botones").fadeOut(350);
+$(document).ready(function(){
+        $(".mediafile").hover(
+        function(){
+
+            $(this).children(".botones").fadeIn(350);
+        },function(){
+            $(this).children(".botones").fadeOut(350);
+        });
+
+        $(".borrar-media").click(function(e){
+            e.preventDefault();
+            var formData = new FormData();
+
+            let id = $(this).data("id");
+
+            var url = `/admin/media/${id}`;
+
+            let token = $("meta[name=csrf-token]").attr('content');
+
+            var datasend = ({'id':id,'_token':token,'_method':'DELETE'});
+
+            formData.append('_token',token);
+            formData.append('id',id);
+            formData.append('_method','delete');
+
+            fetch(url, {
+            method: 'POST',
+            body: JSON.stringify(datasend),
+            headers:{
+                'Content-Type':'application/json'
+            }
+            }).then(res => {
+                window.location.reload();
+            })
+            .catch(error => console.error('Error:', error))
+            .then(response => console.log('Success:', response));
+            });
+
+
+
+            $(".thumimg").on('click',function(e) {
+                e.preventDefault();
+                $(this).toggleClass("seleccionado");
+                $(this).children('.boxmark').children("span").toggleClass("glyphicon-ok").toggleClass("glyphicon");
+            });
+
+            $(".thumimg-slide").on('click',function(e) {
+                e.preventDefault();
+                $(".thumimg-slide").removeClass("seleccionado");
+                $(".thumimg-slide").children('.boxmark').children("span").removeClass("glyphicon-ok");
+                $(".thumimg-slide").children('.boxmark').children("span").removeClass("glyphicon");
+
+                $(this).toggleClass("seleccionado");
+                $(this).children('.boxmark').children("span").toggleClass("glyphicon-ok").toggleClass("glyphicon");
+            });
+
+
+
+
+        $(".seleccionar-thumb").on('click',function(){
+            var htm = '';
+            $(".thumimg").each(function(){
+
+                if($(this).hasClass("seleccionado")){
+                    let id = $(this).data('id');
+                    let img = $(this).data('path');
+                    htm+=`<div class="col-md-2 "><img src="/storage/${img}" width="70" class="thumbnail"><input type="hidden" name="imageid[]" value="${id}"></div>`;
+                }
+            });
+        $(".prodimages").html(htm);
+        $("#modal-default").modal('hide');
+        $(".thumimg").removeClass("seleccionado");
+        $(".thumimg").children('.boxmark').children("span").removeClass("glyphicon-ok");
+        $(".thumimg").children('.boxmark').children("span").removeClass("glyphicon");
+
+        $(".prodimages").before("<p style='display:block; color:red;'>Deber guardar para mantener la selección de imagenes</p>")
+        });
+
+
+        $(document).on('click',".seleccionar-slide",function(e){
+            e.preventDefault();
+            var htm = '';
+
+            let datakey = $(this).attr('rel');
+
+            $(".thumimg-slide").each(function(){
+                if($(this).hasClass("seleccionado")){
+                    let id = $(this).data('id');
+                    let img = $(this).data('path');
+                    htm+=`<div><img src="/storage/${img}" width="70" class="thumbnail"><input type="hidden" name="imagen[]" value="${img}"></div>`;
+                }
+            });
+            $(`.prodimages${datakey}`).html(htm);
+
+            $("#modal-slides").modal('hide');
+            $(".thumimg").removeClass("seleccionado");
+            $(".thumimg").children('.boxmark').children("span").removeClass("glyphicon-ok");
+            $(".thumimg").children('.boxmark').children("span").removeClass("glyphicon");
+            $(this).data('key',"");
+            $(`.prodimages${datakey}`).before("<p style='display:block; color:red;'>Deber guardar para mantener la selección de imagenes</p>")
+            datakey = null;
+
+
+        });
+
+
+        $(document).on('click',".btn-seleccionar-imagen",function(){
+            let key = $(this).data('key');
+            $(".seleccionar-slide").attr('rel',key);
+        });
 });
 
-$(".borrar-media").click(function(e){
+
+$(".btn-add-slide").click(function(e){
     e.preventDefault();
-    var formData = new FormData();
+    var phtm = '';
 
-    let id = $(this).data("id");
+    let iden = $(".btn-seleccionar-imagen").length;
+    let contador = iden +1;
+    let slide_id = $(this).data('slideid');
+    phtm +=`
+    <div class="form-group">
+        <input type="hidden" name="slide_id" value="${slide_id}">
+        <div class="form-group">
+            <label for="imagen" class="col-sm-2 control-label">Imagen</label>
+            <div class="col-sm-10">
+                <a class="btn btn-success btn-seleccionar-imagen" data-key="${contador}" data-toggle="modal" data-target="#modal-slides">Seleccionar Imagen</a>
 
-    var url = `/admin/media/${id}`;
+                <div class="prodimages${contador}"></div>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="titulo" class="col-sm-2 control-label">Url</label>
+        <div class="col-sm-10">
+            <input type="text"  name="link[]" class="form-control" value="" id="titulo" placeholder="Titulo" required>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="titulo" class="col-sm-2 control-label">Destino</label>
+        <div class="col-sm-10">
+            <input type="text"  name="target[]" class="form-control" value="" id="titulo" placeholder="Titulo" required>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="titulo" class="col-sm-2 control-label">Orden</label>
+        <div class="col-sm-10">
+            <input type="text"  name="order[]" class="form-control" value="" id="titulo" placeholder="Titulo" required>
+        </div>
+    </div>
+    <hr>`;
+
+    $(".canva-slide").append(phtm);
+});
+
+
+$(".btn-delete-slide").on('click',function(e){
+    e.preventDefault();
+   let id = $(this).data('id');
 
     let token = $("meta[name=csrf-token]").attr('content');
 
-    var datasend = ({'id':id,'_token':token,'_method':'DELETE'});
 
-    formData.append('_token',token);
-    formData.append('id',id);
-    formData.append('_method','delete');
+   var datasend = ({'id':id,'_token':token,'_method':'DELETE'});
 
-    fetch(url, {
-    method: 'POST',
-    body: JSON.stringify(datasend),
-    headers:{
-        'Content-Type':'application/json'
-    }
-    }).then(res => {
-        window.location.reload();
-    })
-    .catch(error => console.error('Error:', error))
-    .then(response => console.log('Success:', response));
-    });
-
-
-
-    $(".thumimg").on('click',function(e) {
-        e.preventDefault();
-        $(this).toggleClass("seleccionado");
-        $(this).children('.boxmark').children("span").toggleClass("glyphicon-ok").toggleClass("glyphicon");
-      });
-
-
-
-
-$(".seleccionar-thumb").on('click',function(){
-    var htm = '';
-    $(".thumimg").each(function(){
-
-        if($(this).hasClass("seleccionado")){
-            let id = $(this).data('id');
-            let img = $(this).data('path');
-            htm+=`<div class="col-md-2 "><img src="/storage/${img}" width="70" class="thumbnail"><input type="hidden" name="imageid[]" value="${id}"></div>`;
+    $.ajax({
+        url:'/admin/banners/slide/'+id,
+        type:'POST',
+        dataType:'json',
+        data:datasend,
+        success:function(response){
+            if(response.rpta=='ok'){
+                window.location.reload();
+            }
         }
     });
-  $(".prodimages").html(htm);
-  $("#modal-default").modal('hide');
-  $(".thumimg").removeClass("seleccionado");
-  $(".thumimg").children('.boxmark').children("span").removeClass("glyphicon-ok");
-  $(".thumimg").children('.boxmark').children("span").removeClass("glyphicon");
 
-  $(".prodimages").before("<p style='display:block; color:red;'>Deber guardar para mantener la selección de imagenes</p>")
 });

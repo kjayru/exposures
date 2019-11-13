@@ -6,12 +6,12 @@
         <!-- Content Header (Page header) -->
         <section class="content-header">
           <h1>
-            Categorias
-            <small>Control panel</small>
+            Banner
+
           </h1>
           <ol class="breadcrumb">
             <li><a href="#"><i class="fa fa-dashboard"></i> Inicio</a></li>
-            <li class="active">Dashboard</li>
+            <li class="active">Banner</li>
           </ol>
         </section>
 
@@ -26,26 +26,28 @@
 
 
                 @if(session('info'))
+
                     <div class="alert alert-success">
                         {{ session('info')}}
                     </div>
+
                 @endif
 
-              <form class="form-horizontal" action="{{ route('category.update',$categoria->id) }}" method="POST" enctype="multipart/form-data">
+              <form class="form-horizontal" action="{{ route('banner.update',$banner->id) }}" method="POST" enctype="multipart/form-data">
                 <div class="box-header with-border">
                   <h3 class="box-title">Editar Categoria</h3>
-                  <a href="{{ route('category.index') }}" class="btn btn-danger pull-right">Cancelar</a>
+                  <a href="{{ route('banner.index') }}" class="btn btn-danger pull-right">Cancelar</a>
                 </div>
                   <div class="box-body">
 
                     @csrf
                     <input type="hidden" name="_method" value="PUT">
 
-                    @include('backend.category.form.index')
+                    @include('backend.banner.form.index')
 
                   </div>
                   <div class="box-footer">
-                        <a href="{{ route('category.index') }}" class="btn btn-danger">Cancelar</a>
+                        <a href="{{ route('banner.index') }}" class="btn btn-danger">Cancelar</a>
                     <button type="submit" class="btn btn-info pull-right">Guardar</button>
                   </div>
               </form>

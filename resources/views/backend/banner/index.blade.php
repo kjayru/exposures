@@ -6,7 +6,7 @@
         <!-- Content Header (Page header) -->
         <section class="content-header">
           <h1>
-            Categorias
+            Banners
             <small>Control panel</small>
           </h1>
           <ol class="breadcrumb">
@@ -22,8 +22,8 @@
             <div class="col-xs-12">
               <div class="box">
                 <div class="box-header">
-                  <h3 class="box-title">Categorias</h3>
-                  <a href="{{route('category.build')}}" class="btn btn-xs btn-primary pull-right">Crear Categoría</a>
+                  <h3 class="box-title">Banners</h3>
+                  <a href="{{route('category.build')}}" class="btn btn-xs btn-primary pull-right">Crear Banner</a>
                 </div>
                 <!-- /.box-header -->
                 <div class="box-body">
@@ -33,25 +33,22 @@
                       <th></th>
                       <th>Nombre</th>
                       <th>Titulo</th>
-                      <th>Keywords</th>
-                      <th>Descripción</th>
+
                       <th>Fecha</th>
                       <th></th>
                     </tr>
                     </thead>
                     <tbody>
 
-                      @foreach($categorias as $key=>$categoria)
+                      @foreach($banners as $key=>$banner)
                       <tr>
                       <th>{{ $key+1}}</th>
-                      <td>{{$categoria->name}}</td>
-                      <td>{{$categoria->title}}</td>
-                      <td>{{$categoria->keywords}}</td>
-                      <td>{{$categoria->description}}</td>
-                      <td>{{$categoria->updated_at}}</td>
+                      <td>{{$banner->name}}</td>
+                      <td>{{$banner->title}}</td>
+                      <td>{{$banner->updated_at}}</td>
                       <td>
-                        <a href="{{ route('category.edit',['id'=>$categoria->id]) }}" class="btn btn-xs btn-primary">Editar</a>
-                        <a href="#" data-id="{{ $categoria->id }}" data-toggle="modal" data-target="#delobjeto" class="btn btn-xs btn-danger btn-object-delete">Borrar</a>
+                        <a href="{{ route('banner.edit',['id'=>$banner->id]) }}" class="btn btn-xs btn-primary">Editar</a>
+                        <a href="#" data-id="{{ $banner->id }}" data-toggle="modal" data-target="#delobjeto" class="btn btn-xs btn-danger btn-object-delete">Borrar</a>
                     </td>
                     </tr>
                       @endforeach

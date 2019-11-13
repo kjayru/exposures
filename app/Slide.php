@@ -10,7 +10,7 @@ class Slide extends Model
         return $this->hasMany(Page::class);
     }
 
-    
+
 
     public function slideitems(){
         return $this->hasMany(SlideItem::class);

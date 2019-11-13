@@ -13,32 +13,37 @@ class HomeController extends Controller
 {
     public function index(){
 
+        $slide = Slide::where('id',1)->first();
         $testimonios = Testimony::orderBy('id','desc')->get();
 
-        return view('frontend.home.inicio',['testimonios'=>$testimonios]);
+        return view('frontend.home.inicio',['testimonios'=>$testimonios,'slide'=>$slide]);
     }
 
     public function empresa(){
-
-        return view('frontend.home.empresa');
+        $slide = Slide::where('id',2)->first();
+        return view('frontend.home.empresa',['slide'=>$slide]);
     }
 
     public function productos(){
-        return view('frontend.home.productos');
+        $slide = Slide::where('id',3)->first();
+        return view('frontend.home.productos',['slide'=>$slide]);
     }
     public function productoDetalle($slug){
-
-        return view('frontend.home.detalleProducto');
+        $slide = Slide::where('id',3)->first();
+        return view('frontend.home.detalleProducto',['slide'=>$slide]);
     }
 
     public function videos(){
-        return view('frontend.home.videos');
+        $slide = Slide::where('id',4)->first();
+        return view('frontend.home.videos',['slide'=>$slide]);
     }
     public function distribuidores(){
-        return view('frontend.home.distribuidores');
+        $slide = Slide::where('id',4)->first();
+        return view('frontend.home.distribuidores',['slide'=>$slide]);
     }
     public function contacto(){
-        return view('frontend.home.contacto');
+        $slide = Slide::where('id',5)->first();
+        return view('frontend.home.contacto',['slide'=>$slide]);
     }
 
     public function getslide(){

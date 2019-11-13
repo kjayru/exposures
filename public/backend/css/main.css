@@ -503,3 +503,19 @@
     color: red;
 }
 
+
+#modal-slides .contenedor {
+    height: 150px !important;
+    position: relative;
+    display: block;
+
+}
+#modal-slides .boxmark {
+    position: absolute;
+    top: -24px !important;
+
+}
+#modal-slides img
+ {
+    margin-top: 20px !important;
+}

@@ -11318,3 +11318,18 @@ h3.regular {
   bottom: -3px;
 }
 
+#modal-slides .contenedor {
+  height: auto !important;
+  position: relative;
+  display: block;
+}
+
+#modal-slides .boxmark {
+  position: absolute;
+  top: -24px !important;
+}
+
+#modal-slides img {
+  margin-top: 20px !important;
+}
+
