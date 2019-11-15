@@ -11,5 +11,48 @@
                 </div>
         </div>
 </section>
-    <videos-component></videos-component>
+<!-- videos-->
+
+
+<section class="container-fluid paginas">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="{{ $destacado->link }}" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <div class="col-md-8">
+                        <div class="contexto">
+                            <div class="tituloembed">{{ $destacado->name }}</div>
+                               {{ $destacado->description }}
+                        </div>
+            </div>
+        </div>
+
+
+        <div class="row justify-content-center">
+
+            <div class="col-md-8">
+
+                <div class="row">
+                    <!-- loop-->
+                    @foreach($videos as $video)
+                         <div class="col-md-6">
+                            <div class="cvideo embed-responsive embed-responsive-16by9">
+                                <iframe class="embed-responsive-item" src="{{ $video->link }}" allowfullscreen></iframe>
+                            </div>
+                            <div class="infotext">
+                                {{ $video->name }}
+                            </div>
+                        </div>
+                    @endforeach
+
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
 @endsection

@@ -112,6 +112,18 @@
                                    </a>
                             </li>
 
+                            <li {{{ (Request::is('admin/dealers') ? 'class=active' : '') }}}>
+                                <a href="/admin/dealers">
+                                  <i class="fa fa-users" aria-hidden="true"></i> <span>Distribuidores</span>
+                               </a>
+                        </li>
+
+                        <li {{{ (Request::is('admin/videos') ? 'class=active' : '') }}}>
+                            <a href="/admin/videos">
+                              <i class="fa fa-users" aria-hidden="true"></i> <span>Videos</span>
+                           </a>
+                    </li>
+
                     </ul>
                   </li>
 

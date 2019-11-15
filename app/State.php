@@ -9,4 +9,8 @@ class State extends Model
     public function cities(){
         return $this->hasMany(City::class);
     }
+
+    public function dealers(){
+        return $this->hasMany(Dealer::class);
+    }
 }

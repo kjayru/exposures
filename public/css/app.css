@@ -10847,6 +10847,9 @@ li.nav-item.copy {
 
 .seccionwhite .footer {
   display: block;
+  text-align: right;
+  position: relative;
+  bottom: -18px;
 }
 
 .grayspace {
@@ -11318,18 +11321,214 @@ h3.regular {
   bottom: -3px;
 }
 
-#modal-slides .contenedor {
-  height: auto !important;
-  position: relative;
+.dealer h3 {
+  font-size: 22px;
+  color: #0b91c6;
+  margin-bottom: -6px;
+}
+
+.dealer .titulo span {
+  color: #000;
+  font-size: 17px;
+}
+
+.dealer .titulo p {
+  margin: 0 0 10px;
+  color: #9fa2a7;
+}
+
+.dealer .ito span {
   display: block;
+  position: relative;
+  padding-left: 40px;
 }
 
-#modal-slides .boxmark {
+.dealer .address span:before {
+  content: "";
+  background: url(/images/d-direccion-icono.png) no-repeat 0px 0px;
+  width: 38px;
+  height: 30px;
   position: absolute;
-  top: -24px !important;
+  left: 0;
+  top: 3px;
 }
 
-#modal-slides img {
-  margin-top: 20px !important;
+.dealer .phone span:before {
+  content: "";
+  background: url(/images/d-telefono-icono.png) no-repeat 0px 0px;
+  width: 38px;
+  height: 30px;
+  position: absolute;
+  left: 0;
+  top: 3px;
+}
+
+.dealer .email span:before {
+  content: "";
+  background: url(/images/d-email-icono.png) no-repeat 0px 0px;
+  width: 38px;
+  height: 30px;
+  position: absolute;
+  left: 0;
+  top: 3px;
+}
+
+.dealer .ito p {
+  color: #99adb8;
+  line-height: 19px;
+  padding-top: 20px;
+  padding-left: 42px;
+}
+
+.dealer h2 {
+  color: #0371bc;
+  font-size: 28px;
+  padding: 20px 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+.mapsFrame {
+  float: left;
+  width: 100%;
+  height: 150px;
+  border: none;
+}
+
+.titleprod {
+  color: #0072bc;
+  font-weight: bold;
+  font-size: 25px;
+  border-bottom: 1px solid gray;
+}
+
+.btn-producto {
+  color: #25a3f5;
+  border: solid 2px #25a3f5;
+  text-decoration: none;
+  font-size: 120%;
+  background: transparent;
+}
+
+.btn-categoria:hover {
+  text-decoration: none;
+  background: #000;
+  color: #0072bc;
+}
+
+.producto h2 {
+  color: #0371bc;
+  font-size: 28px;
+  padding: 20px 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+.producto h3 {
+  font-size: 17px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 0px;
+}
+
+.producto .titulo span {
+  font-size: 13px;
+  color: #666;
+}
+
+.contenedor {
+  margin: 20px;
+  border: #eee 1px solid;
+  padding: 25px 10px;
+  background: white;
+}
+
+.seccionwhite .body {
+  display: block;
+  color: #A2A7AB;
+  padding: 10px;
+  text-align: justify;
+}
+
+.btn-irproducto {
+  font-size: 14px;
+}
+
+.prodbody {
+  padding-bottom: 20px;
+  padding-top: 24px;
+}
+
+.prodbody strong {
+  font-size: 14px;
+  line-height: 150%;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: justify;
+}
+
+.logoprod {
+  max-width: 71px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+div#carouselProducto {
+  max-height: 500px;
+}
+
+.carousel-inner {
+  max-height: 500px;
+  background: white;
+}
+
+div#carouselProducto img {
+  max-height: 500px;
+  text-align: center;
+}
+
+.carousel-item {
+  text-align: center;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 7%;
+  opacity: 0.8;
+  transition: opacity 0.15s ease;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  height: 53px;
+  width: 68px;
+  outline: black;
+  background-size: 100%, 100%;
+  border: 1px solid black;
+  background-image: none;
+  background: black;
+  position: relative;
+}
+
+.carousel-control-next-icon:after {
+  content: "";
+  font-size: 55px;
+  color: white;
+  position: absolute;
+  top: 17px;
+  left: 24px;
+  background: url(/images/carrNext.png) no-repeat;
+  height: 20px;
+  width: 40px;
+}
+
+.carousel-control-prev-icon:after {
+  content: "";
+  font-size: 55px;
+  color: white;
+  position: absolute;
+  top: 17px;
+  left: 24px;
+  background: url(/images/carrPrev.png) no-repeat;
+  height: 20px;
+  width: 40px;
 }
 

@@ -23,7 +23,6 @@ class ProductController extends Controller
     public function index()
     {
         $productos = Product::orderBy('id','desc')->get();
-
         return view('backend.product.index',['productos'=>$productos]);
     }
 

@@ -8,6 +8,10 @@ use App\Slide;
 use App\SlideItem;
 use App\Page;
 use App\Testimony;
+use App\Dealer;
+use App\Video;
+use App\Product;
+use App\Category;
 
 class HomeController extends Controller
 {
@@ -26,20 +30,40 @@ class HomeController extends Controller
 
     public function productos(){
         $slide = Slide::where('id',3)->first();
-        return view('frontend.home.productos',['slide'=>$slide]);
+        $productos = Product::orderBy('id','desc')->paginate(8);
+        $categorias = Category::orderBy('name','desc')->get();
+        $categoria = null;
+        return view('frontend.home.productos',['slide'=>$slide,'productos'=>$productos,'categorias'=>$categorias,'categoria'=>$categoria]);
     }
-    public function productoDetalle($slug){
+
+    public function productoCategory($cat){
         $slide = Slide::where('id',3)->first();
-        return view('frontend.home.detalleProducto',['slide'=>$slide]);
+        $categoria = Category::where('slug',$cat)->first();
+        $productos = $categoria->products()->paginate(8);
+
+        $categorias = Category::orderBy('name','desc')->get();
+        return view('frontend.home.productos',['slide'=>$slide,'productos'=>$productos,'categorias'=>$categorias,'categoria'=>$categoria]);
+    }
+    public function productoDetalle($cat,$slug){
+        $slide = Slide::where('id',3)->first();
+
+        $producto = Product::where('slug',$slug)->first();
+        return view('frontend.home.detalleProducto',['slide'=>$slide,'producto'=>$producto]);
     }
 
     public function videos(){
         $slide = Slide::where('id',4)->first();
-        return view('frontend.home.videos',['slide'=>$slide]);
+
+        $destacado = Video::where('destacar',1)->first();
+
+        $videos = Video::where('destacar','<>',1)->get();
+        return view('frontend.home.videos',['slide'=>$slide,'videos'=>$videos,'destacado'=>$destacado]);
     }
     public function distribuidores(){
         $slide = Slide::where('id',4)->first();
-        return view('frontend.home.distribuidores',['slide'=>$slide]);
+        $dealers = Dealer::orderBy('id','desc')->paginate(8);
+
+        return view('frontend.home.distribuidores',['slide'=>$slide,'dealers'=>$dealers]);
     }
     public function contacto(){
         $slide = Slide::where('id',5)->first();

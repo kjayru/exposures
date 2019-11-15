@@ -14,7 +14,9 @@
 Route::get('/', 'Frontend\HomeController@index')->name('home');
 Route::get('/empresa', 'Frontend\HomeController@empresa')->name('empresa');
 Route::get('/productos', 'Frontend\HomeController@productos')->name('productos');
-Route::get('/productos/{slug}', 'Frontend\HomeController@productoDetalle')->name('productos.detalle');
+
+Route::get('/productos/{cat}', 'Frontend\HomeController@productoCategory')->name('productos.categoria');
+Route::get('/productos/{cat}/{slug}', 'Frontend\HomeController@productoDetalle')->name('productos.detalle');
 Route::get('/videos', 'Frontend\HomeController@videos')->name('videos');
 Route::get('/distribuidores', 'Frontend\HomeController@distribuidores')->name('distribuidores');
 Route::get('/contacto', 'Frontend\HomeController@contacto')->name('contacto');
@@ -164,6 +166,24 @@ Route::group(['prefix' => 'admin'],function(){
 
     Route::delete('/banners/slide/{id}','Backend\BannerController@destroyitem')->name('banner.destroyitem');
 
+
+    //dealers
+
+    Route::get('/dealers', 'Backend\DealerController@index')->name('dealer.index');
+    Route::get('/dealers/create', 'Backend\DealerController@create')->name('dealer.created');
+    Route::post('/dealers', 'Backend\DealerController@store')->name('dealer.store');
+    Route::get('/dealers/{dealer}/edit', 'Backend\DealerController@edit')->name('dealer.edit');
+    Route::put('/dealers/{dealer}', 'Backend\DealerController@update')->name('dealer.update');
+    Route::delete('/dealers/{dealer}', 'Backend\DealerController@destroy')->name('dealer.destroy');
+
+    //videos
+
+    Route::get('/videos', 'Backend\VideoController@index')->name('video.index');
+    Route::get('/videos/create', 'Backend\VideoController@create')->name('video.created');
+    Route::post('/videos', 'Backend\VideoController@store')->name('video.store');
+    Route::get('/videos/{video}/edit', 'Backend\VideoController@edit')->name('video.edit');
+    Route::put('/videos/{video}', 'Backend\VideoController@update')->name('video.update');
+    Route::delete('/videos/{video}', 'Backend\VideoController@destroy')->name('video.destroy');
 });
 
 
