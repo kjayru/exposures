@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Frontend;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Product;
+use App\Category;
 
 class OutletController extends Controller
 {
@@ -12,73 +14,59 @@ class OutletController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+
     public function index(){
-        return view('frontend.outlet.index');
+        $products = Product::where('outlet','1')->orderBy('id','desc')->get();
+
+        $latest = Product::where('outlet','1')->orderBy('id','desc')->limit(4)->get();
+        $catout = [];
+        foreach($products as $prod){
+
+                $obj = array('name'=> $prod->category->name ,'slug'=> $prod->category->slug);
+                array_push($catout,$obj);
+
+        }
+        $coleccion = collect($catout);
+        $categorias = $coleccion->unique();
+
+        return view('frontend.outlet.index',compact('latest','products','categorias'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
+
+    public function categoria($slug){
+
+
+
+        $categoria = Category::where('slug',$slug)->first();
+
+        $products = Product::where('category_id',$categoria->id)->where('outlet','1')->get();
+
+
+        $latest = Product::where('outlet','1')->orderBy('id','desc')->limit(4)->get();
+
+        $generals = Product::where('outlet','1')->orderBy('id','desc')->get();
+
+
+        $catout = [];
+        foreach($generals as $prod){
+
+                $obj = array('name'=> $prod->category->name ,'slug'=> $prod->category->slug);
+                array_push($catout,$obj);
+
+        }
+        $coleccion = collect($catout);
+        $categorias = $coleccion->unique();
+
+        $nombre = $categoria->name;
+
+        return view('frontend.outlet.index',compact('latest','products','categorias','nombre'));
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
+    public function detalle($slug,$prod){
+        $producto = Product::where('slug',$prod)->first();
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
+        return view('frontend.outlet.detalle',compact('producto'));
     }
 }

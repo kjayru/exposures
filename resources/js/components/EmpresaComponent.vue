@@ -28,7 +28,7 @@
                 </p>
                 <p>Nuestra historia se sigue escribiendo....
                 </p>
-                <img src="http://exposure.mx/images/empresa1.jpg"  class="img-fluid">
+                <img src="/images/empresa1.jpg"  class="img-fluid">
             </div>
 
             <div class="col-md-8">

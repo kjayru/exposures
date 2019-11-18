@@ -12,6 +12,10 @@ use App\Dealer;
 use App\Video;
 use App\Product;
 use App\Category;
+use Illuminate\Support\Str;
+use Excel;
+use File;
+use App\Imports\ProductImport;
 
 class HomeController extends Controller
 {
@@ -110,6 +114,28 @@ class HomeController extends Controller
         $page = Page::where('id',6)->first();
 
         return response()->json($page);
+    }
+
+
+    public function jobslug(){
+
+
+        //$products = Product::all();
+        /*
+        foreach($products as $prod){
+        $product = Product::find($prod->id);
+        $product->slug = Str::slug($prod->name, '-');
+        $product->save();
+
+        echo Str::slug($prod->name, '-')."<br>";
+
+        }*/
+
+        //$path = File::get(public_path().'/productos_imagenes.xls');
+       //Excel::import(new ProductImport, 'productos_imagenes.xls');
+
+
+        //dd($data);
     }
 }
 

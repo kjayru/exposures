@@ -38971,7 +38971,7 @@ var staticRenderFns = [
           _vm._v(" "),
           _c("img", {
             staticClass: "img-fluid",
-            attrs: { src: "http://exposure.mx/images/empresa1.jpg" }
+            attrs: { src: "/images/empresa1.jpg" }
           })
         ]),
         _vm._v(" "),

@@ -30,6 +30,9 @@ Route::get('/getvideos', 'Frontend\HomeController@getvideos')->name('getvideos')
 Route::get('/getdistribuidores', 'Frontend\HomeController@getdistribuidores')->name('getdistribuidores');
 Route::get('/getcontacto', 'Frontend\HomeController@getcontacto')->name('getcontacto');
 
+//Route::get('/jobslug', 'Frontend\HomeController@jobslug')->name('jobslug');
+
+
 Auth::routes();
 
 //Route::get('/login', 'backend\HomeController@index')->name('login');
@@ -188,7 +191,10 @@ Route::group(['prefix' => 'admin'],function(){
 
 
 Route::group(['prefix' => 'outlet'],function(){
-    Route::get('/', 'Frontend\OutletController@index')->name('dashboard');
+    Route::get('/', 'Frontend\OutletController@index')->name('outlet.index');
+    Route::get('/{slug}', 'Frontend\OutletController@categoria')->name('outlet.categoria');
+    Route::get('/{slug}/{prod}', 'Frontend\OutletController@detalle')->name('outlet.detalle');
+
 });
 
 Route::group(['prefix' => 'usuario'],function(){

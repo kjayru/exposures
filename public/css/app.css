@@ -11532,3 +11532,32 @@ div#carouselProducto img {
   width: 40px;
 }
 
+.outlet .products .title {
+  font-size: 12px;
+}
+
+.outlet .card .price {
+  font-size: 17px;
+}
+
+.outlet .card:hover {
+  box-shadow: 2px 4px 12px 0px;
+}
+
+.outlet ul.navbar li {
+  width: 100%;
+}
+
+.outlet ul.navbar li a {
+  background: none;
+  border-bottom: 1px solid #455A64;
+  color: #231F20;
+  font-size: 18px;
+  padding: 5px 4px;
+  display: block;
+}
+
+.outlet .card a:hover {
+  text-decoration: none;
+}
+
