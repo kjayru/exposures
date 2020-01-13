@@ -11557,7 +11557,47 @@ div#carouselProducto img {
   display: block;
 }
 
+.titulodetalle .pricetext {
+  font-size: 45px;
+  font-weight: bold;
+}
+
+.titulodetalle .pricetitle {
+  font-size: 40px;
+}
+
 .outlet .card a:hover {
   text-decoration: none;
+}
+
+.titulodetalle {
+  color: #0a60ae;
+}
+
+.outlet {
+  margin-bottom: 40px;
+}
+
+.outlet .imagenproducto {
+  height: 50%;
+}
+
+a.btn.btn-primario {
+  font-size: 20px;
+  padding: 2px 35px;
+}
+
+.btn-paypal {
+  background: #0070ba;
+  color: white;
+}
+
+.btn-frecuentes {
+  color: #25a3f5;
+  border: 1px solid #25a3f5;
+}
+
+.botones {
+  padding: 33px 0;
 }
 
