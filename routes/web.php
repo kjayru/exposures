@@ -30,6 +30,10 @@ Route::get('/getvideos', 'Frontend\HomeController@getvideos')->name('getvideos')
 Route::get('/getdistribuidores', 'Frontend\HomeController@getdistribuidores')->name('getdistribuidores');
 Route::get('/getcontacto', 'Frontend\HomeController@getcontacto')->name('getcontacto');
 
+Route::post('/addproduct', 'Frontend\OutletController@addCart')->name('addcart');
+Route::get('/carrito', 'Frontend\OutletController@productos')->name('carrito');
+Route::post('/getremoveitem', 'Frontend\OutletController@getRemoveItem')->name('removecart');
+
 //Route::get('/jobslug', 'Frontend\HomeController@jobslug')->name('jobslug');
 
 
@@ -195,6 +199,7 @@ Route::group(['prefix' => 'outlet'],function(){
     Route::get('/{slug}', 'Frontend\OutletController@categoria')->name('outlet.categoria');
     Route::get('/{slug}/{prod}', 'Frontend\OutletController@detalle')->name('outlet.detalle');
 
+
 });
 
 Route::group(['prefix' => 'usuario'],function(){
@@ -209,3 +214,24 @@ Route::group(['prefix' => 'exposure-team'],function(){
 
 });
 
+
+Route::group(['prefix'=>'checkout'],function(){
+    Route::get('/payment', 'Frontend\CartController@index')->name('cart.index')->middleware('permission:carts.index');
+
+    Route::post('/charge', 'Frontend\CartController@charge')->name('cart.charge');
+    Route::get('/paymentsuccess', 'Frontend\CartController@payment_success')->name('cart.success');
+    Route::get('/paymenterror', 'Frontend\CartController@payment_error')->name('cart.error');
+
+    Route::post('/savebilling','Frontend\CartController@savebilling')->name('cart.billing');
+    Route::post('/activestatus','Frontend\CartController@activestatus')->name('cart.activestatus');
+
+
+});
+
+//Route::get('/procesopago/{id}', 'Frontend\OutletController@procesopago')->name('outlet.procesopago');
+
+/*
+Route::get('payment', 'Frontend\OutletController@listar');
+Route::post('charge', 'Frontend\OutletController@charge');
+Route::get('paymentsuccess', 'Frontend\OutletController@payment_success');
+Route::get('paymenterror', 'Frontend\OutletController@payment_error');*/

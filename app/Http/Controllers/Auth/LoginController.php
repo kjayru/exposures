@@ -31,17 +31,20 @@ class LoginController extends Controller
     protected function authenticated(Request $request, $user)
     {
 
+
        switch ($user->roles[0]->slug) {
             case 'usuario':
-            return redirect('/outlet');
+                return redirect('/carrito');
             break;
             case 'client':
                 return redirect('/admin');
-                break;
+            break;
 
             case 'admin':
                 return redirect('/admin');
-                break;
+            break;
+
+
         }
 
 

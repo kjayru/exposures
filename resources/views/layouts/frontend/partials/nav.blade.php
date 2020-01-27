@@ -37,7 +37,17 @@
                         <a class="nav-link {{{ (Request::is('exposure-team') ? 'active' : '') }}}" href="/exposure-team" >
                             Exposure Team
                         </a>
+                    </li>
 
+                    <li class="nav-item">
+                        <a href="/usuario" class="nav-link {{{ (Request::is('contacto') ? 'active' : '') }}}">Mi cuenta</a>
+                    </li>
+
+                      <li>
+                          <a href="/carrito" class="nav-cart">
+                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                            <span class="quantity-icon quantity-icon-notification" id="cart-counter">1</span>
+                            </a>
                       </li>
                 </ul>
 

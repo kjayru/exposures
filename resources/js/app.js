@@ -1,5 +1,5 @@
 require('./bootstrap');
-
+/*
 window.Vue = require('vue');
 Vue.config.productionTip = false
 Vue.component('bloque-component', require('./components/BloqueComponent.vue').default);
@@ -16,12 +16,12 @@ Vue.component('distribuidores-component',require('./components/DistribuidoresCom
 Vue.component('contacto-component',require('./components/ContactoComponent.vue').default);
 
 Vue.component('marca-component',require('./components/MarcasComponent.vue').default);
-Vue.component('detalle-component',require('./components/DetalleComponent.vue').default);
+//Vue.component('detalle-component',require('./components/DetalleComponent.vue').default);
 
-Vue.component('outlet-component',require('./components/OutletComponent.vue').default);
+//Vue.component('outlet-component',require('./components/OutletComponent.vue').default);
 
 const app = new Vue({
     el: '#app'
 });
-
+*/
 
