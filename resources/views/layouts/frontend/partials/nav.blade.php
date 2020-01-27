@@ -38,11 +38,12 @@
                             Exposure Team
                         </a>
                     </li>
-
+                    @guest
+                    @else
                     <li class="nav-item">
                         <a href="/usuario" class="nav-link {{{ (Request::is('contacto') ? 'active' : '') }}}">Mi cuenta</a>
                     </li>
-
+                    @endguest
                       <li>
                           <a href="/carrito" class="nav-cart">
                             <i class="fa fa-shopping-cart" aria-hidden="true"></i>
