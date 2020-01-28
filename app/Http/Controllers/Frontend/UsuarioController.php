@@ -5,6 +5,16 @@ namespace App\Http\Controllers\Frontend;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
+use Illuminate\Support\Facades\Auth;
+use Session;
+use DB;
+use App\Order;
+use App\Paypal;
+use Illuminate\Support\Str;
+
+use App\Product;
+use App\User;
+
 class UsuarioController extends Controller
 {
     /**
@@ -13,7 +23,13 @@ class UsuarioController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index(){
-        return view('frontend.usuario.index');
+
+        $user_id = Auth::id();
+
+        $ordenes = Order::where('user_id',$user_id)->get();
+        $usuario = User::find($user_id);
+
+        return view('frontend.usuario.index',['ordenes'=>$ordenes,'usuario'=>$usuario]);
     }
 
     /**
@@ -21,64 +37,31 @@ class UsuarioController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function configuracion()
     {
-        //
+
+        $user_id = Auth::id();
+        $usuario = User::find($user_id);
+
+        return view('frontend.usuario.configuracion',['usuario'=>$usuario]);
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
+    public function updatedatos(Request $request){
+
+
+        $user = User::find($request->user_id);
+
+        $user->name = $request->name;
+        $user->email =$request->email;
+
+        if($request->password){
+            $user->password = Hash::make($request->password);
+        }
+        $user->save();
+
+        return redirect()->back()->with('success', ['Producto agregado al carrito']);
+
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
-    }
 }

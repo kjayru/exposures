@@ -1,59 +1,56 @@
 @extends('layouts.frontend.app')
 
 @section('content')
+<div class="page-wrapper chiller-theme toggled">
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-2">
+        <div class="col-md-3">
             <div class="wrapper">
 
-                <nav id="sidebar">
-                    <div class="sidebar-header">
-                        <h3>Wile Tinoco</h3>
-                    </div>
-
-                    <ul class="list-unstyled components">
-
-
-                        <li>
-                            <a href="#">Historial de compras</a>
-                        </li>
-
-                        <li>
-                            <a href="#">Configuración</a>
-                        </li>
-
-                        <li>
-                            <a href="{{ route('logout') }}" class="btn btn-default btn-flat" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Salir</a>
-                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                @csrf
-                            </form>
-                        </li>
-
-                    </ul>
-                </nav>
+                @include('layouts.frontend.partials.navuser')
 
             </div>
         </div>
-        <div class="col-md-10">
-            <div class="card">
-                <div class="card-header">Historial de compras</div>
+        <div class="col-md-9 historico">
 
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
+
+                @if($ordenes)
+
+                   @foreach($ordenes as $key => $orden)
+
+
+
+                    <div class="card">
+                        <div class="card-header">
+                            <strong>Pedido Nº</strong> {{ $orden->order_send_id}} | <strong>Comprado el</strong> {{ $orden->created_at}}
+                           | <strong>Total:</strong> ${{ unserialize($orden->cart)->totalPrice }}
                         </div>
-                    @endif
 
+                        <div class="card-body">
+                            <table class="table">
+                                @foreach(unserialize($orden->cart)->items as $key => $producto )
+                                <tr>
+                                    <td style="width:120px;">
+
+                                        <img src="{{ $producto['item']->imagen }}" width="100" >
+                                    </td>
+                                    <td style="padding-top:50px;">
+                                        {{ $producto['item']->name }}
+                                    </td>
+                                </tr>
+                                @endforeach
+                            </table>
+                        </div>
+                    </div>
+                   @endforeach
+
+                @else
                     No se registran compras
 
+                @endif
 
-                    <table class="table">
-                        <tr></tr>
-                    </table>
-                </div>
-            </div>
         </div>
     </div>
+</div>
 </div>
 @endsection
