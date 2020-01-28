@@ -47,7 +47,9 @@
                       <li>
                           <a href="/carrito" class="nav-cart">
                             <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                            <span class="quantity-icon quantity-icon-notification" id="cart-counter">1</span>
+
+                            <span class="quantity-icon quantity-icon-notification" id="cart-counter">{{Session::has('cart') ? Session::get('cart')->totalQty : ''}}</span>
+
                             </a>
                       </li>
                 </ul>
