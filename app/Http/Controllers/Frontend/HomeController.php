@@ -117,25 +117,8 @@ class HomeController extends Controller
     }
 
 
-    public function jobslug(){
-
-
-        //$products = Product::all();
-        /*
-        foreach($products as $prod){
-        $product = Product::find($prod->id);
-        $product->slug = Str::slug($prod->name, '-');
-        $product->save();
-
-        echo Str::slug($prod->name, '-')."<br>";
-
-        }*/
-
-        //$path = File::get(public_path().'/productos_imagenes.xls');
-       //Excel::import(new ProductImport, 'productos_imagenes.xls');
-
-
-        //dd($data);
+    public function ingresar(){
+        return view('frontend.login.index');
     }
 }
 

@@ -33,7 +33,7 @@ Route::get('/getcontacto', 'Frontend\HomeController@getcontacto')->name('getcont
 Route::post('/addproduct', 'Frontend\OutletController@addCart')->name('addcart');
 Route::get('/carrito', 'Frontend\OutletController@productos')->name('carrito');
 Route::post('/getremoveitem', 'Frontend\OutletController@getRemoveItem')->name('removecart');
-
+Route::get('/ingresar','Frontend\HomeController@ingresar')->name('ingresar');
 //Route::get('/jobslug', 'Frontend\HomeController@jobslug')->name('jobslug');
 
 
