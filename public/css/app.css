@@ -10649,6 +10649,11 @@ a.text-dark:focus {
   font-size: 14px;
 }
 
+h2.titulo {
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 .navbar-laravel {
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
@@ -10715,10 +10720,10 @@ li.nav-item.copy {
   padding-top: 8px;
 }
 
-.slick-slide {
-  height: 520px !important;
-  width: 100h !important;
-}
+/*.slick-slide {
+    height: 520px !important;
+    width:100h !important;
+}*/
 
 .o-h {
   overflow: hidden;
@@ -10925,10 +10930,10 @@ ul.navbar li {
   padding-right: 0;
 }
 
-.slick-slide {
-  height: calc(100vh - 86px) !important;
-  width: 100vw !important;
-}
+/*.slick-slide {
+    height: calc(100vh - 86px) !important;
+    width: 100vw !important;
+}*/
 
 .lienzo .card {
   font-size: 14px;
@@ -11042,20 +11047,18 @@ ul.navbar li {
   border-radius: 50%;
 }
 
-.slick-prev {
-  left: 0;
-  background: red;
+/*.slick-prev {
+    left: 0;
+    background: red;
 }
-
 .slick-next {
-  right: 0;
-  background: red;
+    right: 0;
+    background: red;
 }
-
 .slick-dots {
   bottom: 0px;
   margin-left: 0;
-}
+}*/
 
 .ac-tile-col:hover .text .excerpt,
 .ac-tile-col:hover .ac-text .excerpt {
@@ -11548,14 +11551,14 @@ div#carouselProducto img {
   width: 100%;
 }
 
-.outlet ul.navbar li a {
-  background: none;
-  border-bottom: 1px solid #455A64;
-  color: #231F20;
-  font-size: 18px;
-  padding: 5px 4px;
-  display: block;
-}
+/*.outlet ul.navbar li a{
+     background: none;
+     border-bottom: 1px solid #455A64;
+     color: #231F20;
+     font-size: 18px;
+     padding: 5px 4px;
+    display: block;
+}*/
 
 .titulodetalle .pricetext {
   font-size: 45px;
@@ -12456,5 +12459,124 @@ a.nav-cart {
   top: 0;
   left: -300px;
   z-index: 999;
+}
+
+.place {
+  background: white;
+  padding: 10px;
+  min-height: 226px;
+  margin-left: 15px;
+}
+
+.card-item {
+  padding-left: 0;
+  position: relative;
+}
+
+.product-card {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  text-align: center;
+  padding: 12.5px;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 0 0 1px;
+  color: #666;
+  z-index: 1;
+}
+
+.product-card__overlay {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.06);
+  transition: all 0.15s ease-in;
+}
+
+.product-card:hover .product-card__overlay,
+.product-card:focus .product-card__overlay {
+  visibility: visible;
+  opacity: 1;
+  padding: 10px;
+  min-height: 226px;
+  margin-left: 15px;
+}
+
+.product-card__overlay-btn {
+  position: relative;
+  top: 50%;
+  transform: translateY(-45%);
+  transition: all 0.15s ease-in;
+}
+
+.product-card:hover .product-card__overlay-btn {
+  transform: translateY(-85%);
+}
+
+.no-csstransforms .product-card__overlay-btn {
+  top: 35%;
+}
+
+.product-card__overlay-btn {
+  display: inline-block;
+  width: auto;
+  text-decoration: none;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+  cursor: pointer;
+  border: 1px solid transparent;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: #006eff;
+  color: #fff;
+}
+
+.cover {
+  height: 317px;
+  overflow: hidden;
+}
+
+.menusidebar {
+  padding: 0;
+}
+
+.menusidebar .navbar {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.menusidebar .navbar li {
+  border-bottom: 1px solid #f0f0f0;
+  padding: 2px 0;
+  width: 100%;
+  float: left;
+  font-size: 13px;
+}
+
+.menusidebar .navbar li a {
+  line-height: 2em;
+  text-decoration: none;
+  float: left;
+  width: 100%;
+  color: #333;
+  background: #fff;
+  width: 100%;
+  font-size: 18px;
+  padding: 5px 4px;
+}
+
+.menusidebar .navbar li a:hover {
+  text-decoration: none;
+  background: #e7e7e7;
 }
 

@@ -34,7 +34,7 @@ class OutletController extends Controller
     public function index(){
         $products = Product::where('outlet','1')->orderBy('id','desc')->get();
 
-        $latest = Product::where('outlet','1')->orderBy('id','desc')->limit(4)->get();
+        $latest = Product::where('outlet','1')->orderBy('id','desc')->limit(6)->get();
         $catout = [];
         foreach($products as $prod){
 

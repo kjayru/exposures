@@ -3,28 +3,42 @@
 @section('content')
 
 <section class="container-fluid outlet">
-    <img src="/images/top_image.jpg" class="img-fluid">
+<div class="row">
+    <div class="cover col-md-12">
+    <img src="/images/camp.jpg" class="img-fluid">
+</div>
+</div>
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <h2 class="pt-5 pb-5">Recientemente agregados</h2>
+            <h2 class="titulo pt-3 pb-3">Recientemente agregados</h2>
         </div>
     </div>
     <div class="row justify-content-center grayspace">
-        <div class="col-md-8 pt-5 pb-5">
+        <div class="col-md-8 pt-3 pb-3">
             <div class="row">
 
+                <div class="col-md-12">
+                    <div class="recientes">
 
-                <div class="card-columns">
-                   @foreach($latest as $pd)
-                    <div class="card">
-                        <blockquote class="blockquote mb-0 card-body">
-                            <img src="/storage/{{ $pd->imagen}}"  class="card-img-top">
-                        </blockquote>
+                    @foreach($latest as $pd)
+
+
+                            <div class="card-item">
+                                <a href="/outlet/{{ $pd->category->slug}}/{{$pd->slug}}" class="product-card">
+                                    <div class="place pproduct-card__image-wrapper">
+                                        <img src="/storage/{{ $pd->imagen}}"  class="img-fluid">
+                                    </div>
+                                    <div class="product-card__overlay">
+                                        <span class="btn product-card__overlay-btn  btn--narrow">Ver producto</span>
+                                    </div>
+                                </a>
+                            </div>
+
+
+                        @endforeach
+
                     </div>
-                    @endforeach
-
                 </div>
-
 
             </div>
         </div>
@@ -34,7 +48,7 @@
         <div class="col-md-8">
 
             <div class="row pb-5 pt-5">
-                <div class="col-md-3">
+                <div class="col-md-3 menusidebar">
                     <ul class="navbar">
                         @foreach($categorias as $cat)
                         <li><a href="/outlet/{{$cat['slug']}}" class="link">{{ $cat['name'] }}</a></li>
@@ -50,22 +64,26 @@
                         Productos
                         @endif
                     </h3>
-                    <div class="card-columns products">
+                    <div class="row products">
+
 
                         @foreach($products as $prod)
-                        <div class="card">
-                             <a href="/outlet/{{ $prod->category->slug}}/{{$prod->slug}}">
-                            <div class="card-head">
-                                <div class="title">{{ $prod->name }}</div>
-                                <div class="price">$ {{ $prod->price }}</div>
-                            </div>
-                            <div class="card-body">
+                            <div class="col-md-4 col-6">
+                                <div class="card">
+                                    <a href="/outlet/{{ $prod->category->slug}}/{{$prod->slug}}">
+                                    <div class="card-head">
+                                        <div class="title">{{ $prod->name }}</div>
+                                        <div class="price">$ {{ $prod->price }}</div>
+                                    </div>
+                                    <div class="card-body">
 
-                               <img src="/storage/{{$prod->imagen}}" class="card-img-top">
+                                    <img src="/storage/{{$prod->imagen}}" class="card-img-top">
+                                    </div>
+                                    </a>
+                                </div>
                             </div>
-                            </a>
-                        </div>
                         @endforeach
+
                     </div>
 
                 </div>
