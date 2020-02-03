@@ -19,6 +19,8 @@ Route::get('/productos/{cat}', 'Frontend\HomeController@productoCategory')->name
 Route::get('/productos/{cat}/{slug}', 'Frontend\HomeController@productoDetalle')->name('productos.detalle');
 Route::get('/videos', 'Frontend\HomeController@videos')->name('videos');
 Route::get('/distribuidores', 'Frontend\HomeController@distribuidores')->name('distribuidores');
+
+Route::get('/distribuidores/{id}','Frontend\HomeController@dealerSearch')->name('buscador-dealer');
 Route::get('/contacto', 'Frontend\HomeController@contacto')->name('contacto');
 
 Route::get('/sliders', 'Frontend\HomeController@getslide')->name('slider');

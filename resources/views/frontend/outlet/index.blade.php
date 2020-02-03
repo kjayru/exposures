@@ -50,8 +50,9 @@
             <div class="row pb-5 pt-5">
                 <div class="col-md-3 menusidebar">
                     <ul class="navbar">
+
                         @foreach($categorias as $cat)
-                        <li><a href="/outlet/{{$cat['slug']}}" class="link">{{ $cat['name'] }}</a></li>
+                        <li><a href="/outlet/{{$cat['slug']}}" class="link @if(strpos($_SERVER['REQUEST_URI'], $cat['slug']) !== false) active  @endif">{{ $cat['name'] }}</a></li>
                         @endforeach
                     </ul>
 
@@ -68,16 +69,30 @@
 
 
                         @foreach($products as $prod)
-                            <div class="col-md-4 col-6">
+                            <div class="col-md-4 col-6 pb-3">
                                 <div class="card">
+                                    <div class="card-foot">
+                                        <div class="title"></div>
+
+                                    </div>
                                     <a href="/outlet/{{ $prod->category->slug}}/{{$prod->slug}}">
                                     <div class="card-head">
-                                        <div class="title">{{ $prod->name }}</div>
-                                        <div class="price">$ {{ $prod->price }}</div>
+
                                     </div>
                                     <div class="card-body">
+                                        <img src="/storage/{{$prod->imagen}}" class="card-img-top">
+                                    </div>
+                                    <div class="card-foot">
+                                        <div class="row cardpad">
+                                            <div class="col-md-7">
+                                                <div class="titulo">{{ $prod->name }}</div>
+                                            </div>
+                                            <div class="col-md-5 rcol">
+                                                <div class="price">${{ $prod->price }}</div>
+                                            </div>
+                                        </div>
 
-                                    <img src="/storage/{{$prod->imagen}}" class="card-img-top">
+
                                     </div>
                                     </a>
                                 </div>

@@ -15,6 +15,7 @@ use App\Category;
 use Illuminate\Support\Str;
 use Excel;
 use File;
+use App\State;
 use App\Imports\ProductImport;
 
 class HomeController extends Controller
@@ -63,12 +64,28 @@ class HomeController extends Controller
         $videos = Video::where('destacar','<>',1)->get();
         return view('frontend.home.videos',['slide'=>$slide,'videos'=>$videos,'destacado'=>$destacado]);
     }
+
     public function distribuidores(){
         $slide = Slide::where('id',4)->first();
         $dealers = Dealer::orderBy('id','desc')->paginate(8);
 
-        return view('frontend.home.distribuidores',['slide'=>$slide,'dealers'=>$dealers]);
+        $estados = State::orderBy('name','desc')->get();
+        return view('frontend.home.distribuidores',['slide'=>$slide,'dealers'=>$dealers,'estados'=>$estados]);
     }
+
+
+    public function dealerSearch($id){
+        $slide = Slide::where('id',4)->first();
+        $dealers = Dealer::where('id',$id)->orderBy('id','desc')->paginate(8);
+
+        $estados = State::orderBy('name','desc')->get();
+
+        $ciudad = State::where('id',$id)->first();
+
+        return view('frontend.home.buscar',['slide'=>$slide,'dealers'=>$dealers,'estados'=>$estados,'ciudad'=>$ciudad]);
+    }
+
+
     public function contacto(){
         $slide = Slide::where('id',5)->first();
         return view('frontend.home.contacto',['slide'=>$slide]);

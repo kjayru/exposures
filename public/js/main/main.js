@@ -14,6 +14,13 @@ $(window).on('load',function(){
 
 });
 
+
+$("#estadodealer").on('change', function() {
+
+    window.location.href="/distribuidores/"+this.value;
+  });
+
+
 $('#sliderHome').nivoSlider({
   effect: 'random',
     slices: 15,
@@ -222,6 +229,8 @@ $(".recientes").slick({
   autoplaySpeed: 2000,
   centerMode:true,
   });
+
+
 
 
 

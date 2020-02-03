@@ -11,25 +11,29 @@
 <section class="container outlet">
 
     <div class="row justify-content-center">
-        <div class="col-md-4 ">
+        <div class="col-md-6">
             <div class="row align-items-center imagenproducto">
                 <div class="col">
                      <img src="/storage/{{ $producto->imagen}}"  class="img-fluid">
                 </div>
             </div>
         </div>
-        <div class="col-md-8">
+        <div class="col-md-6">
             <div class="row justify-content-center titulodetalle">
-                <div class="col-md-8">
-                    <h2 class="p-2 pricetitle">{{ $producto->title }}</h2>
+                <div class="col-md-12 text-left">
+                    <h2 class="pb-2 pt-2 pricetitle">{{ $producto->title }}</h2>
                 </div>
-                <div class="col-md-4 text-right">
-                    <h2 class="p-2 pricetext">${{ $producto->price }}</h2>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12">
 
+            </div>
+
+            <div class="row">
+
+                <div class="col-md-4 text-left">
+                    <h2 class="pricetext">${{ $producto->price }}</h2>
+                </div>
+
+                <div class="col-md-12">
+                    <h3 class="pb-2 pt-2 titulo-descripcion">Descripción</h3>
                     {!! iconv('UTF-8', 'ISO-8859-1//IGNORE',$producto->description)  !!}
                 </div>
             </div>
@@ -38,11 +42,7 @@
                 <div class="col-md-12">
                     <div id="paypal-button-container"></div>
 
-                   <!-- <form method="POST" action="/addproduct">
-                    @csrf
-                    <input type="hidden" name="id" value="{{ $producto->id }}">
-                    <button type="submit" class="btn btn-primario btn-paypal">Añadir al carrito</button>
-                    </form>-->
+
 
                     <a href="#" data-id="{{ $producto->id }}" class="btn btn-primario btn-paypal btn-add-producto"> Añadir al carrito </a>
                     <a href="#" class="btn btn-primario btn-frecuentes">Preguntas frecuentes</a>

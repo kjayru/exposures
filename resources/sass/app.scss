@@ -1,4 +1,3 @@
-
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito');
 
@@ -219,8 +218,12 @@ ul.navbar li {
 }
 
 .products .card {
-    padding: 10px;
-    color:#0a60ae;
+
+    color: #0a60ae;
+
+}
+.products .card-body{
+    min-height: 234px;
 }
 .card .price {
     font-size: 20px;
@@ -488,7 +491,10 @@ position: absolute;
 top: 0;
 padding: 32px;
 }
-
+.card-footer{
+    margin: 0 -11px -11px;
+    padding: 0;
+}
 
 .ac-category-filters-wrapper {
   margin-right: 2px;
@@ -601,22 +607,25 @@ h3.regular {
 }
 
 .dealer h3 {
-    font-size: 22px;
-    color: #0b91c6;
-    margin-bottom: -6px;
-}
-.dealer .titulo span{
+    font-size: 28px;
     color: #000;
+    margin-bottom: -4px;
+    font-weight: bold;
+}
+.dealer .titulo span {
+    color: #333;
     font-size: 17px;
 }
 .dealer .titulo p{
     margin: 0 0 10px;
     color: #9fa2a7;
 }
-.dealer .ito span{
+.dealer .ito span {
     display: block;
     position: relative;
     padding-left: 40px;
+    font-weight: 800;
+    font-style: normal;
 }
 .dealer  .address span:before{
     content: "";
@@ -648,12 +657,14 @@ h3.regular {
     top: 3px;
 }
 
-.dealer .ito p{
-    color: #99adb8;
+.dealer .ito p {
+    color: #777;
     line-height: 19px;
     padding-top: 20px;
     padding-left: 42px;
+    position: relative;
 }
+
 .dealer h2{
     color: #0371bc;
     font-size: 28px;
@@ -661,11 +672,31 @@ h3.regular {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
 }
+.row.abody {
+    padding-top: 20px;
+    background: rgba(0,0,0,0.02);
+    margin-right: 6px;
+    margin-left: 0px;
+}
+.ito:before {
+    content: "";
+    background: #eee;
+    width: 1px;
+    height: 88px;
+    position: absolute;
+    top: 32px;
+    left: 0;
+}
+.ito:first-child:before{
+
+    background: transparent !important;
+}
 .mapsFrame {
     float: left;
     width: 100%;
-    height: 150px;
+    height: 200px;
     border: none;
+    padding-top: 9px;
 }
 .titleprod {
     color: #0072bc;
@@ -797,11 +828,12 @@ div#carouselProducto img{
     font-size: 12px;
 }
 .outlet .card .price {
-    font-size: 17px;
+    font-size: 15px;
+    text-align: right;
 }
-.outlet .card:hover{
+/*.outlet .card:hover{
     box-shadow: 2px 4px 12px 0px;
-}
+}*/
 .outlet ul.navbar li {
     width:100%;
 }
@@ -814,12 +846,14 @@ div#carouselProducto img{
     display: block;
 }*/
 .titulodetalle .pricetext {
-    font-size: 45px;
-    font-weight: bold;
-}
-.titulodetalle .pricetitle{
-    font-size: 40px;
 
+    font-weight: bold;
+    text-align: left;
+    font-size: 25px;
+}
+.titulodetalle .pricetitle {
+    font-size: 40px;
+    padding-left: 0!important;
 }
 
 .outlet .card a:hover{
@@ -1718,4 +1752,58 @@ line-height: 2em;
 .menusidebar .navbar li a:hover{
     text-decoration: none;
     background: #e7e7e7;
+}
+
+.menusidebar .active{
+    background: #e7e7e7 !important;
+}
+.cardpad {
+    margin: 0;
+    padding: 9px 0 8px;
+    box-shadow: 0 -2px 6px -2px rgba(0, 0, 0, 0.1);
+}
+.cardpad .rcol{
+    border-left: 1px solid  rgba(0, 0, 0, 0.1);;
+}
+
+.cardpad .titulo {
+    font-size: 15px;
+    line-height: 16px;
+}
+.pricetitle{
+    position: relative;
+}
+.pricetitle:after {
+    content: "";
+    height: 2px;
+    width: 100%;
+    background: #eee;
+    display: block;
+    top: 59px;
+    position: absolute;
+}
+
+.titulo-descripcion {
+    position: relative;
+    font-size: 18px;
+    padding-bottom: 15px;
+    text-transform: uppercase;
+}
+.titulo-descripcion:after{
+    content: "";
+    height: 2px;
+    width: 100%;
+    background: #eee;
+    display: block;
+    top: 34px;
+    position: absolute;
+}
+.dealer iframe{
+    position: relative;
+}
+
+
+.marco {
+    display: block;
+    border-top: 8px solid #0371bc;
 }

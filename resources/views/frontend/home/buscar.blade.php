@@ -2,8 +2,6 @@
 
 @section('content')
 <section class="slider-home">
-
-
         <div class="slider-wrapper theme-default">
                 <div id="sliderEmpresa" class="nivoSlider">
                         @foreach($slide->slideitems as $item)
@@ -11,15 +9,15 @@
 
                     @endforeach
                 </div>
-        </div>
 
+        </div>
 </section>
 
 
    <section class="container-fluid dealer">
         <div class="row justify-content-center">
             <div class="col-md-8">
-                    <h2>Distribuidores</h2>
+                    <h2>Distribuidores: {{ $ciudad->name }}</h2>
                     <div class="row">
                         <div class="col-md-6">
                             <form id="frm-dealer" id="frm-dealer">
