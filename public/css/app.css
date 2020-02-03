@@ -12680,3 +12680,26 @@ a.nav-cart {
   padding-bottom: 100px;
 }
 
+.row.destacado {
+  padding-bottom: 50px;
+  padding-top: 80px;
+}
+
+.destacado .resumen {
+  padding-top: 20px;
+  padding-bottom: 14px;
+}
+
+.tituloembed {
+  font-size: 20px;
+}
+
+.cvideo.embed-responsive {
+  margin-bottom: 18px;
+}
+
+.infotext {
+  margin-bottom: 42px;
+  height: 60px;
+}
+

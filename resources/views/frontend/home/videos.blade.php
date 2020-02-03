@@ -16,18 +16,25 @@
 
 <section class="container-fluid paginas">
         <div class="row justify-content-center">
-            <div class="col-md-8">
-                <div class="embed-responsive embed-responsive-16by9">
-                    <iframe class="embed-responsive-item" src="{{ $destacado->link }}" allowfullscreen></iframe>
+
+        <div class="col-md-8">
+            <div class="row destacado">
+                <div class="col-md-12">
+                    <div class="embed-responsive embed-responsive-16by9">
+
+                        <iframe class="embed-responsive-item"  src="https://www.youtube.com/embed/{{ $destacado->link }}" frameborder="0" allow="accelerometer;  encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+
+                <div class="col-md-12 resumen">
+                    <div class="contexto">
+                        <div class="tituloembed">{{ $destacado->name }}</div>
+                            {{ $destacado->description }}
+                    </div>
                 </div>
             </div>
+        </div>
 
-            <div class="col-md-8">
-                        <div class="contexto">
-                            <div class="tituloembed">{{ $destacado->name }}</div>
-                               {{ $destacado->description }}
-                        </div>
-            </div>
         </div>
 
 
@@ -40,7 +47,7 @@
                     @foreach($videos as $video)
                          <div class="col-md-6">
                             <div class="cvideo embed-responsive embed-responsive-16by9">
-                                <iframe class="embed-responsive-item" src="{{ $video->link }}" allowfullscreen></iframe>
+                                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/{{ $video->link }}" allowfullscreen></iframe>
                             </div>
                             <div class="infotext">
                                 {{ $video->name }}
