@@ -35,15 +35,16 @@ class OutletController extends Controller
         $products = Product::where('outlet','1')->orderBy('id','desc')->get();
 
         $latest = Product::where('outlet','1')->orderBy('id','desc')->limit(6)->get();
-        $catout = [];
+        /*$catout = [];
         foreach($products as $prod){
 
                 $obj = array('name'=> $prod->category->name ,'slug'=> $prod->category->slug);
                 array_push($catout,$obj);
 
-        }
-        $coleccion = collect($catout);
-        $categorias = $coleccion->unique();
+        }*/
+        //$coleccion = collect($catout);
+        //$categorias = $coleccion->unique();
+        $categorias = Category::where('parent_id',0)->get();
 
         return view('frontend.outlet.index',compact('latest','products','categorias'));
     }

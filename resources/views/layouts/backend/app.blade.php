@@ -43,6 +43,7 @@
 
 
   <link rel="stylesheet" href="/backend/css/main.css?v={{uniqid()}}">
+
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
@@ -65,11 +66,11 @@
 
 <script src="https://unpkg.com/react-dom@16.8.6/umd/react-dom.production.min.js"></script>
 
-
+<!--
 <script src="{{ asset('vendor/laraberg/js/laraberg.js') }}"></script>
-
+-->
 <script>
-        Laraberg.init('editorgut');
+   /*     Laraberg.init('editorgut');
 
 
 
@@ -581,7 +582,7 @@
 	window.wp.blockEditor,
 	window.wp.element,
 );
-        </script>
+       */ </script>
 <!-- jQuery 3 -->
 <script src="/backend/bower_components/jquery/dist/jquery.min.js"></script>
 <!-- jQuery UI 1.11.4 -->

@@ -18,19 +18,24 @@ use File;
 use App\State;
 use App\Imports\ProductImport;
 
+
 class HomeController extends Controller
 {
     public function index(){
 
         $slide = Slide::where('id',1)->first();
         $testimonios = Testimony::orderBy('id','desc')->get();
+        $categorias = Category::all();
+        $pagina = Page::where('id',1)->first();
 
-        return view('frontend.home.inicio',['testimonios'=>$testimonios,'slide'=>$slide]);
+        return view('frontend.home.inicio',['testimonios'=>$testimonios,'slide'=>$slide,'pagina'=>$pagina]);
     }
 
     public function empresa(){
         $slide = Slide::where('id',2)->first();
-        return view('frontend.home.empresa',['slide'=>$slide]);
+
+        $pagina = Page::where('id',2)->first();
+        return view('frontend.home.empresa',['slide'=>$slide,'pagina'=>$pagina]);
     }
 
     public function productos(){
@@ -38,22 +43,33 @@ class HomeController extends Controller
         $productos = Product::orderBy('id','desc')->paginate(8);
         $categorias = Category::orderBy('name','desc')->get();
         $categoria = null;
+
+
         return view('frontend.home.productos',['slide'=>$slide,'productos'=>$productos,'categorias'=>$categorias,'categoria'=>$categoria]);
     }
 
     public function productoCategory($cat){
         $slide = Slide::where('id',3)->first();
+
+
         $categoria = Category::where('slug',$cat)->first();
-        $productos = $categoria->products()->paginate(8);
+
+        $productos = $categoria->product()->paginate(8);
+
 
         $categorias = Category::orderBy('name','desc')->get();
         return view('frontend.home.productos',['slide'=>$slide,'productos'=>$productos,'categorias'=>$categorias,'categoria'=>$categoria]);
     }
+
+
     public function productoDetalle($cat,$slug){
         $slide = Slide::where('id',3)->first();
 
         $producto = Product::where('slug',$slug)->first();
-        return view('frontend.home.detalleProducto',['slide'=>$slide,'producto'=>$producto]);
+
+        $categoria = Category::where('slug',$cat)->first();
+
+        return view('frontend.home.detalleProducto',['slide'=>$slide,'producto'=>$producto,'categoria'=>$categoria]);
     }
 
     public function videos(){
@@ -88,7 +104,8 @@ class HomeController extends Controller
 
     public function contacto(){
         $slide = Slide::where('id',5)->first();
-        return view('frontend.home.contacto',['slide'=>$slide]);
+        $pagina = Page::where('id',6)->first();
+        return view('frontend.home.contacto',['slide'=>$slide,'pagina'=>$pagina]);
     }
 
     public function getslide(){
@@ -100,6 +117,15 @@ class HomeController extends Controller
 
 
        return response()->json([$items]);
+    }
+
+
+    public function search(Request $request){
+
+        $products = \DB::table('products')->where('name', 'like', '%'.$request->search.'%')->get();
+
+
+        return view('frontend.home.search',['products'=>$products]);
     }
 
     public function getinicio(){
@@ -132,7 +158,6 @@ class HomeController extends Controller
 
         return response()->json($page);
     }
-
 
     public function ingresar(){
         return view('frontend.login.index');

@@ -18,6 +18,9 @@
         "omnipay/paypal": "^3.0",
         "paypal/rest-api-sdk-php": "^1.14",
         "srmklive/paypal": "^1.6",
+        "te7a-houdini/laravel-trix": "1.1",
+        "unisharp/laravel-ckeditor": "^4.7",
+        "unisharp/laravel-filemanager": "^2.0",
         "van-ons/laraberg": "^1.0"
     },
     "require-dev": {

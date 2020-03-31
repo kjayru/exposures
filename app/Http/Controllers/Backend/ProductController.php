@@ -22,8 +22,9 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $productos = Product::orderBy('id','desc')->get();
-        return view('backend.product.index',['productos'=>$productos]);
+        $productos = Product::orderBy('id','desc')->paginate(20);
+        $categorias = Category::all();
+        return view('backend.product.index',['productos'=>$productos,'categorias'=>$categorias]);
     }
 
     /**
@@ -70,8 +71,10 @@ class ProductController extends Controller
          $product->imagen = $imagen;
         }
 
-        $product->category_id = $request->category;
+
         $product->save();
+
+        $product->category()->sync($request->categorias);
 
         return redirect()->route('product.edit',['id' => $product->id ])
         ->with('info','Producto actualizado satisfactoriamente');
@@ -87,12 +90,28 @@ class ProductController extends Controller
     {
 
 
-      $product = Product::find($id);
+        $product = Product::find($id);
 
-      $categorias = Category::orderBy('name','desc')->get();
-    $multimedias = Multimedia::orderBy('id','desc')->get();
+        $categorias = Category::orderBy('name','desc')->get();
+        $multimedias = Multimedia::orderBy('id','desc')->get();
 
-      return view('backend.product.edit',['product'=>$product,'categorias'=>$categorias,'fotos'=>$multimedias]);
+        $catprods = $product->category()->get();
+
+        $cats=[];
+
+        foreach($catprods as $cat){
+           $cats[] =  $cat->id;
+        }
+
+
+        if(count($cats)>0){
+            $mcas = $cats;
+        }else{
+            $mcas = 0;
+        }
+
+
+        return view('backend.product.edit',['product'=>$product,'categorias'=>$categorias,'fotos'=>$multimedias,'catprods'=>$mcas]);
     }
 
 
@@ -108,6 +127,7 @@ class ProductController extends Controller
     {
 
 
+
         $product = Product::find($id);
 
         $product->name = $request->name;
@@ -119,7 +139,7 @@ class ProductController extends Controller
          $imagen = $request->file('imagen')->store('products');
          $product->imagen = $imagen;
         }
-        $product->category_id = $request->category;
+       // $product->category_id = $request->category;
 
         if($request->outlet){
             $product->outlet = $request->outlet;
@@ -127,6 +147,8 @@ class ProductController extends Controller
 
 
         $product->save();
+
+        $product->category()->sync($request->categorias);
 
         if($request->imageid){
             foreach($request->imageid as $imgid){

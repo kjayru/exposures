@@ -24,7 +24,7 @@
 
 
                             <div class="card-item">
-                                <a href="/outlet/{{ $pd->category->slug}}/{{$pd->slug}}" class="product-card">
+                                <a href="/outlet//{" class="product-card">
                                     <div class="place pproduct-card__image-wrapper">
                                         <img src="/storage/{{ $pd->imagen}}"  class="img-fluid">
                                     </div>
@@ -52,7 +52,7 @@
                     <ul class="navbar">
 
                         @foreach($categorias as $cat)
-                        <li><a href="/outlet/{{$cat['slug']}}" class="link @if(strpos($_SERVER['REQUEST_URI'], $cat['slug']) !== false) active  @endif">{{ $cat['name'] }}</a></li>
+                        <li><a href="/outlet/" class="link @if(strpos($_SERVER['REQUEST_URI'], $cat['slug']) !== false) active  @endif">{{ $cat['name'] }}</a></li>
                         @endforeach
                     </ul>
 
@@ -75,7 +75,7 @@
                                         <div class="title"></div>
 
                                     </div>
-                                    <a href="/outlet/{{ $prod->category->slug}}/{{$prod->slug}}">
+                                    <a href="/outlet/categoria/{{$prod->slug}}">
                                     <div class="card-head">
 
                                     </div>

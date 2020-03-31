@@ -13,8 +13,8 @@
                     <div class="col-md-8">
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="/productos">Productos</a></li>
-                            <li class="breadcrumb-item"><a href="/productos/{{ $producto->category->slug}}">{{ $producto->category->name }}</a></li>
+
+                            <li class="breadcrumb-item"><a href="/{{$categoria->slug}}">{{ $categoria->name }}</a></li>
                             <li class="breadcrumb-item active" aria-current="page">{{ $producto->name}}</li>
                             </ol>
                         </nav>

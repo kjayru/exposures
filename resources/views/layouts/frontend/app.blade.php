@@ -27,6 +27,7 @@
 </head>
 <body>
     <div id="app">
+
         @include('layouts.frontend.partials.nav')
         <main role="main">
             @yield('content')

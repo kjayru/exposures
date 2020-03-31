@@ -38,6 +38,7 @@
                             {{ session('info')}}
                           </div>
                     @endif
+
                   <table id="example2" class="table table-bordered table-hover">
                       <thead>
                         <tr>
@@ -47,7 +48,7 @@
                           <th>Resumen</th>
                           <th>Titulo</th>
                           <th>Imagen</th>
-                          <th>Categoria</th>
+
                           <th>Fecha</th>
                           <th></th>
                         </tr>
@@ -62,7 +63,7 @@
                           <td width="15%">{{$product->excerpt}}</td>
                           <td>{{$product->title}}</td>
                           <td><img src="/storage/{{$product->imagen}}" width="50" alt="" srcset=""></td>
-                          <td>{{$product->category->name}}</td>
+
                           <td>{{$product->updated_at}}</td>
                           <td>
                             <a href="{{ route('product.edit',['id'=> $product->id]) }}" class="btn btn-xs btn-primary">Editar</a>
@@ -76,7 +77,7 @@
                 <!-- /.box-body -->
               </div>
               <!-- /.box -->
-
+              {{ $productos->links() }}
 
             </div>
 

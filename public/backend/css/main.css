@@ -519,3 +519,59 @@
  {
     margin-top: 20px !important;
 }
+
+
+
+
+
+#listcat .list-group-item {
+    user-select: none;
+  }
+
+ #listcat  .list-group input[type="checkbox"] {
+    display: none;
+  }
+
+ #listcat  .list-group input[type="checkbox"] + .list-group-item {
+    cursor: pointer;
+  }
+
+ #listcat  .list-group input[type="checkbox"] + .list-group-item:before {
+    content: "\2713";
+    color: transparent;
+    font-weight: bold;
+    margin-right: 1em;
+  }
+
+ #listcat  .list-group input[type="checkbox"]:checked + .list-group-item {
+    background-color: #0275D8;
+    color: #FFF;
+  }
+
+ #listcat  .list-group input[type="checkbox"]:checked + .list-group-item:before {
+    color: inherit;
+  }
+
+ #listcat  .list-group input[type="radio"] {
+    display: none;
+  }
+
+ #listcat  .list-group input[type="radio"] + .list-group-item {
+    cursor: pointer;
+  }
+
+ #listcat  .list-group input[type="radio"] + .list-group-item:before {
+    content: "\2022";
+    color: transparent;
+    font-weight: bold;
+    margin-right: 1em;
+  }
+
+ #listcat  .list-group input[type="radio"]:checked + .list-group-item {
+    background-color: #0275D8;
+    color: #FFF;
+  }
+
+ #listcat  .list-group input[type="radio"]:checked + .list-group-item:before {
+    color: inherit;
+  }

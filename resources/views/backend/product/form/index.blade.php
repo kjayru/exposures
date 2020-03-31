@@ -7,6 +7,14 @@
         </div>
     </div>
 
+    <div class="form-group @if($errors->first('name')) has-error @endif">
+        <label for="name" class="col-sm-2 control-label">Título</label>
+        <div class="col-sm-10">
+            <input type="text"  name="title" class="form-control" value="{{ @$product->title}}" id="title" placeholder="Título" required>
+            <span class="help-block">{{ $errors->first('title') }}</span>
+        </div>
+    </div>
+
     <div class="form-group @if($errors->first('price')) has-error @endif">
       <label for="price" class="col-sm-2 control-label">Precio</label>
 
@@ -73,18 +81,33 @@
         </div>
     @endif
 
+
     <div class="form-group">
-            <label for="imagen" class="col-sm-2 control-label">Categoria</label>
-        <div class="col-sm-10">
-            <select name="category" id="category" class="form-control">
-                <option value="">Seleccione</option>
-                @foreach($categorias as $category)
-                    <option value="{{$category->id}}" @if(@$product->category_id == $category->id) selected @endif>{{ $category->name}}</option>
+        <label for="excerpt" class="col-sm-2 control-label">Categorias</label>
+
+        <div id="listcat" class="col-md-4">
+            <div class="list-group">
+                @foreach($categorias as $key => $cat)
+
+
+                @if($cat->parent_id ==0)
+
+                    <label class="list-group-item" for="categoria{{$key+1}}">{{$cat->name}}</label>
+                @else
+                   <p style="padding-left:20px; margin-top:10px;">
+                    <input type="checkbox" name="categorias[]" value="{{$cat->id}}" @if($catprods>0) @if(in_array(@$cat->id, @$catprods)) checked @endif @endif id="categoria{{$key+1}}" />
+                    <label class="list-group-item" for="categoria{{$key+1}}">{{$cat->name}}</label>
+                </p>
+                @endif
+
+
+
+
+
                 @endforeach
-            </select>
+            </div>
         </div>
     </div>
-
     <div class="form-group @if($errors->first('excerpt')) has-error @endif">
             <label for="excerpt" class="col-sm-2 control-label">Outlet</label>
 

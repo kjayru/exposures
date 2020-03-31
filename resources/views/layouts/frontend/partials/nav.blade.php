@@ -1,4 +1,5 @@
 <header>
+
 <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
         <div class="container">
             <a class="navbar-brand" href="{{ url('/') }}">
@@ -8,7 +9,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="collapse navbar-collapse " id="navbarSupportedContent">
                 <!-- Left Side Of Navbar -->
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item ">
@@ -17,9 +18,30 @@
                     <li class="nav-item">
                         <a href="/empresa" class="nav-link {{{ (Request::is('empresa') ? 'active' : '') }}}">Empresa</a>
                     </li>
-                    <li class="nav-item">
-                        <a href="/productos" class="nav-link {{{ (Request::is('productos') ? 'active' : '') }}}">Productos</a>
+
+
+                    <li  class="nav-item dropdown">
+
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Productos
+                          </a>
+                          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+
+                                @foreach($menus as $k => $item)
+
+                                    @if ($item['parent_id'] != 0)
+                                        @break
+                                    @endif
+                                    @include('layouts.frontend.partials.menu-item', ['item' => $item])
+
+                                @endforeach
+                          </ul>
+
+
+
                     </li>
+
+
                     <li class="nav-item">
                         <a href="/videos" class="nav-link {{{ (Request::is('videos') ? 'active' : '') }}}">Videos</a>
                     </li>
@@ -34,7 +56,7 @@
                     </li>
 
                     <li class="nav-item ">
-                        <a class="nav-link {{{ (Request::is('exposure-team') ? 'active' : '') }}}" href="/exposure-team" >
+                        <a class="nav-link" href="http://exposureteam.mx/" >
                             Exposure Team
                         </a>
                     </li>
@@ -44,13 +66,27 @@
                         <a href="/usuario" class="nav-link {{{ (Request::is('contacto') ? 'active' : '') }}}">Mi cuenta</a>
                     </li>
                     @endguest
-                      <li>
+                      <li class="posrelative">
                           <a href="/carrito" class="nav-cart">
                             <i class="fa fa-shopping-cart" aria-hidden="true"></i>
 
                             <span class="quantity-icon quantity-icon-notification" id="cart-counter">{{Session::has('cart') ? Session::get('cart')->totalQty : ''}}</span>
 
                             </a>
+                      </li>
+
+                      <li class="posrelative">
+
+                        <div class="box">
+                            <div class="container-2">
+                                <span class="icon"><i class="fa fa-search"></i></span>
+                                <form action="/buscar" method="post">
+                                    @csrf
+                                    <input type="search" id="search" name="search" placeholder="buscar..." />
+                                </form>
+                            </div>
+                          </div>
+
                       </li>
                 </ul>
 

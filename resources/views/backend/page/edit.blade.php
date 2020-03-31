@@ -10,8 +10,9 @@
             <small>Control panel</small>
           </h1>
           <ol class="breadcrumb">
-            <li><a href="#"><i class="fa fa-dashboard"></i> Inicio</a></li>
-            <li class="active">Dashboard</li>
+            <li><a href="/admin"><i class="fa fa-dashboard"></i> Inicio</a></li>
+            <li><a href="/admin/pages"><i class="fa fa-dashboard"></i> Paginas</a></li>
+            <li class="active">Pagina</li>
           </ol>
         </section>
 
@@ -33,6 +34,9 @@
                         @include('backend.page.form.index')
 
 
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+                        </div>
                     </form>
 
 
@@ -47,5 +51,31 @@
       </div>
 
 
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+      <script src="/vendor/unisharp/laravel-ckeditor/ckeditor.js"></script>
+
+
+ <script>
+
+
+    $(function () {
+
+     /* CKEDITOR.replace( '.contenidos', {
+        height: 700
+    } );*/
+
+         $('.contenidos').each(function(e){
+            CKEDITOR.replace( this.id, {   height: 300 });
+            CKEDITOR.config.allowedContent = true;
+            CKEDITOR.config.contentsCss = '/css/app.css';
+
+        });
+
+
+    })
+
+  </script>
 
 @endsection

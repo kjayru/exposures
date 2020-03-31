@@ -13,10 +13,10 @@
 
 Route::get('/', 'Frontend\HomeController@index')->name('home');
 Route::get('/empresa', 'Frontend\HomeController@empresa')->name('empresa');
-Route::get('/productos', 'Frontend\HomeController@productos')->name('productos');
+//Route::get('/productos', 'Frontend\HomeController@productos')->name('productos');
 
-Route::get('/productos/{cat}', 'Frontend\HomeController@productoCategory')->name('productos.categoria');
-Route::get('/productos/{cat}/{slug}', 'Frontend\HomeController@productoDetalle')->name('productos.detalle');
+Route::get('/producto/{cat}', 'Frontend\HomeController@productoCategory')->name('productos.categoria');
+Route::get('/producto/{cat}/{slug}', 'Frontend\HomeController@productoDetalle')->name('productos.detalle');
 Route::get('/videos', 'Frontend\HomeController@videos')->name('videos');
 Route::get('/distribuidores', 'Frontend\HomeController@distribuidores')->name('distribuidores');
 
@@ -37,7 +37,7 @@ Route::get('/carrito', 'Frontend\OutletController@productos')->name('carrito');
 Route::post('/getremoveitem', 'Frontend\OutletController@getRemoveItem')->name('removecart');
 Route::get('/ingresar','Frontend\HomeController@ingresar')->name('ingresar');
 //Route::get('/jobslug', 'Frontend\HomeController@jobslug')->name('jobslug');
-
+Route::post('/buscar','Frontend\HomeController@search')->name('buscar');
 
 Auth::routes();
 

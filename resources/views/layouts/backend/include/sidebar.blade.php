@@ -127,7 +127,7 @@
                     </ul>
                   </li>
 
-            <li class="treeview menu-open">
+            <!--<li class="treeview menu-open">
               <a href="/admin/blog">
                 <i class="fa fa-binoculars" aria-hidden="true"></i><span>Team explore</span>
                 <span class="pull-right-container">
@@ -139,7 +139,7 @@
                 <li {{{ (Request::is('admin/category-blog') ? 'class=active' : '') }}}>  <a href="/admin/category-blog" > <i class="fa fa-archive" aria-hidden="true"></i>Categorias</a><li>
                 <li {{{ (Request::is('admin/posts') ? 'class=active' : '') }}}>  <a href="/admin/posts" > <i class="fa fa-file-text" aria-hidden="true"></i>Equipo</a><li>
               </ul>
-            </li>
+            </li>-->
 
           </ul>
         </section>

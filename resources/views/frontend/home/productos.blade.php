@@ -20,7 +20,8 @@
                 <div class="col-md-8 pb-5 pt-5">
 
                 @foreach($categorias as $cat)
-                    <a href="/productos/{{ $cat->slug }}" class="btn btn-default btn-categoria">{{ $cat->name }}</a>
+
+                    <a href="/{{ $cat->slug }}" class="btn btn-default btn-categoria">{{ $cat->name }}</a>
 
                 @endforeach
 
@@ -29,13 +30,13 @@
         </div>
         <div class="seccionwhite producto pt-5 pb-5">
             <div class="row justify-content-center">
-                 <div class="col-md-8">
+                <div class="col-md-8">
                     @if($categoria)
-                     <h2>{{ $categoria->name }}</h2>
+                      <h2>{{ $categoria->name }}</h2>
                     @else
-                    <h2>Productos </h2>
+                      <h2>Productos </h2>
                     @endif
-                     <div class="row justify-content-center">
+                        <div class="row justify-content-center">
                             <div class="col-md-9">
                                     {{ $productos->links() }}
                             </div>
@@ -63,7 +64,8 @@
 
                                             </div>
                                             <div class="footer">
-                                                <a href="/productos/{{ $prod->category->slug}}/{{$prod->slug}}" class="btn btn-primary btn-irproducto">Ver detalle</a>
+
+                                                <a href="/{{ $categoria->slug }}/{{$prod->slug}}" class="btn btn-primary btn-irproducto">Ver detalle</a>
                                             </div>
                                         </div>
                                     </div>
@@ -80,7 +82,7 @@
                                     {{ $productos->links() }}
                             </div>
                         </div>
-                 </div>
+                </div>
             </div>
         </div>
     </section>

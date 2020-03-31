@@ -614,3 +614,27 @@ $(".btn-delete-slide").on('click',function(e){
     });
 
 });
+
+    $(".add-blockcontent").on('click',function(e){
+        e.preventDefault();
+
+        var htm='';
+
+    htm+=`<div class="col-md-12 box">
+            <label>Contenido </label>
+            <textarea id="editor1" class="contenidos1" name="contenido[]" rows="200" cols="80"></textarea>
+        </div>`;
+
+        $(".contenedorform").append(htm).delay(350).promise().done(function(){
+
+            /*$('.contenidos1').each(function(e){
+                CKEDITOR.replace( this.id, {   height: 300 });
+            });*/
+
+
+    });
+
+
+
+
+});

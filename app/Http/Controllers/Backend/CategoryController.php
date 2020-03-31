@@ -30,7 +30,8 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        return view('backend.category.create');
+        $categorias = Category::orderBy('id','desc')->get();
+        return view('backend.category.create',['categorias'=>$categorias]);
     }
 
     /**
@@ -51,6 +52,8 @@ class CategoryController extends Controller
        $category->name = $request->nombre;
        $category->slug = Str::slug($request->nombre, '-');
        $category->title =  $request->titulo;
+       $category->parent_id = $request->categoria;
+       $category->order = $request->order;
        $category->save();
 
       return redirect()->route('category.edit',['id'=>$category->id])
@@ -66,7 +69,9 @@ class CategoryController extends Controller
     public function edit($id)
     {
         $categoria = Category::find($id);
-        return view('backend.category.edit',['categoria'=>$categoria]);
+        $categorias = Category::orderBy('name','asc')->get();
+
+        return view('backend.category.edit',['categoria'=>$categoria,'categorias'=>$categorias]);
     }
 
     /**
@@ -79,6 +84,7 @@ class CategoryController extends Controller
     public function update(Request $request, $id)
     {
 
+
         $request->validate([
             'nombre' => 'required',
             'titulo' => 'required',
@@ -90,6 +96,8 @@ class CategoryController extends Controller
          $category->name = $request->nombre;
          $category->slug = Str::slug($request->nombre, '-');
          $category->title =  $request->titulo;
+         $category->parent_id = $request->categoria;
+         $category->order = $request->order;
          $category->save();
 
 
