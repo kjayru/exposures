@@ -63,7 +63,7 @@
                     @guest
                     @else
                     <li class="nav-item">
-                        <a href="/usuario" class="nav-link {{{ (Request::is('contacto') ? 'active' : '') }}}">Mi cuenta</a>
+                        <a href="/usuario" class="nav-link {{{ (Request::is('usuario') ? 'active' : '') }}}">Mi cuenta</a>
                     </li>
                     @endguest
                       <li class="posrelative">
