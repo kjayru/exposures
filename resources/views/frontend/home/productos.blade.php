@@ -65,7 +65,7 @@
                                             </div>
                                             <div class="footer">
 
-                                                <a href="/{{ $categoria->slug }}/{{$prod->slug}}" class="btn btn-primary btn-irproducto">Ver detalle</a>
+                                                <a href="/producto/{{$prod->slug}}" class="btn btn-primary btn-irproducto">Ver detalle</a>
                                             </div>
                                         </div>
                                     </div>

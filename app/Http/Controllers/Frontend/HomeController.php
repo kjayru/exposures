@@ -39,6 +39,7 @@ class HomeController extends Controller
     }
 
     public function productos(){
+        dd("productos");
         $slide = Slide::where('id',3)->first();
         $productos = Product::orderBy('id','desc')->paginate(8);
         $categorias = Category::orderBy('name','desc')->get();
@@ -54,6 +55,7 @@ class HomeController extends Controller
 
         $categoria = Category::where('slug',$cat)->first();
 
+
         $productos = $categoria->product()->paginate(8);
 
 
@@ -62,14 +64,14 @@ class HomeController extends Controller
     }
 
 
-    public function productoDetalle($cat,$slug){
+    public function productoDetalle($slug){
         $slide = Slide::where('id',3)->first();
 
         $producto = Product::where('slug',$slug)->first();
 
-        $categoria = Category::where('slug',$cat)->first();
+        //$categoria = Category::where('slug',$cat)->first();
 
-        return view('frontend.home.detalleProducto',['slide'=>$slide,'producto'=>$producto,'categoria'=>$categoria]);
+        return view('frontend.home.detalleProducto',['slide'=>$slide,'producto'=>$producto]);
     }
 
     public function videos(){
@@ -127,6 +129,14 @@ class HomeController extends Controller
 
         return view('frontend.home.search',['products'=>$products]);
     }
+
+
+    public function preguntas(){
+
+
+        return view('frontend.home.preguntas');
+    }
+
 
     public function getinicio(){
         $page = Page::where('id',1)->first();

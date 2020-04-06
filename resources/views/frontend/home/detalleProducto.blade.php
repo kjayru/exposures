@@ -9,17 +9,19 @@
                      <img src="/images/marcas/10-BD-logo-png" class="img-fluid logoprod">
                 </div>
             </div>
-            <div class="row justify-content-center">
-                    <div class="col-md-8">
-                        <nav aria-label="breadcrumb">
-                            <ol class="breadcrumb">
 
-                            <li class="breadcrumb-item"><a href="/{{$categoria->slug}}">{{ $categoria->name }}</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">{{ $producto->name}}</li>
-                            </ol>
-                        </nav>
-                    </div>
+            <!--<div class="row justify-content-center">
+                <div class="col-md-8">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+
+                        <li class="breadcrumb-item"><a href="/">categoria</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">{{ $producto->name}}</li>
+                        </ol>
+                    </nav>
                 </div>
+            </div>-->
+
             <div class="row justify-content-center">
                 <div class="col-md-8">
                     <div class="producto-img">
@@ -95,7 +97,7 @@
                             </p>-->
 
 
-                            <a href="#" class="btn  btn-producto">Preguntas frecuentes</a>
+                            <a href="/preguntas-frecuentes" class="btn  btn-producto">Preguntas frecuentes</a>
                     </div>
                 </div>
             </div>
