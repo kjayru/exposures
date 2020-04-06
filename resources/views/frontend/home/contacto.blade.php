@@ -16,13 +16,15 @@
 
 
 
-<section class="container-fluid paginas">
+<section class="container-fluid paginas contactos">
     <div class="row justify-content-center">
         <div class="col-md-8">
+            <h3 class="ptitulo">Contactos</h3>
+
            {!! $pagina->blocks[0]->contenido !!}
 
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-12 formulario">
                     <h3>NOS INTERESAN TUS COMENTARIOS!</h3>
 
                      <div class="row">
