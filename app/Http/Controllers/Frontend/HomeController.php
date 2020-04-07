@@ -12,6 +12,7 @@ use App\Dealer;
 use App\Video;
 use App\Product;
 use App\Category;
+use App\Marca;
 use Illuminate\Support\Str;
 use Excel;
 use File;
@@ -39,7 +40,7 @@ class HomeController extends Controller
     }
 
     public function productos(){
-        dd("productos");
+
         $slide = Slide::where('id',3)->first();
         $productos = Product::orderBy('id','desc')->paginate(8);
         $categorias = Category::orderBy('name','desc')->get();
@@ -62,6 +63,18 @@ class HomeController extends Controller
         $categorias = Category::orderBy('name','desc')->get();
         return view('frontend.home.productos',['slide'=>$slide,'productos'=>$productos,'categorias'=>$categorias,'categoria'=>$categoria]);
     }
+
+
+    public function productoMarca($cat){
+
+        $slide = Slide::where('id',3)->first();
+        $categoria = Marca::where('slug',$cat)->first();
+        $productos = $categoria->product()->paginate(8);
+
+        $categorias = Category::orderBy('name','desc')->get();
+        return view('frontend.home.productos',['slide'=>$slide,'productos'=>$productos,'categorias'=>$categorias,'categoria'=>$categoria]);
+    }
+
 
 
     public function productoDetalle($slug){

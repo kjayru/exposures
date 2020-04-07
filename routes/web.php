@@ -16,6 +16,8 @@ Route::get('/empresa', 'Frontend\HomeController@empresa')->name('empresa');
 Route::get('/categoria', 'Frontend\HomeController@productos')->name('productos');
 
 Route::get('/categoria/{cat}', 'Frontend\HomeController@productoCategory')->name('productos.categoria');
+Route::get('/marca/{cat}', 'Frontend\HomeController@productoMarca')->name('marcas.categoria');
+
 Route::get('/producto/{slug}', 'Frontend\HomeController@productoDetalle')->name('productos.detalle');
 Route::get('/videos', 'Frontend\HomeController@videos')->name('videos');
 Route::get('/distribuidores', 'Frontend\HomeController@distribuidores')->name('distribuidores');

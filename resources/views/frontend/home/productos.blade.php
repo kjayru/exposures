@@ -42,8 +42,28 @@
                             </div>
                         </div>
                      <div class="row">
+                        <div class="col-md-6">
+
+                            <form  method="get" class="form-inline">
+
+                                    <div class="form-group mb-2 ">
+
+                                      <select class="form-control">
+                                        <option>ACTIVIDAD</option>
+                                      </select>
+                                    </div>
+                                    <div class="form-group mx-sm-3 mb-2">
+
+                                        <select class="form-control">
+                                            <option>MARCA</option>
+                                          </select>
+                                    </div>
 
 
+                            </form>
+                        </div>
+                    </div>
+                    <div class="row">
                          <!--item-->
                          @foreach($productos as $prod)
 

@@ -23,7 +23,7 @@
                     <li  class="nav-item dropdown">
 
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Marcas
+                            Productos
                           </a>
                           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
 
@@ -33,6 +33,28 @@
                                         @break
                                     @endif
                                     @include('layouts.frontend.partials.menu-item', ['item' => $item])
+
+                                @endforeach
+                          </ul>
+
+
+
+                    </li>
+
+                    <li  class="nav-item dropdown">
+
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Marcas
+                          </a>
+
+                          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+
+                                @foreach($menusmarca as $k => $item)
+
+                                    @if ($item['parent_id'] != 0)
+                                        @break
+                                    @endif
+                                    @include('layouts.frontend.partials.menumarca-item', ['item' => $item])
 
                                 @endforeach
                           </ul>
