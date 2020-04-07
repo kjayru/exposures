@@ -51,17 +51,16 @@ class HomeController extends Controller
     }
 
     public function productoCategory($cat){
+
         $slide = Slide::where('id',3)->first();
-
-
         $categoria = Category::where('slug',$cat)->first();
-
-
         $productos = $categoria->product()->paginate(8);
+
+        $marcas = Marca::where('parent_id','')->get();
 
 
         $categorias = Category::orderBy('name','desc')->get();
-        return view('frontend.home.productos',['slide'=>$slide,'productos'=>$productos,'categorias'=>$categorias,'categoria'=>$categoria]);
+        return view('frontend.home.productos',['slide'=>$slide,'productos'=>$productos,'categorias'=>$categorias,'categoria'=>$categoria,'marcas'=>$marcas]);
     }
 
 
@@ -71,8 +70,10 @@ class HomeController extends Controller
         $categoria = Marca::where('slug',$cat)->first();
         $productos = $categoria->product()->paginate(8);
 
+        $marcas = Marca::where('parent_id','')->get();
+
         $categorias = Category::orderBy('name','desc')->get();
-        return view('frontend.home.productos',['slide'=>$slide,'productos'=>$productos,'categorias'=>$categorias,'categoria'=>$categoria]);
+        return view('frontend.home.productos',['slide'=>$slide,'productos'=>$productos,'categorias'=>$categorias,'categoria'=>$categoria,'marcas'=>$marcas]);
     }
 
 

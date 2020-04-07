@@ -55,7 +55,11 @@
                                     <div class="form-group mx-sm-3 mb-2">
 
                                         <select class="form-control">
-                                            <option>MARCA</option>
+
+                                            <option value="">MARCA</option>
+                                            @foreach($marcas as $marca)
+                                            <option value="{{$marca->id}}">{{ $marca->name }}</option>
+                                            @endforeach
                                           </select>
                                     </div>
 

@@ -32,6 +32,9 @@ class CreateProductsTable extends Migration
             $table->unsignedInteger('category_id');
             $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
 
+            $table->unsignedInteger('activity_id')->nullable();
+            $table->foreign('activity_id')->references('id')->on('activities')->onDelete('cascade');
+
             $table->timestamps();
         });
     }

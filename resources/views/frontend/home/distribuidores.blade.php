@@ -59,7 +59,7 @@
                                     <span>{{ $dealer->subtitle }}</span>
                                     <p>
 
-                                    {!! iconv('UTF-8', 'ISO-8859-1//IGNORE',$dealer->description) !!}
+                                    {!! $dealer->description !!}
                                     </p>
                                 </div>
 
