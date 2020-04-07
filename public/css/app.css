@@ -12831,7 +12831,7 @@
       text-align: center;
       text-transform: uppercase;
       padding: 40px;
-      border: 3px solid blue;
+      border: 3px solid #0072BC;
       border-top-right-radius: 50px;
       border-bottom-left-radius: 50px;
   }
@@ -13142,6 +13142,30 @@ section#testimonio {
 
 
   @media (min-width: 768px) {
+    .mensaje{
+        position: relative;
+    }
+    .mensaje:before {
+        content: "";
+        background: url(/images/Comillas01.png) no-repeat 0px 0px;
+        width: 48px;
+        height: 51px;
+        position: absolute;
+        top: -20px;
+        left: -23px;
+        background-size: contain;
+    }
+      .mensaje:after{
+        content: "";
+        background: url(/images/Comillas02.png) no-repeat 0px 0px;
+        width: 48px;
+        height: 51px;
+        position: absolute;
+        bottom: -28px;
+        right: -23px;
+        background-size: contain;
+
+    }
       .logohome {
           position: absolute;
           top: 20px;
