@@ -23,7 +23,7 @@
                     <li  class="nav-item dropdown">
 
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Productos
+                            Marcas
                           </a>
                           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
 
@@ -56,7 +56,7 @@
                     </li>
 
                     <li class="nav-item ">
-                        <a class="nav-link" href="http://exposureteam.mx/" >
+                        <a class="nav-link" href="http://exposureteam.mx/">
                             Exposure Team
                         </a>
                     </li>
