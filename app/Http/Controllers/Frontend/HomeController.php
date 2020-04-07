@@ -13,6 +13,7 @@ use App\Video;
 use App\Product;
 use App\Category;
 use App\Marca;
+use App\Activity;
 use Illuminate\Support\Str;
 use Excel;
 use File;
@@ -57,10 +58,11 @@ class HomeController extends Controller
         $productos = $categoria->product()->paginate(8);
 
         $marcas = Marca::where('parent_id','')->get();
+        $actividades = Activity::orderBy('name','asc')->get();
 
 
         $categorias = Category::orderBy('name','desc')->get();
-        return view('frontend.home.productos',['slide'=>$slide,'productos'=>$productos,'categorias'=>$categorias,'categoria'=>$categoria,'marcas'=>$marcas]);
+        return view('frontend.home.productos',['slide'=>$slide,'productos'=>$productos,'categorias'=>$categorias,'categoria'=>$categoria,'marcas'=>$marcas,'actividades'=>$actividades]);
     }
 
 
@@ -71,9 +73,10 @@ class HomeController extends Controller
         $productos = $categoria->product()->paginate(8);
 
         $marcas = Marca::where('parent_id','')->get();
+        $actividades = Activity::orderBy('name','asc')->get();
 
         $categorias = Category::orderBy('name','desc')->get();
-        return view('frontend.home.productos',['slide'=>$slide,'productos'=>$productos,'categorias'=>$categorias,'categoria'=>$categoria,'marcas'=>$marcas]);
+        return view('frontend.home.productos',['slide'=>$slide,'productos'=>$productos,'categorias'=>$categorias,'categoria'=>$categoria,'marcas'=>$marcas,'actividades'=>$actividades]);
     }
 
 

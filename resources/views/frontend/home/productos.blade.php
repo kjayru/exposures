@@ -50,6 +50,9 @@
 
                                       <select class="form-control">
                                         <option>ACTIVIDAD</option>
+                                        @foreach($actividades as $actividad)
+                                            <option value="{{$actividad->id}}">{{ $actividad->name }}</option>
+                                            @endforeach
                                       </select>
                                     </div>
                                     <div class="form-group mx-sm-3 mb-2">
