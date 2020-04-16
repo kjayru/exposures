@@ -38,5 +38,7 @@
                 </div>
             </div>
         </section>
+
+        @include('layouts.backend.include.marcaGallery')
 </div>
 @endsection

@@ -89,23 +89,30 @@
             <div class="list-group">
                 @foreach($categorias as $key => $cat)
 
+                    @if($cat->parent_id ==0)
 
-                @if($cat->parent_id ==0)
-
-                    <label class="list-group-item" for="categoria{{$key+1}}">{{$cat->name}}</label>
-                @else
-                   <p style="padding-left:20px; margin-top:10px;">
-                    <input type="checkbox" name="categorias[]" value="{{$cat->id}}" @if($catprods>0) @if(in_array(@$cat->id, @$catprods)) checked @endif @endif id="categoria{{$key+1}}" />
-                    <label class="list-group-item" for="categoria{{$key+1}}">{{$cat->name}}</label>
-                </p>
-                @endif
-
-
-
-
+                        <label class="list-group-item" for="categoria{{$key+1}}">{{$cat->name}}</label>
+                    @else
+                    <p style="padding-left:20px; margin-top:10px;">
+                        <input type="checkbox" name="categorias[]" value="{{$cat->id}}" @if($catprods>0) @if(in_array(@$cat->id, @$catprods)) checked @endif @endif id="categoria{{$key+1}}" />
+                        <label class="list-group-item" for="categoria{{$key+1}}">{{$cat->name}}</label>
+                    </p>
+                    @endif
 
                 @endforeach
             </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="parent" class="col-sm-2 control-label">Marca</label>
+        <div class="col-sm-10">
+            <select name="marca" id="marca" class="form-control">
+                <option value="">Seleccione</option>
+                @foreach($marcas as $cat)
+                 <option value="{{$cat->id}}" @if(@$cat->id == @$marca->parent_id) selected @endif>{{ $cat->name }}</option>
+                @endforeach
+            </select>
         </div>
     </div>
     <div class="form-group @if($errors->first('excerpt')) has-error @endif">

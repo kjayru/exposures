@@ -22,7 +22,9 @@ Route::get('/producto/{slug}', 'Frontend\HomeController@productoDetalle')->name(
 Route::get('/videos', 'Frontend\HomeController@videos')->name('videos');
 Route::get('/distribuidores', 'Frontend\HomeController@distribuidores')->name('distribuidores');
 
-Route::get('/distribuidores/{id}','Frontend\HomeController@dealerSearch')->name('buscador-dealer');
+Route::get('/distribuidores/zona/{id}','Frontend\HomeController@dealerSearch')->name('buscador-dealer');
+
+Route::get('/distribuidores/marca/{marca}','Frontend\HomeController@dealermarca')->name('buscador-marca');
 Route::get('/contacto', 'Frontend\HomeController@contacto')->name('contacto');
 
 Route::get('/sliders', 'Frontend\HomeController@getslide')->name('slider');
@@ -196,6 +198,24 @@ Route::group(['prefix' => 'admin'],function(){
     Route::get('/videos/{video}/edit', 'Backend\VideoController@edit')->name('video.edit');
     Route::put('/videos/{video}', 'Backend\VideoController@update')->name('video.update');
     Route::delete('/videos/{video}', 'Backend\VideoController@destroy')->name('video.destroy');
+
+    //marcas
+    Route::get('/marcas', 'Backend\MarcaController@index')->name('marca.index');
+    Route::get('/marcas/create', 'Backend\MarcaController@create')->name('marca.created');
+    Route::post('/marcas', 'Backend\MarcaController@store')->name('marca.store');
+    Route::get('/marcas/{marca}/edit', 'Backend\MarcaController@edit')->name('marca.edit');
+    Route::put('/marcas/{marca}', 'Backend\MarcaController@update')->name('marca.update');
+    Route::delete('/marcas/{marca}', 'Backend\MarcaController@destroy')->name('marca.destroy');
+
+    //brands
+
+    Route::get('/brands', 'Backend\BrandController@index')->name('brand.index');
+    Route::get('/brands/create', 'Backend\BrandController@create')->name('brand.created');
+    Route::post('/brands', 'Backend\BrandController@store')->name('brand.store');
+    Route::get('/brands/{marca}/edit', 'Backend\BrandController@edit')->name('brand.edit');
+    Route::put('/brands/{marca}', 'Backend\BrandController@update')->name('brand.update');
+    Route::delete('/brands/{marca}', 'Backend\BrandController@destroy')->name('brand.destroy');
+
 });
 
 

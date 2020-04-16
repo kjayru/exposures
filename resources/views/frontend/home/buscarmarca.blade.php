@@ -17,7 +17,7 @@
    <section class="container dealer">
         <div class="row">
             <div class="col-md-8 m-0 p-0">
-                <h2>Distribuidores: {{ $ciudad}}</h2>
+                <h2>Distribuidores : {{ $marca}}</h2>
                     <form id="frm-dealer" id="frm-dealer">
                         @csrf
                         <div class="row">

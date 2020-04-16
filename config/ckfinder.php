@@ -120,6 +120,15 @@ $config['resourceTypes'][] = array(
     'backend'           => 'default'
 );
 
+$config['resourceTypes'][] = array(
+    'name'              => 'Marcas', // Single quotes not allowed.
+    'directory'         => 'marcas',
+    'maxSize'           => 0,
+    'allowedExtensions' => '7z,aiff,asf,avi,bmp,csv,doc,docx,fla,flv,gif,gz,gzip,jpeg,jpg,mid,mov,mp3,mp4,mpc,mpeg,mpg,ods,odt,pdf,png,ppt,pptx,pxd,qt,ram,rar,rm,rmi,rmvb,rtf,sdc,sitd,swf,sxc,sxw,tar,tgz,tif,tiff,txt,vsd,wav,wma,wmv,xls,xlsx,zip',
+    'deniedExtensions'  => '',
+    'backend'           => 'default'
+);
+
 
 
 /*================================ Access Control =====================================*/
@@ -163,7 +172,7 @@ $config['forceAscii'] = false;
 $config['xSendfile'] = false;
 
 // http://docs.cksource.com/ckfinder3-php/configuration.html#configuration_options_debug
-$config['debug'] = false;
+$config['debug'] = true;
 
 /*==================================== Plugins ========================================*/
 // http://docs.cksource.com/ckfinder3-php/configuration.html#configuration_options_plugins

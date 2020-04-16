@@ -39,6 +39,13 @@
                                 </a>
                               </li>
 
+                              <li {{{ (Request::is('admin/marcas') ? 'class=active' : '') }}}>
+                                <a href="/admin/marcas">
+                                    <i class="fa fa-cubes" aria-hidden="true"></i><span>Marcas</span>
+
+                                </a>
+                              </li>
+
                             <li {{{ (Request::is('admin/products') ? 'class=active' : '') }}}>
                                 <a href="/admin/products">
                                     <i class="fa fa-cube" aria-hidden="true"></i> <span>Productos</span>
@@ -93,6 +100,12 @@
 
                                 </a>
                               </li>
+                              <li {{{ (Request::is('admin/brands') ? 'class=active' : '') }}}>
+                                <a href="/admin/brands">
+                                  <i class="fa fa-th"></i> <span>Marcas</span>
+
+                                </a>
+                              </li>
                               <li {{{ (Request::is('admin/testimonials') ? 'class=active' : '') }}}>
                                   <a href="/admin/testimonials">
                                       <i class="fa fa-users" aria-hidden="true"></i> <span>Testimonio</span>
@@ -127,19 +140,6 @@
                     </ul>
                   </li>
 
-            <!--<li class="treeview menu-open">
-              <a href="/admin/blog">
-                <i class="fa fa-binoculars" aria-hidden="true"></i><span>Team explore</span>
-                <span class="pull-right-container">
-                    <i class="fa fa-angle-left pull-right"></i>
-                </span>
-
-              </a>
-              <ul class="treeview-menu" style="display:block">
-                <li {{{ (Request::is('admin/category-blog') ? 'class=active' : '') }}}>  <a href="/admin/category-blog" > <i class="fa fa-archive" aria-hidden="true"></i>Categorias</a><li>
-                <li {{{ (Request::is('admin/posts') ? 'class=active' : '') }}}>  <a href="/admin/posts" > <i class="fa fa-file-text" aria-hidden="true"></i>Equipo</a><li>
-              </ul>
-            </li>-->
 
           </ul>
         </section>

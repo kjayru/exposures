@@ -18,6 +18,7 @@ use Illuminate\Support\Str;
 use Excel;
 use File;
 use App\State;
+use App\Brand;
 use App\Imports\ProductImport;
 
 
@@ -104,8 +105,9 @@ class HomeController extends Controller
         $slide = Slide::where('id',4)->first();
         $dealers = Dealer::orderBy('id','desc')->paginate(8);
 
+        $marcas = Brand::orderBy('name','desc')->get();
         $estados = State::orderBy('name','desc')->get();
-        return view('frontend.home.distribuidores',['slide'=>$slide,'dealers'=>$dealers,'estados'=>$estados]);
+        return view('frontend.home.distribuidores',['slide'=>$slide,'dealers'=>$dealers,'estados'=>$estados,'marcas'=>$marcas]);
     }
 
 
@@ -116,8 +118,21 @@ class HomeController extends Controller
         $estados = State::orderBy('name','desc')->get();
 
         $ciudad = State::where('id',$id)->first();
+        $marcas = Brand::orderBy('name','desc')->get();
 
-        return view('frontend.home.buscar',['slide'=>$slide,'dealers'=>$dealers,'estados'=>$estados,'ciudad'=>$ciudad]);
+        return view('frontend.home.buscar',['slide'=>$slide,'dealers'=>$dealers,'estados'=>$estados,'ciudad'=>$ciudad,'marcas'=>$marcas,'ciudad'=>$ciudad->name]);
+    }
+
+    public function dealermarca($marca){
+
+        $slide = Slide::where('id',4)->first();
+        $brand = Brand::where('id',$marca)->first();
+        $estados = State::orderBy('name','desc')->get();
+
+        $ciudad = null;
+        $marcas = Brand::orderBy('name','desc')->get();
+
+        return view('frontend.home.buscarmarca',['slide'=>$slide,'dealers'=>$brand->dealer,'estados'=>$estados,'ciudad'=>$ciudad,'marcas'=>$marcas,'marca'=>$brand->name]);
     }
 
 

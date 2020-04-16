@@ -78,3 +78,24 @@
             </div>
         </div>
 
+
+        <fieldset> <legend>Seleccionar marcas</legend></fieldset>
+
+        <div class="form-group">
+
+            @foreach($brands as $marca)
+            <div class="col-md-2"></div>
+            <div class="col-md-10">
+                    <div class="checkbox">
+                        <label>
+                          <input name="marca[]" value="{{$marca->id}}" type="checkbox" @if(@in_array($marca->id, $contenedor)) checked @endif />
+                          {{$marca->name}}
+                        </label>
+                      </div>
+            </div>
+            @endforeach
+
+        </div>
+
+
+

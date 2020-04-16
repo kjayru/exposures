@@ -6,12 +6,12 @@
         <!-- Content Header (Page header) -->
         <section class="content-header">
           <h1>
-            Categorias
+            Marcas
             <small>Control panel</small>
           </h1>
           <ol class="breadcrumb">
             <li><a href="#"><i class="fa fa-dashboard"></i> Inicio</a></li>
-            <li class="active">Categorias</li>
+            <li class="active">Marcas</li>
           </ol>
         </section>
 
@@ -22,26 +22,40 @@
             <div class="col-xs-12">
               <div class="box">
                 <div class="box-header">
-                  <h3 class="box-title">Categorias</h3>
-                  <a href="{{route('category.build')}}" class="btn btn-xs btn-primary pull-right">Crear Categoría</a>
+                  <h3 class="box-title">Marcas</h3>
+                  <a href="{{route('brand.created')}}" class="btn btn-xs btn-primary pull-right">Crear Marca</a>
                 </div>
                 <!-- /.box-header -->
                 <div class="box-body">
+                  <table id="example2" class="table table-bordered table-hover">
+                    <thead>
+                    <tr>
+                      <th></th>
+                      <th>Nombre</th>
+                      <th>Imagen</th>
 
-                    <ul class="list-group lista1">
-                        @foreach($categories as $k => $item)
+                      <th></th>
+                    </tr>
+                    </thead>
+                    <tbody>
 
-                            @if ($item['parent_id'] != 0)
-                                @break
-                            @endif
+                      @foreach($marcas as $key=>$marca)
+                      <tr>
+                      <th>{{ $key+1}}</th>
+                      <td>{{$marca->name}}</td>
+                      <td>
+                        <img src="/{{$marca->file }}" width="100" class="img-responsive">
+                    </td>
 
-                            @include('layouts.backend.include.category-item', ['item' => $item])
+                      <td>
+                        <a href="{{ route('brand.edit',['id'=>$marca->id]) }}" class="btn btn-xs btn-primary">Editar</a>
+                        <a href="#" data-id="{{ $marca->id }}" data-toggle="modal" data-target="#delobjeto" class="btn btn-xs btn-danger btn-object-delete">Borrar</a>
+                    </td>
+                    </tr>
+                      @endforeach
 
-                        @endforeach
-                    </ul>
-
-
-
+                    </tbody>
+                  </table>
                 </div>
                 <!-- /.box-body -->
               </div>
@@ -55,7 +69,7 @@
       <div class="modal modal-danger fade in" id="delobjeto">
             <div class="modal-dialog">
                 <div class="modal-content">
-                    <form class="delete-objeto" action="/admin/categories/delete" method="POST">
+                    <form class="delete-objeto" action="/admin/brands/delete" method="POST">
                         @csrf
                             <div class="modal-header">
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">

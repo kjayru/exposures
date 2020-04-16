@@ -16,7 +16,7 @@
     </div>
 
     <div class="form-group">
-        <label for="parent" class="col-sm-2 control-label">Seleccione una categoría</label>
+        <label for="parent" class="col-sm-2 control-label">Seleccione una categoría padre</label>
         <div class="col-sm-10">
             <select name="categoria" id="categoria" class="form-control">
                 <option value="">Seleccione</option>

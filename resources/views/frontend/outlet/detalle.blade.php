@@ -34,7 +34,7 @@
 
                 <div class="col-md-12">
                     <h3 class="pb-2 pt-2 titulo-descripcion">Descripción</h3>
-                    {!! iconv('UTF-8', 'ISO-8859-1//IGNORE',$producto->description)  !!}
+                    {!! $producto->description !!}
                 </div>
             </div>
 

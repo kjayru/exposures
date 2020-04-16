@@ -22,9 +22,12 @@ class CreateDealersTable extends Migration
             $table->string('phone');
             $table->string('email');
             $table->text('maps');
-            $table->integer('state');
+            $table->integer('state_id');
             $table->integer('order');
             $table->timestamps();
+
+            $table->unsignedInteger('state_id');
+            $table->foreign('state_id')->references('id')->on('states')->onDelete('cascade');
         });
     }
 

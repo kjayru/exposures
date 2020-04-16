@@ -6,12 +6,12 @@
         <!-- Content Header (Page header) -->
         <section class="content-header">
           <h1>
-            Categorias
+            Marcas menu
             <small>Control panel</small>
           </h1>
           <ol class="breadcrumb">
             <li><a href="#"><i class="fa fa-dashboard"></i> Inicio</a></li>
-            <li class="active">Categorias</li>
+            <li class="active">Marcas</li>
           </ol>
         </section>
 
@@ -22,24 +22,25 @@
             <div class="col-xs-12">
               <div class="box">
                 <div class="box-header">
-                  <h3 class="box-title">Categorias</h3>
-                  <a href="{{route('category.build')}}" class="btn btn-xs btn-primary pull-right">Crear Categoría</a>
+                  <h3 class="box-title">Marcas</h3>
+                  <a href="{{route('marca.created')}}" class="btn btn-xs btn-primary pull-right">Crear Marca</a>
                 </div>
                 <!-- /.box-header -->
                 <div class="box-body">
 
+
+
                     <ul class="list-group lista1">
-                        @foreach($categories as $k => $item)
+                        @foreach($marcas as $k => $item)
 
                             @if ($item['parent_id'] != 0)
                                 @break
                             @endif
 
-                            @include('layouts.backend.include.category-item', ['item' => $item])
+                            @include('layouts.backend.include.marca-item', ['item' => $item])
 
                         @endforeach
                     </ul>
-
 
 
                 </div>

@@ -17,7 +17,12 @@ $(window).on('load',function(){
 
 $("#estadodealer").on('change', function() {
 
-    window.location.href="/distribuidores/"+this.value;
+    window.location.href="/distribuidores/zona/"+this.value;
+  });
+
+  $("#marcadealer").on('change', function() {
+
+    window.location.href="/distribuidores/marca/"+this.value;
   });
 
 

@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Product;
 use App\Category;
+use App\Marca;
 use Illuminate\Support\Str;
 use App\Multimedia;
 use App\MultimediaProduct;
@@ -35,7 +36,9 @@ class ProductController extends Controller
     public function create()
     {
         $categorias = Category::orderBy('name','desc')->get();
-        return view('backend.product.create',['categorias'=>$categorias]);
+        $multimedias = Multimedia::orderBy('id','desc')->get();
+        $marcas = Marca::OrderBy('name','desc')->where('parent_id',null)->get();
+        return view('backend.product.create',['categorias'=>$categorias,'marcas'=>$marcas]);
     }
 
     /**
@@ -71,7 +74,7 @@ class ProductController extends Controller
          $product->imagen = $imagen;
         }
 
-
+        $product->brand_id = $request->marca;
         $product->save();
 
         $product->category()->sync($request->categorias);
@@ -111,7 +114,9 @@ class ProductController extends Controller
         }
 
 
-        return view('backend.product.edit',['product'=>$product,'categorias'=>$categorias,'fotos'=>$multimedias,'catprods'=>$mcas]);
+        $marcas = Marca::OrderBy('name','desc')->where('parent_id',null)->get();
+
+        return view('backend.product.edit',['product'=>$product,'categorias'=>$categorias,'fotos'=>$multimedias,'catprods'=>$mcas,'marcas'=>$marcas]);
     }
 
 
@@ -145,6 +150,7 @@ class ProductController extends Controller
             $product->outlet = $request->outlet;
         }
 
+        $product->brand_id = $request->marca;
 
         $product->save();
 

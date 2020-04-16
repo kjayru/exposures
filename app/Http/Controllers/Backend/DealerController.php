@@ -4,8 +4,12 @@ namespace App\Http\Controllers\Backend;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Storage;
 use App\Dealer;
 use App\State;
+use App\Multimedia;
+use App\Brand;
+use App\Brandmedia;
 class DealerController extends Controller
 {
     /**
@@ -16,6 +20,7 @@ class DealerController extends Controller
     public function index()
     {
         $dealers = Dealer::orderBy('id','desc')->get();
+
         return view('backend.dealer.index',['dealers'=>$dealers]);
     }
 
@@ -27,7 +32,11 @@ class DealerController extends Controller
     public function create()
     {
         $estados = State::orderBy('name','desc')->get();
-        return view('backend.dealer.create',['estados'=>$estados]);
+
+
+        $files = Storage::files('marcas');
+
+        return view('backend.dealer.create',['estados'=>$estados,'fotos'=>$files]);
     }
 
     /**
@@ -52,6 +61,11 @@ class DealerController extends Controller
         $dealer->order = $request->order;
         $dealer->state_id = $request->state;
         $dealer->state = '1';
+
+        if($request->marca){
+            $dealer->brand()->save($request->marca);
+        }
+
         $dealer->save();
 
         return redirect()->route('dealer.index')->with(['info'=>'Datos actualizados']);
@@ -73,9 +87,23 @@ class DealerController extends Controller
      */
     public function edit($id)
     {
+
+        $contenedor = null;
+        $files = Storage::files('marcas');
+
+
         $dealer = Dealer::find($id);
         $estados = State::orderBy('name','desc')->get();
-        return view('backend.dealer.edit',['dealer'=>$dealer,'estados'=>$estados]);
+        $multimedias = Multimedia::orderBy('id','desc')->get();
+        $brands = Brand::all();
+
+        $arreglo = $dealer->brand;
+        foreach($arreglo as $arr){
+            $contenedor[] =$arr->id;
+        }
+
+
+        return view('backend.dealer.edit',['dealer'=>$dealer,'estados'=>$estados,'fotos'=>$files,'brands'=>$brands,'contenedor'=>$contenedor]);
     }
 
     /**
@@ -87,6 +115,8 @@ class DealerController extends Controller
      */
     public function update(Request $request, $id)
     {
+
+
         $dealer = Dealer::find($id);
         $dealer->name = $request->name;
         $dealer->subtitle = $request->subtitle;
@@ -97,7 +127,13 @@ class DealerController extends Controller
         $dealer->maps = $request->maps;
         $dealer->order = $request->order;
         $dealer->state_id = $request->state;
+
         $dealer->save();
+
+        if($request->marca){
+
+            $dealer->brand()->sync($request->marca);
+        }
 
         return redirect()->route('dealer.index')->with(['info'=>'Datos actualizados']);
     }

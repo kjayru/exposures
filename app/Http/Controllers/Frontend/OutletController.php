@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Product;
 use App\Category;
-
+use App\Marca;
 use Session;
 use DB;
 use App\Invoice;
@@ -44,32 +44,34 @@ class OutletController extends Controller
         }*/
         //$coleccion = collect($catout);
         //$categorias = $coleccion->unique();
-        $categorias = Category::where('parent_id',0)->get();
+        $marcas = Marca::where('parent_id',null)->get();
 
-        return view('frontend.outlet.index',compact('latest','products','categorias'));
+
+
+        return view('frontend.outlet.index',compact('latest','products','marcas'));
     }
 
 
     public function categoria($slug){
 
-        $categoria = Category::where('slug',$slug)->first();
-        $products = Product::where('category_id',$categoria->id)->where('outlet','1')->get();
+
+        $marca = Marca::where('slug',$slug)->first();
+
+
+        $products = $marca->products;
+
 
 
         $latest = Product::where('outlet','1')->orderBy('id','desc')->limit(4)->get();
         $generals = Product::where('outlet','1')->orderBy('id','desc')->get();
 
         $catout = [];
-        foreach($generals as $prod){
-                $obj = array('name'=> $prod->category->name ,'slug'=> $prod->category->slug);
-                array_push($catout,$obj);
-        }
-        $coleccion = collect($catout);
-        $categorias = $coleccion->unique();
 
-        $nombre = $categoria->name;
 
-        return view('frontend.outlet.index',compact('latest','products','categorias','nombre'));
+        $marcas = Marca::where('parent_id',null)->get();
+        $nombre = $marca->name;
+
+        return view('frontend.outlet.index',compact('latest','products','marcas','nombre'));
     }
 
 

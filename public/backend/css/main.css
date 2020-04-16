@@ -575,3 +575,14 @@
  #listcat  .list-group input[type="radio"]:checked + .list-group-item:before {
     color: inherit;
   }
+
+  .lista1>li>p {
+    display: inline-block;
+    font-size: 15px;
+    font-weight: bold;
+    margin-right: 37px;
+}
+ul.lista2>li>p {
+    display: inline-block;
+    margin-right: 37px;
+}

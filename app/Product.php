@@ -17,4 +17,8 @@ class Product extends Model
     public function activity(){
         return $this->belongsTo(Activity::class);
     }
+
+    public function marca(){
+        return $this->belongsTo(Marca::class);
+    }
 }
