@@ -15,7 +15,7 @@
       </div>
     </div>
 
-    @if($marca->file)
+    @if(@$marca->file)
    <div class="form-group">
        <div class="col-md-2"></div>
        <div class="col-sm-10">
