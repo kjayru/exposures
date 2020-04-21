@@ -19,7 +19,7 @@
    <div class="form-group">
        <div class="col-md-2"></div>
        <div class="col-sm-10">
-           <img src="/{{$marca->file}}" width="100">
+           <img src="/storage/{{$marca->file}}" width="100">
        </div>
    </div>
 
