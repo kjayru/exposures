@@ -31,7 +31,8 @@ class MarcaController extends Controller
     public function create()
     {
         $makes = Marca::orderBy('id','desc')->get();
-        return view('backend.marca.create',['makes'=>$makes]);
+        $marcas = Marca::marcas();
+        return view('backend.marca.create',['makes'=>$makes,'marcas'=>$marcas]);
     }
 
     /**
