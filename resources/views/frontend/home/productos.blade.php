@@ -15,7 +15,7 @@
 </section>
 
 <section class="paginas">
-        <div class="container-fluid  seccioncategorias">
+        <!--<div class="container-fluid  seccioncategorias">
             <div class="row justify-content-center">
                 <div class="col-md-8 pb-5 pt-5">
 
@@ -27,7 +27,7 @@
 
                 </div>
             </div>
-        </div>
+        </div>-->
         <div class="seccionwhite producto pt-5 pb-5">
             <div class="row justify-content-center">
                 <div class="col-md-8">
