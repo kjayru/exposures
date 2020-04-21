@@ -44,7 +44,7 @@
                       <th>{{ $key+1}}</th>
                       <td>{{$marca->name}}</td>
                       <td>
-                        <img src="/{{$marca->file }}" width="100" class="img-responsive">
+                        <img src="/storage/{{$marca->file }}" width="100" class="img-responsive">
                     </td>
 
                       <td>
