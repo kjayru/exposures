@@ -34,7 +34,7 @@
                            <p>Que mejor que escuchar recomendaciones de boca de los expertos, en esta seccion podran encontrar reseñas y consejos del equipo que ya esta siendo sometido a las mas duras pruebas de campo a manos de nuestro equipo de atletas.</p>
                             <div class="row">
                             @foreach($testimonios as $k => $testimonio)
-                             <!--item-->
+
                                 <div class="testimonio col-md-6">
                                     <div class="mcuadro">
                                         <div class="testimonio-header">
