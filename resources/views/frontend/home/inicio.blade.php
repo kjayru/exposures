@@ -25,7 +25,7 @@
 
 
 
-<section id="testimonio" class=" blanco pt-5 pb-5">
+<!--<section id="testimonio" class=" blanco pt-5 pb-5">
                 <div class="container">
                     <div class="row justify-content-center">
                         <div class="col-md-12">
@@ -69,7 +69,7 @@
                         </div>
                     </div>
                 </div>
-</section>
+</section>-->
 
 {!! $pagina->blocks[3]->contenido !!}
 <!-- /wp:html -->
