@@ -76,7 +76,7 @@
                                 <div>
                                     @foreach($dealer->brand as $marca)
 
-                                    <img src="/{{  $marca->file }}" alt="" width="100">
+                                    <img src="/storage/{{  $marca->file }}" alt="" width="100">
                                     @endforeach
                                 </div>
                                 <div class="row abody">
