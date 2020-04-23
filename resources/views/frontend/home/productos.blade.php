@@ -73,7 +73,7 @@
                     <div class="row">
                          <!--item-->
                          @foreach($productos as $prod)
-
+                        {{ dd($prod)}}
                          <div class="col-md-6 col-12 cartprod">
                             <div class="row">
                                 <div class="contenedor">
