@@ -59,7 +59,7 @@ class HomeController extends Controller
         $productos = $categoria->product()->paginate(8);
 
         $marcas = Marca::where('parent_id','')->get();
-        $actividades = Activity::orderBy('name','asc')->get();
+        $actividades = Category::orderBy('name','asc')->where('parent_id',null)->get();
 
 
         $categorias = Category::orderBy('name','desc')->get();
