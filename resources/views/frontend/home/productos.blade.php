@@ -83,11 +83,11 @@
                                         </div>
                                         <div class="col-md-7">
                                             <div class="titulo">
-                                            <h3> {{ iconv('UTF-8', 'ISO-8859-1//IGNORE',$prod->name) }}</h3>
-                                                <span> {{ iconv('UTF-8', 'ISO-8859-1//IGNORE',$prod->subtheme) }}</span>
+                                            <h3> {{ $prod->name }}</h3>
+                                                <span> {{ $prod->subtheme }}</span>
                                             </div>
                                             <div class="body">
-                                            {{ iconv('UTF-8', 'ISO-8859-1//IGNORE',$prod->excerpt) }}
+                                            {{ $prod->excerpt }}
 
                                             </div>
                                             <div class="footer">
