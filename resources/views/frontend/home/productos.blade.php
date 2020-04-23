@@ -87,7 +87,7 @@
                                                 <span> {{ $prod->subtheme }}</span>
                                             </div>
                                             <div class="body">
-                                            {{ $prod->excerpt }}
+                                            {{  \Illuminate\Support\Str::str_limit($prod->excerpt, 23) }}
 
                                             </div>
                                             <div class="footer">
