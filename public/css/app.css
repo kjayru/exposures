@@ -13148,7 +13148,7 @@ section#testimonio {
     }
     .mensaje:before {
         content: "";
-        background: url(/images/Comillas01.png) no-repeat 0px 0px;
+        background: url(/images/Comillas01.jpg) no-repeat 0px 0px;
         width: 48px;
         height: 51px;
         position: absolute;
@@ -13158,7 +13158,7 @@ section#testimonio {
     }
       .mensaje:after{
         content: "";
-        background: url(/images/Comillas02.png) no-repeat 0px 0px;
+        background: url(/images/Comillas02.jpg) no-repeat 0px 0px;
         width: 48px;
         height: 51px;
         position: absolute;
