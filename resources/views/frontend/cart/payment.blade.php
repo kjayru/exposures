@@ -1,7 +1,7 @@
 @extends('layouts.frontend.app')
 @section('content')
 
-<section id="marcas" class="pt-5 pb-5 " >
+<section id="payment" class="pt-5 pb-5 " >
     <div class="container-fluid">
         <div class="row justify-content-center">
             <div class="col-md-6">
