@@ -31,7 +31,7 @@
                             <div class="col-xs-12">
                                 <h2 class="page-header">
                                 <i class="fa fa-globe"></i> Exposure
-                                <small class="pull-right">Fecha: {{ $orden->created_at }}</small>
+                                <small class="pull-right">Fecha: {{ strftime("%d %B %Y", date (strtotime($orden->created_at)) ) }}</small>
                                 </h2>
                             </div>
                             <!-- /.col -->
@@ -44,37 +44,25 @@
                             <div class="col-xs-12 table-responsive">
                                 <table class="table table-striped">
                                 <thead>
-                                <tr>
-
-                                    <th>Producto</th>
-                                    <th>Cantidad</th>
-
-                                    <th>Precio Unitario</th>
-                                    <th>Subtotal</th>
+                                    <tr>
+                                        <th>Producto</th>
+                                        <th>Cantidad</th>
+                                        <th>Precio Unitario</th>
+                                        <th>Subtotal</th>
                                     </tr>
-                                    </thead>
-                                    <tbody>
+                                </thead>
+                                <tbody>
+
+                                    @foreach($productos->items as $prod)
                                     <tr>
 
-                                        <td>Call of Duty</td>
-                                        <td>1</td>
-                                        <td>$ 54.00</td>
-                                        <td>$ 54.50</td>
-                                    </tr>
-                                    <tr>
-
-                                        <td>Call of Duty</td>
-                                        <td>1</td>
-                                        <td>$ 54.00</td>
-                                        <td>$ 54.50</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Call of Duty</td>
-                                        <td>1</td>
-                                        <td>$ 54.00</td>
-                                        <td>$ 54.50</td>
+                                        <td>{{ $prod['item']->name}}</td>
+                                        <td>{{ $prod['qty']}}</td>
+                                        <td>$ {{ $prod['item']->price}}</td>
+                                        <td>${{ $prod['price']}}</td>
                                     </tr>
 
+                                    @endforeach
                                 </tbody>
                                 </table>
                             </div>
@@ -96,25 +84,25 @@
                             </div>
                             <!-- /.col -->
                             <div class="col-xs-6">
-                                <p class="lead">Pago realizado 2/22/2014</p>
+                                <p class="lead">Pago realizado  {{ strftime("%d %B %Y %X", date (strtotime($orden->created_at)) ) }}</p>
 
                                 <div class="table-responsive">
                                 <table class="table">
                                     <tr>
                                     <th style="width:50%">Subtotal:</th>
-                                    <td>$250.30</td>
+                                    <td>${{$productos->totalPrice}}</td>
                                     </tr>
                                     <tr>
-                                    <th>Impuesto (8%)</th>
+                                    <!--<th>Impuesto (8%)</th>
                                     <td>$10.34</td>
                                     </tr>
                                     <tr>
                                     <th>Envio:</th>
                                     <td>${{ $orden->shipment}}</td>
-                                    </tr>
+                                    </tr>-->
                                     <tr>
                                     <th>Total:</th>
-                                    <td>$265.24</td>
+                                    <td>${{$productos->totalPrice}}</td>
                                     </tr>
                                 </table>
                                 </div>
@@ -127,7 +115,7 @@
 
                 <div class="box-footer">
                         <a href="{{ $previous }}" class="btn btn-danger pull-left">Regresar</a>
-                        <a href="{{ route('invoice.edit',['id'=>$orden->payment->id ]) }}" class="btn btn-info pull-right">Ver factura</a>
+                        <!--<a href="" class="btn btn-info pull-right">Ver factura</a>-->
                 </div>
             </div>
 

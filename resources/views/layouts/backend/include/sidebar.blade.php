@@ -74,12 +74,12 @@
                                 </a>
                             </li>
 
-                            <li {{{ (Request::is('admin/invoices') ? 'class=active' : '') }}}>
+                           <!-- <li {{{ (Request::is('admin/invoices') ? 'class=active' : '') }}}>
                                 <a href="/admin/invoices">
                                     <i class="fa fa-ticket" aria-hidden="true"></i><span>Facturas</span>
 
                                 </a>
-                            </li>
+                            </li>-->
 
                     </ul>
             </li>

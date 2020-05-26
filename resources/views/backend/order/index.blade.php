@@ -25,7 +25,6 @@
             <section class="content">
 
 
-
               <div class="row">
 
                 <div class="col-xs-12">
@@ -40,7 +39,7 @@
                         <tr>
                           <th></th>
                           <th>Producto</th>
-                          <th>Envio</th>
+                         <!-- <th>Envio</th>-->
                           <th>N Orden</th>
                           <th>Usuario</th>
                           <th>Fecha</th>
@@ -51,8 +50,8 @@
                           @foreach($ordenes as $key=>$order)
                           <tr>
                             <th>{{ $key+1 }}</th>
-                            <td>{{ $order->cart }} </td>
-                            <td>{{ $order->shipment }}</td>
+                            <td>{{ \App\Order::getNameProducts($order->cart) }} </td>
+                            <!--<td>{{ $order->shipment }}</td>-->
                             <td>{{ $order->order_send_id }}</td>
                             <td>{{ $order->user->name }}</td>
                             <td>{{ $order->updated_at }}</td>
