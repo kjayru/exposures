@@ -100,7 +100,7 @@
                         <table class="table">
                             @foreach($productos->items as $prod)
                             <tr>
-                                <td><img src="/{{ $prod['item']->imagen  }}" class="img-fluid cart-img"></td>
+                                <td><img src="/storage/{{ $prod['item']->imagen  }}" class="img-fluid cart-img"></td>
                                 <td>{{ $prod['item']->name  }}</td>
                             </tr>
                             @endforeach

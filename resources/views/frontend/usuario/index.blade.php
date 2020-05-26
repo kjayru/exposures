@@ -32,7 +32,7 @@
                                 <tr>
                                     <td style="width:120px;">
 
-                                        <img src="{{ $producto['item']->imagen }}" width="100" >
+                                        <img src="/storage/{{ $producto['item']->imagen }}" width="100" >
                                     </td>
                                     <td style="padding-top:50px;">
                                         {{ $producto['item']->name }}
