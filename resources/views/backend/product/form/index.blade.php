@@ -94,7 +94,7 @@
                         <label class="list-group-item" for="categoria{{$key+1}}">{{$cat->name}}</label>
                     @else
                     <p style="padding-left:20px; margin-top:10px;">
-                        <input type="checkbox" name="categorias[]" value="{{$cat->id}}" @if($catprods>0) @if(in_array(@$cat->id, @$catprods)) checked @endif @endif id="categoria{{$key+1}}" />
+                        <input type="checkbox" name="categorias[]" value="{{$cat->id}}" @if(@$catprods>0) @if(in_array(@$cat->id, @$catprods)) checked @endif @endif id="categoria{{$key+1}}" />
                         <label class="list-group-item" for="categoria{{$key+1}}">{{$cat->name}}</label>
                     </p>
                     @endif
@@ -135,10 +135,10 @@
             </button>
         </div>
         <div class="prodimages">
-        @if(@$product->multimedias)
-           @foreach($product->multimedias as $foto)
+        @if(@$galerias)
+           @foreach($galerias as $foto)
             <div class="col-md-2 ">
-                <img src="/storage/{{ $foto->file }}" class="thumbnail" width="70">
+                <img src="/storage/{{ $foto->imagen}}" class="thumbnail" width="70">
             </div>
             @endforeach
         @endif

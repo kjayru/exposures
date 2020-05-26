@@ -17,6 +17,13 @@
 
         <section class="content">
 
+
+        @if(session('info'))
+            <div class="alert alert-success">
+                {{ session('info')}}
+            </div>
+        @endif
+
           <div class="row">
 
             <div class="col-xs-12">
@@ -28,7 +35,7 @@
                 <!-- /.box-header -->
                 <div class="box-body">
 
-                    <ul class="list-group lista1">
+                    <ol class="lista1">
                         @foreach($categories as $k => $item)
 
                             @if ($item['parent_id'] != 0)
@@ -38,7 +45,7 @@
                             @include('layouts.backend.include.category-item', ['item' => $item])
 
                         @endforeach
-                    </ul>
+                    </ol>
 
 
 

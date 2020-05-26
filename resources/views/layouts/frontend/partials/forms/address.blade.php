@@ -32,11 +32,16 @@
                       <label class="form-label required" for="celular">Teléfono Celular</label>
                       <input type="text" id="celular" name="celular" required="required"  mask="999999999"  class="form-control" >
                 </div>
+
                 <div class="col-xs-12 col-md-12">
                       <label class="form-label" for="telefono">Otro Teléfono (opcional)</label>
                       <input type="text" id="telefono" name="telefono"    class="form-control" >
                 </div>
 
+                <div class="col-xs-12 col-md-12">
+                    <label class="form-label required" for="email">Email</label>
+                    <input type="text" id="email" name="email" required="required"   class="form-control">
+                </div>
 
 
                 <div class="col-xs-12 col-md-12">

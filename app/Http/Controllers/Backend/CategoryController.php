@@ -24,6 +24,7 @@ class CategoryController extends Controller
         return view('backend.category.index',['categorias'=>$categorias,'categories'=>$categories]);
     }
 
+
     /**
      * Show the form for creating a new resource.
      *
@@ -57,7 +58,7 @@ class CategoryController extends Controller
        $category->order = $request->order;
        $category->save();
 
-      return redirect()->route('category.edit',['id'=>$category->id])
+      return redirect()->route('category.index',['id'=>$category->id])
      ->with('info','Categoria creada satisfactoriamente');
     }
 
@@ -103,7 +104,7 @@ class CategoryController extends Controller
 
 
 
-        return redirect()->route('category.edit',['id'=>$id])
+        return redirect()->route('category.index',['id'=>$id])
        ->with('info','Categoria actualizada satisfactoriamente');
     }
 

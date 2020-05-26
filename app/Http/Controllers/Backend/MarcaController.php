@@ -57,7 +57,7 @@ class MarcaController extends Controller
        $marca->order = $request->order;
        $marca->save();
 
-      return redirect()->route('marca.edit',['id'=>$marca->id])
+      return redirect()->route('marca.index',['id'=>$marca->id])
      ->with('info','Marca creada satisfactoriamente');
     }
 
@@ -103,7 +103,7 @@ class MarcaController extends Controller
 
 
 
-        return redirect()->route('marca.edit',['id'=>$id])
+        return redirect()->route('marca.index',['id'=>$id])
        ->with('info','Categoria actualizada satisfactoriamente');
     }
 

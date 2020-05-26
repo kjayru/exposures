@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Backend;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Storage;
 use App\Product;
 use App\Category;
 use App\Marca;
@@ -11,6 +12,8 @@ use Illuminate\Support\Str;
 use App\Multimedia;
 use App\MultimediaProduct;
 use App\ProductMultimedia;
+use App\Gallery;
+
 class ProductController extends Controller
 {
     public function __construct(){
@@ -36,9 +39,13 @@ class ProductController extends Controller
     public function create()
     {
         $categorias = Category::orderBy('name','desc')->get();
-        $multimedias = Multimedia::orderBy('id','desc')->get();
+
         $marcas = Marca::OrderBy('name','desc')->where('parent_id',null)->get();
-        return view('backend.product.create',['categorias'=>$categorias,'marcas'=>$marcas]);
+
+
+        $multimedias = Storage::allFiles('products');
+
+        return view('backend.product.create',['categorias'=>$categorias,'marcas'=>$marcas,'fotos'=>$multimedias]);
     }
 
     /**
@@ -77,9 +84,24 @@ class ProductController extends Controller
         $product->brand_id = $request->marca;
         $product->save();
 
+
+
         $product->category()->sync($request->categorias);
 
-        return redirect()->route('product.edit',['id' => $product->id ])
+
+        if($request->imageid){
+
+            foreach($request->imageid as $imgid){
+                $galeria = New Gallery();
+                $galeria->product_id  = $product->id;
+                $galeria->imagen = $imgid;
+                $galeria->save();
+
+            }
+        }
+
+
+        return redirect()->route('product.index',['id' => $product->id ])
         ->with('info','Producto actualizado satisfactoriamente');
     }
 
@@ -116,7 +138,10 @@ class ProductController extends Controller
 
         $marcas = Marca::OrderBy('name','desc')->where('parent_id',null)->get();
 
-        return view('backend.product.edit',['product'=>$product,'categorias'=>$categorias,'fotos'=>$multimedias,'catprods'=>$mcas,'marcas'=>$marcas]);
+        $galerias = Gallery::where('product_id',$id)->get();
+        $multimedias = Storage::allFiles('products');
+
+        return view('backend.product.edit',['product'=>$product,'categorias'=>$categorias,'fotos'=>$multimedias,'catprods'=>$mcas,'marcas'=>$marcas,'galerias'=>$galerias]);
     }
 
 
@@ -157,13 +182,18 @@ class ProductController extends Controller
         $product->category()->sync($request->categorias);
 
         if($request->imageid){
+            Gallery::where('product_id',$id)->delete();
+
             foreach($request->imageid as $imgid){
-                $producto = Product::findOrFail($id);
-                $product->multimedias()->attach($imgid);
+                $galeria = New Gallery();
+                $galeria->product_id  = $id;
+                $galeria->imagen = $imgid;
+                $galeria->save();
+
             }
         }
 
-        return redirect()->route('product.edit',['id'=>$id])
+        return redirect()->route('product.index',['id'=>$id])
      ->with('info','Producto actualizado satisfactoriamente');
     }
 

@@ -7,13 +7,14 @@
               <h4 class="modal-title">Imagenes</h4>
             </div>
             <div class="modal-body">
+
                 @if(@$fotos)
                 @foreach ($fotos as $foto)
 
                 <div class="col-md-3 ">
                     <div class="thumbnail">
-                        <a href="#" class="contenedor thumimg" data-id="{{ $foto->id}}" data-path="{{ $foto->file }}">
-                            <img src="/storage/{{ $foto->file}}" class="img-responsive">
+                        <a href="#" class="contenedor thumimg"  data-path="{{ $foto }}">
+                            <img src="/storage/{{ $foto}}" class="img-responsive">
                             <div class="boxmark">
                                 <span ></span>
                             </div>

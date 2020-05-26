@@ -135,6 +135,7 @@ $(".btn-save-billing").on('click',function(e){
 
     let nombre = $("#nombre").val();
     let apellidos =  $("#apellidos").val();
+    let email =  $("#email").val();
     let celular =  $("#celular").val();
     let telefono =  $("#telefono").val();
     let direccion =  $("#direccion").val();
@@ -142,7 +143,7 @@ $(".btn-save-billing").on('click',function(e){
     let estado =  $("#estado").val();
     let zipcode =  $("#zipcode").val();
 
-    var datasendbilling = ({'_token':token,'_method':'POST', 'tipo':tipo, 'nombre':nombre, 'apellidos':apellidos, 'celular':celular,'telefono':telefono,'direccion':direccion,'ciudad':ciudad,'estado':estado,'zipcode':zipcode});
+    var datasendbilling = ({'_token':token,'_method':'POST', 'tipo':tipo, 'nombre':nombre, 'apellidos':apellidos, 'celular':celular,'telefono':telefono,'email':email,'direccion':direccion,'ciudad':ciudad,'estado':estado,'zipcode':zipcode});
 
     $.ajax({
         url:'/checkout/savebilling',

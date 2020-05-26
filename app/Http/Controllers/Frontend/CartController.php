@@ -43,9 +43,7 @@ class CartController extends Controller
         $user_id = Auth::id();
 
         $prods = $request->session()->get('cart');
-
         $ciudades = City::orderBy('name','asc')->get();
-
         $billings = Billing::where('user_id',$user_id)->get();
 
         if($billings->count()==0){
@@ -187,6 +185,7 @@ class CartController extends Controller
         $billing->lastname = $request->apellidos;
         $billing->phone = $request->celular;
         $billing->other_phone = $request->telefono;
+        $billing->email = $request->email;
         $billing->address1 = $request->direccion;
         $billing->city_id = $request->ciudad;
         $billing->colony = $request->estado;

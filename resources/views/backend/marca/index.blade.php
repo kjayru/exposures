@@ -19,6 +19,11 @@
 
           <div class="row">
 
+            @if(session('info'))
+                <div class="alert alert-success">
+                    {{ session('info')}}
+                </div>
+            @endif
             <div class="col-xs-12">
               <div class="box">
                 <div class="box-header">
@@ -30,7 +35,7 @@
 
 
 
-                    <ul class="list-group lista1">
+                    <ol class="lista1">
                         @foreach($marcas as $k => $item)
 
                             @if ($item['parent_id'] != 0)
@@ -40,7 +45,7 @@
                             @include('layouts.backend.include.marca-item', ['item' => $item])
 
                         @endforeach
-                    </ul>
+                    </ol>
 
 
                 </div>

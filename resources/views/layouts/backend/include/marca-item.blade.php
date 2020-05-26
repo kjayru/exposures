@@ -2,26 +2,26 @@
 
 @if(@$item['subitem'] == [])
 
-    <li class="list-group-item ">
+    <li >
         <p>{{ $item['name'] }}</p>
         <a href="{{ route('marca.edit',['id'=>$item['id']]) }}" class="btn btn-xs btn-primary">Editar</a>
         <a href="#" data-id="{{ $item['id'] }}" data-toggle="modal" data-target="#delobjeto" class="btn btn-xs btn-danger btn-object-delete">Borrar</a>
 
     </li>
 @else
-<li  class="list-group-item first-item" >
+<li  >
 
  <p> {{ $item['name'] }}</p>
     <a href="{{ route('marca.edit',['id'=>$item['id']]) }}" class="btn btn-xs btn-primary">Editar</a>
     <a href="#" data-id="{{ $item['id'] }}" data-toggle="modal" data-target="#delobjeto" class="btn btn-xs btn-danger btn-object-delete">Borrar</a>
 
 
-    <ul class="list-group lista2">
+    <ul class=" lista2">
 
         @foreach($item['subitem'] as $j => $submenu)
 
             @if (@$submenu['subitem'] == [])
-                <li class="list-group-item ">
+                <li >
 
                    <p>{{$submenu['name']}}</p>
                    <a href="{{ route('marca.edit',['id'=>$submenu['id']]) }}" class="btn btn-xs btn-primary">Editar</a>

@@ -502,7 +502,8 @@ $(document).ready(function(){
                 if($(this).hasClass("seleccionado")){
                     let id = $(this).data('id');
                     let img = $(this).data('path');
-                    htm+=`<div class="col-md-2 "><img src="/storage/${img}" width="70" class="thumbnail"><input type="hidden" name="imageid[]" value="${id}"></div>`;
+                    htm+=`<div class="col-md-2 "><img src="/storage/${img}" width="70" class="thumbnail">
+                    <input type="hidden" name="imageid[]" value="${img}"></div>`;
                 }
             });
         $(".prodimages").html(htm);
