@@ -262,3 +262,4 @@ Route::get('payment', 'Frontend\OutletController@listar');
 Route::post('charge', 'Frontend\OutletController@charge');
 Route::get('paymentsuccess', 'Frontend\OutletController@payment_success');
 Route::get('paymenterror', 'Frontend\OutletController@payment_error');*/
+
