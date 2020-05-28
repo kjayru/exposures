@@ -82,27 +82,34 @@
     @endif
 
 
-    <div class="form-group">
-        <label for="excerpt" class="col-sm-2 control-label">Categorias</label>
 
-        <div id="listcat" class="col-md-4">
-            <div class="list-group">
-                @foreach($categorias as $key => $cat)
 
-                    @if($cat->parent_id ==0)
+<!--categorias-->
+<div class="form-group">
+    <label for="excerpt" class="col-sm-2 control-label">Categorias</label>
 
-                        <label class="list-group-item" for="categoria{{$key+1}}">{{$cat->name}}</label>
-                    @else
-                    <p style="padding-left:20px; margin-top:10px;">
-                        <input type="checkbox" name="categorias[]" value="{{$cat->id}}" @if(@$catprods>0) @if(in_array(@$cat->id, @$catprods)) checked @endif @endif id="categoria{{$key+1}}" />
-                        <label class="list-group-item" for="categoria{{$key+1}}">{{$cat->name}}</label>
-                    </p>
-                    @endif
 
-                @endforeach
-            </div>
-        </div>
+
+
+        <!--categorias-->
+        <div class="col-sm-10">
+        @foreach($categorias as $key => $cat)
+
+            @if($cat->parent_id ==0)
+
+            <h4> {{$cat->name}}</h4>
+
+            @else
+                <div class="form-field">
+                    <label for=""> <input type="checkbox"  @if(@$catprods>0) @if(in_array(@$cat->id, @$catprods)) checked @endif @endif name="{{$cat->name}}" value="{{$cat->id}}">{{$cat->name}}</label>
+                </div>
+            @endif
+
+        @endforeach
+        <!--end cat-->
     </div>
+</div>
+
 
     <div class="form-group">
         <label for="parent" class="col-sm-2 control-label">Marca</label>

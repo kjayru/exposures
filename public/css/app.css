@@ -13245,3 +13245,9 @@ section#testimonio {
           text-transform: uppercase;
       }
    }
+
+   .form-field {
+    display: inline-block;
+    padding-left: 10px;
+    padding-right: 10px;
+}
