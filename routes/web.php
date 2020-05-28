@@ -160,7 +160,7 @@ Route::group(['prefix' => 'admin'],function(){
     Route::get('/testimonials/{testimony}/edit', 'Backend\TestimonyController@edit')->name('testimony.edit');
     Route::put('/testimonials/{testimony}', 'Backend\TestimonyController@update')->name('testimony.update');
     Route::delete('/testimonials/{testimony}', 'Backend\TestimonyController@destroy')->name('testimony.destroy');
-
+/*
 
     Route::get('/posts', 'Backend\BLogController@index')->name('post.index');
     Route::get('/posts/create', 'Backend\BLogController@create')->name('post.created');
@@ -168,7 +168,7 @@ Route::group(['prefix' => 'admin'],function(){
     Route::get('/posts/{post}/edit', 'Backend\BLogController@edit')->name('post.edit');
     Route::put('/posts/{post}', 'Backend\BLogController@update')->name('post.update');
     Route::delete('/posts/{testimony}', 'Backend\BLogController@destroy')->name('post.destroy');
-
+*/
     //banner
 
     Route::get('/banners', 'Backend\BannerController@index')->name('banner.index');
