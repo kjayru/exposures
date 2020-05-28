@@ -71,6 +71,9 @@ class BannerController extends Controller
      */
     public function update(Request $request, $id)
     {
+
+
+
        $items = count($request->imagen);
 
         $slide = Slide::find($id);

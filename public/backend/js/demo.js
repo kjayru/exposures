@@ -497,6 +497,7 @@ $(document).ready(function(){
 
         $(".seleccionar-thumb").on('click',function(){
             var htm = '';
+
             $(".thumimg").each(function(){
 
                 if($(this).hasClass("seleccionado")){
@@ -506,13 +507,13 @@ $(document).ready(function(){
                     <input type="hidden" name="imageid[]" value="${img}"></div>`;
                 }
             });
-        $(".prodimages").html(htm);
-        $("#modal-default").modal('hide');
-        $(".thumimg").removeClass("seleccionado");
-        $(".thumimg").children('.boxmark').children("span").removeClass("glyphicon-ok");
-        $(".thumimg").children('.boxmark').children("span").removeClass("glyphicon");
+            $(".prodimages").html(htm);
+            $("#modal-default").modal('hide');
+            $(".thumimg").removeClass("seleccionado");
+            $(".thumimg").children('.boxmark').children("span").removeClass("glyphicon-ok");
+            $(".thumimg").children('.boxmark').children("span").removeClass("glyphicon");
 
-        $(".prodimages").before("<p style='display:block; color:red;'>Deber guardar para mantener la selección de imagenes</p>")
+            $(".prodimages").before("<p style='display:block; color:red;'>Deber guardar para mantener la selección de imagenes</p>")
         });
 
 
@@ -544,6 +545,9 @@ $(document).ready(function(){
 
 
         $(document).on('click',".btn-seleccionar-imagen",function(){
+
+              $(this).parent().children('.thumbnail').children('input').remove();
+
             let key = $(this).data('key');
             $(".seleccionar-slide").attr('rel',key);
         });
