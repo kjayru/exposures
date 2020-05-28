@@ -156,7 +156,7 @@ $config['accessControl'][] = array(
     'IMAGE_RESIZE_CUSTOM' => true
 );
 
-
+//$config['loadRoutes'] = false;
 /*================================ Other Settings =====================================*/
 // http://docs.cksource.com/ckfinder3-php/configuration.html
 

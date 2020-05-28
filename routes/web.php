@@ -255,6 +255,8 @@ Route::group(['prefix'=>'checkout'],function(){
 
 });
 
+
+
 //Route::get('/procesopago/{id}', 'Frontend\OutletController@procesopago')->name('outlet.procesopago');
 
 /*
