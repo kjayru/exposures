@@ -44,6 +44,12 @@ Route::get('/ingresar','Frontend\HomeController@ingresar')->name('ingresar');
 Route::post('/buscar','Frontend\HomeController@search')->name('buscar');
 Route::get('/preguntas-frecuentes','Frontend\HomeController@preguntas')->name('preguntas');
 
+Route::any('/ckfinder/connector', '\CKSource\CKFinderBridge\Controller\CKFinderController@requestAction')
+    ->name('ckfinder_connector');
+
+Route::any('/ckfinder/browser', '\CKSource\CKFinderBridge\Controller\CKFinderController@browserAction')
+    ->name('ckfinder_browser');
+
 Auth::routes();
 
 //Route::get('/login', 'backend\HomeController@index')->name('login');
