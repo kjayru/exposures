@@ -89,24 +89,21 @@
     <label for="excerpt" class="col-sm-2 control-label">Categorias</label>
 
 
-
-
         <!--categorias-->
-        <div class="col-sm-10">
-        @foreach($categorias as $key => $cat)
+     <div class="col-sm-10">
 
-            @if($cat->parent_id ==0)
 
-            <h4> {{$cat->name}}</h4>
+        <ol>
+            @foreach($categories as $k => $item)
 
-            @else
-                <div class="form-field">
-                    <label for=""> <input type="checkbox"  @if(@$catprods>0) @if(in_array(@$cat->id, @$catprods)) checked @endif @endif name="{{$cat->name}}" value="{{$cat->id}}">{{$cat->name}}</label>
-                </div>
-            @endif
+                @if ($item['parent_id'] != 0)
+                    @break
+                @endif
 
-        @endforeach
-        <!--end cat-->
+                @include('layouts.backend.include.category-input', ['item' => $item])
+
+            @endforeach
+         </ol>
     </div>
 </div>
 

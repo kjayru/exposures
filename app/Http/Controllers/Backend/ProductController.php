@@ -28,6 +28,7 @@ class ProductController extends Controller
     {
         $productos = Product::orderBy('id','desc')->paginate(20);
         $categorias = Category::all();
+
         return view('backend.product.index',['productos'=>$productos,'categorias'=>$categorias]);
     }
 
@@ -141,7 +142,10 @@ class ProductController extends Controller
         $galerias = Gallery::where('product_id',$id)->get();
         $multimedias = Storage::allFiles('products');
 
-        return view('backend.product.edit',['product'=>$product,'categorias'=>$categorias,'fotos'=>$multimedias,'catprods'=>$mcas,'marcas'=>$marcas,'galerias'=>$galerias]);
+        $categories = Category::categorias();
+
+
+        return view('backend.product.edit',['product'=>$product,'categories'=>$categories,'categorias'=>$categorias,'fotos'=>$multimedias,'catprods'=>$mcas,'marcas'=>$marcas,'galerias'=>$galerias]);
     }
 
 
