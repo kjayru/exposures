@@ -21,7 +21,7 @@
             <h4><i class="icon fa fa-check"></i> {{ session('info')}}</h4>
 
           </div>
-    @endif
+         @endif
         <section class="content">
 
           <div class="row">

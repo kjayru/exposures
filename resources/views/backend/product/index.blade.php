@@ -14,7 +14,14 @@
             <li class="active">Productos</li>
           </ol>
         </section>
+        @if(session('info'))
 
+            <div class="alert alert-success alert-dismissible">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                <h4><i class="icon fa fa-check"></i>{{ session('info')}}</h4>
+
+            </div>
+        @endif
 
         <section class="content">
 
@@ -30,14 +37,7 @@
                 </div>
                 <!-- /.box-header -->
                 <div class="box-body">
-                        @if(session('info'))
 
-                        <div class="alert alert-success alert-dismissible">
-                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                            <h4><i class="icon fa fa-check"></i>{{ session('info')}}</h4>
-
-                          </div>
-                    @endif
 
                   <table id="example2" class="table table-bordered table-hover">
                       <thead>
