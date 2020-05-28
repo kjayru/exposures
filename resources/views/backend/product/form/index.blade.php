@@ -41,14 +41,14 @@
     </div>
     </div>
 
-    <div class="form-group @if($errors->first('title')) has-error @endif">
+    <!--<div class="form-group @if($errors->first('title')) has-error @endif">
       <label for="title" class="col-sm-2 control-label">Titulo</label>
 
       <div class="col-sm-10">
         <input type="text"  name="title" class="form-control" value="{{ @$product->name}}" id="title" placeholder="Titulo" required>
         <span class="help-block">{{ $errors->first('title') }}</span>
     </div>
-    </div>
+    </div>-->
 
     <!--imagen-->
     @if(!@$product->imagen)
