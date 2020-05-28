@@ -144,7 +144,7 @@ Route::group(['prefix' => 'admin'],function(){
     Route::post('/pages','Backend\PageController@store')->name('pages.store');
     Route::put('pages/{id}','Backend\PageController@update')->name('pages.update');
 
-
+/*
     Route::get('/category-blog', 'Backend\CategoryBLogController@index')->name('catblog.index');
     Route::get('/category-blog/create', 'Backend\CategoryBLogController@create')->name('catblog.created');
     Route::post('/category-blog', 'Backend\CategoryBLogController@store')->name('catblog.store');
@@ -152,7 +152,7 @@ Route::group(['prefix' => 'admin'],function(){
     Route::put('/category-blog/{catblog}', 'Backend\CategoryBLogController@update')->name('catblog.update');
     Route::delete('/category-blog/{catblog}', 'Backend\CategoryBLogController@destroy')->name('catblog.destroy');
 
-
+*/
 
     Route::get('/testimonials', 'Backend\TestimonyController@index')->name('testimony.index');
     Route::get('/testimonials/create', 'Backend\TestimonyController@create')->name('testimony.created');
