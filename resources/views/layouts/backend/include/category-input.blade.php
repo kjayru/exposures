@@ -2,9 +2,8 @@
 
 @if(@$item['subitem'] == [])
 
-    <li >
+    <li>
         <p>{{ $item['name'] }}</p>
-
     </li>
 @else
 <li>
@@ -18,13 +17,10 @@
         @foreach($item['subitem'] as $j => $submenu)
 
             @if (@$submenu['subitem'] == [])
-                <li >
-
+                <li>
                    <p>
                     <input type="checkbox"  @if(@$catprods>0) @if(in_array(@$submenu['id'], @$catprods)) checked @endif @endif name="categoria[]" value="{{$submenu['id'] }}"> {{$submenu['name'] }}</label>
-                </p>
-
-
+                   </p>
                 </li>
             @else
 

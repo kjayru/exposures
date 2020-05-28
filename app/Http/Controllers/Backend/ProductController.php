@@ -87,7 +87,7 @@ class ProductController extends Controller
 
 
 
-        $product->category()->sync($request->categorias);
+        $product->category()->sync($request->categoria);
 
 
         if($request->imageid){
@@ -183,7 +183,7 @@ class ProductController extends Controller
 
         $product->save();
 
-        $product->category()->sync($request->categorias);
+        $product->category()->sync($request->categoria);
 
         if($request->imageid){
             Gallery::where('product_id',$id)->delete();
