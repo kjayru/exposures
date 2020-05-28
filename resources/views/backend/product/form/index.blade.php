@@ -7,13 +7,13 @@
         </div>
     </div>
 
-    <div class="form-group @if($errors->first('name')) has-error @endif">
+    <!--<div class="form-group @if($errors->first('name')) has-error @endif">
         <label for="name" class="col-sm-2 control-label">Título</label>
         <div class="col-sm-10">
             <input type="text"  name="title" class="form-control" value="{{ @$product->title}}" id="title" placeholder="Título" required>
             <span class="help-block">{{ $errors->first('title') }}</span>
         </div>
-    </div>
+    </div>-->
 
     <div class="form-group @if($errors->first('price')) has-error @endif">
       <label for="price" class="col-sm-2 control-label">Precio</label>
