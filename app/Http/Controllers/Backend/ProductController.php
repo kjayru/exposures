@@ -74,7 +74,7 @@ class ProductController extends Controller
         $product->price = $request->price;
         $product->excerpt = $request->excerpt;
         $product->description = $request->description;
-        $product->title = $request->title;
+        $product->title = $request->name;
         $product->slug = Str::slug($request->name, '-');
 
         if($request->hasFile('imagen')){
