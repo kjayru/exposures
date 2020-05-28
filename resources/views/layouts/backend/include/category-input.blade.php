@@ -10,7 +10,7 @@
 <li>
 
  <p>
-    <label for=""> <input type="checkbox"  @if(@$catprods>0) @if(in_array(@$item['id'], @$catprods)) checked @endif @endif name="categoria[]" value=" {{$item['id'] }}"> {{$item['name'] }}</label>
+    <label for=""> <input type="checkbox"  @if(@$catprods>0) @if(in_array(@$item['id'], @$catprods)) checked @endif @endif name="categoria[]" value="{{$item['id'] }}"> {{$item['name'] }}</label>
 </p>
 
     <ul class="lista2">
@@ -21,7 +21,7 @@
                 <li >
 
                    <p>
-                    <input type="checkbox"  @if(@$catprods>0) @if(in_array(@$submenu['id'], @$catprods)) checked @endif @endif name="categoria[]" value=" {{$submenu['id'] }}"> {{$submenu['name'] }}</label>
+                    <input type="checkbox"  @if(@$catprods>0) @if(in_array(@$submenu['id'], @$catprods)) checked @endif @endif name="categoria[]" value="{{$submenu['id'] }}"> {{$submenu['name'] }}</label>
                 </p>
 
 
