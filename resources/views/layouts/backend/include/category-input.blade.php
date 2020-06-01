@@ -3,7 +3,7 @@
 @if(@$item['subitem'] == [])
 
     <li>
-        <p>{{ $item['name'] }}</p>
+        <p><label for=""> <input type="checkbox"  @if(@$catprods>0) @if(in_array(@$item['id'], @$catprods)) checked @endif @endif name="categorias[]" value="{{$item['id'] }}"> {{$item['name'] }}</label></p>
     </li>
 @else
 <li>
