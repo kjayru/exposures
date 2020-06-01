@@ -15,7 +15,7 @@ class CreateMarcaProductTable extends Migration
     {
         Schema::create('marca_product', function (Blueprint $table) {
             $table->integer('marca_id')->unsigned()->index();
-            $table->foreign('marca_id')->references('id')->on('categories')->onDelete('cascade');
+            $table->foreign('marca_id')->references('id')->on('marcas')->onDelete('cascade');
             $table->integer('product_id')->unsigned()->index();
             $table->foreign('product_id')->references('id')->on('products')->onDelete('cascade');
         });

@@ -15,10 +15,10 @@ Route::get('/', 'Frontend\HomeController@index')->name('home');
 Route::get('/empresa', 'Frontend\HomeController@empresa')->name('empresa');
 Route::get('/categoria', 'Frontend\HomeController@productos')->name('productos');
 
-Route::get('/categoria/{cat}', 'Frontend\HomeController@productoCategory')->name('productos.categoria');
-Route::get('/marca/{cat}', 'Frontend\HomeController@productoMarca')->name('marcas.categoria');
+Route::get('/categoria/{cat}/{slug}', 'Frontend\HomeController@productoCategory')->name('productos.categoria');
+Route::get('/marca/{cat}/{slug}', 'Frontend\HomeController@productoMarca')->name('marcas.categoria');
 
-Route::get('/producto/{slug}', 'Frontend\HomeController@productoDetalle')->name('productos.detalle');
+Route::get('/producto/{id}/{slug}', 'Frontend\HomeController@productoDetalle')->name('productos.detalle');
 Route::get('/videos', 'Frontend\HomeController@videos')->name('videos');
 Route::get('/distribuidores', 'Frontend\HomeController@distribuidores')->name('distribuidores');
 
@@ -150,15 +150,15 @@ Route::group(['prefix' => 'admin'],function(){
     Route::post('/pages','Backend\PageController@store')->name('pages.store');
     Route::put('pages/{id}','Backend\PageController@update')->name('pages.update');
 
-/*
-    Route::get('/category-blog', 'Backend\CategoryBLogController@index')->name('catblog.index');
-    Route::get('/category-blog/create', 'Backend\CategoryBLogController@create')->name('catblog.created');
-    Route::post('/category-blog', 'Backend\CategoryBLogController@store')->name('catblog.store');
-    Route::get('/category-blog/{catblog}/edit', 'Backend\CategoryBLogController@edit')->name('catblog.edit');
-    Route::put('/category-blog/{catblog}', 'Backend\CategoryBLogController@update')->name('catblog.update');
-    Route::delete('/category-blog/{catblog}', 'Backend\CategoryBLogController@destroy')->name('catblog.destroy');
+    /*
+        Route::get('/category-blog', 'Backend\CategoryBLogController@index')->name('catblog.index');
+        Route::get('/category-blog/create', 'Backend\CategoryBLogController@create')->name('catblog.created');
+        Route::post('/category-blog', 'Backend\CategoryBLogController@store')->name('catblog.store');
+        Route::get('/category-blog/{catblog}/edit', 'Backend\CategoryBLogController@edit')->name('catblog.edit');
+        Route::put('/category-blog/{catblog}', 'Backend\CategoryBLogController@update')->name('catblog.update');
+        Route::delete('/category-blog/{catblog}', 'Backend\CategoryBLogController@destroy')->name('catblog.destroy');
 
-*/
+    */
 
     Route::get('/testimonials', 'Backend\TestimonyController@index')->name('testimony.index');
     Route::get('/testimonials/create', 'Backend\TestimonyController@create')->name('testimony.created');
@@ -166,15 +166,15 @@ Route::group(['prefix' => 'admin'],function(){
     Route::get('/testimonials/{testimony}/edit', 'Backend\TestimonyController@edit')->name('testimony.edit');
     Route::put('/testimonials/{testimony}', 'Backend\TestimonyController@update')->name('testimony.update');
     Route::delete('/testimonials/{testimony}', 'Backend\TestimonyController@destroy')->name('testimony.destroy');
-/*
+    /*
 
-    Route::get('/posts', 'Backend\BLogController@index')->name('post.index');
-    Route::get('/posts/create', 'Backend\BLogController@create')->name('post.created');
-    Route::post('/posts', 'Backend\BLogController@store')->name('post.store');
-    Route::get('/posts/{post}/edit', 'Backend\BLogController@edit')->name('post.edit');
-    Route::put('/posts/{post}', 'Backend\BLogController@update')->name('post.update');
-    Route::delete('/posts/{testimony}', 'Backend\BLogController@destroy')->name('post.destroy');
-*/
+        Route::get('/posts', 'Backend\BLogController@index')->name('post.index');
+        Route::get('/posts/create', 'Backend\BLogController@create')->name('post.created');
+        Route::post('/posts', 'Backend\BLogController@store')->name('post.store');
+        Route::get('/posts/{post}/edit', 'Backend\BLogController@edit')->name('post.edit');
+        Route::put('/posts/{post}', 'Backend\BLogController@update')->name('post.update');
+        Route::delete('/posts/{testimony}', 'Backend\BLogController@destroy')->name('post.destroy');
+    */
     //banner
 
     Route::get('/banners', 'Backend\BannerController@index')->name('banner.index');

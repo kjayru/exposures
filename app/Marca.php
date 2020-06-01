@@ -6,8 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Marca extends Model
 {
-    public function products(){
-        return $this->hasMany(Product::class,'brand_id');
+    protected $table = 'marcas';
+
+    public function product(){
+        return $this->belongsToMany(Product::class);
     }
 
 
@@ -41,6 +43,7 @@ class Marca extends Model
 
         $menuAll = [];
         foreach ($data as $line) {
+
             if($line['parent_id']==null){
                 $item = [ array_merge($line, ['submenu' => $menus->getChildren($data, $line) ]) ];
                 $menuAll = array_merge($menuAll, $item);

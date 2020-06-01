@@ -52,13 +52,17 @@ class HomeController extends Controller
         return view('frontend.home.productos',['slide'=>$slide,'productos'=>$productos,'categorias'=>$categorias,'categoria'=>$categoria]);
     }
 
-    public function productoCategory($cat){
+    public function productoCategory($cat,$slug){
+
 
         $slide = Slide::where('id',3)->first();
-        $categoria = Category::where('slug',$cat)->first();
+        $categoria = Category::where('id',$cat)->first();
+
         $productos = $categoria->product()->paginate(8);
 
+
         $marcas = Marca::where('parent_id','')->get();
+
         $actividades = Category::orderBy('name','asc')->where('parent_id',null)->get();
 
 
@@ -67,11 +71,18 @@ class HomeController extends Controller
     }
 
 
-    public function productoMarca($cat){
+    public function productoMarca($cat,$subcat){
 
         $slide = Slide::where('id',3)->first();
-        $categoria = Marca::where('slug',$cat)->first();
-        $productos = $categoria->product()->paginate(8);
+        $brand = Marca::where('id',$cat)->first();
+
+        $productos =$brand->product()->paginate(8);
+       // dd($cat." - ".$subcat);
+
+        $categoria = Product::where('brand_id',$cat)->first();
+
+
+       // $productos = $categoria->product()->paginate(8);
 
         $marcas = Marca::where('parent_id','')->get();
         $actividades = Activity::orderBy('name','asc')->get();
@@ -82,10 +93,10 @@ class HomeController extends Controller
 
 
 
-    public function productoDetalle($slug){
+    public function productoDetalle($id,$slug){
         $slide = Slide::where('id',3)->first();
 
-        $producto = Product::where('slug',$slug)->first();
+        $producto = Product::where('id',$id)->first();
 
         //$categoria = Category::where('slug',$cat)->first();
 

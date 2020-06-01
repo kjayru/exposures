@@ -13,4 +13,6 @@ class Brand extends Model
     public function brandmedia(){
         return $this->hasMany(Brandmedia::class);
     }
+
+
 }

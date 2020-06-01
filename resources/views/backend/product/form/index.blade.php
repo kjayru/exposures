@@ -108,17 +108,45 @@
 </div>
 
 
-    <div class="form-group">
+<!--categorias-->
+<div class="form-group">
+    <label for="excerpt" class="col-sm-2 control-label">Marcas</label>
+
+
+        <!--categorias-->
+     <div class="col-sm-10">
+
+
+        <ol>
+            @foreach($marcas as $k => $item)
+
+                @if ($item['parent_id'] != 0)
+                    @break
+                @endif
+
+                @include('layouts.backend.include.marca-input', ['item' => $item])
+
+            @endforeach
+         </ol>
+    </div>
+</div>
+
+
+    <!--<div class="form-group">
         <label for="parent" class="col-sm-2 control-label">Marca</label>
         <div class="col-sm-10">
             <select name="marca" id="marca" class="form-control">
                 <option value="">Seleccione</option>
-                @foreach($marcas as $cat)
-                 <option value="{{$cat->id}}" @if(@$cat->id == @$marca->parent_id) selected @endif>{{ $cat->name }}</option>
-                @endforeach
+                foreach($marcas as $cat)
+                // <option value="{{@$cat->id}}" @if(@$cat->id == @$marca->parent_id) selected @endif>{{ @$cat->name }}</option>
+                endforeach
             </select>
         </div>
-    </div>
+    </div>-->
+
+
+
+
     <div class="form-group @if($errors->first('excerpt')) has-error @endif">
             <label for="excerpt" class="col-sm-2 control-label">Outlet</label>
 

@@ -13,6 +13,8 @@ use App\Multimedia;
 use App\MultimediaProduct;
 use App\ProductMultimedia;
 use App\Gallery;
+use App\CategoryProduct;
+use App\MarcaProduct;
 
 class ProductController extends Controller
 {
@@ -81,14 +83,11 @@ class ProductController extends Controller
          $imagen = $request->file('imagen')->store('products');
          $product->imagen = $imagen;
         }
-
-        $product->brand_id = $request->marca;
         $product->save();
 
 
-
-        $product->category()->sync($request->categoria);
-
+        $product->category()->sync($request->categorias);
+        $product->marca()->sync($request->marcas);
 
         if($request->imageid){
 
@@ -124,28 +123,40 @@ class ProductController extends Controller
         $catprods = $product->category()->get();
 
         $cats=[];
+        $marcs=[];
 
         foreach($catprods as $cat){
            $cats[] =  $cat->id;
         }
-
-
         if(count($cats)>0){
             $mcas = $cats;
         }else{
             $mcas = 0;
         }
 
+        $catmarcs = $product->marca()->get();
 
-        $marcas = Marca::OrderBy('name','desc')->where('parent_id',null)->get();
+
+        foreach($catmarcs as $cam){
+            $marcs[] =  $cam->id;
+         }
+         if(count($marcs)>0){
+             $mpro = $marcs;
+         }else{
+             $mpro = 0;
+         }
+
+      //  $marcas = Marca::OrderBy('name','desc')->where('parent_id',null)->get();
 
         $galerias = Gallery::where('product_id',$id)->get();
         $multimedias = Storage::allFiles('products');
 
         $categories = Category::categorias();
 
+        $marcas = Marca::marcas();
 
-        return view('backend.product.edit',['product'=>$product,'categories'=>$categories,'categorias'=>$categorias,'fotos'=>$multimedias,'catprods'=>$mcas,'marcas'=>$marcas,'galerias'=>$galerias]);
+
+        return view('backend.product.edit',['product'=>$product,'categories'=>$categories,'categorias'=>$categorias,'fotos'=>$multimedias,'catprods'=>$mcas,'mpro'=>$mpro,'marcas'=>$marcas,'galerias'=>$galerias]);
     }
 
 
@@ -161,7 +172,6 @@ class ProductController extends Controller
     {
 
 
-
         $product = Product::find($id);
 
         $product->name = $request->name;
@@ -173,17 +183,16 @@ class ProductController extends Controller
          $imagen = $request->file('imagen')->store('products');
          $product->imagen = $imagen;
         }
-       // $product->category_id = $request->category;
 
         if($request->outlet){
             $product->outlet = $request->outlet;
         }
 
-        $product->brand_id = $request->marca;
-
         $product->save();
 
-        $product->category()->sync($request->categoria);
+        $product->category()->sync($request->categorias);
+        $product->marca()->sync($request->marcas);
+
 
         if($request->imageid){
             Gallery::where('product_id',$id)->delete();
