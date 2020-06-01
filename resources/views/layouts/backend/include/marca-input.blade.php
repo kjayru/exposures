@@ -25,7 +25,7 @@
                 </li>
             @else
 
-                @include('layouts.backend.include.marca-item', [ 'item' => $submenu ])
+                @include('layouts.backend.include.marca-input', [ 'item' => $submenu ])
             @endif
 
 
