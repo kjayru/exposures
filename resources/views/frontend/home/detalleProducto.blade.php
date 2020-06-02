@@ -24,25 +24,31 @@
 
             <div class="row justify-content-center">
                 <div class="col-md-8">
-                    <div class="producto-img">
-
-                    </div>
 
 
-                    <div id="carouselProducto" class="carousel slide" data-ride="carousel">
+
+                   <!-- <div id="carouselProducto" class="carousel slide" data-ride="carousel">
                             <ol class="carousel-indicators">
                               <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                              <li data-target="#carouselExampleIndicators" data-slide-to="1" ></li>
+                              @if($contador>0)
+                                @foreach($galeria as $k => $gal)
+                                 <li data-target="#carouselExampleIndicators" data-slide-to="{{$k+1}}" ></li>
+                                @endforeach
+                              @endif
 
                             </ol>
 
                             <div class="carousel-inner">
-                              <div class="carousel-item active">
-                                    <img src="/storage/{{ $producto->imagen}}" class="img-fluid">
-                              </div>
-                              <div class="carousel-item ">
-                                    <img src="/storage/{{ $producto->imagen}}" class="img-fluid">
-                              </div>
+                                    <div class="carousel-item active">
+                                            <img src="/storage/{{ $producto->imagen}}" class="img-fluid">
+                                    </div>
+                             @if($contador>0)
+                              @foreach($galeria as $gal)
+                                    <div class="carousel-item">
+                                        <img src="/storage/{{ $gal->imagen}}" class="img-fluid">
+                                    </div>
+                                @endforeach
+                             @endif
 
                             </div>
 
@@ -55,8 +61,22 @@
                               <span class="carousel-control-next-icon" aria-hidden="true"></span>
                               <span class="sr-only">Next</span>
                             </a>
-                    </div>
+                    </div>-->
 
+
+                    <div id="slideproducto">
+                            <div>
+                                <img src="/storage/{{ $producto->imagen}}" class="img-fluid">
+                            </div>
+                        @if($contador>0)
+                            @foreach($galeria as $gal)
+                                <div>
+                                    <img src="/storage/{{ $gal->imagen}}" class="img-fluid">
+                                </div>
+                            @endforeach
+                        @endif
+
+                    </div>
 
                 </div>
             </div>

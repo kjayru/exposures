@@ -20,7 +20,7 @@ use File;
 use App\State;
 use App\Brand;
 use App\Imports\ProductImport;
-
+use App\Gallery;
 
 class HomeController extends Controller
 {
@@ -99,8 +99,11 @@ class HomeController extends Controller
         $producto = Product::where('id',$id)->first();
 
         //$categoria = Category::where('slug',$cat)->first();
+        $contador = Gallery::where('product_id',$id)->count();
 
-        return view('frontend.home.detalleProducto',['slide'=>$slide,'producto'=>$producto]);
+        $galeria = Gallery::where('product_id',$id)->get();
+
+        return view('frontend.home.detalleProducto',['slide'=>$slide,'producto'=>$producto,'contador'=>$contador,'galeria'=>$galeria]);
     }
 
     public function videos(){
