@@ -94,7 +94,7 @@
 
 
         <ol>
-            @foreach($categories as $k => $item)
+            @foreach(@$categories as $k => $item)
 
                 @if ($item['parent_id'] != 0)
                     @break
@@ -118,7 +118,7 @@
 
 
         <ol>
-            @foreach($marcas as $k => $item)
+            @foreach(@$marcas as $k => $item)
 
                 @if ($item['parent_id'] != 0)
                     @break

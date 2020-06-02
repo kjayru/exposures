@@ -46,9 +46,15 @@ class ProductController extends Controller
         $marcas = Marca::OrderBy('name','desc')->where('parent_id',null)->get();
 
 
+
+
         $multimedias = Storage::allFiles('products');
 
-        return view('backend.product.create',['categorias'=>$categorias,'marcas'=>$marcas,'fotos'=>$multimedias]);
+        $categories = Category::categorias();
+
+        $marcas = Marca::marcas();
+
+        return view('backend.product.create',['categories'=>$categories,'marcas'=>$marcas,'categorias'=>$categorias,'marcas'=>$marcas,'fotos'=>$multimedias]);
     }
 
     /**
