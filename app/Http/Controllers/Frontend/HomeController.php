@@ -111,7 +111,7 @@ class HomeController extends Controller
 
         $destacado = Video::where('destacar',1)->first();
 
-        $videos = Video::where('destacar','<>',1)->get();
+        $videos = Video::where('destacar','<>',1)->orderBy('order','asc')->get();
 
 
         return view('frontend.home.videos',['slide'=>$slide,'videos'=>$videos,'destacado'=>$destacado]);
