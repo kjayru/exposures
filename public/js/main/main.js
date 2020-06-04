@@ -121,9 +121,60 @@ $(".btn-modificar-address").on('click',function(e){
 });
 
 
-$(".btn-edit-address").on('click',function(e){
+$(document).on('click',".btn-edit-billing",function(e){
     e.preventDefault();
-    $("#ModalBilling").modal('show');
+
+
+
+
+    let id = $(this).data('id');
+
+
+    $.ajax({
+        url:'/getdatabill/'+id,
+        type:'GET',
+        dataType:'json',
+
+        success:function(response){
+
+
+            /*address1: "asddd asd s122"
+address2: null
+city_id: 18
+colony: null
+created_at: "2020-06-02 23:13:21"
+email: "demo@demoo.com"
+id: 2
+lastname: "demo"
+name: "demo"
+other_phone: "3423423"
+phone: "1313123"
+state_id: 3
+status: 1
+type_address: null
+updated_at: "2020-06-02 23:55:04"
+user_id: 2
+zipcode: "234234"*/
+
+            $("#nombre").val(response.name);
+            $("#apellidos").val(response.lastname);
+            $("#email").val(response.email);
+            $("#celular").val(response.phone);
+            $("#telefono").val(response.other_phone);
+            $("#direccion").val(response.address1);
+
+            //$("#estado").val(response[0].state_id);
+            $(`#estado option[value=${response.state_id}]`).attr('selected','selected');
+            $("#zipcode").val(response.zipcode);
+            $("#tipo").val("editar");
+            $("#ciudad").html(`<option value="${response.city_id}">${response.city_name}</option>`);
+            $("input[name='_method']").val('PUT');
+            $("#ModalBilling form").append(`<input type='hidden' name='id' value='${response.id}'>`);
+            $("#ModalBilling").modal('show');
+        }
+    });
+
+
 });
 
 
@@ -131,7 +182,7 @@ $(".btn-save-billing").on('click',function(e){
     e.preventDefault();
 
     let token = $("meta[name=csrf-token]").attr('content');
-    let tipo = $("input[name=tipo]").val();
+    let tipo = $("input[name=_method]").val();
 
     let nombre = $("#nombre").val();
     let apellidos =  $("#apellidos").val();
@@ -142,20 +193,41 @@ $(".btn-save-billing").on('click',function(e){
     let ciudad =  $("#ciudad").val();
     let estado =  $("#estado").val();
     let zipcode =  $("#zipcode").val();
+    let id =  $("input[name=id]").val();
 
-    var datasendbilling = ({'_token':token,'_method':'POST', 'tipo':tipo, 'nombre':nombre, 'apellidos':apellidos, 'celular':celular,'telefono':telefono,'email':email,'direccion':direccion,'ciudad':ciudad,'estado':estado,'zipcode':zipcode});
 
-    $.ajax({
-        url:'/checkout/savebilling',
-        type:'POST',
-        dataType:'json',
-        data:datasendbilling,
-        success:function(response){
-            if(response.rpta=='ok'){
-                window.location.reload();
+    if(tipo=='POST'){
+
+        var datasendbilling = ({'_token':token,'_method':'POST', 'tipo':tipo, 'nombre':nombre, 'apellidos':apellidos, 'celular':celular,'telefono':telefono,'email':email,'direccion':direccion,'ciudad':ciudad,'estado':estado,'zipcode':zipcode});
+
+        $.ajax({
+            url:'/checkout/savebilling/',
+            type:'POST',
+            dataType:'json',
+            data:datasendbilling,
+            success:function(response){
+                if(response.rpta=='ok'){
+                    window.location.reload();
+                }
             }
-        }
-    });
+        });
+    }else{
+
+        var datasendbilling = ({'_token':token,'_method':'PUT','id':id, 'tipo':tipo, 'nombre':nombre, 'apellidos':apellidos, 'celular':celular,'telefono':telefono,'email':email,'direccion':direccion,'ciudad':ciudad,'estado':estado,'zipcode':zipcode});
+
+
+        $.ajax({
+            url:'/checkout/updatebilling/'+id,
+            type:'POST',
+            dataType:'json',
+            data:datasendbilling,
+            success:function(response){
+                if(response.rpta=='ok'){
+                    window.location.reload();
+                }
+            }
+        });
+    }
 
 
 
@@ -280,3 +352,29 @@ $('#slideproducto').slick({
     }
 
 });
+
+
+$("#estado").change(function(){
+    var valor = $(this).val();
+
+    var ciudades = null;
+    let token = $("meta[name=csrf-token]").attr('content');
+
+
+    var datasend = ({'id':valor,'_token':token,'_method':'POST'});
+
+     $.ajax({
+         url:'/getciudades',
+         type:'POST',
+         dataType:'json',
+         data:datasend,
+         success:function(response){
+             $.each(response,function(i,e){
+
+                 ciudades +=`<option value="${e.id}">${e.name}</option>`;
+             })
+
+           $("#ciudad").html(ciudades);
+         }
+     });
+})

@@ -49,6 +49,23 @@
                       <input type="text" id="direccion" name="direccion" required="required"  maxlength="250" class="form-control">
                 </div>
 
+
+                <div class="col-xs-12 col-md-12">
+                    <label class="form-label required" for="estado">Estados</label>
+
+                      <select name="estado" id="estado" class="form-control">
+
+                        <option value="">Seleccione</option>
+
+                        @foreach($estados as $estado)
+
+                        <option value="{{$estado->id}}">{{ $estado->name }}</option>
+
+                        @endforeach
+                      </select>
+                </div>
+
+
                 <div class="col-xs-12 col-md-12">
                       <label class="form-label required" for="ciudad">Ciudad</label>
 
@@ -56,18 +73,10 @@
 
                         <option value="">Seleccione</option>
 
-                        @foreach($ciudades as $ciudad)
 
-                        <option value="{{$ciudad->id}}">{{ $ciudad->name }}</option>
-
-                        @endforeach
                       </select>
                 </div>
 
-                <div class="col-xs-12 col-md-12">
-                      <label class="form-label" for="estado">Estado</label>
-                      <input type="text" id="estado" name="estado" class="form-control">
-                </div>
 
                 <div class="col-xs-12 col-md-12">
                       <label class="form-label" for="zipcode">Código postal</label>

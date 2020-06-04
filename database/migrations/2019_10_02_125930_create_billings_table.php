@@ -29,6 +29,9 @@ class CreateBillingsTable extends Migration
             $table->unsignedInteger('city_id');
             $table->foreign('city_id')->references('id')->on('cities')->onDelete('cascade');
 
+            $table->unsignedInteger('state_id');
+            $table->foreign('state_id')->references('id')->on('states')->onDelete('cascade');
+
             $table->unsignedInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
 

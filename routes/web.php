@@ -50,6 +50,10 @@ Route::any('/ckfinder/connector', '\CKSource\CKFinderBridge\Controller\CKFinderC
 Route::any('/ckfinder/browser', '\CKSource\CKFinderBridge\Controller\CKFinderController@browserAction')
     ->name('ckfinder_browser');
 
+Route::post('/getciudades','Frontend\CartController@getCiudades');
+Route::get('/getdatabill/{id}','Frontend\CartController@getbilling');
+
+
 Auth::routes();
 
 //Route::get('/login', 'backend\HomeController@index')->name('login');
@@ -256,6 +260,8 @@ Route::group(['prefix'=>'checkout'],function(){
     Route::get('/paymenterror', 'Frontend\CartController@payment_error')->name('cart.error');
 
     Route::post('/savebilling','Frontend\CartController@savebilling')->name('cart.billing');
+
+    Route::put('/updatebilling/{id}','Frontend\CartController@updatebilling')->name('cart.updatebilling');
     Route::post('/activestatus','Frontend\CartController@activestatus')->name('cart.activestatus');
 
 

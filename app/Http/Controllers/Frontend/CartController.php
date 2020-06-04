@@ -5,19 +5,19 @@ namespace App\Http\Controllers\Frontend;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Str;
 use Session;
 use DB;
 
 use App\Billing;
 use App\Order;
 use App\Paypal;
-use Illuminate\Support\Str;
 use App\Cart;
 use App\Product;
 use App\User;
 use Omnipay\Omnipay;
 use App\City;
-
+use App\State;
 
 class CartController extends Controller
 {
@@ -43,6 +43,7 @@ class CartController extends Controller
         $user_id = Auth::id();
 
         $prods = $request->session()->get('cart');
+        $estados = State::orderBy('name','asc')->get();
         $ciudades = City::orderBy('name','asc')->get();
         $billings = Billing::where('user_id',$user_id)->get();
 
@@ -54,7 +55,7 @@ class CartController extends Controller
 
 
 
-        return view('frontend.cart.payment',['productos'=>$prods,'ciudades'=>$ciudades,'billings'=>$billings,'billingselect'=>$billingselect]);
+        return view('frontend.cart.payment',['estados'=>$estados,'productos'=>$prods,'ciudades'=>$ciudades,'billings'=>$billings,'billingselect'=>$billingselect]);
     }
 
 
@@ -188,7 +189,7 @@ class CartController extends Controller
         $billing->email = $request->email;
         $billing->address1 = $request->direccion;
         $billing->city_id = $request->ciudad;
-        $billing->colony = $request->estado;
+        $billing->state_id = $request->estado;
         $billing->zipcode = $request->zipcode;
         $billing->status = 1;
 
@@ -222,4 +223,65 @@ class CartController extends Controller
        return response()->json(['rpta'=>'ok']);
     }
 
+
+    public function getCiudades(Request $request){
+
+        $ciudades = City::where('state_id',$request->id)->get();
+
+        return response()->json($ciudades);
+    }
+
+    public function getbilling($id){
+
+
+        $billing = Billing::where('id',$id)->first();
+
+        $ciudad = City::where('id',$billing->city_id)->first();
+
+        $datos =  [
+            'id' => $billing->id,
+            'address1' => $billing->address1,
+            'address2' => $billing->address2,
+            'city_id' => $billing->city_id,
+            'city_name' => $ciudad->name,
+            'email' => $billing->email,
+            'lastname' => $billing->lastname,
+            'name' => $billing->name,
+            'other_phone' => $billing->other_phone,
+            'phone' => $billing->phone,
+            'state_id' => $billing->state_id,
+            'zipcode' => $billing->zipcode
+        ];
+
+
+        return response()->json($datos);
+    }
+
+
+    public function updatebilling(Request $request, $id){
+        $user_id = Auth::id();
+
+        $billing =  Billing::where('id',$id)->first();
+
+        $billing->name = $request->nombre;
+        $billing->lastname = $request->apellidos;
+        $billing->phone = $request->celular;
+        $billing->other_phone = $request->telefono;
+        $billing->email = $request->email;
+        $billing->address1 = $request->direccion;
+        $billing->city_id = $request->ciudad;
+        $billing->state_id = $request->estado;
+        $billing->zipcode = $request->zipcode;
+        $billing->status = 1;
+
+        $billing->user_id = $user_id;
+
+        $billing->save();
+
+        return response()->json(['rpta'=>'ok']);
+
+    }
+
+
 }
+
