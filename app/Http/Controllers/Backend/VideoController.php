@@ -41,7 +41,11 @@ class VideoController extends Controller
         $video->link = $request->link;
         $video->description = $request->description;
         $video->order = $request->order;
+        if( $request->destacar){
         $video->destacar = $request->destacar;
+        }else{
+            $video->destacar = 0;
+        }
         $video->save();
 
         return redirect()->route('video.index')->with(['info'=>'Creado exitosamente']);
