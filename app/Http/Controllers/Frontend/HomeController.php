@@ -153,7 +153,7 @@ class HomeController extends Controller
 
 
     public function contacto(){
-        $slide = Slide::where('id',5)->first();
+        $slide = Slide::where('id',6)->first();
         $pagina = Page::where('id',6)->first();
         return view('frontend.home.contacto',['slide'=>$slide,'pagina'=>$pagina]);
     }

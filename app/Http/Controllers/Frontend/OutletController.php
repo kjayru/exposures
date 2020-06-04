@@ -20,7 +20,7 @@ use Omnipay\Omnipay;
 // Import the class namespaces first, before using it directly
 use Srmklive\PayPal\Services\ExpressCheckout;
 use Srmklive\PayPal\Services\AdaptivePayments;
-
+use App\Slide;
 $provider = new ExpressCheckout;      // To use express checkout.
 //$provider = new AdaptivePayments;     // To use adaptive payments.
 
@@ -32,6 +32,8 @@ class OutletController extends Controller
 
 
     public function index(){
+        $slide = Slide::where('id',7)->first();
+
         $products = Product::where('outlet','1')->orderBy('id','desc')->get();
 
         $latest = Product::where('outlet','1')->orderBy('id','desc')->limit(6)->get();
@@ -46,9 +48,9 @@ class OutletController extends Controller
         //$categorias = $coleccion->unique();
         $marcas = Marca::where('parent_id',null)->get();
 
+      ;
 
-
-        return view('frontend.outlet.index',compact('latest','products','marcas'));
+        return view('frontend.outlet.index',compact('latest','products','marcas','slide'));
     }
 
 

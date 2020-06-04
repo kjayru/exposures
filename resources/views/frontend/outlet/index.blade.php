@@ -3,10 +3,17 @@
 @section('content')
 
 <section class="container-fluid outlet">
-<div class="row">
-    <div class="cover col-md-12">
-    <img src="/images/camp.jpg" class="img-fluid">
-</div>
+    <section class="slider-home">
+        <div class="slider-wrapper theme-default">
+                <div id="sliderHome" class="nivoSlider">
+                    @foreach($slide->slideitems as $item)
+                        <img src="/storage/{{$item->imagen}}"  />
+
+                    @endforeach
+                </div>
+
+        </div>
+</section>
 </div>
     <div class="row justify-content-center">
         <div class="col-md-8">
