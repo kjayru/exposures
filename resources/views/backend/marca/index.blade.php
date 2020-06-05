@@ -61,7 +61,7 @@
       <div class="modal modal-danger fade in" id="delobjeto">
             <div class="modal-dialog">
                 <div class="modal-content">
-                    <form class="delete-objeto" action="/admin/categories/delete" method="POST">
+                    <form class="delete-objeto" action="/admin/marcas/delete" method="POST">
                         @csrf
                             <div class="modal-header">
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
