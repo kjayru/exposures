@@ -45,7 +45,7 @@
 
 
                     <a href="#" data-id="{{ $producto->id }}" class="btn btn-primario btn-paypal btn-add-producto"> Añadir al carrito </a>
-                    <a href="#" class="btn btn-primario btn-frecuentes">Preguntas frecuentes</a>
+                    <a href="/preguntas-frecuentes" class="btn btn-primario btn-frecuentes">Preguntas frecuentes</a>
                 </div>
                 <div class="col-md-12">
                     <a href="#" class="btn btn-face"><i class="fab fa-facebook-f"></i></a>

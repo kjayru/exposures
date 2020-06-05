@@ -13246,7 +13246,7 @@ section#testimonio {
       }
    }
 
-   .form-field {
+.form-field {
     display: inline-block;
     padding-left: 10px;
     padding-right: 10px;
@@ -13309,4 +13309,27 @@ div#slideproducto {
     outline: none;
     cursor: pointer;
 
+}
+
+p.pComillas.p_negro.p_interrogacion {
+    width: 100%;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    background: #353535 url(../images/comillas.png) 16px 15px no-repeat;
+    border-left: solid 5px #0077c4;
+    padding: 17px 20px 17px 70px;
+    margin: 0;
+    color: #fff;
+    font-size: 20px;
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+p.preguntas_otras {
+    color: #fff;
+    padding: 20px;
+    background: #1169b0;
+}
+
+main {
+    min-height: 611px;
 }
