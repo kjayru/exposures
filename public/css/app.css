@@ -4845,6 +4845,7 @@
     width: 100%;
     border-top-left-radius: calc(0.25rem - 1px);
     border-top-right-radius: calc(0.25rem - 1px);
+    max-height: 190px;
   }
 
   .card-img-bottom {
@@ -13275,14 +13276,14 @@ div#carouselProducto {
 div#slideproducto {
     height: 450px;
 }
-.slick-list.draggable {
+div#slideproducto .slick-list.draggable {
     height: 450px;
 
 }
-.slick-slide {
+div#slideproducto .slick-slide {
     height: 450px;
 }
-.slick-slide img {
+div#slideproducto .slick-slide img {
     display: block;
     max-height: 450px;
     margin: 0 auto;
@@ -13293,11 +13294,11 @@ div#slideproducto {
     left: 5%
 }
 
- button.slick-siguiente.slick-arrow {
+button.slick-siguiente.slick-arrow {
     right: 5%
 }
 
- button.slick-arrow {
+button.slick-arrow {
     display: block !important;
     position: absolute;
     color: #2c2c2c;
@@ -13332,4 +13333,31 @@ p.preguntas_otras {
 
 main {
     min-height: 611px;
+}
+
+#recientes .slick-slide img {
+    display: block;
+    max-height: 196px;
+    margin: 0 auto;
+}
+
+#recientes button.slick-siguiente.slick-arrow {
+    right: -30px;
+}
+#recientes button.slick-anterior.slick-arrow {
+    left: -20px;
+}
+
+.cardpad  .price {
+    font-size: 14px;
+}
+a.carprod {
+    display: inline-block;
+    background: transparent;
+    width: 33px;
+    height: 30px;
+    position: absolute;
+    text-indent: -9999px;
+    z-index: 2;
+    right: 0px;
 }

@@ -378,3 +378,23 @@ $("#estado").change(function(){
          }
      });
 })
+
+
+$('#recientes').slick({
+    infinite: true,
+    slidesToShow: 4,
+    slidesToScroll: 4,
+    dots: true,
+    speed: 600,
+    cssEase: 'linear',
+
+    arrows: true,
+    prevArrow: '<button type="button" class="slick-anterior"><i class="fas fa-chevron-left"></i></button>',
+    nextArrow: '<button type="button" class="slick-siguiente"><i class="fas fa-chevron-right"></i></ button>',
+    autoplay: true,
+    autoplaySpeed: 6000,
+    onAfterChange: function() {
+        player.stopVideo();
+    }
+
+});

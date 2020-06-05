@@ -25,13 +25,13 @@
             <div class="row">
 
                 <div class="col-md-12">
-                    <div class="recientes">
+                    <div id="recientes" class="reciente-slide">
 
                     @foreach($latest as $pd)
 
 
-                            <div class="card-item">
-                                <a href="/outlet/{" class="product-card">
+                            <div>
+                                <a href="/outlet/producto/{{$pd->slug}}" class="product-card">
                                     <div class="place pproduct-card__image-wrapper">
                                         <img src="/storage/{{ $pd->imagen}}"  class="img-fluid">
                                     </div>
@@ -79,7 +79,9 @@
                             <div class="col-md-4 col-6 pb-3">
                                 <div class="card">
                                     <div class="card-foot">
-                                        <div class="title"></div>
+                                        <div class="title">
+                                            <a href="#" data-id="{{$prod->id}}" class="carprod btn-add-producto">cart</a>
+                                        </div>
 
                                     </div>
                                     <a href="/outlet/producto/{{$prod->slug}}">
@@ -113,4 +115,29 @@
         </div>
     </div>
 </section>
+
+
+<div class="modal fade" id="modaladdprod" tabindex="-1" role="dialog" aria-labelledby="modaladdprodLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modaladdprodLabel">
+            <i class="fa fa-check-circle" aria-hidden="true"></i>
+              <span class="added-product">Tu producto se agrego al carrito</span>
+            </h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+
+        </div>
+        <div class="modal-footer">
+            <a href="/carrito" class="btn btn-primary pull-left">Ir al carrito</a>
+
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Seguir comprando</button>
+        </div>
+      </div>
+    </div>
+  </div>
 @endsection
