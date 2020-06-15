@@ -48,7 +48,13 @@
 
 
 
-                            <a href="/preguntas-frecuentes" class="btn btn btn-primario btn-frecuentes">Preguntas frecuentes</a>
+
+                    </div>
+
+                </div>
+                <div class="col-md-8 p-0 pt-5">
+                    <div class="content-box">
+                        <a href="/preguntas-frecuentes" class="btn btn btn-primario btn-frecuentes">Preguntas frecuentes</a>
 
                     </div>
                 </div>
