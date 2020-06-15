@@ -22,7 +22,9 @@ class Product extends Model
         return $this->belongsTo(Activity::class);
     }
 
-
+    public function brand(){
+        return $this->belongsTo(Brand::class);
+    }
 
 
     public static function productosCategory($cat,$subcat){

@@ -98,7 +98,8 @@ class HomeController extends Controller
 
         $producto = Product::where('id',$id)->first();
 
-        //$categoria = Category::where('slug',$cat)->first();
+
+
         $contador = Gallery::where('product_id',$id)->count();
 
         $galeria = Gallery::where('product_id',$id)->get();

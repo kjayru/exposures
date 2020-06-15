@@ -6,21 +6,11 @@
         <div class="container-fluid">
             <div class="row justify-content-center">
                 <div class="col-md-8">
-                     <img src="/images/marcas/10-BD-logo-png" class="img-fluid logoprod">
+                     <img src="/{{@$producto->marca[0]->brand->file}}" class="img-fluid logoprod">
                 </div>
-            </div>asdasdasdasdasds
-            {{  $producto->brand }}
-            <!--<div class="row justify-content-center">
-                <div class="col-md-8">
-                    <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb">
+            </div>
 
-                        <li class="breadcrumb-item"><a href="/">categoria</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">{{ $producto->name}}</li>
-                        </ol>
-                    </nav>
-                </div>
-            </div>-->
+
 
             <div class="row justify-content-center">
                 <div class="col-md-8">

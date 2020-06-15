@@ -76,6 +76,9 @@ class MarcaController extends Controller
         $makes = Marca::orderBy('name','asc')->get();
 
         $brands = Brand::orderBy('name','asc')->get();
+
+
+
         return view('backend.marca.edit',['marca'=>$marca,'makes'=>$makes,'brands'=>$brands]);
     }
 

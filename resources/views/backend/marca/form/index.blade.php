@@ -28,7 +28,7 @@
             <select name="brand_id" id="brand_id" class="form-control">
                 <option value="">Seleccione</option>
                 @foreach($brands as $brand)
-                 <option value="{{$brand->id}}" @if(@$brand->id == @$marca->parent_id) selected @endif>{{ $brand->name }}</option>
+                 <option value="{{$brand->id}}" @if(@$brand->id == @$marca->brand_id) selected @endif>{{ $brand->name }}</option>
                 @endforeach
             </select>
         </div>
