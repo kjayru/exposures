@@ -41,40 +41,12 @@
                                     {{ $productos->links() }}
                             </div>
                         </div>
-                     <div class="row">
-                        <div class="col-md-6">
 
-                            <form  method="get" class="form-inline">
-
-                                    <div class="form-group mb-2 ">
-
-                                      <select class="form-control">
-                                        <option>ACTIVIDAD</option>
-                                        @foreach($actividades as $actividad)
-                                            <option value="{{$actividad->id}}">{{ $actividad->name }}</option>
-                                            @endforeach
-                                      </select>
-                                    </div>
-                                    <div class="form-group mx-sm-3 mb-2">
-
-                                        <select class="form-control">
-
-                                            <option value="">MARCA</option>
-                                            @foreach($marcas as $marca)
-                                            <option value="{{$marca->id}}">{{ $marca->name }}</option>
-                                            @endforeach
-                                          </select>
-                                    </div>
-
-
-                            </form>
-                        </div>
-                    </div>
                     <div class="row">
                          <!--item-->
                          @foreach($productos as $prod)
 
-                         <div class="col-md-6 col-12 cartprod">
+                         <div class="col-md-12 col-12 cartprod">
                             <div class="row">
                                 <div class="contenedor">
                                     <div class="row">
