@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Str;
 use App\Marca;
+use App\Brand;
 
 class MarcaController extends Controller
 {
@@ -32,7 +33,8 @@ class MarcaController extends Controller
     {
         $makes = Marca::orderBy('id','desc')->get();
         $marcas = Marca::marcas();
-        return view('backend.marca.create',['makes'=>$makes,'marcas'=>$marcas]);
+        $brands = Brand::orderBy('name','asc')->get();
+        return view('backend.marca.create',['makes'=>$makes,'marcas'=>$marcas,'brands'=>$brands]);
     }
 
     /**
@@ -55,6 +57,7 @@ class MarcaController extends Controller
 
        $marca->parent_id = $request->categoria;
        $marca->order = $request->order;
+       $marca->brand_id = $request->brand_id;
        $marca->save();
 
       return redirect()->route('marca.index',['id'=>$marca->id])
@@ -72,7 +75,8 @@ class MarcaController extends Controller
         $marca = Marca::find($id);
         $makes = Marca::orderBy('name','asc')->get();
 
-        return view('backend.marca.edit',['marca'=>$marca,'makes'=>$makes]);
+        $brands = Brand::orderBy('name','asc')->get();
+        return view('backend.marca.edit',['marca'=>$marca,'makes'=>$makes,'brands'=>$brands]);
     }
 
     /**
@@ -99,6 +103,9 @@ class MarcaController extends Controller
 
          $marca->parent_id = $request->categoria;
          $marca->order = $request->order;
+
+         $marca->brand_id = $request->brand_id;
+
          $marca->save();
 
 

@@ -8,8 +8,8 @@
                 <div class="col-md-8">
                      <img src="/images/marcas/10-BD-logo-png" class="img-fluid logoprod">
                 </div>
-            </div>
-
+            </div>asdasdasdasdasds
+            {{  $producto->brand }}
             <!--<div class="row justify-content-center">
                 <div class="col-md-8">
                     <nav aria-label="breadcrumb">
