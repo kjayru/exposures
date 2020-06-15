@@ -6,7 +6,7 @@
         <div class="container-fluid">
             <div class="row justify-content-center">
                 <div class="col-md-8">
-                     <img src="/{{@$producto->marca[0]->brand->file}}" class="img-fluid logoprod">
+                     <img src="/storage/{{@$producto->marca[0]->brand->file}}" class="img-fluid logoprod">
                 </div>
             </div>
 
