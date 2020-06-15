@@ -46,7 +46,7 @@
                          <!--item-->
                          @foreach($productos as $prod)
 
-                         <div class="col-md-12 col-12 cartprod">
+                         <div class="col-md-6 col-12 cartprod">
                             <div class="row">
                                 <div class="contenedor">
                                     <div class="row">
