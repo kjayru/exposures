@@ -42,7 +42,47 @@
                             <!-- Table row -->
                             <div class="row">
                             <div class="col-xs-12 table-responsive">
-                                <table class="table table-striped">
+
+                                <table class="table table-bordered table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>Datos Cliente</th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <dt>Nombre:</dt><dl>{{ $orden->user->name}}</dl>
+                                                <dt>Email:</dt><dl>{{ $orden->user->email}}</dl>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <table class="table table-bordered table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>Dirección de Envio</th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <dt>Nombre:</dt><dl>{{ $orden->billing->name }} {{ $orden->billing->lastname }}</dl>
+                                                <dt>Dirección:</dt><dl>{{ $orden->billing->address1 }}</dl>
+                                                <dt>Estado :</dt><dl></dl>
+                                                <dt>Ciudad :</dt><dl>{{ $orden->billing->city->name }}</dl>
+
+
+
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                            <table class="table table-striped">
                                 <thead>
                                     <tr>
                                         <th>Producto</th>
@@ -64,8 +104,15 @@
 
                                     @endforeach
                                 </tbody>
-                                </table>
+                            </table>
+
+
+
+
+
                             </div>
+
+
                             <!-- /.col -->
                             </div>
                             <!-- /.row -->

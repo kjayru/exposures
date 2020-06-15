@@ -55,16 +55,8 @@
         <div class="col-md-8">
 
             <div class="row pb-5 pt-5">
-                <div class="col-md-3 menusidebar">
-                    <ul class="navbar">
 
-                        @foreach($marcas as $cat)
-                        <li><a href="/outlet/{{@$cat->slug}}" class="link @if(strpos($_SERVER['REQUEST_URI'], @$cat['slug']) !== false) active  @endif">{{ @$cat['name'] }}</a></li>
-                        @endforeach
-                    </ul>
-
-                </div>
-                <div class="col-md-9">
+                <div class="col-md-12">
                     <h3 class="pTitulo pb-5">
                         @if(@$nombre)
                         {{$nombre}}
@@ -89,7 +81,7 @@
 
                                     </div>
                                     <div class="card-body">
-                                        <img src="/storage/{{$prod->imagen}}" class="card-img-top">
+                                        <img src="/storage/{{$prod->imagen}}" class="img-fluid">
                                     </div>
                                     <div class="card-foot">
                                         <div class="row cardpad">

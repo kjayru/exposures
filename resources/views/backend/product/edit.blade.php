@@ -71,9 +71,7 @@
 
    $(function () {
 
-    /* CKEDITOR.replace( '.contenidos', {
-       height: 700
-   } );*/
+
 
            CKEDITOR.replace( description, {   height: 300 });
            CKEDITOR.config.allowedContent = true;

@@ -4845,7 +4845,7 @@
     width: 100%;
     border-top-left-radius: calc(0.25rem - 1px);
     border-top-right-radius: calc(0.25rem - 1px);
-    max-height: 190px;
+    max-height: 285px;
   }
 
   .card-img-bottom {
@@ -10892,6 +10892,7 @@
 
   .products .card-body {
     min-height: 234px;
+    height:400px;
   }
 
   .card .price {
@@ -13360,4 +13361,8 @@ a.carprod {
     text-indent: -9999px;
     z-index: 2;
     right: 0px;
+}
+.infoutlet {
+    color: #3490dc;
+    font-size: 28px;
 }
