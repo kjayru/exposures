@@ -85,6 +85,7 @@
                             <table class="table table-striped">
                                 <thead>
                                     <tr>
+                                        <th></th>
                                         <th>Producto</th>
                                         <th>Cantidad</th>
                                         <th>Precio Unitario</th>
@@ -95,7 +96,7 @@
 
                                     @foreach($productos->items as $prod)
                                     <tr>
-
+                                        <td><img src="/storage/{{$prod['item']->imagen}}" width="150"></td>
                                         <td>{{ $prod['item']->name}}</td>
                                         <td>{{ $prod['qty']}}</td>
                                         <td>$ {{ $prod['item']->price}}</td>

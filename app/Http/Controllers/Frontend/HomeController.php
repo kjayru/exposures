@@ -186,6 +186,12 @@ class HomeController extends Controller
         return view('frontend.home.preguntas');
     }
 
+    public function politicas(){
+
+
+        return view('frontend.home.politicas');
+    }
+
 
     public function getinicio(){
         $page = Page::where('id',1)->first();
