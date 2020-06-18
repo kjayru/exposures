@@ -53,7 +53,7 @@
                     <a href="/preguntas-frecuentes" class="btn btn-primario btn-frecuentes">Preguntas frecuentes</a>
                 </div>
                 <div class="col-md-12">
-                    <a href="#" class="btn btn-face" data-image="/storage/{{ $producto->imagen}}"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="btn btn-face" data-image="{{ env('APP_URL')}}/storage/{{ $producto->imagen}}"><i class="fab fa-facebook-f"></i></a>
                     <a href="#" class="btn btn-twitter"><i class="fab fa-twitter"></i></a>
                 </div>
             </div>
