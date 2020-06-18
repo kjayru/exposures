@@ -53,7 +53,7 @@
 
                 </div>
                 <div class="col-md-8 p-0 pt-5">
-                    <div class="content-box">
+                    <div class="content-box row">
                         <div class="col-md-10">
                             <a href="/preguntas-frecuentes" class="btn btn btn-primario btn-frecuentes">Preguntas frecuentes</a>
                             <a href="/preguntas-frecuentes" class="btn btn btn-primario btn-comprar">Dónde comprar</a>
