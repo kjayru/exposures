@@ -412,12 +412,7 @@ $('#recientes').slick({
 
         FB.ui({
             method: 'feed',
-            name:`${ogname}`,
-            link: `${paginaget}`,
-            caption: `${ogdescripcion}`,
-            picture: `${ogimagen}`,
-            description: `${ogdescripcion}`
-
+            link: `${paginaget}`
         });
     });
 
