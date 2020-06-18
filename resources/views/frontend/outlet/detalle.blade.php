@@ -79,7 +79,7 @@
 
         </div>
         <div class="modal-footer">
-            <a href="/carrito" class="btn btn-primary pull-left">Ir al carrito</a>
+            <a href="/carrito" data-image="/storage/{{ $producto->imagen}}" class="btn btn-primary pull-left">Ir al carrito</a>
 
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Seguir comprando</button>
         </div>

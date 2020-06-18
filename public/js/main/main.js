@@ -398,3 +398,23 @@ $('#recientes').slick({
     }
 
 });
+
+
+
+    $('.btn-face').click(function(e){
+        e.preventDefault();
+        var paginaget = window.location.href;
+        var ogname = document.querySelector('meta[property="og:title"]').content;
+        var ogdescripcion = document.querySelector('meta[property="og:description"]').content;
+        var ogimagen = $(this).data('image');
+        FB.ui({
+            method: 'feed',
+            name:`${ogname}`,
+            link: `${paginaget}`,
+            caption: `${ogdescripcion}`,
+            image: `${ogimagen}`,
+            description: `${ogdescripcion}`
+
+        });
+    });
+
