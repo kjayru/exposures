@@ -25,6 +25,9 @@ Route::get('/distribuidores', 'Frontend\HomeController@distribuidores')->name('d
 Route::get('/distribuidores/zona/{id}','Frontend\HomeController@dealerSearch')->name('buscador-dealer');
 
 Route::get('/distribuidores/marca/{marca}','Frontend\HomeController@dealermarca')->name('buscador-marca');
+
+Route::get('/distribuidores/filtro/{marca}','Frontend\HomeController@filtro')->name('buscador-filtro');
+
 Route::get('/contacto', 'Frontend\HomeController@contacto')->name('contacto');
 
 Route::get('/sliders', 'Frontend\HomeController@getslide')->name('slider');

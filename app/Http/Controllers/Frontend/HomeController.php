@@ -104,7 +104,11 @@ class HomeController extends Controller
 
         $galeria = Gallery::where('product_id',$id)->get();
 
-        return view('frontend.home.detalleProducto',['slide'=>$slide,'producto'=>$producto,'contador'=>$contador,'galeria'=>$galeria]);
+
+        $relacionados = $producto->marca[0]->product;
+
+
+        return view('frontend.home.detalleProducto',['slide'=>$slide,'producto'=>$producto,'contador'=>$contador,'galeria'=>$galeria,'relacionados'=>$relacionados]);
     }
 
     public function videos(){
@@ -226,6 +230,35 @@ class HomeController extends Controller
 
     public function ingresar(){
         return view('frontend.login.index');
+    }
+
+    public function filtro($id){
+        $arreglo = collect();
+        $producto = Product::where('id',$id)->first();
+
+
+        $slide = Slide::where('id',4)->first();
+
+
+        $marcas = Brand::orderBy('name','desc')->get();
+        $estados = State::orderBy('name','desc')->get();
+
+
+        foreach($producto->marca as $marca){
+            if($marca->parent_id == null){
+                foreach($marca->brand->dealer as $dl){
+
+                    $arreglo->push($dl);
+                }
+            }
+            break;
+        }
+
+        $dealers = collect($arreglo->all());
+
+
+
+        return view('frontend.home.filtro',['slide'=>$slide,'dealers'=>$dealers,'estados'=>$estados,'marcas'=>$marcas]);
     }
 }
 
