@@ -54,7 +54,9 @@
                 </div>
                 <div class="col-md-8 p-0 pt-5">
                     <div class="content-box">
-                        <a href="/preguntas-frecuentes" class="btn btn btn-primario btn-frecuentes">Preguntas frecuentes..</a>
+                        <a href="/preguntas-frecuentes" class="btn btn btn-primario btn-frecuentes">Preguntas frecuentes</a>
+                        <a href="/preguntas-frecuentes" class="btn btn btn-primario btn-comprar">Dónde comprar</a>
+                        <a href="/preguntas-frecuentes" class="btn btn btn-primario btn-comprelo">!Comprelo ahora¡</a>
 
                     </div>
                 </div>
