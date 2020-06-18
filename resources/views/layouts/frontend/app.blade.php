@@ -11,7 +11,8 @@
 
     @include('layouts.frontend.partials.metas');
 
-
+    <meta property="og:image:height"  content="200" />
+    <meta property="og:image:width"  content="200" />
     <meta name="googlebot" content="index,follow" />
     <meta http-equiv="Content-Language" name="language" content="es" />
     <meta name="distribution" content="Global" />
