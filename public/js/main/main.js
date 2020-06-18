@@ -407,6 +407,9 @@ $('#recientes').slick({
         var ogname = document.querySelector('meta[property="og:title"]').content;
         var ogdescripcion = document.querySelector('meta[property="og:description"]').content;
         var ogimagen = $(this).data('image');
+
+        $('meta[property="og:image"]').attr(ogimagen);
+
         FB.ui({
             method: 'feed',
             name:`${ogname}`,
