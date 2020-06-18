@@ -3,6 +3,6 @@
 <meta property="og:image" itemprop="image" content="{{@$meta_image}}" />
 <meta property="og:url" itemprop="url" content="{{@$meta_url}}/" />
 
-<meta property="og:image:width" content="200" />
-<meta property="og:image:height" content="200" />
+<meta property="og:image:width" content="400" />
+<meta property="og:image:height" content="300" />
 
