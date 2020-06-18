@@ -13366,3 +13366,14 @@ a.carprod {
     color: #3490dc;
     font-size: 28px;
 }
+
+.btn-comprar {
+    color: #fff;
+    border: 1px solid #25a3f5;
+    background: #25a3f5;
+}
+.btn-add-producto{
+    color: #fff;
+    background-color: #ffc107;
+    border: 1px solid #ffc107;
+}
