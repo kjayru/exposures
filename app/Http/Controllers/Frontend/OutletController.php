@@ -79,7 +79,7 @@ class OutletController extends Controller
 
     public function detalle($slug,$prod){
         $producto = Product::where('slug',$prod)->first();
-        dd($producto);
+
         $meta_title ="exposure outle";
         $meta_description ="Ipsum lorem ipcus";
         $meta_image = env('APP_URL')."/storage/products/".$producto->imagen;
