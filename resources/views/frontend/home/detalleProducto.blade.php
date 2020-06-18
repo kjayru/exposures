@@ -57,7 +57,9 @@
                         <div class="col-md-10">
                             <a href="/preguntas-frecuentes" class="btn btn btn-primario btn-frecuentes">Preguntas frecuentes</a>
                             <a href="/preguntas-frecuentes" class="btn btn btn-primario btn-comprar">Dónde comprar</a>
-                            <a href="/preguntas-frecuentes" class="btn btn btn-primario btn-comprelo">!Comprelo ahora¡</a>
+                            @if($producto->outlet>0)
+                             <a href="/preguntas-frecuentes" class="btn btn btn-primario btn-comprelo">!Comprelo ahora¡</a>
+                            @endif
                         </div>
                         <div class="col-md-2">
                             <a href="#" class="btn btn-face" data-image="{{ env('APP_URL')}}/storage/{{ $producto->imagen}}"><i class="fab fa-facebook-f"></i></a>
