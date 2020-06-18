@@ -59,7 +59,7 @@
                             @if(@$producto->brand->id)
                             <a href="/distribuidores/marca/{{ @$producto->brand->id}}" class="btn  btn-primario btn-comprar">Dónde comprar</a>
                            @else
-                           <a href="/distribuidores/distribuidores" class="btn  btn-primario btn-comprar">Dónde comprar</a>
+                           <a href="/distribuidores" class="btn  btn-primario btn-comprar">Dónde comprar</a>
                            @endif
                             @if($producto->outlet>0)
 
