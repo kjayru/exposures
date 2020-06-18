@@ -112,7 +112,7 @@ class HomeController extends Controller
             $relacionados = null;
         }
 
-        dd($relacionados);
+
 
         return view('frontend.home.detalleProducto',['slide'=>$slide,'producto'=>$producto,'contador'=>$contador,'galeria'=>$galeria,'relacionados'=>$relacionados]);
     }
