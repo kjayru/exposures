@@ -18,7 +18,7 @@
     <meta name="googlebot" content="index,follow" />
     <meta http-equiv="Content-Language" name="language" content="es" />
     <meta name="distribution" content="Global" />
-    <meta property="fb:app_id" content="255968652401344" />
+
 
     <meta name="lang" content="es" itemprop="inLanguage" />
 
