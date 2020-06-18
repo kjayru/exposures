@@ -104,8 +104,8 @@ class HomeController extends Controller
 
         $galeria = Gallery::where('product_id',$id)->get();
 
-        if($producto->marca!=""){
-            dd(count($producto->marca));
+        if(count($producto->marca)>0){
+
         $relacionados = $producto->marca[0]->product;
 
         }else{
