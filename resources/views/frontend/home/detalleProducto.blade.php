@@ -80,40 +80,42 @@
     </section>
     <section>
         <div class="container">
+            @if($relacionados != null)
             <div class="row">
                 <!--item-->
-            @foreach($relacionados as $prod)
-                @if($prod->id!=$producto->id)
-                <div class="col-md-6 col-12 cartprod">
-                <div class="row">
-                    <div class="contenedor">
-                        <div class="row">
-                            <div class="col-md-5">
-                                <img src="/storage/{{ $prod->imagen}}" class="img-fluid">
-                            </div>
-                            <div class="col-md-7">
-                                <div class="titulo">
-                                <h3> {{ $prod->name }}</h3>
-                                    <span> {{ $prod->subtheme }}</span>
+                @foreach($relacionados as $prod)
+                    @if($prod->id!=$producto->id)
+                    <div class="col-md-6 col-12 cartprod">
+                    <div class="row">
+                        <div class="contenedor">
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <img src="/storage/{{ $prod->imagen}}" class="img-fluid">
                                 </div>
-                                <div class="body">
-                                {{  \Illuminate\Support\Str::limit($prod->excerpt, 150) }}
+                                <div class="col-md-7">
+                                    <div class="titulo">
+                                    <h3> {{ $prod->name }}</h3>
+                                        <span> {{ $prod->subtheme }}</span>
+                                    </div>
+                                    <div class="body">
+                                    {{  \Illuminate\Support\Str::limit($prod->excerpt, 150) }}
 
-                                </div>
-                                <div class="footer">
+                                    </div>
+                                    <div class="footer">
 
-                                    <a href="/producto/{{$prod->id}}/{{$prod->slug}}" class="btn btn-primary btn-irproducto">Ver detalle</a>
+                                        <a href="/producto/{{$prod->id}}/{{$prod->slug}}" class="btn btn-primary btn-irproducto">Ver detalle</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                </div>
+                    </div>
 
-        @endif
-    @endforeach
+                    @endif
+                @endforeach
 
-        </div>
+            </div>
+            @endif
         </div>
     </section>
 

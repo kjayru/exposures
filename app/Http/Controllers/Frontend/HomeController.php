@@ -107,6 +107,8 @@ class HomeController extends Controller
 
         $relacionados = $producto->marca[0]->product;
 
+        dd($relacionados);
+
 
         return view('frontend.home.detalleProducto',['slide'=>$slide,'producto'=>$producto,'contador'=>$contador,'galeria'=>$galeria,'relacionados'=>$relacionados]);
     }
