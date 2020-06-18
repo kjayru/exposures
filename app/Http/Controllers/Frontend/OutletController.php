@@ -83,8 +83,8 @@ class OutletController extends Controller
         $meta_title ="exposure outle";
         $meta_description ="Ipsum lorem ipcus";
         $meta_image = 'https://exposure.kjayru.com/storage/products/1272-1-Joshua-Tree-Hat.JPG';
-
-        return view('frontend.outlet.detalle',['producto'=>$producto,"meta_title"=>$meta_title,"meta_description"=>$meta_description,"meta_image"=>$meta_image]);
+        $meta_url = env('APP_URL')."/outlet/producto/".$slug;
+        return view('frontend.outlet.detalle',['producto'=>$producto,"meta_title"=>$meta_title,"meta_description"=>$meta_description,"meta_image"=>$meta_image,'meta_url'=>$meta_url]);
     }
 
 
