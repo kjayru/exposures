@@ -80,7 +80,11 @@ class OutletController extends Controller
     public function detalle($slug,$prod){
         $producto = Product::where('slug',$prod)->first();
 
-        return view('frontend.outlet.detalle',compact('producto'));
+        $meta_title ="exposure outle";
+        $meta_description ="Ipsum lorem ipcus";
+        $meta_image = 'https://exposure.kjayru.com/storage/products/1272-1-Joshua-Tree-Hat.JPG';
+
+        return view('frontend.outlet.detalle',['producto'=>$producto,"meta_title"=>$meta_title,"meta_description"=>$meta_description,"meta_image"=>$meta_image]);
     }
 
 

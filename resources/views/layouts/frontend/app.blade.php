@@ -9,19 +9,15 @@
 
     <!--metas-->
 
-    <meta property="og:title" itemprop="headline" content="Titulo" />
-    <meta property="og:description" itemprop="description" content="Titulo" />
-    <meta property="og:image" itemprop="image" content="https://exposure.kjayru.com/imgshare.jpg" />
-    <meta property="og:url" itemprop="url" content="https://exposure.kjayru.com" />
+    @include('layouts.frontend.partials.metas');
 
-    <!-- fin Twitter Card -->    <!-- fin Dublin Core -->
+
     <meta name="googlebot" content="index,follow" />
     <meta http-equiv="Content-Language" name="language" content="es" />
     <meta name="distribution" content="Global" />
     <meta property="fb:app_id" content="255968652401344" />
 
     <meta name="lang" content="es" itemprop="inLanguage" />
-
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
