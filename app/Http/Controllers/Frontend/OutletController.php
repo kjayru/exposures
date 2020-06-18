@@ -82,7 +82,7 @@ class OutletController extends Controller
 
         $meta_title ="exposure outle";
         $meta_description ="Ipsum lorem ipcus";
-        $meta_image = env('APP_URL')."/storage/products/".$producto->imagen;
+        $meta_image = env('APP_URL')."/storage/".$producto->imagen;
         $meta_url = env('APP_URL')."/outlet/producto/".$prod;
         return view('frontend.outlet.detalle',['producto'=>$producto,"meta_title"=>$meta_title,"meta_description"=>$meta_description,"meta_image"=>$meta_image,'meta_url'=>$meta_url]);
     }
