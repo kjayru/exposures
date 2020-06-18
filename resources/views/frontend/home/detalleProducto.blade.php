@@ -57,7 +57,7 @@
                         <div class="col-md-10">
                             <a href="/preguntas-frecuentes" class="btn btn-primario btn-frecuentes">Preguntas frecuentes</a>
 
-                            <a href="/distribuidores/marca/{{ $producto->brand->id}}" class="btn  btn-primario btn-comprar">Dónde comprar</a>
+                            <a href="/distribuidores/marca/{{ @$producto->brand->id}}" class="btn  btn-primario btn-comprar">Dónde comprar</a>
                             @if($producto->outlet>0)
 
                              <a href="#" data-id="{{ $producto->id }}" class="btn btn-primario  btn-add-producto"> !Comprelo ahora¡ </a>
