@@ -106,12 +106,13 @@ class HomeController extends Controller
 
         if(count($producto->marca)>0){
 
-        $relacionados = $producto->marca[0]->product;
+            $relacionados = $producto->marca[0]->product;
 
         }else{
-            $relacionados =null;
+            $relacionados = null;
         }
 
+        dd($relacionados);
 
         return view('frontend.home.detalleProducto',['slide'=>$slide,'producto'=>$producto,'contador'=>$contador,'galeria'=>$galeria,'relacionados'=>$relacionados]);
     }
