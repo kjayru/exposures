@@ -104,10 +104,11 @@ class HomeController extends Controller
 
         $galeria = Gallery::where('product_id',$id)->get();
 
+        dd($producto->marca[0]->product);
 
         $relacionados = $producto->marca[0]->product;
 
-        dd($relacionados);
+
 
 
         return view('frontend.home.detalleProducto',['slide'=>$slide,'producto'=>$producto,'contador'=>$contador,'galeria'=>$galeria,'relacionados'=>$relacionados]);
