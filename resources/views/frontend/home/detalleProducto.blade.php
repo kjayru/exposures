@@ -60,7 +60,7 @@
                             <a href="/distribuidores/marca/{{ @$producto->brand->id}}" class="btn  btn-primario btn-comprar">Dónde comprar</a>
                             @if($producto->outlet>0)
 
-                             <a href="#" data-id="{{ $producto->id }}" class="btn btn-primario  btn-add-producto"> !Comprelo ahora¡ </a>
+                             <a href="#" data-id="{{ @$producto->id }}" class="btn btn-primario  btn-add-producto"> !Comprelo ahora¡ </a>
                             @endif
                         </div>
                         <div class="col-md-2">
