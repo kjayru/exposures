@@ -412,7 +412,7 @@ $('#recientes').slick({
             name:`${ogname}`,
             link: `${paginaget}`,
             caption: `${ogdescripcion}`,
-            picture: `${ogimagen}`,
+            picture: `https://exposure.kjayru.com/${ogimagen}`,
             description: `${ogdescripcion}`
 
         });
