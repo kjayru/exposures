@@ -54,10 +54,14 @@
                 </div>
                 <div class="col-md-8 p-0 pt-5">
                     <div class="content-box">
-                        <a href="/preguntas-frecuentes" class="btn btn btn-primario btn-frecuentes">Preguntas frecuentes</a>
-                        <a href="/preguntas-frecuentes" class="btn btn btn-primario btn-comprar">Dónde comprar</a>
-                        <a href="/preguntas-frecuentes" class="btn btn btn-primario btn-comprelo">!Comprelo ahora¡</a>
-
+                        <div class="col-md-9">
+                            <a href="/preguntas-frecuentes" class="btn btn btn-primario btn-frecuentes">Preguntas frecuentes</a>
+                            <a href="/preguntas-frecuentes" class="btn btn btn-primario btn-comprar">Dónde comprar</a>
+                            <a href="/preguntas-frecuentes" class="btn btn btn-primario btn-comprelo">!Comprelo ahora¡</a>
+                        </div>
+                        <div class="col-md-3">
+                            <a href="#" class="btn btn-face" data-image="{{ env('APP_URL')}}/storage/{{ $producto->imagen}}"><i class="fab fa-facebook-f"></i></a>
+                        </div>
                     </div>
                 </div>
             </div>
