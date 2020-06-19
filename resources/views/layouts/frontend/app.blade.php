@@ -9,7 +9,7 @@
 
     <!--metas-->
 
-    @include('layouts.frontend.partials.metas');
+    @include('layouts.frontend.partials.metas')
 
     <meta property="og:image:height"  content="200" />
     <meta property="og:image:width"  content="200" />

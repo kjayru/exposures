@@ -2,10 +2,11 @@
 
 @section('content')
 <section class="slider-home">
+
         <div class="slider-wrapper theme-default">
                 <div id="sliderEmpresa" class="nivoSlider">
-                        @foreach($slide->slideitems as $item)
-                        <img src="/storage/{{$item->imagen}}"  />
+                    @foreach($slide->slideitems as $k =>$item)
+                        <img src="/storage/{{$item->imagen}}"  data-key="{{ $k+1}}" />
 
                     @endforeach
 
@@ -14,23 +15,11 @@
         </div>
 </section>
 
-<section class="paginas">
-        <!--<div class="container-fluid  seccioncategorias">
-            <div class="row justify-content-center">
-                <div class="col-md-8 pb-5 pt-5">
+<section class="paginas container">
 
-                @foreach($categorias as $cat)
-
-                    <a href="/{{ $cat->slug }}" class="btn btn-default btn-categoria">{{ $cat->name }}</a>
-
-                @endforeach
-
-                </div>
-            </div>
-        </div>-->
         <div class="seccionwhite producto pt-5 pb-5">
             <div class="row justify-content-center">
-                <div class="col-md-8">
+                <div class="col-md-12">
                     @if($categoria)
                       <h2>{{ $categoria->name }}</h2>
                     @else
@@ -50,15 +39,15 @@
                             <div class="row">
                                 <div class="contenedor">
                                     <div class="row">
-                                        <div class="col-md-5">
+                                        <div class="col-md-5 col-12">
                                             <img src="/storage/{{ $prod->imagen}}" class="img-fluid">
                                         </div>
-                                        <div class="col-md-7">
+                                        <div class="col-md-7 col-12">
                                             <div class="titulo">
                                             <h3> {{ $prod->name }}</h3>
                                                 <span> {{ $prod->subtheme }}</span>
                                             </div>
-                                            <div class="body">
+                                            <div class="body d-none d-sm-block">
                                             {{  \Illuminate\Support\Str::limit($prod->excerpt, 150) }}
 
                                             </div>

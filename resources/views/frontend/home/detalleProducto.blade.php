@@ -103,7 +103,7 @@
                                     </div>
                                     <div class="footer">
 
-                                        <a href="/producto/{{$prod->id}}/{{$prod->slug}}" class="btn btn-primary btn-irproducto">Ver detalle</a>
+                                        <a href="/producto/{{$prod->id}}/{{$prod->slug}}" class="btn btn-primary btn-irproducto">Ver más</a>
                                     </div>
                                 </div>
                             </div>
