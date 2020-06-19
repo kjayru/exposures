@@ -2,8 +2,8 @@
 
 @section('content')
 
-<section class="container-fluid outlet">
-    <section class="slider-home">
+<section class="container-fluid">
+    <div class="slider-home">
         <div class="slider-wrapper theme-default">
                 <div id="sliderHome" class="nivoSlider">
                     @foreach($slide->slideitems as $item)
@@ -13,8 +13,9 @@
                 </div>
 
         </div>
+    </div>
 </section>
-</div>
+<section class="container outlet">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <h2 class="titulo pt-3 pb-3">Recientemente agregados</h2>
@@ -52,7 +53,7 @@
     </div>
 
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-12 col-12">
 
             <div class="row pb-5 pt-5">
 
@@ -66,40 +67,40 @@
                     </h3>
                     <div class="row products">
 
-                    @if($products)
-                        @foreach($products as $prod)
-                            <div class="col-md-4 col-6 pb-3">
-                                <div class="card">
-                                    <div class="card-foot">
-                                        <div class="title">
-                                            <a href="#" data-id="{{$prod->id}}" class="carprod btn-add-producto">cart</a>
-                                        </div>
-
-                                    </div>
-                                    <a href="/outlet/producto/{{$prod->slug}}">
-                                    <div class="card-head">
-
-                                    </div>
-                                    <div class="card-body">
-                                        <img src="/storage/{{$prod->imagen}}" class="img-fluid">
-                                    </div>
-                                    <div class="card-foot">
-                                        <div class="row cardpad">
-                                            <div class="col-md-7">
-                                                <div class="titulo">{{ $prod->name }}</div>
+                        @if($products)
+                            @foreach($products as $prod)
+                                <div class="col-md-4 col-12 pb-3">
+                                    <div class="card">
+                                        <div class="card-foot">
+                                            <div class="title">
+                                                <a href="#" data-id="{{$prod->id}}" class="carprod btn-add-producto">cart</a>
                                             </div>
-                                            <div class="col-md-5 rcol">
-                                                <div class="price">${{ $prod->price }}</div>
-                                            </div>
+
                                         </div>
+                                        <a href="/outlet/producto/{{$prod->slug}}">
+                                        <div class="card-head">
+
+                                        </div>
+                                        <div class="card-body">
+                                            <img src="/storage/{{$prod->imagen}}" class="img-fluid">
+                                        </div>
+                                        <div class="card-foot">
+                                            <div class="row cardpad">
+                                                <div class="col-md-7">
+                                                    <div class="titulo">{{ $prod->name }}</div>
+                                                </div>
+                                                <div class="col-md-5 rcol">
+                                                    <div class="price">${{ $prod->price }}</div>
+                                                </div>
+                                            </div>
 
 
+                                        </div>
+                                        </a>
                                     </div>
-                                    </a>
                                 </div>
-                            </div>
-                        @endforeach
-                    @endif
+                            @endforeach
+                        @endif
                     </div>
 
                 </div>

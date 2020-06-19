@@ -13630,6 +13630,11 @@ a.carprod {
     .ito:before {
       opacity:0 !important;
 
+
+    }
+    .products .card-body {
+        min-height: 234px;
+        height: auto;
     }
 
 }
