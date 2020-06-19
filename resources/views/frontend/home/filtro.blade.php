@@ -18,7 +18,7 @@
 
    <section class="container dealer">
         <div class="row">
-            <div class="col-md-8 m-0 p-0">
+            <div class="col-md-12 col-12">
                     <h2>Distribuidores</h2>
                         <form id="frm-dealer" id="frm-dealer">
                             @csrf
