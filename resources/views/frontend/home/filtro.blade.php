@@ -49,14 +49,14 @@
                         </form>
              </div>
 
-
+             <div class="col-12 col-md-12">
 
             @foreach($dealers as $dealer)
 
                     <div class="card p-3">
                         <div class="row">
                             <div class="col-md-3 ">
-                                <div class="marco">
+                                <div class="marco d-none d-sm-block">
                                 {!! html_entity_decode($dealer['maps'])  !!}
                                 </div>
 
@@ -73,7 +73,7 @@
                                     </p>
                                 </div>
 
-                                <div>
+                                <div class="logosdealer">
 
 
                                     @foreach($dealer->brand as $marca)
@@ -104,7 +104,7 @@
                 <hr>
             @endforeach
 
-
+                </div>
 
             </div>
         </div>

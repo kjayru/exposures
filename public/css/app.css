@@ -13599,4 +13599,37 @@ a.carprod {
         position: relative;
     }
 
+    .dealer h3 {
+        font-size: 30px;
+        color: #000;
+        margin-bottom: -4px;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    .dealer .titulo span {
+        color: #333;
+        font-size: 17px;
+        display: block;
+        border-bottom: 1px solid blue;
+        margin-bottom: 20px;
+    }
+    .logosdealer {
+        border-top: 1px solid blue;
+        border-bottom: 1px solid blue;
+        padding-top: 10px;
+        padding-bottom: 20px;
+    }
+    .logosdealer img {
+        max-width: 53px;
+    }
+    hr {
+        opacity: 0 !important;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .ito:before {
+      opacity:0 !important;
+
+    }
+
 }
