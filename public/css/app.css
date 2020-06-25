@@ -13610,12 +13610,12 @@ a.carprod {
         color: #333;
         font-size: 17px;
         display: block;
-        border-bottom: 1px solid blue;
+        border-bottom: 1px solid #3490dc;
         margin-bottom: 20px;
     }
     .logosdealer {
-        border-top: 1px solid blue;
-        border-bottom: 1px solid blue;
+        border-top: 1px solid #3490dc;
+        border-bottom: 1px solid #3490dc;
         padding-top: 10px;
         padding-bottom: 20px;
     }
@@ -13635,6 +13635,17 @@ a.carprod {
     .products .card-body {
         min-height: 234px;
         height: auto;
+    }
+
+    .footmovil .btn-add-producto {
+        color: #fff;
+        background-color: #3490dc;
+        border: 1px solid #3490dc;
+        margin-bottom: 20px;
+    }
+
+    .cardesk .titulo {
+        text-transform: uppercase;
     }
 
 }

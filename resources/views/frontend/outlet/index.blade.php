@@ -71,8 +71,8 @@
                             @foreach($products as $prod)
                                 <div class="col-md-4 col-12 pb-3">
                                     <div class="card">
-                                        <div class="card-foot">
-                                            <div class="title">
+                                        <div class="card-head">
+                                            <div class="title d-none d-sm-block">
                                                 <a href="#" data-id="{{$prod->id}}" class="carprod btn-add-producto">cart</a>
                                             </div>
 
@@ -83,17 +83,32 @@
                                         </div>
                                         <div class="card-body">
                                             <img src="/storage/{{$prod->imagen}}" class="img-fluid">
+
+
+                                                <div class="row cardesk ">
+                                                    <div class="col-md-7 col-6 d-block d-sm-none">
+                                                        <div class="titulo">{{ $prod->name }}</div>
+                                                    </div>
+                                                    <div class="col-md-5 rcol col-6 d-block d-sm-none">
+                                                        <div class="price">${{ $prod->price }}</div>
+                                                    </div>
+                                                </div>
+
+
                                         </div>
                                         <div class="card-foot">
-                                            <div class="row cardpad">
-                                                <div class="col-md-7">
+                                            <div class="row cardpad ">
+                                                <div class="col-md-7 d-none d-sm-block">
                                                     <div class="titulo">{{ $prod->name }}</div>
                                                 </div>
-                                                <div class="col-md-5 rcol">
+                                                <div class="col-md-5 rcol d-none d-sm-block">
                                                     <div class="price">${{ $prod->price }}</div>
                                                 </div>
                                             </div>
 
+                                            <div class="footmovil d-block d-sm-none text-center">
+                                                <a href="#"  data-id="{{$prod->id}}" class="btn btn-primary btn-add-producto">Agregar al carrito</a>
+                                            </div>
 
                                         </div>
                                         </a>
