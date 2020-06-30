@@ -13681,4 +13681,16 @@ a.carprod {
         font-weight: bold;
         padding-bottom: 35px;
     }
+    .content-box .btn-primario {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .content-box .btn-face {
+        background: #3b5998;
+        margin-top: 16px;
+        color: white;
+        width: 100%;
+        margin-top: 1px;
+        margin-bottom: 65px;
+    }
 }

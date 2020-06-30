@@ -53,7 +53,8 @@
 
                 </div>
                 <div class="col-md-8 p-0 pt-5 col-12">
-                    <div class="content-box row">
+
+                    <div class="content-box ">
                         <div class="col-md-10 col-12">
                             <a href="/preguntas-frecuentes" class="btn btn-primario btn-frecuentes">Preguntas frecuentes</a>
 
@@ -65,13 +66,14 @@
                            @endif
                             @if($producto->outlet>0)
 
-                             <a href="#" data-id="{{ @$producto->id }}" class="btn btn-primario  btn-add-producto"> !Comprelo ahora¡ </a>
+                             <a href="#" data-id="{{ @$producto->id }}" class="btn btn-primario  btn-add-producto"> ¡Cómpralo ahora!</a>
                             @endif
                         </div>
                         <div class="col-md-2">
                             <a href="#" class="btn btn-face" data-image="{{ env('APP_URL')}}/storage/{{ $producto->imagen}}"><i class="fab fa-facebook-f"></i></a>
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>
