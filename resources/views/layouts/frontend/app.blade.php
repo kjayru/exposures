@@ -85,9 +85,7 @@
                                 <a class="nav-link" href="/empresa">Empresa</a>
                             </li>
 
-                            <li class="nav-item">
-                                <a class="nav-link" href="/productos">Productos</a>
-                            </li>
+
 
                             <li class="nav-item">
                                 <a class="nav-link" href="/distribuidores">Distribuidores</a>
@@ -101,7 +99,7 @@
                                 <a class="nav-link" href="http://www.exposure.com.mx/pedidosonline/">Acceso a distruidores</a>
                             </li>
                             <li class="designed">
-                                <a class="nav-link" href="#" target="_blank">Design by: COBO's</a>
+                                <a class="nav-link" href="https://cobos.com.mx" target="_blank">Design by: COBO's</a>
                             </li>
                         </ul>
                     </div>
