@@ -52,9 +52,9 @@
                     </div>
 
                 </div>
-                <div class="col-md-8 p-0 pt-5">
+                <div class="col-md-8 p-0 pt-5 col-12">
                     <div class="content-box row">
-                        <div class="col-md-10">
+                        <div class="col-md-10 col-12">
                             <a href="/preguntas-frecuentes" class="btn btn-primario btn-frecuentes">Preguntas frecuentes</a>
 
                             @if(@$producto->marca)

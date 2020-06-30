@@ -7,6 +7,7 @@
             <div class="col-md-6">
                 <h3 class="regular">Carrito de compras</h3>
 
+                <div class="table-responsive">
                     <table class="table">
                             <thead>
                             <tr>
@@ -44,6 +45,7 @@
 
 
                     </table>
+                </div>
             </div>
             <div class="col-md-2">
                 <div class="summary-container">
