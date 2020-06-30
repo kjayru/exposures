@@ -8,7 +8,7 @@
 $(function () {
 
   'use strict';
-
+/*
   // Make the dashboard widgets sortable Using jquery UI
   $('.connectedSortable').sortable({
     containment         : $('section.content'),
@@ -27,7 +27,7 @@ $(function () {
     forcePlaceholderSize: true,
     zIndex              : 999999
   });
-
+*/
   // bootstrap WYSIHTML5 - text editor
   $('.textarea').wysihtml5();
 

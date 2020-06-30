@@ -6,8 +6,8 @@ $(function () {
      * Get access to plugins
      */
 
-    $('[data-toggle="control-sidebar"]').controlSidebar()
-    $('[data-toggle="push-menu"]').pushMenu()
+    //$('[data-toggle="control-sidebar"]').controlSidebar()
+    /*$('[data-toggle="push-menu"]').pushMenu()
     var $pushMenu = $('[data-toggle="push-menu"]').data('lte.pushmenu')
     var $controlSidebar = $('[data-toggle="control-sidebar"]').data('lte.controlsidebar')
     var $layout = $('body').data('lte.layout')
@@ -16,7 +16,7 @@ $(function () {
         $pushMenu = $('[data-toggle="push-menu"]').data('lte.pushmenu')
         $controlSidebar = $('[data-toggle="control-sidebar"]').data('lte.controlsidebar')
         $layout = $('body').data('lte.layout')
-    })
+    })*/
 
     /**
      * List of all the available skins
@@ -345,7 +345,7 @@ $(function () {
 
     setup()
 
-    $('[data-toggle="tooltip"]').tooltip()
+   // $('[data-toggle="tooltip"]').tooltip()
 })
 
 
@@ -643,3 +643,4 @@ $(".btn-delete-slide").on('click',function(e){
 
 
 });
+

@@ -36,8 +36,11 @@
   <!-- Google Font -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 
-  <link rel="stylesheet" href="{{asset('vendor/laraberg/css/laraberg.css')}}">
 
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+ <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap.min.css">
+ <link rel="stylesheet" href="https://cdn.datatables.net/fixedheader/3.1.7/css/fixedHeader.bootstrap.min.css">
+ <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.5/css/responsive.bootstrap.min.css">
 
   <link rel="stylesheet" href="/backend/css/main.css?v={{uniqid()}}">
 
@@ -58,528 +61,7 @@
 @include('layouts.backend.include.footer')
 
   <!--FOOTER-->
-<!--
-  <script src="https://unpkg.com/react@16.8.6/umd/react.production.min.js"></script>
 
-<script src="https://unpkg.com/react-dom@16.8.6/umd/react-dom.production.min.js"></script>
-
-
-<script src="{{ asset('vendor/laraberg/js/laraberg.js') }}"></script>
--->
-<script>
-   /*     Laraberg.init('editorgut');
-
-
-
-
-
-( function(
-	blocks,
-	blockEditor,
-	element,
-) {
-	var el = element.createElement;
-	var InnerBlocks = blockEditor.InnerBlocks;
-	blocks.registerBlockType( 'mwp/inner-blocks', {
-		title: 'bootstrap col 2',
-		category: 'layout',
-		attributes: {},
-		edit: function( props ) {
-			return el(
-				'div',
-				{ },
-				'',
-				el( 'div', { style: {  }  }, el( InnerBlocks ) ),
-				''
-			);
-		},
-		save: function( props ) {
-            return el(
-				'div',
-				{ className:"col-md-2"},
-				'',
-				el( 'div', { style: {  }  }, el( InnerBlocks.Content ) ),
-				''
-			);
-		},
-	} )
-} ) (
-	window.wp.blocks,
-	window.wp.blockEditor,
-	window.wp.element,
-);
-
-( function(
-	blocks,
-	blockEditor,
-	element,
-) {
-	var el = element.createElement;
-	var InnerBlocks = blockEditor.InnerBlocks;
-	blocks.registerBlockType( 'mwp/inner-blocks2', {
-		title: 'bootstrap col 3',
-		category: 'layout',
-		attributes: {},
-		edit: function( props ) {
-			return el(
-				'div',
-				{},
-				'',
-				el( 'div', { style: {  }  }, el( InnerBlocks ) ),
-				''
-			);
-		},
-		save: function( props ) {
-            return el(
-				'div',
-				{ className:"col-md-3"},
-				'',
-				el( 'div', { style: {  }  }, el( InnerBlocks.Content ) ),
-				''
-			);
-		},
-	} )
-} ) (
-	window.wp.blocks,
-	window.wp.blockEditor,
-	window.wp.element,
-);
-
-( function(
-	blocks,
-	blockEditor,
-	element,
-) {
-	var el = element.createElement;
-	var InnerBlocks = blockEditor.InnerBlocks;
-	blocks.registerBlockType( 'mwp/inner-blocks4', {
-		title: 'bootstrap col 4',
-		category: 'layout',
-		attributes: {},
-		edit: function( props ) {
-			return el(
-				'div',
-				{ },
-				'',
-				el( 'div', { style: {  }  }, el( InnerBlocks ) ),
-				''
-			);
-		},
-		save: function( props ) {
-            return el(
-				'div',
-				{ className:"col-md-4"},
-				'',
-				el( 'div', { style: {  }  }, el( InnerBlocks.Content ) ),
-				''
-			);
-		},
-	} )
-} ) (
-	window.wp.blocks,
-	window.wp.blockEditor,
-	window.wp.element,
-);
-
-( function(
-	blocks,
-	blockEditor,
-	element,
-) {
-	var el = element.createElement;
-	var InnerBlocks = blockEditor.InnerBlocks;
-	blocks.registerBlockType( 'mwp/inner-blocks5', {
-		title: 'bootstrap col 5',
-		category: 'layout',
-		attributes: {},
-		edit: function( props ) {
-			return el(
-				'div',
-				{ },
-				'',
-				el( 'div', { style: {  }  }, el( InnerBlocks ) ),
-				''
-			);
-		},
-		save: function( props ) {
-            return el(
-				'div',
-				{ className:"col-md-5"},
-				'',
-				el( 'div', { style: {  }  }, el( InnerBlocks.Content ) ),
-				''
-			);
-		},
-	} )
-} ) (
-	window.wp.blocks,
-	window.wp.blockEditor,
-	window.wp.element,
-);
-
-( function(
-	blocks,
-	blockEditor,
-	element,
-) {
-	var el = element.createElement;
-	var InnerBlocks = blockEditor.InnerBlocks;
-	blocks.registerBlockType( 'mwp/inner-blocks6', {
-		title: 'bootstrap col 6',
-		category: 'layout',
-		attributes: {},
-		edit: function( props ) {
-			return el(
-				'div',
-				{ },
-				'',
-				el( 'div', { style: {  }  }, el( InnerBlocks ) ),
-				''
-			);
-		},
-		save: function( props ) {
-            return el(
-				'div',
-				{ className:"col-md-6"},
-				'',
-				el( 'div', { style: {  }  }, el( InnerBlocks.Content ) ),
-				''
-			);
-		},
-	} )
-} ) (
-	window.wp.blocks,
-	window.wp.blockEditor,
-	window.wp.element,
-);
-
-( function(
-	blocks,
-	blockEditor,
-	element,
-) {
-	var el = element.createElement;
-	var InnerBlocks = blockEditor.InnerBlocks;
-	blocks.registerBlockType( 'mwp/inner-blocks7', {
-		title: 'bootstrap col 7',
-		category: 'layout',
-		attributes: {},
-		edit: function( props ) {
-			return el(
-				'div',
-				{ },
-				'',
-				el( 'div', { style: {  }  }, el( InnerBlocks ) ),
-				''
-			);
-		},
-		save: function( props ) {
-            return el(
-				'div',
-				{ className:"col-md-7"},
-				'',
-				el( 'div', { style: {  }  }, el( InnerBlocks.Content ) ),
-				''
-			);
-		},
-	} )
-} ) (
-	window.wp.blocks,
-	window.wp.blockEditor,
-	window.wp.element,
-);
-
-( function(
-	blocks,
-	blockEditor,
-	element,
-) {
-	var el = element.createElement;
-	var InnerBlocks = blockEditor.InnerBlocks;
-	blocks.registerBlockType( 'mwp/inner-blocks8', {
-		title: 'bootstrap col 8',
-		category: 'layout',
-		attributes: {},
-		edit: function( props ) {
-			return el(
-				'div',
-				{},
-				'',
-				el( 'div', { style: {  }  }, el( InnerBlocks ) ),
-				''
-			);
-		},
-		save: function( props ) {
-            return el(
-				'div',
-				{ className:"col-md-8"},
-				'',
-				el( 'div', { style: {  }  }, el( InnerBlocks.Content ) ),
-				''
-			);
-		},
-	} )
-} ) (
-	window.wp.blocks,
-	window.wp.blockEditor,
-	window.wp.element,
-);
-( function(
-	blocks,
-	blockEditor,
-	element,
-) {
-	var el = element.createElement;
-	var InnerBlocks = blockEditor.InnerBlocks;
-	blocks.registerBlockType( 'mwp/inner-blocks9', {
-		title: 'bootstrap col 9',
-		category: 'layout',
-		attributes: {},
-		edit: function( props ) {
-			return el(
-				'div',
-				{ },
-				'',
-				el( 'div', { style: {  }  }, el( InnerBlocks ) ),
-				''
-			);
-		},
-		save: function( props ) {
-            return el(
-				'div',
-				{ className:"col-md-9"},
-				'',
-				el( 'div', { style: {  }  }, el( InnerBlocks.Content ) ),
-				''
-			);
-		},
-	} )
-} ) (
-	window.wp.blocks,
-	window.wp.blockEditor,
-	window.wp.element,
-);
-
-( function(
-	blocks,
-	blockEditor,
-	element,
-) {
-	var el = element.createElement;
-	var InnerBlocks = blockEditor.InnerBlocks;
-	blocks.registerBlockType( 'mwp/inner-blocks10', {
-		title: 'bootstrap col 10',
-		category: 'layout',
-		attributes: {},
-		edit: function( props ) {
-			return el(
-				'div',
-				{ },
-				'',
-				el( 'div', { style: {  }  }, el( InnerBlocks ) ),
-				''
-			);
-		},
-		save: function( props ) {
-            return el(
-				'div',
-				{ className:"col-md-10"},
-				'',
-				el( 'div', { style: {  }  }, el( InnerBlocks.Content ) ),
-				''
-			);
-		},
-	} )
-} ) (
-	window.wp.blocks,
-	window.wp.blockEditor,
-	window.wp.element,
-);
-( function(
-	blocks,
-	blockEditor,
-	element,
-) {
-	var el = element.createElement;
-	var InnerBlocks = blockEditor.InnerBlocks;
-	blocks.registerBlockType( 'mwp/inner-blocks11', {
-		title: 'bootstrap col 11',
-		category: 'layout',
-		attributes: {},
-		edit: function( props ) {
-			return el(
-				'div',
-				{},
-				'',
-				el( 'div', { style: {  }  }, el( InnerBlocks ) ),
-				''
-			);
-		},
-		save: function( props ) {
-            return el(
-				'div',
-				{ className:"col-md-11"},
-				'',
-				el( 'div', { style: {  }  }, el( InnerBlocks.Content ) ),
-				''
-			);
-		},
-	} )
-} ) (
-	window.wp.blocks,
-	window.wp.blockEditor,
-	window.wp.element,
-);
-
-( function(
-	blocks,
-	blockEditor,
-	element,
-) {
-	var el = element.createElement;
-	var InnerBlocks = blockEditor.InnerBlocks;
-	blocks.registerBlockType( 'mwp/inner-blocks12', {
-		title: 'bootstrap col 12',
-		category: 'layout',
-		attributes: {},
-		edit: function( props ) {
-			return el(
-				'div',
-				{ },
-				'',
-				el( 'div', { style: {  }  }, el( InnerBlocks ) ),
-				''
-			);
-		},
-		save: function( props ) {
-            return el(
-				'div',
-				{ className:"col-md-12"},
-				'',
-				el( 'div', { style: {  }  }, el( InnerBlocks.Content ) ),
-				''
-			);
-		},
-	} )
-} ) (
-	window.wp.blocks,
-	window.wp.blockEditor,
-	window.wp.element,
-);
-
-
-( function(
-	blocks,
-	blockEditor,
-	element,
-) {
-	var el = element.createElement;
-	var InnerBlocks = blockEditor.InnerBlocks;
-	blocks.registerBlockType( 'mwp/inner-container', {
-		title: 'bootstrap container',
-		category: 'layout',
-		attributes: {},
-		edit: function( props ) {
-			return el(
-				'div',
-				{ },
-				'',
-				 el( InnerBlocks ) ,
-				''
-			);
-		},
-		save: function( props ) {
-            return el(
-				'div',
-				{ className:"container"},
-				'',
-				 el( InnerBlocks.Content ),
-				''
-			);
-		},
-	} )
-} ) (
-	window.wp.blocks,
-	window.wp.blockEditor,
-	window.wp.element,
-);
-
-//container fluid
-( function(
-	blocks,
-	blockEditor,
-	element,
-) {
-	var el = element.createElement;
-	var InnerBlocks = blockEditor.InnerBlocks;
-	blocks.registerBlockType( 'mwp/inner-container-fluid', {
-		title: 'bootstrap container-fluid',
-		category: 'layout',
-		attributes: {},
-		edit: function( props ) {
-			return el(
-				'div',
-				{ },
-				'',
-				 el( InnerBlocks ) ,
-				''
-			);
-		},
-		save: function( props ) {
-            return el(
-				'div',
-				{ className:"container-fluid"},
-				'',
-				 el( InnerBlocks.Content ),
-				''
-			);
-		},
-	} )
-} ) (
-	window.wp.blocks,
-	window.wp.blockEditor,
-	window.wp.element,
-);
-
-
-//row bootstrap
-
-( function(
-	blocks,
-	blockEditor,
-	element,
-) {
-	var el = element.createElement;
-	var InnerBlocks = blockEditor.InnerBlocks;
-	blocks.registerBlockType( 'mwp/inner-row', {
-		title: 'bootstrap row',
-		category: 'layout',
-		attributes: {},
-		edit: function( props ) {
-			return el(
-				'div',
-				{ },
-				'',
-				 el( InnerBlocks ) ,
-				''
-			);
-		},
-		save: function( props ) {
-            return el(
-				'div',
-				{ className:"row"},
-				'',
-				 el( InnerBlocks.Content ),
-				''
-			);
-		},
-	} )
-} ) (
-	window.wp.blocks,
-	window.wp.blockEditor,
-	window.wp.element,
-);
-       */ </script>
 <!-- jQuery 3 -->
 <script src="/backend/bower_components/jquery/dist/jquery.min.js"></script>
 <!-- jQuery UI 1.11.4 -->
@@ -607,14 +89,66 @@
 <script src="/backend/bower_components/fastclick/lib/fastclick.js"></script>
 <!-- AdminLTE App -->
 <script src="/backend/js/adminlte.min.js"></script>
-<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-<script src="/backend/js/pages/dashboard.js?v={{ uniqid()}}"></script>
-<!-- AdminLTE for demo purposes -->
+
+<script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap.min.js"></script>
+<script src="https://cdn.datatables.net/fixedheader/3.1.7/js/dataTables.fixedHeader.min.js"></script>
+<script src="https://cdn.datatables.net/responsive/2.2.5/js/dataTables.responsive.min.js"></script>
+<script src="https://cdn.datatables.net/responsive/2.2.5/js/responsive.bootstrap.min.js"></script>
+
+
+
 <script src="/backend/js/dropzone.js"></script>
 
 
 
 <script src="/backend/js/demo.js?v={{uniqid()}}"></script>
+
+<script>
+
+$(document).ready(function() {
+
+    var table = $('#productos').DataTable( {
+                    responsive: true,
+                    "serverSide":true,
+                    "ajax":"{{ url('api/products')}}",
+                    "columnDefs":[
+                      {
+                        "targets": 5,
+                        "render": function ( data, type, row, meta ) {
+                            return '<img src="/storage/'+data +'" width="50" alt="" srcset="">';
+                        }
+                      },
+                      {
+                        "targets": 7,
+                        "render": function ( data, type, row, meta ) {
+
+                        return  `<a href="/admin/products/${data}/edit" class="btn btn-xs btn-primary">Editar</a>
+                                <a href="#" data-id="${data}" data-toggle="modal" data-target="#delobjeto" class="btn btn-xs btn-danger btn-object-delete">Borrar</a>`;
+
+                        }
+                    }],
+                    "columns":[
+                        {data : 'id'},
+                        {data : 'name'},
+                        {data : 'price'},
+                        {data : 'excerpt'},
+                        {data : 'title'},
+                        {data : 'imagen'},
+                        {data : 'updated_at'},
+                        {data : 'id'},
+
+                    ]
+                } );
+
+    new $.fn.dataTable.FixedHeader(table);
+
+
+
+
+});
+
+</script>
 </body>
 </html>
 

@@ -171,6 +171,7 @@ return [
 
         Unisharp\Ckeditor\ServiceProvider::class,
 
+        Yajra\DataTables\DataTablesServiceProvider::class,
         /*
          * Application Service Providers...
          */
@@ -230,6 +231,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'Excel' => Maatwebsite\Excel\Facades\Excel::class,
         'PayPal' => Srmklive\PayPal\Facades\PayPal::class,
+        'DataTables' => Yajra\DataTables\Facades\DataTables::class,
     ],
 
 ];

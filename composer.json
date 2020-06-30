@@ -22,7 +22,8 @@
         "te7a-houdini/laravel-trix": "1.1",
         "unisharp/laravel-ckeditor": "^4.7",
         "unisharp/laravel-filemanager": "^2.0",
-        "van-ons/laraberg": "^1.0"
+        "van-ons/laraberg": "^1.0",
+        "yajra/laravel-datatables-oracle": "8.13.7"
     },
     "require-dev": {
         "beyondcode/laravel-dump-server": "^1.0",
