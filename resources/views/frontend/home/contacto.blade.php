@@ -19,7 +19,7 @@
 <section class="container-fluid paginas contactos">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <h3 class="ptitulo">Contactos</h3>
+            <h3 class="ptitulo">Contacto</h3>
 
            {!! $pagina->blocks[0]->contenido !!}
 

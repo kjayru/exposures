@@ -74,7 +74,7 @@ $(".btn-add-producto").on('click',function(e){
     let token = $("meta[name=csrf-token]").attr('content');
 
     var datasend = ({'id':id,'_token':token,'_method':'POST'});
-    alert(id);
+
     $.ajax({
         url:'/addproduct',
         type:'POST',
