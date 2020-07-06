@@ -23,7 +23,7 @@
 
 {!! $pagina->blocks[2]->contenido !!}
 
-
+{!! $pagina->blocks[4]->contenido !!}
 
 {!! $pagina->blocks[3]->contenido !!}
 <!-- /wp:html -->
