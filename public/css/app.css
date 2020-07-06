@@ -13378,6 +13378,10 @@ a.carprod {
     border: 1px solid #ffc107;
 }
 
+.container.proximo {
+    margin-bottom: 90px;
+}
+
 @media( max-width : 780px){
     .contenedor {
         width: 100%;
