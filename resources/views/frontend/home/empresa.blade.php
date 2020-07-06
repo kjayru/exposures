@@ -24,7 +24,7 @@
 
  <section class="container proximo">
 
-    {!! $pagina->blocks[4]->contenido !!}
+
 
 
         <div class="col-md-12 contacto">
