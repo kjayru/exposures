@@ -54,8 +54,8 @@
                       <td>{{$banner->title}}</td>
                       <td>{{$banner->updated_at}}</td>
                       <td>
-                        <a href="{{ route('banner.edit',['id'=>$banner->id]) }}" class="btn btn-xs btn-primary">Editar</a>
-                        <a href="#" data-id="{{ $banner->id }}" data-toggle="modal" data-target="#delobjeto" class="btn btn-xs btn-danger btn-object-delete">Borrar</a>
+                        <a href="{{ route('banner.edit',['id'=>$banner->id]) }}" class="btn btn-xs btn-primary"><i class="fa fa-fw fa-pencil"></i></a>
+                        <a href="#" data-id="{{ $banner->id }}" data-toggle="modal" data-target="#delobjeto" class="btn btn-xs btn-danger btn-object-delete"><i class="fa fa-fw fa-trash"></i></a>
                     </td>
                     </tr>
                       @endforeach

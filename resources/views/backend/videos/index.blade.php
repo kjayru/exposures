@@ -54,8 +54,8 @@
 
                       <td> {{@$video->order}} </td>
                       <td>
-                        <a href="{{ route('video.edit',['id'=>$video->id])}}" class="btn btn-xs btn-primary">Editar</a>
-                        <a href="#" data-id="{{ $video->id }}" data-toggle="modal" data-target="#delobjeto" class="btn btn-xs btn-danger btn-object-delete">Borrar</a>
+                        <a href="{{ route('video.edit',['id'=>$video->id])}}" class="btn btn-xs btn-primary"><i class="fa fa-fw fa-pencil"></i></a>
+                        <a href="#" data-id="{{ $video->id }}" data-toggle="modal" data-target="#delobjeto" class="btn btn-xs btn-danger btn-object-delete"><i class="fa fa-fw fa-trash"></i></a>
                       </td>
                     </tr>
                     @endforeach

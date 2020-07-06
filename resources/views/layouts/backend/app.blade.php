@@ -113,18 +113,29 @@ $(document).ready(function() {
                     "serverSide":true,
                     "ajax":"{{ url('api/products')}}",
                     "columnDefs":[
+                        { "width": "30%", "targets": 3 },
                       {
                         "targets": 5,
                         "render": function ( data, type, row, meta ) {
                             return '<img src="/storage/'+data +'" width="50" alt="" srcset="">';
                         }
                       },
+
                       {
+                        "targets": 6,
+                        "render": function ( data, type, row, meta ) {
+                            const d = new Date(data);
+                            return d.toLocaleDateString("es-ES");
+                        }
+                      },
+
+                      {
+
                         "targets": 7,
                         "render": function ( data, type, row, meta ) {
 
-                        return  `<a href="/admin/products/${data}/edit" class="btn btn-xs btn-primary">Editar</a>
-                                <a href="#" data-id="${data}" data-toggle="modal" data-target="#delobjeto" class="btn btn-xs btn-danger btn-object-delete">Borrar</a>`;
+                        return  `<a href="/admin/products/${data}/edit" class="btn btn-xs btn-primary"><i class="fa fa-fw fa-pencil"></i></a>
+                                <a href="#" data-id="${data}" data-toggle="modal" data-target="#delobjeto" class="btn btn-xs btn-danger btn-object-delete"><i class="fa fa-fw fa-trash"></i></a>`;
 
                         }
                     }],

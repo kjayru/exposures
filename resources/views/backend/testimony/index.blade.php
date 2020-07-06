@@ -54,8 +54,8 @@
                       <td> {{@$testimony->facebook}} </td>
                       <td> {{@$testimony->twitter}} </td>
                       <td>
-                        <a href="/admin/testimonials/{{ $testimony->id }}/edit" class="btn btn-xs btn-primary">Editar</a>
-                        <a href="#" data-id="{{ $testimony->id }}" data-toggle="modal" data-target="#delobjeto" class="btn btn-xs btn-danger btn-object-delete">Borrar</a>
+                        <a href="/admin/testimonials/{{ $testimony->id }}/edit" class="btn btn-xs btn-primary"><i class="fa fa-fw fa-pencil"></i></a>
+                        <a href="#" data-id="{{ $testimony->id }}" data-toggle="modal" data-target="#delobjeto" class="btn btn-xs btn-danger btn-object-delete"><i class="fa fa-fw fa-trash"></i></a>
                       </td>
                     </tr>
                     @endforeach
