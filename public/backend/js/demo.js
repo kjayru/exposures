@@ -360,7 +360,8 @@ $(".btn-modificar-imagen").on('click',function(e){
 
 $(".btn-object-delete").on("click", function(){
     let id = $(this).data('id');
-    $(".delete-objeto input[name='id']").val(id);
+    $("input[name='id']").val(id);
+
   });
 
 
