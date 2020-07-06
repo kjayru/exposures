@@ -587,7 +587,7 @@ ul.lista2>li>p {
     margin-right: 37px;
 }
 .lista2 p,.lista1 p {
-    width: 90%;
+    width: 85%;
     display: inline-block;
     padding-bottom: 9px;
     border-bottom: 1px solid #ddd;
