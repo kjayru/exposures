@@ -36,7 +36,15 @@ class DealerController extends Controller
 
         $files = Storage::files('marcas');
 
-        return view('backend.dealer.create',['estados'=>$estados,'fotos'=>$files]);
+        $estados = State::orderBy('name','desc')->get();
+        $multimedias = Multimedia::orderBy('id','desc')->get();
+        $brands = Brand::all();
+
+
+            $contenedor =null;
+
+
+        return view('backend.dealer.create',['estados'=>$estados,'fotos'=>$files,'brands'=>$brands,'contenedor'=>$contenedor]);
     }
 
     /**

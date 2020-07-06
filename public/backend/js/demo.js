@@ -358,9 +358,11 @@ $(".btn-modificar-imagen").on('click',function(e){
     $(this).parent('div').parent('div').children("#imagen").show();
 })
 
-$(".btn-object-delete").on("click", function(){
+$(document).on("click",".btn-object-delete", function(){
+
     let id = $(this).data('id');
-    $("input[name='id']").val(id);
+
+    $(".delete-objeto input[name='id']").val(id);
 
   });
 

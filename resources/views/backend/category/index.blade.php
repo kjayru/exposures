@@ -76,7 +76,7 @@
                                     <p>¿Esta seguro de eliminar este item?</p>
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-outline pull-left " data-dismiss="modal">Cancelar</button>
+                                <button type="button" class="btn btn-outline pull-left" data-dismiss="modal">Cancelar</button>
                                 <button type="submit" class="btn btn-outline" >Eliminar</button>
                             </div>
                         </form>
