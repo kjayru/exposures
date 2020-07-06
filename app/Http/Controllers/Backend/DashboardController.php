@@ -4,6 +4,9 @@ namespace App\Http\Controllers\Backend;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\User;
+use App\Order;
+use App\Role;
 
 class DashboardController extends Controller
 {
@@ -18,7 +21,13 @@ class DashboardController extends Controller
      */
     public function index()
     {
-        return view('backend.dashboard');
+
+        $rol = Role::where('id',3)->first();
+
+        $users = $rol->users;
+        $orders = Order::count();
+
+        return view('backend.dashboard',['users'=>$users,'orders'=>$orders]);
     }
 
 

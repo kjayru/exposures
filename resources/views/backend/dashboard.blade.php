@@ -1,7 +1,7 @@
 @extends('layouts.backend.app')
 @section('content')
-   
-    
+
+
 <div class="content-wrapper">
         <!-- Content Header (Page header) -->
         <section class="content-header">
@@ -14,17 +14,17 @@
             <li class="active">Dashboard</li>
           </ol>
         </section>
-    
-     
+
+
         <section class="content">
-       
+
           <div class="row">
             <div class="col-lg-3 col-xs-6">
               <!-- small box -->
               <div class="small-box bg-aqua">
                 <div class="inner">
-                  <h3>15</h3>
-    
+                  <h3>{{ $orders }}</h3>
+
                   <p>Ordenes</p>
                 </div>
                 <div class="icon">
@@ -38,8 +38,8 @@
               <!-- small box -->
               <div class="small-box bg-green">
                 <div class="inner">
-                  <h3>53</h3>
-    
+                  <h3>{{ $users->count()}}</h3>
+
                   <p>Usuarios registrados</p>
                 </div>
                 <div class="icon">
@@ -48,36 +48,36 @@
                 <a href="#" class="small-box-footer">Más <i class="fa fa-arrow-circle-right"></i></a>
               </div>
             </div>
-            
+
           </div>
-       
+
           <div class="row">
-         
+
             <section class="col-lg-7 connectedSortable">
-            
+
               <div class="nav-tabs-custom">
-             
+
                 <ul class="nav nav-tabs pull-right">
                   <li class="active"><a href="#revenue-chart" data-toggle="tab">Area</a></li>
-                  
+
                   <li class="pull-left header"><i class="fa fa-inbox"></i> Ventas</li>
                 </ul>
                 <div class="tab-content no-padding">
-                
+
                   <div class="chart tab-pane active" id="revenue-chart" style="position: relative; height: 300px;"></div>
-                
+
                 </div>
               </div>
-    
+
             </section>
-          
+
           </div>
-        
-    
+
+
         </section>
-      
+
       </div>
 
 
-      
+
 @endsection
