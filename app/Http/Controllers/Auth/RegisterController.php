@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use App\RoleUser;
 
 class RegisterController extends Controller
 {
@@ -28,7 +29,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/admin';
+    protected $redirectTo = '/usuario';
 
     /**
      * Create a new controller instance.
@@ -68,5 +69,50 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
         ]);
+
+
+
+        $role = new RoleUser();
+        $role->role_id = 3;
+        $role->user_id = $user->id;
+        $role->save();
+
+/*
+        //envio de mensaje de registro
+        try {
+			$mandrill = new Mandrill('qwDXkgo5JLRrl85uKQzojA');
+			$template_name = 'cuenta-tienda-eden';
+			$template_content = array();
+			$message = array(
+
+				'subject' => 'Confirmación de registro',
+				'from_email' => 'contacto@eledenmx.com',
+				'from_name' => 'El Edén',
+				'to' => array(
+					array(
+						'email' => $data['email'],
+						'name' => $data['name'],
+						'type' => 'to'
+						)
+
+					),
+				'headers' => array('Reply-To' => 'contacto@eledenmx.com'),
+
+				);
+			$result = $mandrill->messages->sendTemplate($template_name, $template_content, $message);
+
+
+
+
+		} catch(Mandrill_Error $e) {
+
+			echo 'A mandrill error occurred: ' . get_class($e) . ' - ' . $e->getMessage();
+
+			throw $e;
+		}*/
+
+
+        return $user;
+
     }
 }
