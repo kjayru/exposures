@@ -22,7 +22,7 @@ class CreateDealersTable extends Migration
             $table->string('phone');
             $table->string('email');
             $table->text('maps');
-            $table->integer('state_id');
+            $table->integer('estado');
             $table->integer('order');
             $table->timestamps();
 
