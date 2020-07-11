@@ -243,7 +243,7 @@ Route::group(['prefix' => 'outlet'],function(){
 });
 
 Route::group(['prefix' => 'usuario'],function(){
-    Route::get('/', 'Frontend\UsuarioController@index')->name('dashboard');
+    Route::get('/', 'Frontend\UsuarioController@index')->name('usuario.dashboard');
     Route::get('/configuracion','Frontend\UsuarioController@configuracion')->name('configuracion');
     Route::post('/updatedatos','Frontend\UsuarioController@updatedatos')->name('updatedatos');
 });
