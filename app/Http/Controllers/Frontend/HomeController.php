@@ -275,7 +275,7 @@ class HomeController extends Controller
     public function testmail(){
 
 
-        $order = Order::where('id',1)->first();
+        $order = Order::where('id',8)->first();
 
 
        Mail::to("wiltinoco@gmail.com")->send(new OrderShipped($order));
