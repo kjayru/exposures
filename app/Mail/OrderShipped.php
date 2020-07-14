@@ -18,16 +18,16 @@ class OrderShipped extends Mailable
      *
      * @return void
      */
-    public $orden;
+    public $order;
 
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct($orden)
+    public function __construct($order)
     {
-        $this->orden = $orden;
+        $this->order = $order;
     }
 
 

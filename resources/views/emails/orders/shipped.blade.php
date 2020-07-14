@@ -28,8 +28,8 @@
                  <tbody>
                  <tr>
                  <td>
-                 <dt style="font-weight: bold;">Nombre:</dt><dl>{{ $orden->user->name }}</dl>
-                 <dt style="font-weight: bold;">Email:</dt><dl>{{ $orden->user->email }}</dl>
+                 <dt style="font-weight: bold;">Nombre:</dt><dl>{{ $order->user->name }}</dl>
+                 <dt style="font-weight: bold;">Email:</dt><dl>{{ $order->user->email }}</dl>
                  </td>
                  </tr>
                  </tbody>
@@ -43,17 +43,17 @@
                  <tbody>
                  <tr>
                  <td>
-                 <dt style="font-weight: bold;">Nombre:</dt><dl>{{$orden->billing->name." ".$orden->billing->lastname}}</dl>
-                 <dt style="font-weight: bold;">Dirección:</dt><dl>{{$orden->billing->address1}}</dl>
+                 <dt style="font-weight: bold;">Nombre:</dt><dl>{{$order->billing->name." ".$order->billing->lastname}}</dl>
+                 <dt style="font-weight: bold;">Dirección:</dt><dl>{{$order->billing->address1}}</dl>
                  <dt style="font-weight: bold;">Estado :</dt><dl></dl>
-                 <dt style="font-weight: bold;">Ciudad :</dt><dl>{{$orden->billing->city->name}}</dl>
+                 <dt style="font-weight: bold;">Ciudad :</dt><dl>{{$order->billing->city->name}}</dl>
                  </td>
                  </tr>
                  </tbody>
                  </table>
 
 
-                @php $productos = unserialize($orden->cart) @endphp
+                @php $productos = unserialize($order->cart) @endphp
 
 
                     <table style="width:100%">
