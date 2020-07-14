@@ -28,8 +28,8 @@ $config['authentication'] = '\App\Http\Middleware\CustomCKFinderAuth';
 /*============================ License Key ============================================*/
 // http://docs.cksource.com/ckfinder3-php/configuration.html#configuration_options_licenseKey
 
-$config['licenseName'] = 'exposure.kjayru.com';
-$config['licenseKey']  = '7AUASL3F6FAPT7521S74YY1VHN4PF';
+$config['licenseName'] = env('APP_URL');
+$config['licenseKey']  = env('LIC_FINDER');
 
 /*============================ CKFinder Internal Directory ============================*/
 // http://docs.cksource.com/ckfinder3-php/configuration.html#configuration_options_privateDir
