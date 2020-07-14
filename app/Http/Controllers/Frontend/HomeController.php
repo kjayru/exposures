@@ -21,6 +21,9 @@ use App\State;
 use App\Brand;
 use App\Imports\ProductImport;
 use App\Gallery;
+use App\Order;
+use App\Mail\OrderShipped;
+use Illuminate\Support\Facades\Mail;
 
 class HomeController extends Controller
 {
@@ -265,6 +268,21 @@ class HomeController extends Controller
 
 
         return view('frontend.home.filtro',['slide'=>$slide,'dealers'=>$dealers,'estados'=>$estados,'marcas'=>$marcas]);
+    }
+
+
+
+    public function testmail(){
+
+
+        $orden = Order::where('id',1)->first();
+
+
+
+
+
+                        Mail::to("wiltinoco@gmail.com")->send(new OrderShipped($orden));
+
     }
 }
 

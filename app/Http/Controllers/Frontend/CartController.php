@@ -8,6 +8,8 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
 use Session;
 use DB;
+use App\Mail\OrderShipped;
+use Illuminate\Support\Facades\Mail;
 
 use App\Billing;
 use App\Order;
@@ -126,6 +128,10 @@ class CartController extends Controller
                     $user = User::find($user_id);
 
 
+                    //obtener billing 
+                        $billing = Billing::where('user_id',$user_id)->where('status','1')->first();
+                    //
+
                     //REGISTRA ORDEN
                     $order = new Order;
 
@@ -139,17 +145,24 @@ class CartController extends Controller
                     $order->user_id = $user_id;
 
                     $order->order_send_id =  $arr_body['id'];
-                    $order->billing_id = 1;
+                    $order->billing_id = $billing->id;
                     $order->shipment = '0';
                     $order->save();
 
 
-                    //Elimina carrito
-                    Session::forget('cart');
+
+                    //enviar mail con productos
+
+                    Mail::to($user->email)->send(new OrderShipped($orden));
+
 
                 }
+                /*** END PRODUCTOS */
 
-                $mensaje =  "Payment is successful. Your transaction id is: ". $arr_body['id'];
+
+
+
+                $mensaje =  "El pago es exitoso. Su ID de transacción es: ". $arr_body['id'];
             } else {
                 $mensaje =  $response->getMessage();
             }

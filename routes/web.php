@@ -58,7 +58,7 @@ Route::any('/ckfinder/browser', '\CKSource\CKFinderBridge\Controller\CKFinderCon
 Route::post('/getciudades','Frontend\CartController@getCiudades');
 Route::get('/getdatabill/{id}','Frontend\CartController@getbilling');
 
-
+Route::get('/testmail','Frontend\HomeController@testmail');
 Auth::routes();
 
 //Route::get('/login', 'backend\HomeController@index')->name('login');
