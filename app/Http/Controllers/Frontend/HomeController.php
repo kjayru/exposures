@@ -278,10 +278,7 @@ class HomeController extends Controller
         $orden = Order::where('id',1)->first();
 
 
-
-
-
-               //         Mail::to("wiltinoco@gmail.com")->send(new OrderShipped($orden));
+       Mail::to("wiltinoco@gmail.com")->send(new OrderShipped($orden));
 
     }
 }

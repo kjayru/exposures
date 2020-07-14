@@ -27,7 +27,7 @@ use PayPal\Api\PaymentExecution;
 */
 
 Route::get('/products', function (Request $request) {
-    //return $request->user();
+
      return datatables()
         ->eloquent(App\Product::query())
         ->toJson();
