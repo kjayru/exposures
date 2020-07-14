@@ -155,13 +155,14 @@ class CartController extends Controller
 
                     Mail::to($user->email)->send(new OrderShipped($order));
 
-                    Session::forget('cart');
+                   
                 }
                 /*** END PRODUCTOS */
 
 
 
-
+                Session::forget('cart');
+                
                 $mensaje =  "El pago es exitoso. Su ID de transacción es: ". $arr_body['id'];
             } else {
                 $mensaje =  $response->getMessage();
