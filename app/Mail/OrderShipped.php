@@ -38,7 +38,7 @@ class OrderShipped extends Mailable
      */
     public function build()
     {
-        return $this->from('sistema@expusure.mx')
+        return $this->from(env('MAIL_FROM_ADDRESS'))
                 ->view('emails.orders.shipped');
 
     }
