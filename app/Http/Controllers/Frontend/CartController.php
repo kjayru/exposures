@@ -149,13 +149,13 @@ class CartController extends Controller
                     $order->shipment = '0';
                     $order->save();
 
-                    dd($order);
+                   
 
                     //enviar mail con productos
 
                     Mail::to($user->email)->send(new OrderShipped($order));
 
-
+                    Session::forget('cart');
                 }
                 /*** END PRODUCTOS */
 
