@@ -43,11 +43,13 @@
           <div class="col-xs-4">
             <button type="submit" class="btn btn-primary btn-block btn-flat">Ingresar</button>
           </div>
+
           <!-- /.col -->
         </div>
       </form>
 
-
+      <a href="/password/reset" class="text-center">Olvide mi clave</a>
+      <a href="/register" class="text-center">Registrarme</a>
       <!-- /.social-auth-links -->
 
 
