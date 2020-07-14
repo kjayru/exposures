@@ -131,7 +131,7 @@ class CartController extends Controller
                     //obtener billing 
                         $billing = Billing::where('user_id',$user_id)->where('status','1')->first();
                     //
-
+                   
                     //REGISTRA ORDEN
                     $order = new Order;
 
@@ -149,11 +149,11 @@ class CartController extends Controller
                     $order->shipment = '0';
                     $order->save();
 
-
+                    dd($order);
 
                     //enviar mail con productos
 
-                    Mail::to($user->email)->send(new OrderShipped($orden));
+                    Mail::to($user->email)->send(new OrderShipped($order));
 
 
                 }
