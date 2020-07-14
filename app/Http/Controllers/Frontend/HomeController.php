@@ -281,7 +281,7 @@ class HomeController extends Controller
 
 
 
-                        Mail::to("wiltinoco@gmail.com")->send(new OrderShipped($orden));
+               //         Mail::to("wiltinoco@gmail.com")->send(new OrderShipped($orden));
 
     }
 }
