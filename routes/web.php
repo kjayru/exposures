@@ -29,6 +29,7 @@ Route::get('/distribuidores/marca/{marca}','Frontend\HomeController@dealermarca'
 Route::get('/distribuidores/filtro/{marca}','Frontend\HomeController@filtro')->name('buscador-filtro');
 
 Route::get('/contacto', 'Frontend\HomeController@contacto')->name('contacto');
+Route::post('/proceso', 'Frontend\HomeController@procesocontacto')->name('procesocontacto');
 
 Route::get('/sliders', 'Frontend\HomeController@getslide')->name('slider');
 Route::get('/inicio', 'Frontend\HomeController@getinicio')->name('getinicio');
@@ -144,30 +145,12 @@ Route::group(['prefix' => 'admin'],function(){
 
 
 
-    /*Route::resource('/categories', 'CategoryController')->except(['show'])->names([
-        'index'  => 'category.index',
-        'create' => 'category.build',
-        'store'  => 'category.store',
-        'edit'   => 'category.edit',
-        'update' => 'category.update',
-        'delete' => 'category.destroy'
-    ]);*/
-
-
     Route::get('/pages', 'Backend\PageController@index')->name('pages');
     Route::get('/pages/{id}/edit', 'Backend\PageController@edit')->name('pages.edit');
     Route::post('/pages','Backend\PageController@store')->name('pages.store');
     Route::put('pages/{id}','Backend\PageController@update')->name('pages.update');
 
-    /*
-        Route::get('/category-blog', 'Backend\CategoryBLogController@index')->name('catblog.index');
-        Route::get('/category-blog/create', 'Backend\CategoryBLogController@create')->name('catblog.created');
-        Route::post('/category-blog', 'Backend\CategoryBLogController@store')->name('catblog.store');
-        Route::get('/category-blog/{catblog}/edit', 'Backend\CategoryBLogController@edit')->name('catblog.edit');
-        Route::put('/category-blog/{catblog}', 'Backend\CategoryBLogController@update')->name('catblog.update');
-        Route::delete('/category-blog/{catblog}', 'Backend\CategoryBLogController@destroy')->name('catblog.destroy');
 
-    */
 
     Route::get('/testimonials', 'Backend\TestimonyController@index')->name('testimony.index');
     Route::get('/testimonials/create', 'Backend\TestimonyController@create')->name('testimony.created');
@@ -175,15 +158,7 @@ Route::group(['prefix' => 'admin'],function(){
     Route::get('/testimonials/{testimony}/edit', 'Backend\TestimonyController@edit')->name('testimony.edit');
     Route::put('/testimonials/{testimony}', 'Backend\TestimonyController@update')->name('testimony.update');
     Route::delete('/testimonials/{testimony}', 'Backend\TestimonyController@destroy')->name('testimony.destroy');
-    /*
 
-        Route::get('/posts', 'Backend\BLogController@index')->name('post.index');
-        Route::get('/posts/create', 'Backend\BLogController@create')->name('post.created');
-        Route::post('/posts', 'Backend\BLogController@store')->name('post.store');
-        Route::get('/posts/{post}/edit', 'Backend\BLogController@edit')->name('post.edit');
-        Route::put('/posts/{post}', 'Backend\BLogController@update')->name('post.update');
-        Route::delete('/posts/{testimony}', 'Backend\BLogController@destroy')->name('post.destroy');
-    */
     //banner
 
     Route::get('/banners', 'Backend\BannerController@index')->name('banner.index');
@@ -271,14 +246,4 @@ Route::group(['prefix'=>'checkout'],function(){
 
 
 });
-
-
-
-//Route::get('/procesopago/{id}', 'Frontend\OutletController@procesopago')->name('outlet.procesopago');
-
-/*
-Route::get('payment', 'Frontend\OutletController@listar');
-Route::post('charge', 'Frontend\OutletController@charge');
-Route::get('paymentsuccess', 'Frontend\OutletController@payment_success');
-Route::get('paymenterror', 'Frontend\OutletController@payment_error');*/
 

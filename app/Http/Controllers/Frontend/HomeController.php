@@ -24,6 +24,7 @@ use App\Gallery;
 use App\Order;
 use App\Mail\OrderShipped;
 use Illuminate\Support\Facades\Mail;
+use App\Mail\ContactoMail;
 use Sendgrid\Sendgrid;
 
 class HomeController extends Controller
@@ -272,6 +273,23 @@ class HomeController extends Controller
     }
 
 
+    public function procesocontacto(Request $request){
+        $slide = Slide::where('id',6)->first();
+        $pagina = Page::where('id',6)->first();
+
+      $data = ([
+        "nombre"  =>  $request['nombre'],
+        "email"   =>  $request['email'],
+        "asunto"  =>  $request['asunto'],
+        "mensaje" =>  $request['mensaje'],
+        ]);
+
+        Mail::to('tania@cobos.com.mx')->send(new ContactoMail($data));
+
+
+        return view('frontend.home.gracias',['slide'=>$slide,'pagina'=>$pagina]);
+
+    }
 
     public function testmail(){
 
@@ -279,7 +297,7 @@ class HomeController extends Controller
        $order = Order::where('id',1)->first();
 
 
-       Mail::to("wiltinoco@gmail.com")->send(new OrderShipped($order));
+       Mail::to("tania@cobos.com.mx")->send(new OrderShipped($order));
 
        /*$email = new \SendGrid\Mail\Mail();
         $email->setFrom("sistema@exposuredev.com", "Example User");

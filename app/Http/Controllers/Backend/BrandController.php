@@ -80,7 +80,7 @@ class BrandController extends Controller
      */
     public function update(Request $request, $id)
     {
-        dd($request);
+
         $request->validate([
             'nombre' => 'required',
             'file' => 'required',

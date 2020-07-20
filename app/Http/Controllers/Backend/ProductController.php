@@ -90,7 +90,17 @@ class ProductController extends Controller
          $imagen = $request->file('imagen')->store('products');
          $product->imagen = $imagen;
         }
+
+        if(!$request->outlet){
+            $product->outlet = 0;
+        }else{
+            $product->outlet = 1;
+        }
+
+
         $product->save();
+
+
 
 
         $product->category()->sync($request->categorias);
@@ -191,8 +201,10 @@ class ProductController extends Controller
          $product->imagen = $imagen;
         }
 
-        if($request->outlet){
-            $product->outlet = $request->outlet;
+        if(!$request->outlet){
+            $product->outlet = 0;
+        }else{
+            $product->outlet = 1;
         }
 
         $product->save();
