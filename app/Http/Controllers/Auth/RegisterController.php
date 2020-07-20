@@ -7,6 +7,8 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\BienvenidoMail;
 use App\RoleUser;
 
 class RegisterController extends Controller
@@ -64,18 +66,28 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        return User::create([
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'password' => Hash::make($data['password']),
-        ]);
 
 
+        $user = new User();
+
+        $user->name = $data['name'];
+        $user->email = $data['email'];
+        $user->password = Hash::make($data['password']);
+
+        $user->save();
 
         $role = new RoleUser();
         $role->role_id = 3;
         $role->user_id = $user->id;
         $role->save();
+
+
+        $data = ([
+            'name' =>  $data['name'],
+            'email' =>  $data['email'],
+            ]);
+
+        Mail::to($data['email'])->send(new BienvenidoMail($data));
 
 /*
         //envio de mensaje de registro
