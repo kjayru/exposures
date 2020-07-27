@@ -195,7 +195,7 @@ $(".btn-save-billing").on('click',function(e){
     let zipcode =  $("#zipcode").val();
     let id =  $("input[name=id]").val();
 
-
+    alert(tipo);
     if(tipo=='POST'){
 
         var datasendbilling = ({'_token':token,'_method':'POST', 'tipo':tipo, 'nombre':nombre, 'apellidos':apellidos, 'celular':celular,'telefono':telefono,'email':email,'direccion':direccion,'ciudad':ciudad,'estado':estado,'zipcode':zipcode});

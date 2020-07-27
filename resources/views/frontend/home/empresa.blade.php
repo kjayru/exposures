@@ -29,35 +29,43 @@
 
         <div class="col-md-12 contacto">
             <h3>NOS INTERESA TU OPINION, HABLA...EXPOSURE TE ESCUCHA</h3>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="form-group">
-                        <input type="text" name="nombre" placeholder="Nombre:*" class="form-control" required>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="form-group">
-                        <input type="text" name="email" placeholder="Email:*" class="form-control" required>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="form-group">
-                        <input type="text" name="asunto" placeholder="Asunto:*" class="form-control" required>
-                    </div>
-
-                </div>
 
 
-                <div class="col-md-12">
-                    <div class="form-group">
-                        <textarea name="mensaje" class="form-control" placeholder="Mensaje:*" cols="30" rows="10"></textarea>
+            <form action="/proceso" method="POST">
+                @csrf
+                <div class="row formulario">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <input type="text" name="nombre" placeholder="Nombre:*" class="form-control" required>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <input type="text" name="email" placeholder="Email:*" class="form-control" required>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <input type="text" name="asunto" placeholder="Asunto:*" class="form-control" required>
+                        </div>
+
                     </div>
 
-                    <div class="form-group float-right">
-                        <button type="submit" class="btn btn-primary">Enviar</button>
+
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <textarea name="mensaje" class="form-control" placeholder="Mensaje:*" cols="30" rows="10"></textarea>
+                        </div>
+
+                        <div class="form-group float-right">
+                            <button type="submit" class="btn btn-primary">Enviar</button>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </form>
+
+
+
         </div>
 
 </section>

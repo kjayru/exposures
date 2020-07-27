@@ -182,6 +182,8 @@ class CartController extends Controller
 
 
     public function savebilling(Request $request){
+
+       
         $user_id = Auth::id();
 
         $contador = Billing::where('user_id',$user_id)->count();
