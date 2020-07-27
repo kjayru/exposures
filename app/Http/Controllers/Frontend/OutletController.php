@@ -34,7 +34,7 @@ class OutletController extends Controller
     public function index(){
         $slide = Slide::where('id',7)->first();
 
-        $products = Product::where('outlet','1')->orderBy('id','desc')->get();
+        $products = Product::where('outlet','1')->orderBy('updated_at','desc')->get();
 
         $latest = Product::where('outlet','1')->orderBy('updated_at','desc')->limit(6)->get();
         /*$catout = [];
