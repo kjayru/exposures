@@ -195,11 +195,12 @@ $(".btn-save-billing").on('click',function(e){
     let zipcode =  $("#zipcode").val();
     let id =  $("input[name=id]").val();
 
-    alert(tipo);
+ 
     if(tipo=='POST'){
 
         var datasendbilling = ({'_token':token,'_method':'POST', 'tipo':tipo, 'nombre':nombre, 'apellidos':apellidos, 'celular':celular,'telefono':telefono,'email':email,'direccion':direccion,'ciudad':ciudad,'estado':estado,'zipcode':zipcode});
 
+        console.log("post "+datasendbilling);
         $.ajax({
             url:'/checkout/savebilling/',
             type:'POST',
@@ -214,7 +215,7 @@ $(".btn-save-billing").on('click',function(e){
     }else{
 
         var datasendbilling = ({'_token':token,'_method':'PUT','id':id, 'tipo':tipo, 'nombre':nombre, 'apellidos':apellidos, 'celular':celular,'telefono':telefono,'email':email,'direccion':direccion,'ciudad':ciudad,'estado':estado,'zipcode':zipcode});
-
+        console.log("get "+datasendbilling);
 
         $.ajax({
             url:'/checkout/updatebilling/'+id,
