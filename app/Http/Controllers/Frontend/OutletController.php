@@ -36,7 +36,7 @@ class OutletController extends Controller
 
         $products = Product::where('outlet','1')->orderBy('id','desc')->get();
 
-        $latest = Product::where('outlet','1')->orderBy('id','desc')->limit(6)->get();
+        $latest = Product::where('outlet','1')->orderBy('updated_at','desc')->limit(6)->get();
         /*$catout = [];
         foreach($products as $prod){
 
@@ -48,7 +48,7 @@ class OutletController extends Controller
         //$categorias = $coleccion->unique();
         $marcas = Marca::where('parent_id',null)->get();
 
-      ;
+
 
         return view('frontend.outlet.index',compact('latest','products','marcas','slide'));
     }

@@ -301,11 +301,33 @@ jQuery(function ($) {
 });
 
 $(".recientes").slick({
+
     slidesToShow: 4,
-  slidesToScroll: 1,
-  autoplay: true,
-  autoplaySpeed: 2000,
-  centerMode:true,
+    slidesToScroll: 1,
+    autoplaySpeed: 2000,
+    centerMode: true,
+    dots: false,
+    variableWidth: true,
+    arrows: true,
+    infinite: false,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          arrows: false,
+          centerMode: true,
+          slidesToShow: 3
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          arrows: false,
+          centerMode: true,
+          slidesToShow: 1
+        }
+      }
+    ]
   });
 
 

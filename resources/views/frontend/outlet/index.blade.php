@@ -22,7 +22,7 @@
         </div>
     </div>
     <div class="row justify-content-center grayspace">
-        <div class="col-md-8 pt-3 pb-3">
+        <div class="col-md-11 pt-3 pb-3">
             <div class="row">
 
                 <div class="col-md-12">
