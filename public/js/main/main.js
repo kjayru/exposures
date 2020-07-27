@@ -124,9 +124,6 @@ $(".btn-modificar-address").on('click',function(e){
 $(document).on('click',".btn-edit-billing",function(e){
     e.preventDefault();
 
-
-
-
     let id = $(this).data('id');
 
 
@@ -137,24 +134,6 @@ $(document).on('click',".btn-edit-billing",function(e){
 
         success:function(response){
 
-
-            /*address1: "asddd asd s122"
-address2: null
-city_id: 18
-colony: null
-created_at: "2020-06-02 23:13:21"
-email: "demo@demoo.com"
-id: 2
-lastname: "demo"
-name: "demo"
-other_phone: "3423423"
-phone: "1313123"
-state_id: 3
-status: 1
-type_address: null
-updated_at: "2020-06-02 23:55:04"
-user_id: 2
-zipcode: "234234"*/
 
             $("#nombre").val(response.name);
             $("#apellidos").val(response.lastname);
@@ -200,9 +179,9 @@ $(".btn-save-billing").on('click',function(e){
 
         var datasendbilling = ({'_token':token,'_method':'POST', 'tipo':tipo, 'nombre':nombre, 'apellidos':apellidos, 'celular':celular,'telefono':telefono,'email':email,'direccion':direccion,'ciudad':ciudad,'estado':estado,'zipcode':zipcode});
 
-        console.log("post "+datasendbilling);
+       
         $.ajax({
-            url:'/checkout/savebilling/',
+            url:'/checkout/savebilling',
             type:'POST',
             dataType:'json',
             data:datasendbilling,
@@ -215,7 +194,7 @@ $(".btn-save-billing").on('click',function(e){
     }else{
 
         var datasendbilling = ({'_token':token,'_method':'PUT','id':id, 'tipo':tipo, 'nombre':nombre, 'apellidos':apellidos, 'celular':celular,'telefono':telefono,'email':email,'direccion':direccion,'ciudad':ciudad,'estado':estado,'zipcode':zipcode});
-        console.log("get "+datasendbilling);
+      
 
         $.ajax({
             url:'/checkout/updatebilling/'+id,
