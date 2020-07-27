@@ -347,6 +347,9 @@ $(".recientes").slick({
     return false;
   });
 
+
+
+
   $('#search').keypress(function(event){
     var keycode = (event.keyCode ? event.keyCode : event.which);
     if(keycode == '13'){
@@ -464,7 +467,7 @@ $('#recientes').slick({
         });
     });
 
-
+/*
     $(document).ready(function() {
         $('#navbarDropdown').mouseenter(function() {
           $('.dropdown-menu').slideToggle(300, "linear");
@@ -473,4 +476,5 @@ $('#recientes').slick({
         $('.dropdown-menu').mouseleave(function() {
           $(this).slideToggle(300, "linear");
         });
-      });
+    });
+*/

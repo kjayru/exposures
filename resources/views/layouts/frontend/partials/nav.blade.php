@@ -60,11 +60,9 @@
 
                     <li  class="nav-item dropdown mov">
 
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Marcas
-                          </a>
+                        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">Marcas </a>
 
-                          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink2">
 
                                 @foreach($menusmarca as $k => $item)
 
@@ -75,8 +73,6 @@
 
                                 @endforeach
                           </ul>
-
-
 
                     </li>
 
