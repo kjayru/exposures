@@ -39,7 +39,7 @@
             </div>
             <div class="row">
                 <div class="col-md-12 infoutlet">
-                    <strong>Favor de solicitar existencias antes de confirmar la compra al&nbsp;correo:&nbsp;<a href="mailto:info@exposure.mx"><span style="color: #0000ff;">info@exposure.mx</span></a></strong>
+                    <strong>Favor de solicitar existencias antes de confirmar la compra por medio de chat.</strong>
                 </div>
             </div>
 
