@@ -173,7 +173,7 @@ class ProductController extends Controller
         $marcas = Marca::marcas();
 
 
-        return view('backend.product.edit',['product'=>$product,'categories'=>$categories,'categorias'=>$categorias,'fotos'=>$multimedias,'catprods'=>$mcas,'mpro'=>$mpro,'marcas'=>$marcas,'galerias'=>$galerias]);
+        return view('backend.product.edit',['product'=>$product,'categories'=>$categories,'categorias'=>$categorias,'catprods'=>$mcas,'mpro'=>$mpro,'marcas'=>$marcas,'galerias'=>$galerias]);
     }
 
 
@@ -242,7 +242,6 @@ class ProductController extends Controller
         return redirect()->route('product.index')
         ->with('info','Producto eliminado con exito');
     }
-
 
 
 

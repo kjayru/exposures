@@ -6,23 +6,12 @@
                 <span aria-hidden="true">&times;</span></button>
               <h4 class="modal-title">Imagenes</h4>
             </div>
-            <div class="modal-body">
+            <div class="modal-body contenedorjax">
 
-                @if(@$fotos)
-                @foreach ($fotos as $foto)
 
-                <div class="col-md-3 ">
-                    <div class="thumbnail">
-                        <a href="#" class="contenedor thumimg"  data-path="{{ $foto }}">
-                            <img src="/storage/{{ $foto}}" class="img-responsive">
-                            <div class="boxmark">
-                                <span ></span>
-                            </div>
-                        </a>
-                    </div>
-                  </div>
-                @endforeach
-                @endif
+
+
+
             </div>
             <div class="modal-footer">
               <a class="btn btn-default pull-left seleccionar-thumb" >Agregar a producto</a>

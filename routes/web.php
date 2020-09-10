@@ -60,6 +60,8 @@ Route::post('/getciudades','Frontend\CartController@getCiudades');
 Route::get('/getdatabill/{id}','Frontend\CartController@getbilling');
 
 Route::get('/testmail','Frontend\HomeController@testmail');
+Route::get('/getphotos','Frontend\HomeController@getphotos');
+
 Auth::routes();
 
 //Route::get('/login', 'backend\HomeController@index')->name('login');
@@ -205,6 +207,8 @@ Route::group(['prefix' => 'admin'],function(){
     Route::get('/brands/{marca}/edit', 'Backend\BrandController@edit')->name('brand.edit');
     Route::put('/brands/{marca}', 'Backend\BrandController@update')->name('brand.update');
     Route::delete('/brands/{marca}', 'Backend\BrandController@destroy')->name('brand.destroy');
+
+
 
 });
 

@@ -17,6 +17,7 @@ use App\Activity;
 use Illuminate\Support\Str;
 use Excel;
 use File;
+use Illuminate\Support\Facades\Storage;
 use App\State;
 use App\Brand;
 use App\Imports\ProductImport;
@@ -300,5 +301,12 @@ class HomeController extends Controller
        Mail::to("tania@cobos.com.mx")->send(new OrderShipped($order));
 
     }
+
+    public function getphotos(){
+
+        $multimedias = Storage::allFiles('products');
+        return Response()->json($multimedias);
+    }
+
 }
 
