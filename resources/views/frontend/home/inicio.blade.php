@@ -3,7 +3,7 @@
 @section('content')
 <div class="vistas" style="display:none;">
 base {{ env('APP_URL').'/storage/' }}
-root {{ storage_path('/app/public/')}}
+root {{ storage_path('app/public/')}}
 </div>
 <section class="slider-home">
         <div class="slider-wrapper theme-default">
