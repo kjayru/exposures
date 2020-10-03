@@ -85,7 +85,8 @@ $config['backends']['default'] = array(
     'root'         => storage_path('app/public/'),
     'chmodFiles'   => 0777,
     'chmodFolders' => 0755,
-    'filesystemEncoding' => 'UTF-8'
+    'filesystemEncoding' => 'UTF-8',
+    'followSymlinks'     => true
 );
 
 /*================================ Resource Types =====================================*/
