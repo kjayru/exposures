@@ -14,8 +14,8 @@
 //ini_set('display_errors', 0);
 
 // Development
-// error_reporting(E_ALL);
-// ini_set('display_errors', 1);
+error_reporting(E_ALL);
+ ini_set('display_errors', 1);
 
 /*============================ General Settings =======================================*/
 // http://docs.cksource.com/ckfinder3-php/configuration.html
@@ -156,7 +156,7 @@ $config['accessControl'][] = array(
     'IMAGE_RESIZE_CUSTOM' => true
 );
 
-$config['loadRoutes'] = false;
+//$config['loadRoutes'] = false;
 /*================================ Other Settings =====================================*/
 // http://docs.cksource.com/ckfinder3-php/configuration.html
 

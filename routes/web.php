@@ -62,8 +62,6 @@ Route::get('/getdatabill/{id}','Frontend\CartController@getbilling');
 Route::get('/testmail','Frontend\HomeController@testmail');
 Route::get('/getphotos','Frontend\HomeController@getphotos');
 
-Route::any('/ckfinder/examples/{example?}', 'CKSource\CKFinderBridge\Controller\CKFinderController@examplesAction')
-    ->name('ckfinder_examples');
 
 Auth::routes();
 
