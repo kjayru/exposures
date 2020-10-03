@@ -82,7 +82,7 @@ $config['backends']['default'] = array(
     'name'         => 'default',
     'adapter'      => 'local',
     'baseUrl'      => env('APP_URL').'/storage/',
-    'root'         => public_path('/storage/'),
+    'root'         => storage_path('/app/public/'),
     'chmodFiles'   => 0777,
     'chmodFolders' => 0755,
     'filesystemEncoding' => 'UTF-8'
@@ -156,7 +156,7 @@ $config['accessControl'][] = array(
     'IMAGE_RESIZE_CUSTOM' => true
 );
 
-//$config['loadRoutes'] = false;
+$config['loadRoutes'] = false;
 /*================================ Other Settings =====================================*/
 // http://docs.cksource.com/ckfinder3-php/configuration.html
 
