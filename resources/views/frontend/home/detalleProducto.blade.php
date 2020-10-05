@@ -40,7 +40,7 @@
                 <div class="col-md-8 pb-5 pt-5">
                     <div class="titleprod">
                         <b>{{ $producto->name }}</b>
-                        <span class="float-right">${{ $producto->price}}</span>
+                        <span class="float-right">${{ number_format($producto->price)}}</span>
                     </div>
 
                     <div class="prodbody">
