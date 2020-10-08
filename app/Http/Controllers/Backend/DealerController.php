@@ -68,13 +68,14 @@ class DealerController extends Controller
         $dealer->maps = $request->maps;
         $dealer->order = $request->order;
         $dealer->state_id = $request->state;
-        $dealer->state = '1';
-
-        if($request->marca){
-            $dealer->brand()->save($request->marca);
-        }
 
         $dealer->save();
+
+        if($request->marca){
+            $dealer->brand()->sync($request->marca);
+        }
+
+
 
         return redirect()->route('dealer.index')->with(['info'=>'Datos actualizados']);
     }
