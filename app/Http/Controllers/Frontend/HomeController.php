@@ -259,6 +259,7 @@ class HomeController extends Controller
 
         if($producto!=null){
             foreach($producto->marca as $marca){
+                dd($marca->brand->dealer);
                 if($marca->parent_id == null){
                     if(!$marca->brand->dealer){
                     foreach($marca->brand->dealer as $dl){
