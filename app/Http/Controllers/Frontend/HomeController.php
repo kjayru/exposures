@@ -261,7 +261,7 @@ class HomeController extends Controller
             foreach($producto->marca as $marca){
                 dd($marca->brand);
                 if($marca->parent_id == null){
-                    if(!$marca->brand->dealer){
+                    if(!$marca->brand){
                     foreach($marca->brand->dealer as $dl){
 
                         $arreglo->push($dl);
