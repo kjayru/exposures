@@ -146,11 +146,13 @@ class HomeController extends Controller
 
     public function dealerSearch($id){
         $slide = Slide::where('id',4)->first();
-        $dealers = Dealer::where('id',$id)->orderBy('id','desc')->paginate(8);
+       // $dealers = Dealer::where('id',$id)->orderBy('id','desc')->paginate(8);
 
         $estados = State::orderBy('name','desc')->get();
 
         $ciudad = State::where('id',$id)->first();
+
+        $dealers = $ciudad->dealers;
         $marcas = Brand::orderBy('name','desc')->get();
 
         return view('frontend.home.buscar',['slide'=>$slide,'dealers'=>$dealers,'estados'=>$estados,'ciudad'=>$ciudad,'marcas'=>$marcas,'ciudad'=>$ciudad->name]);
