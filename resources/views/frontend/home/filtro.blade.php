@@ -50,8 +50,8 @@
              </div>
 
              <div class="col-12 col-md-12">
-
-            @foreach($dealers as $dealer)
+            @if($dealers)
+                @foreach($dealers as $dealer)
 
                     <div class="card p-3">
                         <div class="row">
@@ -101,9 +101,11 @@
                         </div>
                     </div>
 
-                <hr>
-            @endforeach
-
+                    <hr>
+                @endforeach
+            @else
+                <h4>No existe resultados</h4>
+            @endif
                 </div>
 
             </div>

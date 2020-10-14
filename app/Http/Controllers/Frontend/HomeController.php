@@ -249,7 +249,7 @@ class HomeController extends Controller
     public function filtro($id){
         $arreglo = collect();
         $producto = Product::where('id',$id)->first();
-
+        $dealers=null;
 
         $slide = Slide::where('id',4)->first();
 
@@ -257,19 +257,19 @@ class HomeController extends Controller
         $marcas = Brand::orderBy('name','desc')->get();
         $estados = State::orderBy('name','desc')->get();
 
+        if($producto!=null){
+            foreach($producto->marca as $marca){
+                if($marca->parent_id == null){
+                    foreach($marca->brand->dealer as $dl){
 
-        foreach($producto->marca as $marca){
-            if($marca->parent_id == null){
-                foreach($marca->brand->dealer as $dl){
-
-                    $arreglo->push($dl);
+                        $arreglo->push($dl);
+                    }
                 }
+                break;
             }
-            break;
+
+            $dealers = collect($arreglo->all());
         }
-
-        $dealers = collect($arreglo->all());
-
 
 
         return view('frontend.home.filtro',['slide'=>$slide,'dealers'=>$dealers,'estados'=>$estados,'marcas'=>$marcas]);
