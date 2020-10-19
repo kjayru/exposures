@@ -90,11 +90,7 @@
                         <a href="/contacto" class="nav-link {{{ (Request::is('contacto') ? 'active' : '') }}}">Contacto</a>
                     </li>
 
-                    <li class="nav-item mov">
-                        <a class="nav-link" href="http://exposureteam.mx/">
-                            Exposure Team
-                        </a>
-                    </li>
+
                     @guest
                     @else
                     <li class="nav-item mov">
