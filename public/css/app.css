@@ -13383,6 +13383,15 @@ a.carprod {
     margin-bottom: 90px;
 }
 
+a.iconwhatsapp {
+    position: fixed;
+    right: 20px;
+    bottom: 100px;
+    z-index: 1000;
+    width: 65px;
+    height: 65px;
+}
+
 @media( max-width : 780px){
     .contenedor {
         width: 100%;

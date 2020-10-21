@@ -28,7 +28,7 @@
 
 
         <div class="col-md-12 contacto">
-            <h3>NOS INTERESA TU OPINION, HABLA...EXPOSURE TE ESCUCHA</h3>
+            <h3>NOS INTERESA TU OPINIÓN... EXPOSURE TE ESCUCHA</h3>
 
 
             <form action="/proceso" method="POST">
