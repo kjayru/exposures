@@ -25,16 +25,16 @@
                                             </div>
                                             <div class="col-md-7">
                                                 <div class="titulo">
-                                                <h3> {{ iconv('UTF-8', 'ISO-8859-1//IGNORE',$prod->name) }}</h3>
-                                                    <span> {{ iconv('UTF-8', 'ISO-8859-1//IGNORE',$prod->subtheme) }}</span>
+                                                <h3> {{ $prod->name }}</h3>
+                                                    <span> {{ $prod->subtheme }}</span>
                                                 </div>
                                                 <div class="body">
-                                                 {{ iconv('UTF-8', 'ISO-8859-1//IGNORE',$prod->excerpt) }}
+                                                    {{  \Illuminate\Support\Str::limit($prod->excerpt, 150) }}
 
                                                 </div>
                                                 <div class="footer">
 
-                                                    <a href="/{{$prod->slug}}" class="btn btn-primary btn-irproducto">Ver detalle</a>
+                                                    <a href="/producto/{{$prod->id}}/{{$prod->slug}}" class="btn btn-primary btn-irproducto">Ver detalle</a>
                                                 </div>
                                             </div>
                                         </div>
