@@ -112,7 +112,7 @@ class HomeController extends Controller
 
         if(count($producto->marca)>0){
 
-            $relacionados = $producto->marca[0]->product;
+            $relacionados = $producto->marca[0]->product->take(6);
 
         }else{
             $relacionados = null;
