@@ -26,7 +26,11 @@
                         @if($contador>0)
                             @foreach($galeria as $gal)
                                 <div>
+                                    @if(str_contains($gal->imagen, 'http'))
+                                    <img src="{{ $gal->imagen}}" class="img-fluid">
+                                    @else
                                     <img src="/storage/{{ $gal->imagen}}" class="img-fluid">
+                                    @endif
                                 </div>
                             @endforeach
                         @endif
