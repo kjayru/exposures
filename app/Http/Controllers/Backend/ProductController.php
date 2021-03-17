@@ -106,7 +106,7 @@ class ProductController extends Controller
         $product->category()->sync($request->categorias);
         $product->marca()->sync($request->marcas);
 
-        if($request->imageid){
+        /*if($request->imageid){
 
             foreach($request->imageid as $imgid){
                 $galeria = New Gallery();
@@ -115,8 +115,16 @@ class ProductController extends Controller
                 $galeria->save();
 
             }
-        }
+        }*/
 
+        if($request->gimagen){
+            foreach($request->gimagen as $gal){
+                $galeria = new Gallery();
+                $galeria->imagen = $gal;
+                $galeria->product_id = $product->id;
+                $galeria->save();
+            }
+        }
 
         return redirect()->route('product.index',['id' => $product->id ])
         ->with('info','Producto actualizado satisfactoriamente');
@@ -133,6 +141,7 @@ class ProductController extends Controller
 
 
         $product = Product::find($id);
+
 
         $categorias = Category::orderBy('name','desc')->get();
         $multimedias = Multimedia::orderBy('id','desc')->get();
@@ -189,6 +198,7 @@ class ProductController extends Controller
     {
 
 
+
         $product = Product::find($id);
 
         $product->name = $request->name;
@@ -213,7 +223,20 @@ class ProductController extends Controller
         $product->marca()->sync($request->marcas);
 
 
-        if($request->imageid){
+        if($request->gimagen){
+
+            //$product->galleries()->update(['product_id' => $id,'imagen'=>$request->gimagen]);
+                Gallery::where('product_id',$id)->delete();
+
+                foreach($request->gimagen as $gal){
+                    $galeria = new Gallery();
+                    $galeria->imagen = $gal;
+                    $galeria->product_id = $product->id;
+                    $galeria->save();
+                }
+            }
+
+        /*if($request->imageid){
             Gallery::where('product_id',$id)->delete();
 
             foreach($request->imageid as $imgid){
@@ -223,7 +246,7 @@ class ProductController extends Controller
                 $galeria->save();
 
             }
-        }
+        }*/
 
         return redirect()->route('product.index',['id'=>$id])
      ->with('info','Producto actualizado satisfactoriamente');
@@ -243,6 +266,15 @@ class ProductController extends Controller
         ->with('info','Producto eliminado con exito');
     }
 
+
+    public function deletegal(Request $request){
+
+        Gallery::find($request->id)->delete();
+        return response()->json([
+            'rpta' => 'ok',
+        ]);
+
+    }
 
 
 }

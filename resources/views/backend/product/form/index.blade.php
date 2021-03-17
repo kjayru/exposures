@@ -42,7 +42,23 @@
     </div>
 
 
-    <!--imagen-->
+
+        <div class="form-group">
+            <label for="description" class="col-sm-2 control-label">Imagen</label>
+            <div class="col-sm-10">
+            <a href="#" class="btn btn-default btn-prodsingle">Seleccione imagen</a>
+
+
+
+            <input type="hidden" id="producto" class="form-control" value="{{ @$product->imagen }}"  name="imagen">
+            <picture class="figure thumbnail category__figure">
+                <img src="/storage/{{ @$product->imagen}}" alt="" id="urlproducto" class="img-thumbnail rounded">
+            </picture>
+        </div>
+
+    </div>
+
+    <!--imagen
     @if(!@$product->imagen)
         <div class="form-group @if($errors->first('imagen')) has-error @endif">
             <label for="imagen" class="col-sm-2 control-label">Imagen</label>
@@ -72,7 +88,7 @@
 
         </div>
     @endif
-
+    -->
 
 
 
@@ -154,19 +170,41 @@
 
     <fieldset> <legend>Galeria producto</legend></fieldset>
         <div class="form-group text-center">
-            <button type="button" class="btn btn-default btn-add-images" data-toggle="modal" data-target="#modal-default">
-               Seleccionar imagenes
-            </button>
-        </div>
-        <div class="prodimages">
-        @if(@$galerias)
-           @foreach($galerias as $foto)
-            <div class="col-md-2 ">
-                <img src="/storage/{{ $foto->imagen}}" class="thumbnail" width="70">
+
+            <a href="#" class="btn-btngal btn btn-default mb-5" >  Seleccionar imagenes</a>
+            <!--<button type="button" class="btn btn-default btn-add-images" data-toggle="modal" data-target="#modal-default">
+
+            </button>-->
+
+            <div id="galleryinput">
+                @if(@$product->galleries)
+                    @foreach(@$product->galleries as $key => $gal)
+                        <input type="hidden" name="gimagen[]" class="galeriainput" id="idgal{{$key+1}}" value="{{@$gal->imagen}}">
+                    @endforeach
+                @endif
             </div>
-            @endforeach
-        @endif
+
+            <div class="galeria">
+                @if(@$product->galleries)
+                    @foreach(@$product->galleries as $key => $gal)
+
+                        @if(str_contains($gal->imagen, 'http'))
+                            <picture class="galeria__picture"><a href="#" data-id="{{@$gal->id}}" data-key="{{$key+1}}" class="galeria__btn btn-sm btn-danger">X</a><img src="{{@$gal->imagen}}" class="img-fluid galeria__imagen thumbnail"></picture>
+
+                        @else
+                            <picture class="galeria__picture">
+                                <a href="#" data-id="{{@$gal->id}}" data-key="{{$key+1}}" class="galeria__btn btn-sm btn-danger">X</a>
+                                <img src="/storage/{{ $gal->imagen}}" class="img-fluid galeria__imagen thumbnail" >
+                            </picture>
+                        @endif
+
+                    @endforeach
+                @endif
+            </div>
+
         </div>
+
+
 
 
 

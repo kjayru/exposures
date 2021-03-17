@@ -105,6 +105,10 @@
 <script src="/backend/js/demo.js?v={{uniqid()}}"></script>
 
 <script>
+    var hostedUrl = "{{env('RUTA_IMAGENES')}}";
+ </script>
+
+<script>
 
 $(document).ready(function() {
 

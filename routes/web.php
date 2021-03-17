@@ -131,6 +131,10 @@ Route::group(['prefix' => 'admin'],function(){
     Route::delete('/products/{product}', 'Backend\ProductController@destroy')->name('product.destroy')
     ->middleware('permission:products.destroy');
 
+
+    Route::post('/delete-galeria','Backend\ProductController@deletegal')->name('producto.deletegal');
+
+
     Route::get('/orders', 'Backend\OrderController@index')->name('order.index');
     Route::get('/orders/{order}/edit', 'Backend\OrderController@edit')->name('order.edit');
     Route::delete('/orders/{order}', 'Backend\OrderController@destroy')->name('order.destroy');
@@ -211,6 +215,8 @@ Route::group(['prefix' => 'admin'],function(){
 
 
 
+
+
 });
 
 
@@ -251,4 +257,5 @@ Route::group(['prefix'=>'checkout'],function(){
 
 
 });
+
 

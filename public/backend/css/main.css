@@ -610,3 +610,41 @@ ul.lista2>li>p {
     margin-right: 6px;
     margin-top: 2px;
 }
+
+picture.figure.category__figure {
+    max-width: 140px;
+}
+img.img-fluid.galeria__imagen {
+    max-width: 130px;
+}
+.galeria {
+    padding: 28px 20px;
+}
+
+a.galeria__btn,a.galeria__btnactive {
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: inline-block;
+}
+picture.galeria__picture {
+    position: relative;
+    display: inline-block;
+}
+
+
+
+a.metal__btn,a.metal__btnactive {
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: inline-block;
+}
+
+
+a.textil__btn,a.textil__btnactive {
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: inline-block;
+}

@@ -26,6 +26,9 @@ class Product extends Model
         return $this->belongsTo(Brand::class);
     }
 
+    public function galleries(){
+        return $this->hasMany(Gallery::class);
+    }
 
     public static function productosCategory($cat,$subcat){
         $categoria = Category::where('slug',$cat)->first();
