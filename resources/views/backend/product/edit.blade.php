@@ -32,34 +32,27 @@
             @endif
 
           <form class="form-horizontal" action="{{ route('product.update',$product->id) }}" method="POST" enctype="multipart/form-data">
-            <div class="box-header with-border">
-              <h3 class="box-title">Editar Producto</h3>
-              <a href="{{ route('product.index') }}" class="btn btn-danger pull-right">Cancelar</a>
-            </div>
-              <div class="box-body">
-                @csrf
-                <input type="hidden" name="_method" value="PUT">
+                <div class="box-header with-border">
+                    <h3 class="box-title">Editar Producto</h3>
+                    <a href="{{ route('product.index') }}" class="btn btn-danger pull-right">Cancelar</a>
+                </div>
+                <div class="box-body">
+                    @csrf
+                    <input type="hidden" name="_method" value="PUT">
 
-                @include('backend.product.form.index')
+                    @include('backend.product.form.index')
 
-              </div>
-
-              <div class="box-footer">
-                <a href="{{ route('product.index') }}" class="btn btn-danger">Cancelar</a>
-                <button type="submit" class="btn btn-info pull-right">Guardar</button>
-              </div>
+                </div>
+                <div class="box-footer">
+                    <a href="{{ route('product.index') }}" class="btn btn-danger">Cancelar</a>
+                    <button type="submit" class="btn btn-info pull-right">Guardar</button>
+                </div>
           </form>
-
-
         </section>
 
       </div>
 
-
      @include('layouts.backend.include.productGallery')
-
-
-
 
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
      <script src="/vendor/unisharp/laravel-ckeditor/ckeditor.js"></script>

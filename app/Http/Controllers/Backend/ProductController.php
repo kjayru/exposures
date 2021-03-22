@@ -67,14 +67,11 @@ class ProductController extends Controller
     public function store(Request $request)
     {
 
-
         $request->validate([
             'name' => 'required|min:3',
             'price' => 'required',
             'excerpt' => 'required',
-            'description' => 'required',
-            'imagen'=>'required|image',
-
+            'description' => 'required'
         ]);
 
         $product = new Product();
@@ -86,10 +83,12 @@ class ProductController extends Controller
         $product->title = $request->name;
         $product->slug = Str::slug($request->name, '-');
 
-        if($request->hasFile('imagen')){
-         $imagen = $request->file('imagen')->store('products');
-         $product->imagen = $imagen;
-        }
+        $product->imagen = $request->imagen;
+
+        /*if($request->hasFile('imagen')){
+            $imagen = $request->file('imagen')->store('products');
+            $product->imagen = $imagen;
+        }*/
 
         if(!$request->outlet){
             $product->outlet = 0;
@@ -97,11 +96,7 @@ class ProductController extends Controller
             $product->outlet = 1;
         }
 
-
         $product->save();
-
-
-
 
         $product->category()->sync($request->categorias);
         $product->marca()->sync($request->marcas);
@@ -141,8 +136,6 @@ class ProductController extends Controller
 
 
         $product = Product::find($id);
-
-
         $categorias = Category::orderBy('name','desc')->get();
         $multimedias = Multimedia::orderBy('id','desc')->get();
 
@@ -162,7 +155,6 @@ class ProductController extends Controller
 
         $catmarcs = $product->marca()->get();
 
-
         foreach($catmarcs as $cam){
             $marcs[] =  $cam->id;
          }
@@ -176,9 +168,7 @@ class ProductController extends Controller
 
         $galerias = Gallery::where('product_id',$id)->get();
         $multimedias = Storage::allFiles('products');
-
         $categories = Category::categorias();
-
         $marcas = Marca::marcas();
 
 
@@ -205,11 +195,12 @@ class ProductController extends Controller
         $product->price = $request->price;
         $product->excerpt = $request->excerpt;
         $product->description = $request->description;
+        $product->imagen = $request->imagen;
         $product->slug = Str::slug($request->name, '-');
-        if($request->hasFile('imagen')){
+       /* if($request->hasFile('imagen')){
          $imagen = $request->file('imagen')->store('products');
          $product->imagen = $imagen;
-        }
+        }*/
 
         if(!$request->outlet){
             $product->outlet = 0;

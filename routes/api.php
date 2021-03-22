@@ -29,7 +29,7 @@ use PayPal\Api\PaymentExecution;
 Route::get('/products', function (Request $request) {
 
      return datatables()
-        ->eloquent(App\Product::query())
+        ->eloquent(App\Product::orderBy('id','desc'))
         ->toJson();
 });
 
