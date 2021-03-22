@@ -105,7 +105,7 @@ $config['resourceTypes'][] = array(
     'backend'           => 'default'
 );
 $config['resourceTypes'][] = array(
-    'name'              => 'Slide', // Single quotes not allowed.
+    'name'              => 'slide', // Single quotes not allowed.
     'directory'         => 'slide',
     'maxSize'           => 0,
     'allowedExtensions' => '7z,aiff,asf,avi,bmp,csv,doc,docx,fla,flv,gif,gz,gzip,jpeg,jpg,mid,mov,mp3,mp4,mpc,mpeg,mpg,ods,odt,pdf,png,ppt,pptx,pxd,qt,ram,rar,rm,rmi,rmvb,rtf,sdc,sitd,swf,sxc,sxw,tar,tgz,tif,tiff,txt,vsd,wav,wma,wmv,xls,xlsx,zip',
@@ -113,7 +113,7 @@ $config['resourceTypes'][] = array(
     'backend'           => 'default'
 );
 $config['resourceTypes'][] = array(
-    'name'              => 'Profile', // Single quotes not allowed.
+    'name'              => 'profile', // Single quotes not allowed.
     'directory'         => 'profile',
     'maxSize'           => 0,
     'allowedExtensions' => '7z,aiff,asf,avi,bmp,csv,doc,docx,fla,flv,gif,gz,gzip,jpeg,jpg,mid,mov,mp3,mp4,mpc,mpeg,mpg,ods,odt,pdf,png,ppt,pptx,pxd,qt,ram,rar,rm,rmi,rmvb,rtf,sdc,sitd,swf,sxc,sxw,tar,tgz,tif,tiff,txt,vsd,wav,wma,wmv,xls,xlsx,zip',
@@ -122,7 +122,7 @@ $config['resourceTypes'][] = array(
 );
 
 $config['resourceTypes'][] = array(
-    'name'              => 'Marcas', // Single quotes not allowed.
+    'name'              => 'marcas', // Single quotes not allowed.
     'directory'         => 'marcas',
     'maxSize'           => 0,
     'allowedExtensions' => '7z,aiff,asf,avi,bmp,csv,doc,docx,fla,flv,gif,gz,gzip,jpeg,jpg,mid,mov,mp3,mp4,mpc,mpeg,mpg,ods,odt,pdf,png,ppt,pptx,pxd,qt,ram,rar,rm,rmi,rmvb,rtf,sdc,sitd,swf,sxc,sxw,tar,tgz,tif,tiff,txt,vsd,wav,wma,wmv,xls,xlsx,zip',

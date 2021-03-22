@@ -55,27 +55,22 @@
       </div>
 
       @include('layouts.backend.include.productGallery')
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
-      <script src="/vendor/unisharp/laravel-ckeditor/ckeditor.js"></script>
-
-      <script>
-
-
-        $(function () {
-
-         /* CKEDITOR.replace( '.contenidos', {
-            height: 700
-        } );*/
-
-                CKEDITOR.replace( description, {   height: 300 });
-                CKEDITOR.config.allowedContent = true;
-                CKEDITOR.config.contentsCss = '/css/app.css';
 
 
 
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+     <script src="/vendor/unisharp/laravel-ckeditor/ckeditor.js"></script>
+    <script src="/backend/js/ckfinder/ckfinder.js"></script>
 
-        })
+<script>
+   $(function () {
+          var newCKEdit = CKEDITOR.replace( description, {   height: 300 });
+           CKEDITOR.config.allowedContent = true;
+           CKEDITOR.config.contentsCss = '/css/app.css';
+           CKFinder.config({ connectorPath: '/ckfinder/connector' });
+           CKFinder.setupCKEditor(newCKEdit, '/');
 
-      </script>
+   })
+
+ </script>
 @endsection
