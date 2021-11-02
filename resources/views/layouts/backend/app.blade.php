@@ -112,7 +112,7 @@
 
 $(document).ready(function() {
 
-    var table = $('#productos').DataTable( {
+    var table = $('#productos').DataTable({
                     responsive: true,
                     "serverSide":true,
                     "ajax":"{{ url('api/products')}}",
