@@ -20,6 +20,7 @@ class RedirectNonwww
     {
        
         $host = $request->header('host');
+       
         if (Str::startsWith($host, 'www.')){
             $redirectHost = str_replace('www.', '', $host);
             $request->headers->set('host', $redirectHost);
