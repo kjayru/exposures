@@ -61,6 +61,7 @@ Route::get('/getdatabill/{id}','Frontend\CartController@getbilling');
 
 Route::get('/testmail','Frontend\HomeController@testmail');
 Route::get('/getphotos','Frontend\HomeController@getphotos');
+Route::post('/setsuscripcion', 'Frontend\HomeController@setsuscripcion');
 
 
 Auth::routes();
@@ -214,7 +215,8 @@ Route::group(['prefix' => 'admin'],function(){
     Route::delete('/brands/{marca}', 'Backend\BrandController@destroy')->name('brand.destroy');
 
 
-
+    Route::get('/suscripcion', 'Backend\HomeController@suscripcion')->name('dashboard.suscripcion');
+    Route::post('/suscripcion/export', 'Backend\HomeController@exportar')->name('dashboard.exportar');
 
 
 });

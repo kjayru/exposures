@@ -458,3 +458,53 @@ $('#recientes').slick({
         });
     });
 */
+$(".btn__suscripcion").on('click',function(e){
+  e.preventDefault();
+
+    let token = $("meta[name=csrf-token]").attr('content');
+
+    let nombre = $("#sus__nombre").val();
+    let email = $("#sus__email").val();
+    let telefono = $("#sus__telefono").val();
+
+    let sendata = {'_token':token,'_method':'POST',nombre:nombre,email:email,telefono:telefono};
+    $.ajax({
+      url:'/setsuscripcion',
+      method:'POST',
+      dataType:'json',
+      data:sendata,
+      success:function(response){
+        $(".modal__suscripcion").fadeOut(350,'swing');
+      }
+    }).fail(function(response){
+
+      if(response.responseJSON.errors.nombre){
+        $(".error__nombre").html("Ingrese su nombre");
+      }
+      if(response.responseJSON.errors.email){
+        $(".error__email").html("Ingrese su email");
+      }
+      if(response.responseJSON.errors.telefono){
+        $(".error__telefono").html("Ingrese su teléfono");
+      }
+    });
+
+
+  
+});
+
+$("#sus__nombre").on('focus',function(){
+  $(".error__nombre").html("");
+})
+
+$("#sus__email").on('focus',function(){
+  $(".error__email").html("");
+})
+
+$("#sus__telefono").on('focus',function(){
+  $(".error__telefono").html("");
+})
+
+$(".modal__suscripcion .btn__close").on('click',function(){
+  $(".modal__suscripcion").fadeOut(350,'swing');
+})

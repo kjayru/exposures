@@ -27,6 +27,7 @@ use App\Mail\OrderShipped;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\ContactoMail;
 use Sendgrid\Sendgrid;
+use App\Suscription;
 
 class HomeController extends Controller
 {
@@ -312,6 +313,26 @@ class HomeController extends Controller
         $multimedias = Storage::allFiles('products');
         return Response()->json($multimedias);
     }
+
+    public function setsuscripcion(Request $request){
+
+        $this->validate($request,[
+            'nombre'=>'required',
+            'email'=>'required|email|unique:suscriptions',
+            'telefono'=>'required',
+        ]);
+        $suscripcion = new Suscription();
+
+        $suscripcion->nombre = $request->nombre;
+        $suscripcion->email = $request->email;
+        $suscripcion->telefono = $request->telefono;
+
+        $suscripcion->save();
+
+        return response()->json(['rpta'=>'ok']);
+    }
+
+    
 
 }
 

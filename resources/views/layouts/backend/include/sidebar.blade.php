@@ -32,26 +32,32 @@
 
                     </a>
                     <ul class="treeview-menu" style="display:block">
-                            <li {{{ (Request::is('admin/categories') ? 'class=active' : '') }}}>
+                            <li {{{ (Request::is('admin/categories*') ? 'class=active' : '') }}}>
                                 <a href="/admin/categories">
                                     <i class="fa fa-cubes" aria-hidden="true"></i><span>Categorias</span>
 
                                 </a>
                               </li>
 
-                              <li {{{ (Request::is('admin/marcas') ? 'class=active' : '') }}}>
+                              <li {{{ (Request::is('admin/marcas*') ? 'class=active' : '') }}}>
                                 <a href="/admin/marcas">
                                     <i class="fa fa-cubes" aria-hidden="true"></i><span>Marcas</span>
 
                                 </a>
                               </li>
 
-                            <li {{{ (Request::is('admin/products') ? 'class=active' : '') }}}>
+                            <li {{{ (Request::is('admin/products*') ? 'class=active' : '') }}}>
                                 <a href="/admin/products">
                                     <i class="fa fa-cube" aria-hidden="true"></i> <span>Productos</span>
 
                                 </a>
                             </li>
+                            <li {{{ (Request::is('admin/suscripcion') ? 'class=active' : '') }}}>
+                              <a href="/admin/suscripcion">
+                                  <i class="fa fa-cube" aria-hidden="true"></i> <span>Suscripciones</span>
+
+                              </a>
+                          </li>
 
 
                     </ul>
@@ -67,14 +73,14 @@
                     </a>
                     <ul class="treeview-menu" style="display:block">
 
-                            <li {{{ (Request::is('admin/orders') ? 'class=active' : '') }}}>
+                            <li {{{ (Request::is('admin/orders*') ? 'class=active' : '') }}}>
                                 <a href="/admin/orders">
                                     <i class="fa fa-tasks" aria-hidden="true"></i> <span>Ordenes</span>
 
                                 </a>
                             </li>
 
-                           <!-- <li {{{ (Request::is('admin/invoices') ? 'class=active' : '') }}}>
+                           <!-- <li {{{ (Request::is('admin/invoices*') ? 'class=active' : '') }}}>
                                 <a href="/admin/invoices">
                                     <i class="fa fa-ticket" aria-hidden="true"></i><span>Facturas</span>
 
@@ -100,13 +106,13 @@
 
                                 </a>
                               </li>
-                              <li {{{ (Request::is('admin/brands') ? 'class=active' : '') }}}>
+                              <li {{{ (Request::is('admin/brands*') ? 'class=active' : '') }}}>
                                 <a href="/admin/brands">
                                   <i class="fa fa-th"></i> <span>Marcas</span>
 
                                 </a>
                               </li>
-                              <li {{{ (Request::is('admin/testimonials') ? 'class=active' : '') }}}>
+                              <li {{{ (Request::is('admin/testimonials*') ? 'class=active' : '') }}}>
                                   <a href="/admin/testimonials">
                                       <i class="fa fa-users" aria-hidden="true"></i> <span>Testimonio</span>
 
@@ -119,19 +125,19 @@
                                 </a>
                               </li>
 
-                            <li {{{ (Request::is('admin/banners') ? 'class=active' : '') }}}>
+                            <li {{{ (Request::is('admin/banners*') ? 'class=active' : '') }}}>
                                     <a href="/admin/banners">
                                       <i class="fa fa-users" aria-hidden="true"></i> <span>Banners</span>
                                    </a>
                             </li>
 
-                            <li {{{ (Request::is('admin/dealers') ? 'class=active' : '') }}}>
+                            <li {{{ (Request::is('admin/dealers*') ? 'class=active' : '') }}}>
                                 <a href="/admin/dealers">
                                   <i class="fa fa-users" aria-hidden="true"></i> <span>Distribuidores</span>
                                </a>
                         </li>
 
-                        <li {{{ (Request::is('admin/videos') ? 'class=active' : '') }}}>
+                        <li {{{ (Request::is('admin/videos*') ? 'class=active' : '') }}}>
                             <a href="/admin/videos">
                               <i class="fa fa-users" aria-hidden="true"></i> <span>Videos</span>
                            </a>
