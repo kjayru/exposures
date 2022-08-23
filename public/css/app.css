@@ -13738,6 +13738,7 @@ a.iconwhatsapp {
     top: -2px;
     padding: 0;
     margin: 0;
+    z-index: 1000;
   }
 
 
@@ -13753,6 +13754,7 @@ a.iconwhatsapp {
       text-align: center;
       display: inline;
       width:100%;
+      z-index: 1;
     }
       .modal__suscripcion .contenedor__card .suscripcion__logo_img {
         width: 140px; }
@@ -13808,6 +13810,7 @@ a.iconwhatsapp {
         left: 0;
         top:-38px;
         text-align: center;
+        z-index:1;
        }
        .modal__suscripcion .contenedor__card .suscripcion__logo_img{
         width:165px;
