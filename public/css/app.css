@@ -13786,9 +13786,9 @@ a.iconwhatsapp {
 
 @media (max-width: 780px) {
   .modal__suscripcion {
-    position: unset;
+    position: fixed;
     padding-bottom: 2rem;
-    height: auto;
+    height: 100%;
     width: auto; }
     .modal__suscripcion .contenedor__card {
       margin-top: 16%;
