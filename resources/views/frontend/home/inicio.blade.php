@@ -49,7 +49,7 @@ root {{ storage_path('app/public/')}}
                 </div>
                 <div class="suscripcion__header">
                     <div class="suscripcion__header_title">¡Suscríbete!</div>
-                    <div class="suscripcion__header_parrafo">Registrate para recibir nuestras ultimas</div>
+                    <div class="suscripcion__header_parrafo">Regístrate para recibir nuestras últimas promociones</div>
                 </div>
                 <div class="suscripcion__form">
                     <form method="post" id="frm__post">
