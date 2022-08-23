@@ -54,15 +54,15 @@ root {{ storage_path('app/public/')}}
                 <div class="suscripcion__form">
                     <form method="post" id="frm__post">
                         <div class="form-group">
-                            <input type="text" id="sus__nombre" name="nombre" class="form-control input__suscribe" placeholder="Nombre" required>
+                            <input type="text" id="sus__nombre" name="nombre" class="form-control input__suscribe" placeholder="Nombre*" required>
                             <span class="error__nombre"></span>
                         </div>
                         <div class="form-group">
-                            <input type="email" id="sus__email" name="email" placeholder="Email" class="form-control input__suscribe" required>
+                            <input type="email" id="sus__email" name="email" placeholder="Email*" class="form-control input__suscribe" required>
                             <span class="error__email"></span>
                         </div>
                         <div class="form-group">
-                            <input type="text"  id="sus__telefono" class="form-control input__suscribe" name="telefono" placeholder="Teléfono" required>
+                            <input type="text"  id="sus__telefono" class="form-control input__suscribe" name="telefono" placeholder="Teléfono" >
                             <span class="error__telefono"></span>
                         </div>
                         <div class="form-group">

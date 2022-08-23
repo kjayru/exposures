@@ -13744,13 +13744,16 @@ a.iconwhatsapp {
   .modal__suscripcion .contenedor__card {
     margin-top: 8%;
     background: linear-gradient(180deg, #29c1e3 15%, #ffffff 15%);
-    height: 575px;
+   
     padding: 1rem 5rem;
     border-radius: 15px; }
     .modal__suscripcion .contenedor__card .suscripcion__logo {
       position: absolute;
-      transform: translate(50%, -50%);
-      left: 25%; }
+      left:0;
+      text-align: center;
+      display: inline;
+      width:100%;
+    }
       .modal__suscripcion .contenedor__card .suscripcion__logo_img {
         width: 140px; }
   .modal__suscripcion #frm__post .input__suscribe {
@@ -13771,7 +13774,9 @@ a.iconwhatsapp {
     padding-bottom: 1rem; }
     .modal__suscripcion .suscripcion__header_title {
       font-size: 2.5rem;
-      font-weight: bold; }
+      font-weight: bold;
+      color:#707070;
+     }
     .modal__suscripcion .suscripcion__header_parrafo {
       font-size: 1.3rem; }
   .modal__suscripcion .texto__parrafo {
@@ -13791,7 +13796,7 @@ a.iconwhatsapp {
     height: 100%;
     width: auto; }
     .modal__suscripcion .contenedor__card {
-      margin-top: 16%;
+      margin-top: 10%;
       height: 590px;
       padding: 0rem 2rem;
       border-radius: 15px;
@@ -13799,5 +13804,30 @@ a.iconwhatsapp {
       margin-right: 10px; }
       .modal__suscripcion .contenedor__card .suscripcion__logo {
         position: absolute;
-        transform: translate(50%, -50%);
-        left: 15%; } }
+        width:100%;
+        left: 0;
+        top:-38px;
+        text-align: center;
+       }
+       .modal__suscripcion .contenedor__card .suscripcion__logo_img{
+        width:165px;
+      }
+      .modal__suscripcion .suscripcion__header_parrafo{
+        font-size:1rem;
+        line-height:21px;
+      }
+
+}
+
+@media(min-width:781px){
+  .modal__suscripcion .contenedor__card .suscripcion__logo{
+    top:-75px;
+  }
+  .modal__suscripcion .contenedor__card .suscripcion__logo_img{
+    width:215px;
+  }
+  .modal__suscripcion .contenedor__card .suscripcion__form{
+    padding-bottom:2rem;
+  }
+
+}

@@ -17,7 +17,7 @@ class CreateSuscriptionsTable extends Migration
             $table->bigIncrements('id');
             $table->string("nombre");
             $table->string("email");
-            $table->string("telefono");
+            $table->string("telefono")->nullable();
             $table->timestamps();
         });
     }

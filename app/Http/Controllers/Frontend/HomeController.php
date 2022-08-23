@@ -319,7 +319,7 @@ class HomeController extends Controller
         $this->validate($request,[
             'nombre'=>'required',
             'email'=>'required|email|unique:suscriptions',
-            'telefono'=>'required',
+           
         ]);
         $suscripcion = new Suscription();
 
