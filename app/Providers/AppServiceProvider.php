@@ -26,6 +26,10 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        if (request()->header('x-forwarded-proto') === 'https') {
+        URL::forceScheme('https');
+         }
+
         view()->composer('layouts.frontend.partials.nav', function($view) {
             $view->with(['menus'=>Category::menus(),'menusmarca'=>Marca::menusmarca()]);
         });
